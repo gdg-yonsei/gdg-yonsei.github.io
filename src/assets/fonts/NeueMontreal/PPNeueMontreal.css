@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 100;
+  font-display: swap;
+  src: url("./PPNeueMontreal-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 400;
+  font-display: swap;
+  src: url("./PPNeueMontreal-Book.otf"), format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 500;
+  font-display: swap;
+  src: url("./PPNeueMontreal-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 800;
+  font-display: swap;
+  src: url("./PPNeueMontreal-Bold.otf") format("opentype");
+}
