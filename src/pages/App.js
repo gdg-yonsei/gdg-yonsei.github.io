@@ -1,15 +1,18 @@
+import Hero from "@layout/Main";
 import styled from "styled-components";
 
 function App() {
   return (
-    <>
-      <Container>Hi!</Container>
-    </>
+    <Wrapper>
+      <Hero />
+    </Wrapper>
   );
 }
 
 export default App;
 
-const Container = styled.div`
+const Wrapper = styled.div`
   width: 100%;
+
+  background-color: ${(props) => props.theme.backgroundColor.white};
 `;

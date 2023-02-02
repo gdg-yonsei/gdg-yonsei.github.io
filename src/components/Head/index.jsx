@@ -2,7 +2,7 @@ import useIdle from "@hooks/useIdle";
 import { Helmet } from "react-helmet-async";
 
 function Head() {
-  const idleState = useIdle(3e3);
+  const idleState = useIdle(5e3);
 
   return (
     <Helmet>
