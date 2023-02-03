@@ -1,29 +1,27 @@
-import { hydrate, render } from "react-dom";
-import App from "@pages/App";
-import "./styles/reset.css";
-import "./styles/globals.css";
+import ReactDOM from "react-dom/client";
 import Head from "@components/Head";
+import Home from "@pages/Home/index";
+import { theme } from "@styles/global-theme";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "styled-components";
-import { theme } from "@styles/global-theme";
+import "./styles/globals.css";
+import "./styles/locomotive-scroll.css";
+import "./styles/reset.css";
+import { Fragment } from "react";
+import { BrowserRouter } from "react-router-dom";
+import App from "@pages/App";
 
 const rootElement = document.getElementById("root");
 
-function Index() {
-  return (
-    <>
-      <HelmetProvider>
-        <Head />
-        <ThemeProvider theme={theme}>
+ReactDOM.createRoot(rootElement).render(
+  <Fragment>
+    <HelmetProvider>
+      <Head />
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
           <App />
-        </ThemeProvider>
-      </HelmetProvider>
-    </>
-  );
-}
-
-if (rootElement.hasChildNodes()) {
-  hydrate(<Index />, rootElement);
-} else {
-  render(<Index />, rootElement);
-}
+        </BrowserRouter>
+      </ThemeProvider>
+    </HelmetProvider>
+  </Fragment>
+);

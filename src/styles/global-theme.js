@@ -25,6 +25,7 @@ export const theme = {
   },
   backgroundColor: {
     white: "#fffdfa",
+    black: "#181818",
     button: "#f8f9fa",
   },
 };

@@ -1,18 +1,14 @@
-import Hero from "@layout/Main";
-import styled from "styled-components";
+import { Route, Routes } from "react-router-dom";
+import GooglePage from "./Google";
+import Home from "./Home";
 
 function App() {
   return (
-    <Wrapper>
-      <Hero />
-    </Wrapper>
+    <Routes>
+      <Route path="/google" element={<GooglePage />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
 export default App;
-
-const Wrapper = styled.div`
-  width: 100%;
-
-  background-color: ${(props) => props.theme.backgroundColor.white};
-`;

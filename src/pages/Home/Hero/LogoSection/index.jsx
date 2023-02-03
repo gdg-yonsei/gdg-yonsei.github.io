@@ -3,7 +3,7 @@ import GDSCLogo from "@assets/images/gdsclogo.png";
 
 function LogoSection() {
   return (
-    <Container>
+    <Container data-scroll data-scroll-position="top" data-scroll-speed="2">
       <LogoImg src={GDSCLogo} alt="GDSCLogo" />
     </Container>
   );
