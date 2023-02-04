@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1c8372a2.css",
+    "main.js": "/static/js/main.8e269868.js",
+    "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
+    "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
+    "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
+    "static/media/Roboto-ThinItalic.ttf": "/static/media/Roboto-ThinItalic.9d2ca34eae96e77c6eef.ttf",
+    "static/media/Roboto-BoldItalic.ttf": "/static/media/Roboto-BoldItalic.87d61cea6fe1d235d4a8.ttf",
+    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/Roboto-Thin.ttf": "/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Black.ttf": "/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
+    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "static/media/Roboto-Light.ttf": "/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
+    "static/media/GoogleSans-BoldItalic-v1.27.ttf": "/static/media/GoogleSans-BoldItalic-v1.27.afe977f432a7522f2c07.ttf",
+    "static/media/GoogleSans-MediumItalic-v1.27.ttf": "/static/media/GoogleSans-MediumItalic-v1.27.0f98f085f4815a47cd12.ttf",
+    "static/media/GoogleSans-Medium-v1.27.ttf": "/static/media/GoogleSans-Medium-v1.27.81067d78370e5509b889.ttf",
+    "static/media/GoogleSans-Regular-v1.27.ttf": "/static/media/GoogleSans-Regular-v1.27.19c78e33fc3a7243f219.ttf",
+    "static/media/GoogleSans-Bold-v1.27.ttf": "/static/media/GoogleSans-Bold-v1.27.18cab8ca4b802f600b69.ttf",
+    "static/media/PPNeueMontreal-Medium.otf": "/static/media/PPNeueMontreal-Medium.b604bc34ed28cb1c20b3.otf",
+    "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.a5585efb70f888db7b5c.otf",
+    "static/media/PPNeueMontreal-Book.otf": "/static/media/PPNeueMontreal-Book.497a4d8a79ae3d85403f.otf",
+    "static/media/PPNeueMontreal-Thin.otf": "/static/media/PPNeueMontreal-Thin.79ab813ef18c7e673de5.otf",
+    "static/media/GoogleDevelopers.png": "/static/media/GoogleDevelopers.008a741a39eb169dd39b.png",
+    "static/media/SolutionChallenge.png": "/static/media/SolutionChallenge.f718e3e549766181471b.png",
+    "static/media/gdsclogo.png": "/static/media/gdsclogo.3455e8e781768daa53c9.png",
+    "static/media/mic.svg": "/static/media/mic.00fcd0f91450ab61d0c1f9143af91a1b.svg",
+    "index.html": "/index.html",
+    "main.1c8372a2.css.map": "/static/css/main.1c8372a2.css.map",
+    "main.8e269868.js.map": "/static/js/main.8e269868.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c8372a2.css",
+    "static/js/main.8e269868.js"
+  ]
+}
