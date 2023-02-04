@@ -3,9 +3,8 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import styled from "styled-components";
 import Banner from "./Banner";
 import Introduction from "./Introduction";
-import Progress from "./Progress";
 
-function GooglePage() {
+function DeveloperPage() {
   const ref = useRef(null);
 
   return (
@@ -18,13 +17,12 @@ function GooglePage() {
       <Container data-scroll-container ref={ref}>
         <Banner />
         <Introduction />
-        <Progress />
       </Container>
     </LocomotiveScrollProvider>
   );
 }
 
-export default GooglePage;
+export default DeveloperPage;
 
 const Container = styled.main`
   width: 100%;

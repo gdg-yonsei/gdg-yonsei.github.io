@@ -16,9 +16,24 @@ function Introduction() {
       <DescWrapper>
         {Writeup.map((el, idx) => {
           return idx === 3 ? (
-            <Underline key={idx}>{el}</Underline>
+            <Underline
+              key={idx}
+              href="https://sdgs.un.org/goals"
+              target="_blank"
+              data-scroll
+              data-scroll-position="top"
+              data-scroll-speed="1.5"
+            >
+              {el}
+            </Underline>
           ) : (
-            <Line key={idx} index={idx}>
+            <Line
+              key={idx}
+              index={idx}
+              data-scroll
+              data-scroll-position="top"
+              data-scroll-speed="1.5"
+            >
               {el}
             </Line>
           );
@@ -39,6 +54,9 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
 
+  position: relative;
+  z-index: 2;
+
   background-color: ${(props) => props.theme.color.red};
 
   font-family: "Google Sans", sans-serif;
@@ -52,6 +70,7 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.span`
+  display: inline-block;
   font-size: 5vw;
 `;
 
@@ -62,19 +81,23 @@ const DescWrapper = styled.ul`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `;
 
 const Line = styled.li`
+  display: inline-block;
   width: 100%;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
+  font-weight: 300;
   font-size: 5.5vw;
-  line-height: 1.4;
+  font-family: "Pretendard", sans-serif;
+
+  line-height: 1.3;
 
   ${(props) =>
     props.index % 2 === 0
@@ -86,7 +109,8 @@ const Line = styled.li`
         `}
 `;
 
-const Underline = styled.li`
+const Underline = styled.a`
+  display: inline-block;
   width: 100%;
 
   display: flex;
@@ -96,4 +120,5 @@ const Underline = styled.li`
   font-size: 5.5vw;
 
   text-decoration: underline;
+  cursor: pointer;
 `;

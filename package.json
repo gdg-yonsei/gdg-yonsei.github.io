@@ -19,6 +19,7 @@
     "react-scroll-parallax": "^3.3.2",
     "react-type-animation": "^2.1.2",
     "styled-components": "^5.3.6",
+    "swiper": "^9.0.2",
     "throttle-debounce": "^5.0.0"
   },
   "scripts": {
@@ -26,7 +27,9 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "reactSnap": {
     "include": [
