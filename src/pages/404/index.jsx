@@ -52,7 +52,7 @@ const DinosaurImage = styled.img`
 
 const H1 = styled.h1`
   font-size: 4vw;
-  margin-bottom: 1vh;
+  margin-bottom: 1.5vh;
 `;
 
 const Span = styled.span`
