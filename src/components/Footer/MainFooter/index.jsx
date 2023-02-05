@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import getRandomArbitrary from "@utils/getRandomArbitraryNumber";
 
-const LETTERS = "GDSC-Yonsei Chapter";
+const LETTERS = "GDSC Yonsei Univ. Seoul Campus Chapter";
 
 function MainFooter() {
   return (

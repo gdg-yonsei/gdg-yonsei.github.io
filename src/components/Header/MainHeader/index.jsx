@@ -1,4 +1,3 @@
-import Button from "@components/Button";
 import DropdownIcon from "@components/DropdownIcon";
 import styled from "styled-components";
 
@@ -39,6 +38,7 @@ const LeftEnd = styled.div`
 const LeftSpan = styled.span`
   font-size: 16px;
   color: ${(props) => props.theme.color.darkgrey};
+  cursor: pointer;
 `;
 
 const RightEnd = styled.div`

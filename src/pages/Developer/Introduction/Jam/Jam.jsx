@@ -1,7 +1,33 @@
-import styled from "styled-components";
+import useHover from "@hooks/useHover";
+import { IconContext } from "@react-icons/all-files";
+import styled, { css } from "styled-components";
 
-function Jam() {
-  return <Container></Container>;
+function Jam(props) {
+  const [hoverRef, isHovered] = useHover(false);
+
+  const IconStyle = {
+    width: "30%",
+    height: "100%",
+    fontSize: "30%",
+    color: "black",
+  };
+
+  return (
+    <Container ref={hoverRef}>
+      <IconContainer>
+        <IconContext.Provider
+          value={{
+            style: IconStyle,
+          }}
+        >
+          {props.icon}
+        </IconContext.Provider>
+      </IconContainer>
+      <DescContainer>
+        <DescSpan isHovered={isHovered}>{props.description}</DescSpan>
+      </DescContainer>
+    </Container>
+  );
 }
 
 export default Jam;
@@ -10,5 +36,56 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  background-color: black;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+
+  border-radius: 20px;
+
+  background-color: ${(props) => props.theme.backgroundColor.white};
+  border: 3px solid ${(props) => props.theme.backgroundColor.black};
+
+  cursor: pointer;
+`;
+
+const IconContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const DescContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+
+  overflow: hidden;
+`;
+
+const DescSpan = styled.span`
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+
+  font-size: 2.3vw;
+
+  transition: transform 0.3s cubic-bezier(0.13, 0.8, 0.24, 0.89);
+  will-change: transform;
+
+  ${(props) =>
+    props.isHovered
+      ? css`
+          transform: translateY(-5%);
+        `
+      : css`
+          transform: translateY(100%);
+        `}
 `;

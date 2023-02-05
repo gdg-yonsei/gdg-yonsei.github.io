@@ -6,7 +6,7 @@ function Progress() {
     <Container data-scroll-section>
       <ContentWrapper data-scroll data-scroll-speed="-10">
         <TitleWrapper>
-          <Title>And GDSC - YS is challenging.</Title>
+          <Title>...And GDSC - YS is challenging.</Title>
           <Desc>Currently in development.</Desc>
         </TitleWrapper>
         <SwpierWrapper>

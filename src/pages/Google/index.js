@@ -12,6 +12,7 @@ function GooglePage() {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        smoothMobile: true,
       }}
       containerRef={ref}
     >

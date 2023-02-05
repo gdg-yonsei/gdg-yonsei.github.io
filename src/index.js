@@ -11,6 +11,10 @@ import "./styles/globals.css";
 import "./styles/locomotive-scroll.css";
 import "./styles/reset.css";
 
+import "react-app-polyfill/ie9"; // IE 9 support.
+import "react-app-polyfill/ie11"; // IE 11 support.
+import "react-app-polyfill/stable"; // Stable 
+
 const rootElement = document.getElementById("root");
 
 ReactDOM.createRoot(rootElement).render(

@@ -1,19 +1,29 @@
 import styled from "styled-components";
 import Jam from "./Jam/Jam";
 
+import { VscCode } from "@react-icons/all-files/vsc/VscCode";
+import { BsServer } from "@react-icons/all-files/bs/BsServer";
+import { VscDeviceMobile } from "@react-icons/all-files/vsc/VscDeviceMobile";
+import { GiProcessor } from "@react-icons/all-files/gi/GiProcessor";
+import { FaCogs } from "@react-icons/all-files/fa/FaCogs";
+import { FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
+
 function Introduction() {
   return (
     <Container data-scroll-section>
-      <TitleWrapper>
-        <Title>6 Study Jams are Organized.</Title>
+      <TitleWrapper data-scroll data-scroll-speed="1">
+        <Title>
+          We Have&nbsp;
+          <Green>6 Study Jams&nbsp;</Green>Organized.
+        </Title>
       </TitleWrapper>
       <JamsContainer>
-        <Jam />
-        <Jam />
-        <Jam />
-        <Jam />
-        <Jam />
-        <Jam />
+        <Jam icon={<VscCode />} description={"Web Developement"} />
+        <Jam icon={<BsServer />} description={"Server Development"} />
+        <Jam icon={<VscDeviceMobile />} description={"Mobile Development"} />
+        <Jam icon={<GiProcessor />} description={"Artificial Intelligence"} />
+        <Jam icon={<FaCogs />} description={"Full-Stack Development"} />
+        <Jam icon={<FaHandshake />} description={"Developer Relations"} />
       </JamsContainer>
     </Container>
   );
@@ -33,8 +43,6 @@ const Container = styled.div`
   position: relative;
   z-index: 2;
 
-  background-color: ${(props) => props.theme.color.green};
-
   font-family: "Google Sans", sans-serif;
   color: white;
 `;
@@ -48,6 +56,12 @@ const TitleWrapper = styled.div`
 const Title = styled.span`
   display: inline-block;
   font-size: 5vw;
+
+  color: ${(props) => props.theme.backgroundColor.black};
+`;
+
+const Green = styled.span`
+  color: ${(props) => props.theme.color.green};
 `;
 
 const JamsContainer = styled.div`

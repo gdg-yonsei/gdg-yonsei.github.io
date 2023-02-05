@@ -20,6 +20,8 @@ function NavigationSection() {
               style={{
                 color: "black",
                 fontSize: "24px",
+                fontFamily:
+                  " -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
               }}
               speed={20}
               wrapper="div"

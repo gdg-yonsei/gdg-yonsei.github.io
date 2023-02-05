@@ -11,6 +11,7 @@ function Home() {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        smoothMobile: true,
       }}
       containerRef={ref}
     >

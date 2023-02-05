@@ -28,11 +28,15 @@ function Banner() {
           </div>
           <div data-scroll data-scroll-position="top" data-scroll-speed="3">
             {"Solution".split("").map((el, idx) => {
-              return (
-                <BodySpanFirst key={idx} animationDelay={idx}>
-                  {el}
-                </BodySpanFirst>
-              );
+              if (el === "S") {
+                return <BodySpanExtraLarge>{el}</BodySpanExtraLarge>;
+              } else {
+                return (
+                  <BodySpanFirst key={idx} animationDelay={idx}>
+                    {el}
+                  </BodySpanFirst>
+                );
+              }
             })}
           </div>
           <div data-scroll data-scroll-position="top" data-scroll-speed="4">
@@ -164,4 +168,9 @@ const TitleWrapper = styled.div`
 
 const TitleSpan = styled.h1`
   font-size: 28px;
+`;
+
+const BodySpanExtraLarge = styled.span`
+  display: inline-block;
+  font-size: 10vw;
 `;
