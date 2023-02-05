@@ -27,7 +27,7 @@ const Container = styled.div`
 const Span = styled.span`
   font-size: 16px;
   font-weight: 300;
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const AbsoluteSpan = styled.span`
@@ -40,5 +40,5 @@ const AbsoluteSpan = styled.span`
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 4px;
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;

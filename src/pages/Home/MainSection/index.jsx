@@ -92,7 +92,7 @@ const TitleSpan = styled.span`
   font-size: 10vmin;
   letter-spacing: 3.6px;
 
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const CardContainer = styled.div`

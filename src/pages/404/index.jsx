@@ -76,7 +76,7 @@ const BackToMain = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.backgroundColor.black};
-    color: white;
+    color: ${(props) => props.theme.backgroundColor.white};
   }
 `;
 

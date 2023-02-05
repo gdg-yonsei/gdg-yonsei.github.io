@@ -57,11 +57,11 @@ const TextWrapper = styled.div`
 `;
 
 const LeftText = styled.span`
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
   font-size: 40px;
 `;
 
 const RightText = styled.span`
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
   font-size: 16px;
 `;

@@ -60,7 +60,7 @@ const Container = styled.div`
   background-color: ${(props) => props.theme.color.red};
 
   font-family: "Google Sans", sans-serif;
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const TitleWrapper = styled.div`

@@ -58,7 +58,7 @@ const Container = styled.div`
   position: relative;
   z-index: 2;
 
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const TitleWrapper = styled.div`

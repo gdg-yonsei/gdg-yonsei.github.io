@@ -44,7 +44,7 @@ const Container = styled.div`
   z-index: 2;
 
   font-family: "Google Sans", sans-serif;
-  color: white;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const TitleWrapper = styled.div`
