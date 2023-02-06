@@ -8,7 +8,8 @@ function MainFooter() {
   return (
     <Container>
       <LeftEnd data-scroll-section>
-        {LETTERS.split("").map((letter, idx) => {
+        {[...LETTERS].map((letter, idx) => {
+          console.log(letter);
           return (
             <LeftSpan
               data-scroll
@@ -64,6 +65,9 @@ const LeftSpan = styled.span`
 
   font-size: 20px;
   color: black;
+
+  white-space: pre;
+  letter-spacing: 0.3px;
 `;
 
 const RightEnd = styled.div`

@@ -28,4 +28,6 @@ const MainContainer = styled.main`
 
   position: relative;
   z-index: 1000;
+
+  background-color: ${(props) => props.theme.backgroundColor.white};
 `;
