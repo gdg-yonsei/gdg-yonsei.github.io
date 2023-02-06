@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { letterAnimation } from "./animation";
 import GoogleDevelopers from "@assets/images/GoogleDevelopers.png";
+import { Link } from "react-router-dom";
 
 function Banner() {
   return (
@@ -14,6 +15,16 @@ function Banner() {
         >
           <TitleSpan>Introducing</TitleSpan>
         </TitleWrapper>
+        <Link to="/">
+          <BackToMainButton
+            data-scroll
+            data-scroll-position="top"
+            data-scroll-direction="horizontal"
+            data-scroll-speed="5"
+          >
+            Back To Main
+          </BackToMainButton>
+        </Link>
       </TitleSection>
       <BodySection>
         <TextSection>
@@ -124,9 +135,12 @@ const BodySpanFirst = styled(BodySpan)`
 const TitleSection = styled.div`
   width: 100%;
   padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const TitleWrapper = styled.div`
@@ -144,10 +158,21 @@ const TitleWrapper = styled.div`
   border-radius: 50px;
 
   background-color: ${(props) => props.theme.color.green};
-
-  margin-left: 5vw;
 `;
 
 const TitleSpan = styled.h1`
   font-size: 28px;
+`;
+
+const BackToMainButton = styled.button`
+  padding: 20px 36px;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Google Sans", sans-serif;
+
+  border: none;
+  background-color: ${(props) => props.theme.backgroundColor.white};
+
+  cursor: pointer;
 `;

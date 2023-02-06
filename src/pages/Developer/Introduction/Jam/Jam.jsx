@@ -15,7 +15,12 @@ function Jam(props) {
   };
 
   return (
-    <Container ref={hoverRef} onClick={() => {scroll.scrollTo(props.scrollTarget)}}>
+    <Container
+      ref={hoverRef}
+      onClick={() => {
+        scroll.scrollTo(props.scrollTarget);
+      }}
+    >
       <IconContainer>
         <IconContext.Provider
           value={{

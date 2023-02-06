@@ -1,5 +1,5 @@
+import LocomotiveScrollCustom from "@context/LocomotiveScrollCustom";
 import { useRef } from "react";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import styled from "styled-components";
 import Banner from "./Banner";
 import Introduction from "./Introduction";
@@ -9,19 +9,13 @@ function GooglePage() {
   const ref = useRef(null);
 
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        smoothMobile: true,
-      }}
-      containerRef={ref}
-    >
+    <LocomotiveScrollCustom containerRef={ref}>
       <Container data-scroll-container ref={ref}>
         <Banner />
         <Introduction />
         <Progress />
       </Container>
-    </LocomotiveScrollProvider>
+    </LocomotiveScrollCustom>
   );
 }
 

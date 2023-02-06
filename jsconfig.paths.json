@@ -11,6 +11,7 @@
       "@utils/*": ["./src/utils/*"],
       "@layout/*": ["./src/layout/*"],
       "@store/*": ["./src/store/*"],
+      "@context/*": ["./src/context/*"],
       "@/*": ["./src/*"]
     }
   }

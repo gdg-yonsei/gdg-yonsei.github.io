@@ -9,7 +9,6 @@ function MainFooter() {
     <Container>
       <LeftEnd data-scroll-section>
         {[...LETTERS].map((letter, idx) => {
-          console.log(letter);
           return (
             <LeftSpan
               data-scroll
