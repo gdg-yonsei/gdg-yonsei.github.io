@@ -9,7 +9,7 @@ function Page404() {
     <Container>
       <DinosaurImage src={DinosaurGif} alt="DinosaurGif" />
       <H1>Captain, We're Lost!</H1>
-      <Span>Don't worry. We're get you back on course.</Span>
+      <Span>Don't worry. We'll get you back on course.</Span>
       <BackToMain
         onClick={() => {
           navigate(-1);
@@ -44,6 +44,9 @@ const Container = styled.div`
   position: relative;
 
   font-family: "Google Sans", sans-serif;
+
+  *::selection {
+  }
 `;
 
 const DinosaurImage = styled.img`
@@ -51,7 +54,7 @@ const DinosaurImage = styled.img`
 `;
 
 const H1 = styled.h1`
-  font-size: 4vw;
+  font-size: 80px;
   margin-bottom: 1.5vh;
 `;
 
