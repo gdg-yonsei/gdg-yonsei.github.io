@@ -20,7 +20,7 @@ function useHover() {
         ref.removeEventListener("mouseout", handleHoverOut);
       };
     }
-  }, [hoverRef.current]);
+  }, []);
 
   return [hoverRef, hovered];
 }
