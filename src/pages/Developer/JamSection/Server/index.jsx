@@ -59,10 +59,10 @@ function ServerSection() {
             <H1>02.</H1>
             <H2>Server Development</H2>
             <Paragraph>
-              Backend of the service is something magical to the user, <br />
-              because all of the talks between the client and the server work
-              under the hood. <br />
-              Every communication should be held in integrated way, and each
+              Backend of the service is something magical to the user, because
+              all of the talks between the client and the server work under the
+              hood. <br />
+              Every communication should be held in an integrated way, and each
               communication should have their own responsibility.
             </Paragraph>
           </OutlineContainer>

@@ -32,9 +32,9 @@ function MobileSection() {
             <H1>03.</H1>
             <H2>Mobile Development</H2>
             <Paragraph>
-              As mobile smartphones & devices are any closer than other devices,
-              the importance of mobile developement is emphasized more and more
-              nowadays. <br />
+              As hand-held mobile smartphones & devices are any closer than other
+              devices, the importance of mobile developement is emphasized more
+              and more nowadays. <br />
               Crucial as it seems, and it is!
             </Paragraph>
           </OutlineContainer>

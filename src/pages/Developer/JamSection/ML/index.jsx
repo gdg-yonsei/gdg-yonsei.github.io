@@ -36,9 +36,9 @@ function MLSection() {
             <H2>Machine Learning</H2>
             <H2>Artificial Intelligence</H2>
             <Paragraph>
-              State-of-the-art technology is here. At the frontier of the IT
-              industry, GDSC - YS ML study jam pursues the best and the finest
-              model.
+              State-of-the-art technology is here. At the frontier of the future
+              IT industry, GDSC - YS ML study jam pursues the best and the
+              finest model training and model serving for customized needs.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
