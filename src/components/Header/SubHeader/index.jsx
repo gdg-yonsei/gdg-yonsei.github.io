@@ -16,7 +16,7 @@ const Container = styled.div`
   padding-top: 5vh;
   padding-bottom: 2vh;
 
-  border-bottom: 3px solid ${(props) => props.theme.lightcolor.light};
+  border-bottom: 3px solid ${(props) => props.theme.lightColor.light};
 
   display: flex;
   justify-content: flex-end;

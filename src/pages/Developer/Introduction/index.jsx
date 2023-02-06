@@ -18,12 +18,36 @@ function Introduction() {
         </Title>
       </TitleWrapper>
       <JamsContainer>
-        <Jam icon={<VscCode />} description={"Web Developement"} />
-        <Jam icon={<BsServer />} description={"Server Development"} />
-        <Jam icon={<VscDeviceMobile />} description={"Mobile Development"} />
-        <Jam icon={<GiProcessor />} description={"Artificial Intelligence"} />
-        <Jam icon={<FaCogs />} description={"Full-Stack Development"} />
-        <Jam icon={<FaHandshake />} description={"Developer Relations"} />
+        <Jam
+          icon={<VscCode />}
+          description={"Web Developement"}
+          scrollTarget="#fixed-element-web"
+        />
+        <Jam
+          icon={<BsServer />}
+          description={"Server Development"}
+          scrollTarget="#fixed-element-server"
+        />
+        <Jam
+          icon={<VscDeviceMobile />}
+          description={"Mobile Development"}
+          scrollTarget="#fixed-element-mobile"
+        />
+        <Jam
+          icon={<GiProcessor />}
+          description={"Artificial Intelligence"}
+          scrollTarget="#fixed-element-ML"
+        />
+        <Jam
+          icon={<FaCogs />}
+          description={"Full-Stack Development"}
+          scrollTarget="#fixed-element-FS"
+        />
+        <Jam
+          icon={<FaHandshake />}
+          description={"Developer Relations"}
+          scrollTarget="#fixed-element-DevRel"
+        />
       </JamsContainer>
     </Container>
   );

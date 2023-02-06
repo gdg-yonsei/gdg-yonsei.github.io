@@ -10,7 +10,7 @@ const AsteriskElement = styled.figure`
   position: relative;
   width: 2.5vw;
   height: 10vw;
-  background: ${(props) => props.theme.lightcolor.light};
+  background: ${(props) => props.theme.lightColor.light};
 
   &::before,
   &::after {
@@ -22,7 +22,7 @@ const AsteriskElement = styled.figure`
     width: 2.5vw;
     height: 10vw;
 
-    background: ${(props) => props.theme.lightcolor.light};
+    background: ${(props) => props.theme.lightColor.light};
   }
 
   &::before {

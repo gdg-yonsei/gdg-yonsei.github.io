@@ -27,7 +27,7 @@ const Container = styled.figure`
   align-items: center;
 
   background-color: transparent;
-  border: 1px solid ${(props) => props.theme.lightcolor.light};
+  border: 1px solid ${(props) => props.theme.lightColor.light};
 
   cursor: pointer;
   transition: background-color 1s ease-in-out;

@@ -8,8 +8,16 @@ export const theme = {
     grey: "#676c72",
     darkgrey: "#404040",
     pink: "#fbb4a4",
+    purple: "#5339B3",
   },
-  lightcolor: {
+  brightColor: {
+    blue: "#57cbff",
+    red: "#ff7db0",
+    green: "#5cde6d",
+    yellow: "#ffd527",
+    purple: "#9F85FF",
+  },
+  lightColor: {
     blue: "#bbdefb",
     red: "#ffcdd2",
     green: "#c8e6c9",

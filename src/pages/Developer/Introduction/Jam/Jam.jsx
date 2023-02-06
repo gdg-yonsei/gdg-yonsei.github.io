@@ -1,9 +1,11 @@
 import useHover from "@hooks/useHover";
 import { IconContext } from "@react-icons/all-files";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 import styled, { css } from "styled-components";
 
 function Jam(props) {
   const [hoverRef, isHovered] = useHover(false);
+  const { scroll } = useLocomotiveScroll();
 
   const IconStyle = {
     width: "30%",
@@ -13,7 +15,7 @@ function Jam(props) {
   };
 
   return (
-    <Container ref={hoverRef}>
+    <Container ref={hoverRef} onClick={() => {scroll.scrollTo(props.scrollTarget)}}>
       <IconContainer>
         <IconContext.Provider
           value={{

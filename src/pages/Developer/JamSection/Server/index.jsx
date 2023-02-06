@@ -4,35 +4,42 @@ import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
 
 // Icon Import
-import { SiHtml5 } from "@react-icons/all-files/si/SiHtml5";
-import { SiCss3 } from "@react-icons/all-files/si/SiCss3";
-import { ReactComponent as SiSass } from "@assets/images/icons/web/sass.svg";
-import { ReactComponent as SiStyledComponents } from "@assets/images/icons/web/styledcomponents.svg";
+import { ReactComponent as SiPython } from "@assets/images/icons/python.svg";
+import { ReactComponent as SiSwift } from "@assets/images/icons/swift.svg";
+import { ReactComponent as SiJava } from "@assets/images/icons/server/java.svg";
+import { ReactComponent as SiCplusplus } from "@assets/images/icons/server/cplusplus.svg";
+import { ReactComponent as SiPhp } from "@assets/images/icons/server/php.svg";
+import { ReactComponent as SiGolang } from "@assets/images/icons/server/go.svg";
+import { ReactComponent as SiRuby } from "@assets/images/icons/server/ruby.svg";
+import { ReactComponent as SiKotlin } from "@assets/images/icons/server/kotlin.svg";
+import { ReactComponent as SiScala } from "@assets/images/icons/server/scala.svg";
 import { SiJavascript } from "@react-icons/all-files/si/SiJavascript";
-import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
-
-import { SiReact } from "@react-icons/all-files/si/SiReact";
-import { ReactComponent as SiNextJS } from "@assets/images/icons/web/nextdotjs.svg";
-import { SiVueDotJs } from "@react-icons/all-files/si/SiVueDotJs";
-import { SiAngular } from "@react-icons/all-files/si/SiAngular";
-import { SiRedux } from "@react-icons/all-files/si/SiRedux";
-import { ReactComponent as SiReduxSaga } from "@assets/images/icons/web/reduxsaga.svg";
-import { ReactComponent as SiReactQuery } from "@assets/images/icons/web/reactquery.svg";
-import { ReactComponent as SiReactTable } from "@assets/images/icons/web/reacttable.svg";
 import { ReactComponent as SiNodeJS } from "@assets/images/icons/web/nodedotjs.svg";
-import { ReactComponent as SiThreeJS } from "@assets/images/icons/web/threedotjs.svg";
-import { ReactComponent as SiWebGL } from "@assets/images/icons/web/webgl.svg";
-import { ReactComponent as SiElectronJS } from "@assets/images/icons/web/electron.svg";
 
-import { SiBabel } from "@react-icons/all-files/si/SiBabel";
-import { SiWebpack } from "@react-icons/all-files/si/SiWebpack";
-import { ReactComponent as SiVite } from "@assets/images/icons/web/vite.svg";
+import { ReactComponent as SiSpring } from "@assets/images/icons/server/spring.svg";
+import { ReactComponent as SiSpringBoot } from "@assets/images/icons/server/springboot.svg";
+import { ReactComponent as SiDotnet } from "@assets/images/icons/server/dotnet.svg";
+import { ReactComponent as SiRubyOnRails } from "@assets/images/icons/server/rubyonrails.svg";
+import { ReactComponent as SiLaravel } from "@assets/images/icons/server/laravel.svg";
+import { ReactComponent as SiSymfony } from "@assets/images/icons/server/symfony.svg";
+import { ReactComponent as SiNestJS } from "@assets/images/icons/server/nestjs.svg";
+import { ReactComponent as SiFastAPI } from "@assets/images/icons/server/fastapi.svg";
+import { ReactComponent as SiExpress } from "@assets/images/icons/server/express.svg";
 
-import { SiNpm } from "@react-icons/all-files/si/SiNpm";
-import { SiYarn } from "@react-icons/all-files/si/SiYarn";
+import { ReactComponent as SiMongoDB } from "@assets/images/icons/server/mongodb.svg";
+import { ReactComponent as SiSQLite } from "@assets/images/icons/server/sqlite.svg";
+import { ReactComponent as SiMySQL } from "@assets/images/icons/server/mysql.svg";
+import { ReactComponent as SiPostgreSQL } from "@assets/images/icons/server/postgresql.svg";
+import { ReactComponent as SiRedis } from "@assets/images/icons/server/redis.svg";
+
+import { ReactComponent as SiDocker } from "@assets/images/icons/server/docker.svg";
+import { ReactComponent as SiJira } from "@assets/images/icons/server/jira.svg";
+import { ReactComponent as SiJenkins } from "@assets/images/icons/server/jenkins.svg";
+import { ReactComponent as SiGCP } from "@assets/images/icons/server/googlecloud.svg";
+
 import GithubMenu from "./GithubMenu";
 
-function WebSection() {
+function ServerSection() {
   const observerRef = useRef(null);
   const observerRefSecond = useRef(null);
   const observerRefThird = useRef(null);
@@ -42,20 +49,21 @@ function WebSection() {
 
   return (
     <Container data-scroll-section>
-      <ContentWrapper id="fixed-element-web">
+      <ContentWrapper id="fixed-element-server">
         <LeftSection>
           <OutlineContainer
             data-scroll
             data-scroll-sticky
-            data-scroll-target="#fixed-element-web"
+            data-scroll-target="#fixed-element-server"
           >
-            <H1>01.</H1>
-            <H2>Web Development</H2>
+            <H1>02.</H1>
+            <H2>Server Development</H2>
             <Paragraph>
-              Designing how to interact is another type of art, implying modern
-              frontend code is something more than a layout. <br />
-              Leveraging with modern SPA frameworks, the frontend section
-              defines what and how to deliver the best experience to the user.
+              Backend of the service is something magical to the user, <br />
+              because all of the talks between the client and the server work
+              under the hood. <br />
+              Every communication should be held in integrated way, and each
+              communication should have their own responsibility.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -72,23 +80,16 @@ function WebSection() {
               )}
             </TitleWrapperFirst>
             <LearnList>
-              <List>Explore fundamentals of web development.</List>
-              <List>Build UI/UX-friendly web wireframe for users.</List>
+              <List>Develop web application with RDBMS & Redis.</List>
               <List>
-                Think of creative interaction upon various browser events.
+                Manage REST & RESTful api endpoint using HTTP protocol.
+              </List>
+              <List>Automated CI/CD for continuous service.</List>
+              <List>
+                Penetration test & hacking, learn security by mock CTF.
               </List>
               <List>
-                Write Unit / UI tests to identify errors and malfunctions.
-              </List>
-              <List>
-                Conduct research about modern SPA frameworks & libraries.
-              </List>
-              <List>Build optimized code for faster experience.</List>
-              <List>
-                Understand the process between client-server architecture.
-              </List>
-              <List>
-                Study state management and data binding between components.
+                Design microservice architecture using multi languages.
               </List>
             </LearnList>
           </SectionWrapper>
@@ -107,50 +108,59 @@ function WebSection() {
               <IconName>Languages</IconName>
               <IconWrapper>
                 {/* FIXME: Why not fill color props? */}
-                <SiHtml5 />
-                <SiCss3 />
+                <SiJava />
+                <SiPython />
                 <SiJavascript />
-                <SiTypescript />
+                <SiSwift />
               </IconWrapper>
               <IconWrapper>
-                <SiSass />
-                <SiStyledComponents />
+                <SiGolang />
+                <SiRuby />
+                <SiKotlin />
+              </IconWrapper>
+              <IconWrapper>
+                <SiScala />
+                <SiPhp />
+                <SiCplusplus />
               </IconWrapper>
             </IconList>
             <IconList>
-              <IconName>Frameworks & Libraries</IconName>
+              <IconName>Server Frameworks & Libraries</IconName>
               <IconWrapper>
-                <SiReact />
-                <SiNextJS />
+                <SiSpring />
+                <SiSpringBoot />
+
                 <SiNodeJS />
-                <SiVueDotJs />
-                <SiAngular />
+                <SiExpress />
               </IconWrapper>
               <IconWrapper>
-                <SiRedux />
-                <SiReduxSaga />
-                <SiReactQuery />
-                <SiReactTable />
+                <SiDotnet />
+                <SiRubyOnRails />
+                <SiLaravel />
               </IconWrapper>
               <IconWrapper>
-                <SiThreeJS />
-                <SiWebGL />
-                <SiElectronJS />
+                <SiSymfony />
+                <SiNestJS />
+                <SiFastAPI />
               </IconWrapper>
             </IconList>
             <IconList>
-              <IconName>Build Tools & Transpilers</IconName>
+              <IconName>RDBMS</IconName>
               <IconWrapper>
-                <SiWebpack />
-                <SiVite />
-                <SiBabel />
+                <SiMongoDB />
+                <SiMySQL />
+                <SiPostgreSQL />
+                <SiSQLite />
+                <SiRedis />
               </IconWrapper>
             </IconList>
             <IconList>
-              <IconName>Package Manager</IconName>
+              <IconName>CI/CD</IconName>
               <IconWrapper>
-                <SiNpm />
-                <SiYarn />
+                <SiDocker />
+                <SiJira />
+                <SiJenkins />
+                <SiGCP />
               </IconWrapper>
             </IconList>
           </SectionWrapper>
@@ -167,42 +177,50 @@ function WebSection() {
             </TitleWrapperThird>
             <GithubList>
               <GithubMenu
-                title={"DOM Visualizer"}
+                title={"Faster DB utilizing in-memory DBMS"}
                 type="Github"
                 description={
-                  "Parsing HTML to Virtual DOM Tree. Written in JavaScript & TypeScript without DOMParser API. Features automatic error checking and tree creation animation."
+                  "Utilizing in-memory DBMS, widely known as Redis, DB caching makes handling queries a lot more easier!"
                 }
-                link="https://mumwa.github.io/dom-visualizer/"
+                link="https://github.com/orgs/gdsc-ys/repositories?q=sprint1&type=all"
               />
               <GithubMenu
-                title={"Magic-boolean-conch"}
-                type="Npm"
+                title={"Wargame Simulation"}
+                type={"Dreamhack"}
                 description={
-                  "NPM package that returns random boolean or undefined type. Grab it if you needed. :)"
+                  <span>
+                    If you know the enemy and know yourself, you need not fear
+                    the result of a hundred battles. <br />- Sun Zhu, The Art of
+                    War -
+                  </span>
                 }
-                link="https://www.npmjs.com/package/magic-boolean-conch"
+                link="https://dreamhack.io/group/989/detail"
               />
               <GithubMenu
-                title={"React-moar-table"}
-                type="Npm"
+                title={"Jira Implementation"}
+                type={"Github"}
                 description={
-                  "Customized react table component with other features included. Best choice if you need lightweight & fully-functional table component."
+                  <span>
+                    Implementation of Jira, the project tracking software.{" "}
+                    <br />
+                    Designed based on microservice architecture.
+                  </span>
                 }
-                link="https://www.npmjs.com/package/magic-boolean-conch"
+                link="https://github.com/orgs/gdsc-ys/repositories?q=jira&type=all&language=&sort="
               />
               <GithubMenu
-                title={"Model Curation"}
-                type="Npm"
+                title={"Catrot Market Service"}
+                type={"Github"}
                 description={
-                  "Utilizing three.js, displaying 3d model in website with this package comes in handy."
+                  <span>
+                    Backend of secondhand market services.
+                    <br />
+                    Designed based on microservice architecture.
+                    <br />
+                    Implemented chat, item query, user grouping and more!
+                  </span>
                 }
-                link="https://www.npmjs.com/package/model-curation"
-              />
-              <GithubMenu
-                title={"Course Apply Webpage"}
-                type="Github"
-                description={"Mock Yonsei Univ. Course Apply Webpage."}
-                link="https://github.com/gdsc-ys/left-web-sprint-courseapply"
+                link="https://github.com/orgs/gdsc-ys/repositories?q=catrot"
               />
             </GithubList>
           </SectionWrapper>
@@ -212,7 +230,7 @@ function WebSection() {
   );
 }
 
-export default WebSection;
+export default ServerSection;
 
 const Container = styled.div`
   width: 100%;
@@ -292,7 +310,7 @@ const RightSection = styled.div`
   align-items: center;
 
   overflow: hidden;
-  background-color: ${(props) => props.theme.color.blue};
+  background-color: ${(props) => props.theme.color.red};
 `;
 
 const SectionWrapper = styled.div`
@@ -313,7 +331,7 @@ const TitleWrapper = styled.div`
 
     &::after {
       // cursor styling
-      color: ${(props) => props.theme.brightColor.blue};
+      color: ${(props) => props.theme.brightColor.red};
     }
   }
 `;
@@ -386,13 +404,14 @@ const IconWrapper = styled.div`
     cursor: pointer;
 
     path {
-      fill: ${(props) => props.theme.lightColor.blue};
+      fill: ${(props) => props.theme.lightColor.red};
       transition: fill 0.1s ease-in;
     }
 
     &:hover {
       path {
         fill: ${(props) => props.theme.backgroundColor.white};
+        /* fill: inherit; */
       }
     }
   }

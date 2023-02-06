@@ -2,8 +2,15 @@ import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import styled from "styled-components";
 import Banner from "./Banner";
+import FooterSection from "./FooterSection";
 import Introduction from "./Introduction";
+import DevRelSection from "./JamSection/DevRel";
+import FSSection from "./JamSection/FS";
+import MLSection from "./JamSection/ML";
+import MobileSection from "./JamSection/Mobile";
+import ServerSection from "./JamSection/Server";
 import WebSection from "./JamSection/Web";
+import SectionIntro from "./SectionIntro";
 
 function DeveloperPage() {
   const ref = useRef(null);
@@ -19,8 +26,14 @@ function DeveloperPage() {
       <Container data-scroll-container ref={ref}>
         <Banner />
         <Introduction />
+        <SectionIntro />
         <WebSection />
-        <SamplePadding />
+        <ServerSection />
+        <MobileSection />
+        <MLSection />
+        <FSSection />
+        <DevRelSection />
+        <FooterSection />
       </Container>
     </LocomotiveScrollProvider>
   );
@@ -37,9 +50,4 @@ const Container = styled.main`
   align-items: center;
 
   font-family: "Google Sans", sans-serif;
-`;
-
-const SamplePadding = styled.div`
-  width: 100%;
-  height: 100vh;
 `;
