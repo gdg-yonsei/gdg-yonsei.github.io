@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b712477.css",
-    "main.js": "/static/js/main.249bdcc4.js",
+    "main.css": "/static/css/main.8ff8d9a4.css",
+    "main.js": "/static/js/main.136df01a.js",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -81,11 +81,11 @@
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
     "static/media/flutter.svg": "/static/media/flutter.799390e896410bb1fbfe56c03371bfaa.svg",
     "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg",
-    "main.8b712477.css.map": "/static/css/main.8b712477.css.map",
-    "main.249bdcc4.js.map": "/static/js/main.249bdcc4.js.map"
+    "main.8ff8d9a4.css.map": "/static/css/main.8ff8d9a4.css.map",
+    "main.136df01a.js.map": "/static/js/main.136df01a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b712477.css",
-    "static/js/main.249bdcc4.js"
+    "static/css/main.8ff8d9a4.css",
+    "static/js/main.136df01a.js"
   ]
 }
