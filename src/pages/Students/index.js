@@ -2,24 +2,21 @@ import LocomotiveScrollCustom from "@context/LocomotiveScrollCustom";
 import { useRef } from "react";
 import styled from "styled-components";
 import Banner from "./Banner";
-import Introduction from "./Introduction";
-import Progress from "./Progress";
 
-function GooglePage() {
+function StudentPage() {
   const ref = useRef(null);
 
   return (
     <LocomotiveScrollCustom containerRef={ref}>
       <Container data-scroll-container ref={ref}>
         <Banner />
-        <Introduction />
-        <Progress />
+        <PaddingTest />
       </Container>
     </LocomotiveScrollCustom>
   );
 }
 
-export default GooglePage;
+export default StudentPage;
 
 const Container = styled.main`
   width: 100%;
@@ -28,6 +25,9 @@ const Container = styled.main`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+`;
 
-  background-color: ${(props) => props.theme.backgroundColor.white};
+const PaddingTest = styled.div`
+  width: 100%;
+  height: 100vh;
 `;

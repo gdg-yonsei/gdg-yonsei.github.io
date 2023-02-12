@@ -229,6 +229,8 @@ const Container = styled.div`
   color: ${(props) => props.theme.backgroundColor.white};
 
   perspective: 1px;
+
+  background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const ContentWrapper = styled.div`

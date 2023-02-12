@@ -9,7 +9,9 @@ function MainHeader() {
       </LeftEnd>
       <RightEnd>
         <DropdownIcon />
-        <LoginButton className="Login">Login</LoginButton>
+        <a href="https://accounts.google.com" target="_self">
+          <LoginButton className="Login">Login</LoginButton>
+        </a>
       </RightEnd>
     </Container>
   );
@@ -65,7 +67,7 @@ const LoginButton = styled.button`
   vertical-align: middle;
 
   background-color: ${(props) => props.theme.color.blue};
-  color: ${props => props.theme.backgroundColor.white};
+  color: ${(props) => props.theme.backgroundColor.white};
   border: 1px solid #4285f4;
   border-radius: 4px;
 

@@ -34,6 +34,8 @@ const TitleWrapper = styled.div`
   margin-top: 10vh;
   margin-left: 10vw;
   margin-bottom: 10vh;
+
+  background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const Title = styled.div`

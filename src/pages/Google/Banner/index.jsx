@@ -127,6 +127,8 @@ const BodySpanLarge = styled.span`
   line-height: 1.1;
   opacity: 0;
 
+  color: ${(props) => props.theme.backgroundColor.black};
+
   animation: ${letterAnimation} 0.2s ease-out normal forwards;
   animation-delay: ${(props) => `${props.animationDelay * 0.1}s`};
 `;
@@ -185,6 +187,8 @@ const TitleSpan = styled.h1`
 const BodySpanExtraLarge = styled.span`
   display: inline-block;
   font-size: 10vw;
+
+  color: ${(props) => props.theme.backgroundColor.black};
 `;
 
 const BackToMainButton = styled.button`
@@ -195,6 +199,7 @@ const BackToMainButton = styled.button`
   font-family: "Google Sans", sans-serif;
 
   border: none;
+  color: ${(props) => props.theme.backgroundColor.black};
   background-color: ${(props) => props.theme.backgroundColor.white};
 
   cursor: pointer;

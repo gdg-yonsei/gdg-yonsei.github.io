@@ -38,7 +38,7 @@ function Banner() {
             })}
           </div>
           <div data-scroll data-scroll-position="top" data-scroll-speed="3">
-            {"Developers".split("").map((el, idx) => {
+            {"Students".split("").map((el, idx) => {
               return (
                 <BodySpanFirst key={idx} animationDelay={idx}>
                   {el}
@@ -76,8 +76,6 @@ const HeadingSection = styled.div`
   align-items: center;
 
   font-family: "Google Sans";
-
-  background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const BodySection = styled.div`
@@ -115,8 +113,6 @@ const BodySpanLarge = styled.span`
 
   line-height: 1.1;
   opacity: 0;
-
-  color: ${(props) => props.theme.backgroundColor.black};
 
   animation: ${letterAnimation} 0.2s ease-out normal forwards;
   animation-delay: ${(props) => `${props.animationDelay * 0.1}s`};
@@ -161,7 +157,7 @@ const TitleWrapper = styled.div`
   border: 2px solid ${(props) => props.theme.backgroundColor.black};
   border-radius: 50px;
 
-  background-color: ${(props) => props.theme.color.green};
+  background-color: ${(props) => props.theme.color.blue};
 `;
 
 const TitleSpan = styled.h1`
@@ -177,7 +173,6 @@ const BackToMainButton = styled.button`
 
   border: none;
   background-color: ${(props) => props.theme.backgroundColor.white};
-  color: ${(props) => props.theme.backgroundColor.black};
 
   cursor: pointer;
 `;
