@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { letterAnimation } from "./animation";
-import GoogleDevelopers from "@assets/images/GoogleDevelopers.png";
+import pattern from "@assets/images/odessaPattern1.png";
 import { Link } from "react-router-dom";
 
 function Banner() {
@@ -53,7 +53,7 @@ function Banner() {
             data-scroll
             data-scroll-position="top"
             data-scroll-speed="3"
-            src={GoogleDevelopers}
+            src={pattern}
             alt="Solution Challenge"
           />
         </CanvasSection>
@@ -69,6 +69,7 @@ const HeadingSection = styled.div`
   height: 100vh;
 
   padding-bottom: 1vh;
+  margin-bottom: 5vh;
 
   display: flex;
   flex-direction: column;
@@ -98,12 +99,13 @@ const TextSection = styled.div`
 
 const CanvasSection = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 `;
 
 const CanvasImage = styled.img`
-  width: 80%;
+  height: 80vh;
 `;
 
 const BodySpanLarge = styled.span`

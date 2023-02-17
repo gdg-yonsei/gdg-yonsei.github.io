@@ -1,5 +1,4 @@
-import useSingleEffect from "@hooks/useSingleEffect";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function useWindowSize() {
   const [size, setSize] = useState({
@@ -7,7 +6,7 @@ function useWindowSize() {
     height: undefined,
   });
 
-  useSingleEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setSize({
         width: window.innerWidth,
@@ -20,7 +19,7 @@ function useWindowSize() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, []);
 
   return size;
 }

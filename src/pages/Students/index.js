@@ -1,18 +1,28 @@
+import GithubCursor from "@components/GithubCursor";
 import LocomotiveScrollCustom from "@context/LocomotiveScrollCustom";
+import MouseContextProvider from "@context/MouseContext";
 import { useRef } from "react";
 import styled from "styled-components";
 import Banner from "./Banner";
+import FooterSection from "./FooterSection";
+import MemberSection from "./MemberSection";
 
 function StudentPage() {
   const ref = useRef(null);
 
   return (
-    <LocomotiveScrollCustom containerRef={ref}>
-      <Container data-scroll-container ref={ref}>
-        <Banner />
-        <PaddingTest />
-      </Container>
-    </LocomotiveScrollCustom>
+    <>
+      <LocomotiveScrollCustom containerRef={ref}>
+        <Container data-scroll-container ref={ref}>
+          <Banner />
+          <MouseContextProvider>
+            <MemberSection />
+            <GithubCursor />
+          </MouseContextProvider>
+          <FooterSection />
+        </Container>
+      </LocomotiveScrollCustom>
+    </>
   );
 }
 
@@ -25,9 +35,6 @@ const Container = styled.main`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-`;
 
-const PaddingTest = styled.div`
-  width: 100%;
-  height: 100vh;
+  font-family: "Google Sans";
 `;

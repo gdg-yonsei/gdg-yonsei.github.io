@@ -32,6 +32,10 @@ export const theme = {
     pink: "#f28b82",
   },
   backgroundColor: {
+    red: "#f0e5e6",
+    green: "#eaf0e9",
+    blue: "#e3eef1",
+    yellow: "#f1eee2",
     white: "#fffdfa",
     black: "#181818",
     button: "#f8f9fa",
