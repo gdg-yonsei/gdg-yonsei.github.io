@@ -80,6 +80,8 @@ const UpperSpan = styled.span`
   letter-spacing: 2px;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  color: ${(props) => props.theme.contrast.red};
 `;
 
 const LowerContainer = styled.div`

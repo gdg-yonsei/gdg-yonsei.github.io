@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "cra-bundle-analyzer": "^0.1.1",
     "craco": "^0.0.3",
     "gh-pages": "^5.0.0",
     "react-snap": "^1.23.0",
