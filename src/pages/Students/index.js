@@ -4,6 +4,7 @@ import MouseContextProvider from "@context/MouseContext";
 import { useRef } from "react";
 import styled from "styled-components";
 import Banner from "./Banner";
+import BlogSection from "./BlogSection";
 import FooterSection from "./FooterSection";
 import MemberSection from "./MemberSection";
 
@@ -19,6 +20,7 @@ function StudentPage() {
             <MemberSection />
             <GithubCursor />
           </MouseContextProvider>
+          <BlogSection />
           <FooterSection />
         </Container>
       </LocomotiveScrollCustom>
@@ -37,4 +39,6 @@ const Container = styled.main`
   align-items: center;
 
   font-family: "Google Sans";
+
+  perspective: 1px; // for locomotive-scroll element disappearance bug fix.
 `;

@@ -12,7 +12,13 @@ function GithubCursor() {
   const isHovered = cursorType !== "";
 
   return (
-    <Ring xPos={x} yPos={y} githubHovered={isHovered}>
+    <Ring
+      style={{
+        top: `${y}px`,
+        left: `${x}px`,
+      }}
+      githubHovered={isHovered}
+    >
       {isHovered && (
         <>
           <GithubIcon width={50} height={35} fill="white" />
@@ -27,8 +33,6 @@ export default memo(GithubCursor);
 
 const Ring = styled.div`
   position: fixed;
-  top: ${(props) => `${props.yPos}px`};
-  left: ${(props) => `${props.xPos}px`};
 
   border-radius: 100%;
 

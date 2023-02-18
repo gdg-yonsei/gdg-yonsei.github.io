@@ -18,11 +18,11 @@ function useComponentVisible(init) {
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
-    document.addEventListener("keydown", handleClickOutside, true);
+    document.addEventListener("keydown", handleEscPress, true);
 
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
-      document.removeEventListener("keydown", handleClickOutside, true);
+      document.removeEventListener("keydown", handleEscPress, true);
     };
   }, []);
 

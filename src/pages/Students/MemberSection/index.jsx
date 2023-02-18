@@ -1,45 +1,49 @@
 import { LeftAppearAnimationWidth } from "@components/Animation/LeftAppearAnimation";
-import useOnScreen from "@hooks/useOnScreen";
 import { useCallback, useEffect, useRef, useState } from "react";
 import ReactTextTransition from "react-text-transition";
 import styled, { useTheme } from "styled-components";
 import MemberCard from "./MemberCard";
-import { CoreList, MemberList } from "./memberList";
+import { DevrelList, MemberList } from "./memberList";
 
 import HorizontalPatternImage1 from "@assets/images/pattern3.png";
 import HorizontalPatternImage2 from "@assets/images/pattern4.png";
+import useLocomotiveScrollPosition from "@hooks/useLocomotiveScrollPosition";
+import useWindowSize from "@hooks/useWindowSize";
 import { MouseParallaxContainer } from "react-parallax-mouse";
 import LeadMemberCard from "./LeadMemberCard";
 import ProgressBar from "./ProgressBar";
 
-const Writeups = ["Lead", "Cores", "Members", ""];
+const Writeups = ["Lead", "DevRel", "Developers", ""];
 
 function MemberSection() {
   const sectionRef = useRef(null);
-  // FIXME: Why intersection observer not working properly?
-  const sectionOnScreen = useOnScreen(sectionRef, "100px");
+  const { height } = useWindowSize();
 
-  const leadRef = useRef(null);
-  const coreRef = useRef(null);
-  const memberRef = useRef(null);
-  const leadRefOnScreen = useOnScreen(leadRef, "-350px");
-  const coreRefOnScreen = useOnScreen(coreRef, `-350px`);
-  const memberRefOnScreen = useOnScreen(memberRef, "-350px");
-
+  const scrollPos = useLocomotiveScrollPosition(50);
   const [scrollIndex, setScrollIndex] = useState(3);
   const { contrast, backgroundColor } = useTheme();
 
-  useEffect(() => {
-    if (leadRefOnScreen) {
-      setScrollIndex(0);
-    } else if (coreRefOnScreen) {
-      setScrollIndex(1);
-    } else if (memberRefOnScreen) {
-      setScrollIndex(2);
-    } else {
-      setScrollIndex(3);
+  const modifiedScrollPos = scrollPos - height * 1.05;
+
+  const handleScrollPosition = useCallback((pos) => {
+    if (0 <= pos && pos <= 290) {
+      return 0;
     }
-  }, [coreRefOnScreen, leadRefOnScreen, memberRefOnScreen]);
+
+    if (290 <= pos && pos <= 797) {
+      return 1;
+    }
+
+    if (797 <= pos && pos <= 5610) {
+      return 2;
+    }
+
+    return 3;
+  }, []);
+
+  useEffect(() => {
+    setScrollIndex(handleScrollPosition(modifiedScrollPos));
+  }, [handleScrollPosition, modifiedScrollPos]);
 
   const handleLeftBackgroundColor = useCallback(
     (index) => {
@@ -60,33 +64,31 @@ function MemberSection() {
   return (
     <Container data-scroll-section ref={sectionRef} id="fixed-element-members">
       <LeftContainer id="fixed-element-leftcontainer">
-        {sectionOnScreen && (
-          <TypeWrapper
-            data-scroll
-            data-scroll-sticky
-            data-scroll-target="#fixed-element-members"
-            bgcolor={handleLeftBackgroundColor(scrollIndex)}
-          >
-            <span>GDSC - YS</span>
-            <span>
-              {`${Writeups[scrollIndex]}`.split("").map((n, idx) => {
-                return (
-                  <ReactTextTransition
-                    key={idx}
-                    children={n}
-                    delay={idx * 25}
-                    overflow
-                    inline
-                  />
-                );
-              })}
-            </span>
-          </TypeWrapper>
-        )}
+        <TypeWrapper
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target="#fixed-element-members"
+          bgcolor={handleLeftBackgroundColor(scrollIndex)}
+        >
+          <span>GDSC Yonsei</span>
+          <span>
+            {`${Writeups[scrollIndex]}`.split("").map((n, idx) => {
+              return (
+                <ReactTextTransition
+                  key={idx}
+                  children={n}
+                  delay={idx * 25}
+                  overflow
+                  inline
+                />
+              );
+            })}
+          </span>
+        </TypeWrapper>
         <ProgressBar scrollIndex={scrollIndex} />
       </LeftContainer>
       <RightContainer>
-        <div ref={leadRef}>
+        <div>
           <MouseParallaxContainer
             globalFactorX={0.2}
             globalFactorY={0.2}
@@ -106,8 +108,8 @@ function MemberSection() {
             }}
           />
         </HorizontalLineWrapper>
-        <div ref={coreRef}>
-          {CoreList.map((el, idx) => {
+        <div>
+          {DevrelList.map((el, idx) => {
             return (
               <MouseParallaxContainer
                 key={idx}
@@ -132,7 +134,7 @@ function MemberSection() {
             }}
           />
         </HorizontalLineWrapper>
-        <div ref={memberRef}>
+        <div>
           {MemberList.map((el, idx) => {
             return (
               <MouseParallaxContainer

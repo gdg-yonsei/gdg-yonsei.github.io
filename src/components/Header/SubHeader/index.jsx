@@ -4,7 +4,6 @@ function SubHeader() {
   return (
     <Container>
       <Span>GDSC - Yonsei 2023</Span>
-      <AbsoluteSpan>Click for Details</AbsoluteSpan>
     </Container>
   );
 }
@@ -30,15 +29,15 @@ const Span = styled.span`
   color: ${(props) => props.theme.backgroundColor.white};
 `;
 
-const AbsoluteSpan = styled.span`
-  display: inline-block;
+// const AbsoluteSpan = styled.span`
+//   display: inline-block;
 
-  position: absolute;
-  top: 140%;
-  right: 0%;
+//   position: absolute;
+//   top: 140%;
+//   right: 0%;
 
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 4px;
-  color: ${(props) => props.theme.backgroundColor.white};
-`;
+//   font-size: 16px;
+//   font-weight: 300;
+//   letter-spacing: 4px;
+//   color: ${(props) => props.theme.backgroundColor.white};
+// `;

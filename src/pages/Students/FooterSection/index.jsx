@@ -8,7 +8,7 @@ function FooterSection() {
     <Container data-scroll-section>
       <TitleWrapper data-scroll data-scroll-speed="3">
         <Title>We recruit on yearly schedule.</Title>
-        <Subtitle>Wait for September for next recruitment!</Subtitle>
+        <Subtitle>Stay Tuned!</Subtitle>
       </TitleWrapper>
       <ButtonContainer data-scroll data-scroll-speed="4">
         <GotoTopButton

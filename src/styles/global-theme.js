@@ -6,6 +6,7 @@ export const theme = {
     yellow: "#ffbb25",
     lightgrey: "#d3d3d3",
     grey: "#676c72",
+    lottie: "#676c72",
     darkgrey: "#404040",
     pink: "#fbb4a4",
     purple: "#5339B3",

@@ -1,7 +1,10 @@
 import DropdownIcon from "@components/DropdownIcon";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 import styled from "styled-components";
 
 function MainHeader() {
+  const { scroll } = useLocomotiveScroll();
+
   return (
     <Container data-scroll data-scroll-position="top" data-scroll-speed="0.1">
       <LeftEnd>
@@ -9,9 +12,14 @@ function MainHeader() {
       </LeftEnd>
       <RightEnd>
         <DropdownIcon />
-        <a href="https://accounts.google.com" target="_self">
-          <LoginButton className="Login">Login</LoginButton>
-        </a>
+        <LoginButton
+          className="Login"
+          onClick={() => {
+            scroll.scrollTo("bottom");
+          }}
+        >
+          Login
+        </LoginButton>
       </RightEnd>
     </Container>
   );
