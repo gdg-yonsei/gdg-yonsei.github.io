@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "cra-bundle-analyzer": "^0.1.1",
     "craco": "^0.0.3",
     "gh-pages": "^5.0.0",

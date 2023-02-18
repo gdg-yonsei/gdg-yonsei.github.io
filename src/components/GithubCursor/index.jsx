@@ -1,6 +1,6 @@
 import { MouseContext } from "@context/MouseContext";
 import useMousePosition from "@hooks/useMousePosition";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import styled, { css } from "styled-components";
 
 import { ReactComponent as GithubIcon } from "@assets/images/icons/github.svg";
@@ -23,7 +23,7 @@ function GithubCursor() {
   );
 }
 
-export default GithubCursor;
+export default memo(GithubCursor);
 
 const Ring = styled.div`
   position: fixed;
@@ -60,7 +60,7 @@ const Ring = styled.div`
 `;
 
 const InnerText = styled.span`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 
   color: white;

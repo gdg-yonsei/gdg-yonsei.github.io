@@ -1,6 +1,6 @@
 import { MouseContext } from "@context/MouseContext";
 import useHover from "@hooks/useHover";
-import { useCallback, useContext } from "react";
+import { memo, useCallback, useContext } from "react";
 import { MouseParallaxChild } from "react-parallax-mouse";
 import TextTransition from "react-text-transition";
 import styled from "styled-components";
@@ -44,7 +44,7 @@ function MemberCard({ upperLetter, lowerLetter, githubID }) {
   );
 }
 
-export default MemberCard;
+export default memo(MemberCard);
 
 const Container = styled.a`
   width: 100%;

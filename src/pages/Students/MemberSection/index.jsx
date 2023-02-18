@@ -10,6 +10,7 @@ import HorizontalPatternImage1 from "@assets/images/pattern3.png";
 import HorizontalPatternImage2 from "@assets/images/pattern4.png";
 import { MouseParallaxContainer } from "react-parallax-mouse";
 import LeadMemberCard from "./LeadMemberCard";
+import ProgressBar from "./ProgressBar";
 
 const Writeups = ["Lead", "Cores", "Members", ""];
 
@@ -58,7 +59,7 @@ function MemberSection() {
 
   return (
     <Container data-scroll-section ref={sectionRef} id="fixed-element-members">
-      <LeftContainer>
+      <LeftContainer id="fixed-element-leftcontainer">
         {sectionOnScreen && (
           <TypeWrapper
             data-scroll
@@ -82,6 +83,7 @@ function MemberSection() {
             </span>
           </TypeWrapper>
         )}
+        <ProgressBar scrollIndex={scrollIndex} />
       </LeftContainer>
       <RightContainer>
         <div ref={leadRef}>
