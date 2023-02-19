@@ -15,6 +15,11 @@ import ProgressBar from "./ProgressBar";
 
 const Writeups = ["Lead", "DevRel", "Developers", ""];
 
+// FIXME: Hard-Coded. Is there any idea? Observer doesn't work.
+const LEAD_BREAKPOINT = 290;
+const DEVREL_BREAKPOINT = 797;
+const MEMBER_BREAKPOINT = 5610;
+
 function MemberSection() {
   const sectionRef = useRef(null);
   const { height } = useWindowSize();
@@ -26,24 +31,20 @@ function MemberSection() {
   const modifiedScrollPos = scrollPos - height * 1.05;
 
   const handleScrollPosition = useCallback((pos) => {
-    if (0 <= pos && pos <= 290) {
+    if (0 <= pos && pos <= LEAD_BREAKPOINT) {
       return 0;
     }
 
-    if (290 <= pos && pos <= 797) {
+    if (LEAD_BREAKPOINT <= pos && pos <= DEVREL_BREAKPOINT) {
       return 1;
     }
 
-    if (797 <= pos && pos <= 5610) {
+    if (DEVREL_BREAKPOINT <= pos && pos <= MEMBER_BREAKPOINT) {
       return 2;
     }
 
     return 3;
   }, []);
-
-  useEffect(() => {
-    setScrollIndex(handleScrollPosition(modifiedScrollPos));
-  }, [handleScrollPosition, modifiedScrollPos]);
 
   const handleLeftBackgroundColor = useCallback(
     (index) => {
@@ -61,6 +62,10 @@ function MemberSection() {
     [backgroundColor.black, contrast.blue, contrast.green, contrast.red]
   );
 
+  useEffect(() => {
+    setScrollIndex(handleScrollPosition(modifiedScrollPos));
+  }, [handleScrollPosition, modifiedScrollPos]);
+
   return (
     <Container data-scroll-section ref={sectionRef} id="fixed-element-members">
       <LeftContainer id="fixed-element-leftcontainer">
@@ -70,8 +75,8 @@ function MemberSection() {
           data-scroll-target="#fixed-element-members"
           bgcolor={handleLeftBackgroundColor(scrollIndex)}
         >
-          <span>GDSC Yonsei</span>
-          <span>
+          <LeftTitle>GDSC Yonsei</LeftTitle>
+          <LeftSubtitle>
             {`${Writeups[scrollIndex]}`.split("").map((n, idx) => {
               return (
                 <ReactTextTransition
@@ -83,7 +88,7 @@ function MemberSection() {
                 />
               );
             })}
-          </span>
+          </LeftSubtitle>
         </TypeWrapper>
         <ProgressBar scrollIndex={scrollIndex} />
       </LeftContainer>
@@ -195,7 +200,6 @@ const TypeWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 5vh;
 
   &:after {
     content: "";
@@ -213,11 +217,28 @@ const TypeWrapper = styled.div`
     background-color: ${(props) => props.bgcolor};
     transition: background-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
   }
+`;
 
-  span {
-    font-size: 5vw;
-    color: white;
-  }
+const LeftTitle = styled.span`
+  display: block;
+  width: 100%;
+
+  margin-bottom: 3vh;
+
+  font-family: "Neue Montreal";
+  font-size: 5.5vw;
+  font-weight: 400;
+  color: ${(props) => props.theme.backgroundColor.white};
+`;
+
+const LeftSubtitle = styled.span`
+  display: block;
+  width: 100%;
+
+  font-family: "Neue Montreal";
+  font-size: 2.5vw;
+  font-weight: 200;
+  color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const RightContainer = styled.div`

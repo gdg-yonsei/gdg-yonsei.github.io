@@ -1,6 +1,8 @@
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import styled from "styled-components";
 
+import Pattern from "@assets/images/odeszaPattern2.png";
+
 function FooterSection() {
   const { scroll } = useLocomotiveScroll();
 
@@ -19,6 +21,7 @@ function FooterSection() {
           Take me to the top.
         </GotoTopButton>
       </ButtonContainer>
+      <CenterImage src={Pattern} data-scroll data-scroll-speed="3" />
     </Container>
   );
 }
@@ -27,12 +30,14 @@ export default FooterSection;
 
 const Container = styled.footer`
   width: 100%;
-  height: 70vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 `;
 
 const TitleWrapper = styled.div`
@@ -61,8 +66,11 @@ const ButtonContainer = styled.div`
   flex-grow: 1;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
+
+  padding-bottom: 15vh;
 `;
 
 const GotoTopButton = styled.button`
@@ -75,7 +83,6 @@ const GotoTopButton = styled.button`
   border-radius: 32px;
 
   cursor: pointer;
-  margin-bottom: 10vh;
 
   transition: all 0.2s ease-in-out;
 
@@ -83,4 +90,15 @@ const GotoTopButton = styled.button`
     background-color: ${(props) => props.theme.backgroundColor.black};
     color: ${(props) => props.theme.backgroundColor.white};
   }
+`;
+
+const CenterImage = styled.img`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: 35vw;
 `;

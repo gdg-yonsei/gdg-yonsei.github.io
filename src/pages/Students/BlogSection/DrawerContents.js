@@ -1,7 +1,7 @@
 export const DrawerContents = [
   {
     title: "Web Development",
-    writeup: "The Door",
+    writeup: "Art Follows Function",
     blogs: [
       "https://velog.io/@hysperion",
       "https://velog.io/@doooooring",
@@ -13,7 +13,7 @@ export const DrawerContents = [
   },
   {
     title: "Server Development",
-    writeup: "The Maestro",
+    writeup: "Connected, No Matter What",
     blogs: [
       "https://velog.io/@jimmy0006",
       "https://miji-fernandes.tistory.com/",

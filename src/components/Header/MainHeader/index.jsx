@@ -15,7 +15,10 @@ function MainHeader() {
         <LoginButton
           className="Login"
           onClick={() => {
-            scroll.scrollTo("bottom");
+            scroll.scrollTo("bottom", {
+              duration: 600,
+              easing: [0.06, 0.87, 0.11, 0.96],
+            });
           }}
         >
           Login

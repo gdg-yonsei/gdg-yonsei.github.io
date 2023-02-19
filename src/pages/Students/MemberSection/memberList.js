@@ -30,7 +30,7 @@ export const MemberList = [
     githubID: "BaeRoNuI",
   },
   {
-    upperLetter: "GDSC Flutter Part",
+    upperLetter: "GDSC Flutter & ML & FS Part",
     lowerLetter: "Juii Kim",
     githubID: "watchstep",
   },
@@ -50,7 +50,7 @@ export const MemberList = [
     githubID: "Hysperion",
   },
   {
-    upperLetter: "GDSC L-Web Part",
+    upperLetter: "GDSC L-Web & FS Part",
     lowerLetter: "Kang Seok Yoon",
     githubID: "Doooooring",
   },
@@ -110,7 +110,7 @@ export const MemberList = [
     githubID: "haaem",
   },
   {
-    upperLetter: "GDSC Flutter Part",
+    upperLetter: "GDSC Flutter & Server Part",
     lowerLetter: "Hyun min Yoo",
     githubID: "uhmin99",
   },

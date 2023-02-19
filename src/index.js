@@ -1,5 +1,5 @@
 import Head from "@components/Head";
-import App from "@pages/App";
+import App from "@/App";
 import { theme } from "@styles/global-theme";
 import { Fragment } from "react";
 import ReactDOM from "react-dom/client";

@@ -1,14 +1,16 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import Page404 from "./404";
-import ClubsPage from "./Clubs";
-import DeveloperPage from "./Developer";
-import GooglePage from "./Google";
-import Home from "./Home";
-import StudentPage from "./Students";
+import Page404 from "@pages/404";
+import ClubsPage from "@pages/Clubs";
+import DeveloperPage from "@pages/Developer";
+import GooglePage from "@pages/Google";
+import Home from "@pages/Home";
+import StudentPage from "@pages/Students";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Routes>
+    <Routes location={location}>
       <Route path="/google" element={<GooglePage />} />
       <Route path="/developer" element={<DeveloperPage />} />
       <Route path="/student" element={<StudentPage />} />

@@ -20,6 +20,7 @@ function StudentPage() {
             <MemberSection />
             <GithubCursor />
           </MouseContextProvider>
+          <PaddingSection />
           <BlogSection />
           <FooterSection />
         </Container>
@@ -41,4 +42,11 @@ const Container = styled.main`
   font-family: "Google Sans";
 
   perspective: 1px; // for locomotive-scroll element disappearance bug fix.
+`;
+
+const PaddingSection = styled.div`
+  width: 100%;
+  height: 30vh;
+
+  background-color: transparent;
 `;

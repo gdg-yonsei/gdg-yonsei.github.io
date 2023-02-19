@@ -71,7 +71,7 @@ const UpperContainer = styled.div`
 `;
 
 const UpperSpan = styled.span`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 24px;
 
@@ -79,6 +79,8 @@ const UpperSpan = styled.span`
   letter-spacing: 2px;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  color: ${(props) => props.theme.contrast.red};
 `;
 
 const LowerContainer = styled.div`

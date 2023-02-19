@@ -16,14 +16,16 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "react-text-transition": "^3.0.2",
+    "react-transition-group": "^4.4.5",
     "react-type-animation": "^2.1.2",
     "styled-components": "^5.3.6",
     "swiper": "^9.0.2",
     "throttle-debounce": "^5.0.0"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "GENERATE_SOURCEMAP=false craco start",
+    "build": "GENERATE_SOURCEMAP=false craco build",
+    "winBuild": "set \"GENERATE_SOURCEMAP=false\" && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -53,9 +55,9 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.0.0",
     "@svgr/webpack": "^6.5.1",
     "cra-bundle-analyzer": "^0.1.1",
-    "craco": "^0.0.3",
     "gh-pages": "^5.0.0",
     "react-snap": "^1.23.0",
     "webpack-bundle-analyzer": "^4.7.0"

@@ -12,6 +12,7 @@ function LocomotiveScrollCustom(props) {
         smartphone: {
           smooth: true,
         },
+        ...props.additionalOptions,
       }}
       containerRef={props.containerRef}
     >

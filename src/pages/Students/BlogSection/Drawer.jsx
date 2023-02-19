@@ -8,24 +8,29 @@ function Drawer() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <Container>
+    <Container
+      data-scroll
+      data-scroll-sticky
+      data-scroll-target="#fixed-element-DrawerContainer"
+    >
       <ContentWrapper>
         <PaddingSection />
         {DrawerContents.map((content, idx) => {
           return (
-            <SessionCard
-              key={idx}
-              index={idx}
-              title={content.title}
-              setSelectedIndex={setSelectedIndex}
-            >
+            <>
+              <SessionCard
+                key={idx}
+                index={idx}
+                title={content.title}
+                setSelectedIndex={setSelectedIndex}
+              />
               <SessionBlog
                 selected={selectedIndex === idx}
                 index={idx}
                 writeup={content.writeup}
                 blogs={content.blogs}
               />
-            </SessionCard>
+            </>
           );
         })}
       </ContentWrapper>

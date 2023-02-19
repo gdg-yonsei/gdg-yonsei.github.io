@@ -4,10 +4,10 @@ import Drawer from "./Drawer";
 function BlogSection() {
   return (
     <Container data-scroll-section>
-      <TitleWrapper data-scroll data-scroll-speed="2">
+      <TitleWrapper data-scroll data-scroll-speed="4.5">
         <Title>Checkout Our Dev. Blogs</Title>
       </TitleWrapper>
-      <DrawerContainer>
+      <DrawerContainer id="fixed-element-DrawerContainer">
         <Drawer />
       </DrawerContainer>
     </Container>
@@ -38,5 +38,5 @@ const Title = styled.span`
 
 const DrawerContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 200vh;
 `;
