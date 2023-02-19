@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ff8d9a4.css",
-    "main.js": "/static/js/main.2aaa286a.js",
+    "main.css": "/static/css/main.8ee3c903.css",
+    "main.js": "/static/js/main.5c1c6b45.js",
     "static/media/odessaPattern1.png": "/static/media/odessaPattern1.55c6eab460e563dac59a.png",
+    "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.b1d16f0d6d71361d1036.png",
+    "static/media/terrainPattern1.png": "/static/media/terrainPattern1.854b0f0499492233976e.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -83,12 +85,10 @@
     "static/media/tensorflow.svg": "/static/media/tensorflow.2c1801bb18ea8780cb4a759879fe54ce.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
     "static/media/flutter.svg": "/static/media/flutter.799390e896410bb1fbfe56c03371bfaa.svg",
-    "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg",
-    "main.8ff8d9a4.css.map": "/static/css/main.8ff8d9a4.css.map",
-    "main.2aaa286a.js.map": "/static/js/main.2aaa286a.js.map"
+    "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg"
   },
   "entrypoints": [
-    "static/css/main.8ff8d9a4.css",
-    "static/js/main.2aaa286a.js"
+    "static/css/main.8ee3c903.css",
+    "static/js/main.5c1c6b45.js"
   ]
 }
