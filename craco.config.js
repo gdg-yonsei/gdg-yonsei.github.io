@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { CracoAliasPlugin } = require("react-app-alias");
 const CracoSwcPlugin = require("craco-swc");
 
