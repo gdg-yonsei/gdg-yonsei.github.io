@@ -1,10 +1,20 @@
 import { useCallback } from "react";
 import styled from "styled-components";
 
-function SessionCard({ index, title, setSelectedIndex, children }) {
+function SessionCard({
+  index,
+  title,
+  selectedIndex,
+  setSelectedIndex,
+  children,
+}) {
   const handleCardClick = useCallback(() => {
-    setSelectedIndex(index);
-  }, [index, setSelectedIndex]);
+    if (selectedIndex === index) {
+      setSelectedIndex(null);
+    } else {
+      setSelectedIndex(index);
+    }
+  }, [index, selectedIndex, setSelectedIndex]);
 
   return (
     <TitleContainer onClick={handleCardClick}>

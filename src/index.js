@@ -21,7 +21,7 @@ ReactDOM.createRoot(rootElement).render(
     <HelmetProvider>
       <Head />
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <App />
         </BrowserRouter>
       </ThemeProvider>

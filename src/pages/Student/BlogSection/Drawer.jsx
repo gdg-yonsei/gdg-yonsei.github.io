@@ -35,6 +35,7 @@ function Drawer() {
               <SessionCard
                 index={idx}
                 title={content.title}
+                selectedIndex={selectedIndex}
                 setSelectedIndex={setSelectedIndex}
               />
               <SessionBlog
