@@ -61,7 +61,7 @@
     "craco-swc": "^0.5.1",
     "cross-env": "^7.0.3",
     "eslint": "latest",
-    "eslint-plugin-react": "latest",
+    "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0",
     "react-snap": "^1.23.0",
     "typescript": "^4.9.5",
