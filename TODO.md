@@ -4,7 +4,8 @@
 
 - [x] Virtual Scrolling
 - [x] Page Transition Animation
-- [ ] Text Appear Animation on Banner Page
+- [x] Text Appear Animation on Banner Page
+- [ ] Image to css-doodle for optimization.
 - [ ] Micro Interactions on Home/Hero
 
 ### Bug Fix & Layout Requests
