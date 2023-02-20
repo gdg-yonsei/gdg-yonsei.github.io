@@ -44,9 +44,7 @@ const Container = styled.div`
   position: relative;
 
   font-family: "Google Sans", sans-serif;
-
-  *::selection {
-  }
+  background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const DinosaurImage = styled.img`

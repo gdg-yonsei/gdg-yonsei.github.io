@@ -1,3 +1,4 @@
+import { STUDENTS_PROGRESS_UPPER_LIMIT } from "@constants/constants";
 import useLocomotiveScrollPosition from "@hooks/useLocomotiveScrollPosition";
 import useWindowSize from "@hooks/useWindowSize";
 import clamp from "@utils/clamp";
@@ -11,7 +12,12 @@ function ProgressBar({ scrollIndex }) {
 
   const HEIGHT_OFFSET = height * 1.05;
   const progress =
-    clamp((scrollPos - HEIGHT_OFFSET) / (6500 - HEIGHT_OFFSET), 0, 1) * 100;
+    clamp(
+      (scrollPos - HEIGHT_OFFSET) /
+        (STUDENTS_PROGRESS_UPPER_LIMIT - HEIGHT_OFFSET),
+      0,
+      1
+    ) * 100;
 
   const handleColor = useCallback(
     (idx) => {

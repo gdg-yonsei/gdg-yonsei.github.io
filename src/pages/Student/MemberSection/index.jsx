@@ -12,13 +12,9 @@ import useWindowSize from "@hooks/useWindowSize";
 import { MouseParallaxContainer } from "react-parallax-mouse";
 import LeadMemberCard from "./LeadMemberCard";
 import ProgressBar from "./ProgressBar";
+import { STUDENTS_COLOR_BREAKPOINT as BREAKPOINT } from "@constants/constants";
 
 const Writeups = ["Lead", "DevRel", "Developers", ""];
-
-// FIXME: Hard-Coded. Is there any idea? Observer doesn't work.
-const LEAD_BREAKPOINT = 290;
-const DEVREL_BREAKPOINT = 797;
-const MEMBER_BREAKPOINT = 5610;
 
 function MemberSection() {
   const sectionRef = useRef(null);
@@ -30,16 +26,23 @@ function MemberSection() {
 
   const modifiedScrollPos = scrollPos - height * 1.05;
 
+  // FIXME: Hard-Coded. Is there any idea? Observer doesn't work.
   const handleScrollPosition = useCallback((pos) => {
-    if (0 <= pos && pos <= LEAD_BREAKPOINT) {
+    if (0 <= pos && pos <= BREAKPOINT.LEAD_BREAKPOINT) {
       return 0;
     }
 
-    if (LEAD_BREAKPOINT <= pos && pos <= DEVREL_BREAKPOINT) {
+    if (
+      BREAKPOINT.LEAD_BREAKPOINT <= pos &&
+      pos <= BREAKPOINT.DEVREL_BREAKPOINT
+    ) {
       return 1;
     }
 
-    if (DEVREL_BREAKPOINT <= pos && pos <= MEMBER_BREAKPOINT) {
+    if (
+      BREAKPOINT.DEVREL_BREAKPOINT <= pos &&
+      pos <= BREAKPOINT.MEMBER_BREAKPOINT
+    ) {
       return 2;
     }
 

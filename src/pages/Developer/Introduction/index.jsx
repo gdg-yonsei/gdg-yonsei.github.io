@@ -1,14 +1,58 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Jam from "./Jam/Jam";
 
-import { VscCode } from "@react-icons/all-files/vsc/VscCode";
-import { BsServer } from "@react-icons/all-files/bs/BsServer";
-import { VscDeviceMobile } from "@react-icons/all-files/vsc/VscDeviceMobile";
-import { GiProcessor } from "@react-icons/all-files/gi/GiProcessor";
-import { FaCogs } from "@react-icons/all-files/fa/FaCogs";
-import { FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
+import { useState } from "react";
+import { JamList } from "./Jam/JamList";
+
+const handleHoveredSection = (sectionIndex) => {
+  switch (sectionIndex) {
+    case 0:
+      return css`
+        grid-template-columns: 1.2fr 1fr 1fr;
+        grid-template-rows: 1.2fr 1fr;
+      `;
+
+    case 1:
+      return css`
+        grid-template-columns: 1fr 1.2fr 1fr;
+        grid-template-rows: 1.2fr 1fr;
+      `;
+
+    case 2:
+      return css`
+        grid-template-columns: 1fr 1fr 1.2fr;
+        grid-template-rows: 1.2fr 1fr;
+      `;
+
+    case 3:
+      return css`
+        grid-template-columns: 1.2fr 1fr 1fr;
+        grid-template-rows: 1fr 1.2fr;
+      `;
+
+    case 4:
+      return css`
+        grid-template-columns: 1fr 1.2fr 1fr;
+        grid-template-rows: 1fr 1.2fr;
+      `;
+
+    case 5:
+      return css`
+        grid-template-columns: 1fr 1fr 1.2fr;
+        grid-template-rows: 1fr 1.2fr;
+      `;
+
+    default:
+      return css`
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      `;
+  }
+};
 
 function Introduction() {
+  const [hoveredSection, setHoveredSection] = useState(null);
+
   return (
     <Container data-scroll-section>
       <TitleWrapper data-scroll data-scroll-speed="1">
@@ -17,37 +61,19 @@ function Introduction() {
           <Green>6 Study Jams&nbsp;</Green>Organized.
         </Title>
       </TitleWrapper>
-      <JamsContainer>
-        <Jam
-          icon={<VscCode />}
-          description={"Web Developement"}
-          scrollTarget="#fixed-element-web"
-        />
-        <Jam
-          icon={<BsServer />}
-          description={"Server Development"}
-          scrollTarget="#fixed-element-server"
-        />
-        <Jam
-          icon={<VscDeviceMobile />}
-          description={"Mobile Development"}
-          scrollTarget="#fixed-element-mobile"
-        />
-        <Jam
-          icon={<GiProcessor />}
-          description={"Artificial Intelligence"}
-          scrollTarget="#fixed-element-ML"
-        />
-        <Jam
-          icon={<FaCogs />}
-          description={"Full-Stack Development"}
-          scrollTarget="#fixed-element-FS"
-        />
-        <Jam
-          icon={<FaHandshake />}
-          description={"Developer Relations"}
-          scrollTarget="#fixed-element-DevRel"
-        />
+      <JamsContainer hoveredSection={hoveredSection}>
+        {JamList.map((JamElement, idx) => {
+          return (
+            <Jam
+              key={idx}
+              index={idx}
+              icon={JamElement.icon}
+              description={JamElement.description}
+              scrollTarget={JamElement.scrollTarget}
+              setHoveredSection={setHoveredSection}
+            />
+          );
+        })}
       </JamsContainer>
     </Container>
   );
@@ -90,13 +116,16 @@ const Green = styled.span`
 
 const JamsContainer = styled.div`
   width: 100%;
+  height: 25vh;
   flex-grow: 1;
 
   padding: 5vh 5vw;
 
+  transition: grid-template-columns 0.35s ease-in-out,
+    grid-template-rows 0.35s ease-in-out;
+  ${(props) => handleHoveredSection(props.hoveredSection)}
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   row-gap: 5vh;
   column-gap: 3vw;
 `;

@@ -1,9 +1,10 @@
 import useHover from "@hooks/useHover";
 import { IconContext } from "@react-icons/all-files";
+import { useCallback } from "react";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import styled, { css } from "styled-components";
 
-function Jam(props) {
+function Jam({ index, icon, scrollTarget, description, setHoveredSection }) {
   const [hoverRef, isHovered] = useHover(false);
   const { scroll } = useLocomotiveScroll();
 
@@ -14,12 +15,22 @@ function Jam(props) {
     color: "black",
   };
 
+  const handleMouseEnter = useCallback(() => {
+    setHoveredSection(index);
+  }, [index, setHoveredSection]);
+
+  const handleMouseLeave = useCallback(() => {
+    setHoveredSection(null);
+  }, [setHoveredSection]);
+
   return (
     <Container
       ref={hoverRef}
       onClick={() => {
-        scroll.scrollTo(props.scrollTarget);
+        scroll.scrollTo(scrollTarget);
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <IconContainer>
         <IconContext.Provider
@@ -27,11 +38,11 @@ function Jam(props) {
             style: IconStyle,
           }}
         >
-          {props.icon}
+          {icon}
         </IconContext.Provider>
       </IconContainer>
       <DescContainer>
-        <DescSpan isHovered={isHovered}>{props.description}</DescSpan>
+        <DescSpan isHovered={isHovered}>{description}</DescSpan>
       </DescContainer>
     </Container>
   );

@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "framer-motion": "^9.0.4",
     "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-app-alias": "^2.2.2",
@@ -16,7 +17,6 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "react-text-transition": "^3.0.2",
-    "react-transition-group": "^4.4.5",
     "react-type-animation": "^2.1.2",
     "styled-components": "^5.3.6",
     "swiper": "^9.0.2",
@@ -24,12 +24,13 @@
   },
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false craco start",
-    "build": "GENERATE_SOURCEMAP=false craco build",
-    "winBuild": "set \"GENERATE_SOURCEMAP=false\" && craco build",
+    "build": "GENERATE_SOURCEMAP=false craco build --stats",
+    "winbuild": "set \"GENERATE_SOURCEMAP=false\" && craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "analyze": "npm run build &&  npx webpack-bundle-analyzer ./build/bundle-stats.json"
   },
   "reactSnap": {
     "include": [
@@ -57,7 +58,7 @@
   "devDependencies": {
     "@craco/craco": "^7.0.0",
     "@svgr/webpack": "^6.5.1",
-    "cra-bundle-analyzer": "^0.1.1",
+    "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
     "react-snap": "^1.23.0",
     "webpack-bundle-analyzer": "^4.7.0"

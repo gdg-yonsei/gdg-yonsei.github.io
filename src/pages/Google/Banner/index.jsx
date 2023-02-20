@@ -1,9 +1,12 @@
-import styled from "styled-components";
-import { letterAnimation } from "./animation";
 import SolutionChallenge from "@assets/images/SolutionChallenge.png";
-import { Link } from "react-router-dom";
+import { BannerTextAnimation } from "@components/Animation/BannerTextAnimation";
+import DelayedLink from "@components/DelayedLink";
+import { TRANSITION_DURATION } from "@constants/constants";
+import styled from "styled-components";
 
 function Banner() {
+  const animationDelaySeconds = TRANSITION_DURATION * 0.001;
+
   return (
     <HeadingSection data-scroll-section>
       <TitleSection>
@@ -15,7 +18,7 @@ function Banner() {
         >
           <TitleSpan>Introducing</TitleSpan>
         </TitleWrapper>
-        <Link to="/">
+        <DelayedLink to="/" delay={TRANSITION_DURATION}>
           <BackToMainButton
             data-scroll
             data-scroll-position="top"
@@ -24,43 +27,20 @@ function Banner() {
           >
             Back To Main
           </BackToMainButton>
-        </Link>
+        </DelayedLink>
       </TitleSection>
       <BodySection>
         <TextSection>
-          <div data-scroll data-scroll-position="top" data-scroll-speed="2">
-            {"Google".split("").map((el, idx) => {
-              return (
-                <BodySpanLarge key={idx} animationDelay={idx}>
-                  {el}
-                </BodySpanLarge>
-              );
-            })}
-          </div>
-          <div data-scroll data-scroll-position="top" data-scroll-speed="3">
-            {"Solution".split("").map((el, idx) => {
-              if (el === "S") {
-                return <BodySpanExtraLarge key={idx}>{el}</BodySpanExtraLarge>;
-              } else {
-                return (
-                  <BodySpanFirst key={idx} animationDelay={idx}>
-                    {el}
-                  </BodySpanFirst>
-                );
-              }
-            })}
-          </div>
-          <div data-scroll data-scroll-position="top" data-scroll-speed="4">
-            {"Challenge".split("").map((el, idx) => {
-              return (
-                <BodySpanSecond key={idx} animationDelay={idx}>
-                  {el}
-                </BodySpanSecond>
-              );
-            })}
-          </div>
+          <TextAnimationContainer delay={animationDelaySeconds}>
+            <BodySpanLarge>Google</BodySpanLarge>
+          </TextAnimationContainer>
+          <TextAnimationContainer delay={animationDelaySeconds + 0.3}>
+            <BodySpan>Solution</BodySpan>
+          </TextAnimationContainer>
+          <TextAnimationContainer delay={animationDelaySeconds + 0.3}>
+            <BodySpan>Challenge</BodySpan>
+          </TextAnimationContainer>
         </TextSection>
-        {/* //TODO: Replace This to custom animation. */}
         <CanvasSection>
           <CanvasImage
             data-scroll
@@ -109,6 +89,25 @@ const TextSection = styled.div`
   align-items: flex-start;
 `;
 
+const TextAnimationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(100%) rotateX(-80deg);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+
+  animation-name: ${BannerTextAnimation};
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: forwards;
+  animation-delay: ${(props) => `${props.delay}s`};
+
+  user-select: none;
+`;
+
 const CanvasSection = styled.div`
   display: flex;
   justify-content: center;
@@ -125,31 +124,17 @@ const BodySpanLarge = styled.span`
   font-weight: 500;
 
   line-height: 1.1;
-  opacity: 0;
 
   color: ${(props) => props.theme.backgroundColor.black};
-
-  animation: ${letterAnimation} 0.2s ease-out normal forwards;
-  animation-delay: ${(props) => `${props.animationDelay * 0.1}s`};
 `;
 
 const BodySpan = styled.span`
+  display: inline-block;
   font-size: 6.3vw;
   font-weight: 400;
 
   line-height: 1.1;
   color: ${(props) => props.theme.backgroundColor.black};
-  opacity: 0;
-`;
-
-const BodySpanFirst = styled(BodySpan)`
-  animation: ${letterAnimation} 0.2s ease-out normal forwards;
-  animation-delay: ${(props) => `${props.animationDelay * 0.1 + 0.3}s`};
-`;
-
-const BodySpanSecond = styled(BodySpan)`
-  animation: ${letterAnimation} 0.2s ease-out normal forwards;
-  animation-delay: ${(props) => `${props.animationDelay * 0.1 + 0.5}s`};
 `;
 
 const TitleSection = styled.div`
@@ -182,13 +167,6 @@ const TitleWrapper = styled.div`
 
 const TitleSpan = styled.h1`
   font-size: 28px;
-`;
-
-const BodySpanExtraLarge = styled.span`
-  display: inline-block;
-  font-size: 10vw;
-
-  color: ${(props) => props.theme.backgroundColor.black};
 `;
 
 const BackToMainButton = styled.button`

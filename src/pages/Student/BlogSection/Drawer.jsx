@@ -1,11 +1,25 @@
-import { memo, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { Fragment, memo, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import SessionCard from "./SessionCard";
-import SessionBlog from "./SessionBlog";
 import { DrawerContents } from "./DrawerContents";
+import SessionBlog from "./SessionBlog";
+import SessionCard from "./SessionCard";
 
 function Drawer() {
   const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const drawerRef = useRef(null);
+  const isDrawerInView = useInView(drawerRef, { amount: 0.1 });
+  const [translateXPos, setTranslateXPos] = useState(90);
+
+  useEffect(() => {
+    if (isDrawerInView) {
+      setTranslateXPos(0);
+    } else {
+      setTranslateXPos(90);
+      setSelectedIndex(null);
+    }
+  }, [isDrawerInView]);
 
   return (
     <Container
@@ -13,13 +27,12 @@ function Drawer() {
       data-scroll-sticky
       data-scroll-target="#fixed-element-DrawerContainer"
     >
-      <ContentWrapper>
+      <ContentWrapper ref={drawerRef} translatexpos={translateXPos}>
         <PaddingSection />
         {DrawerContents.map((content, idx) => {
           return (
-            <>
+            <Fragment key={idx}>
               <SessionCard
-                key={idx}
                 index={idx}
                 title={content.title}
                 setSelectedIndex={setSelectedIndex}
@@ -30,7 +43,7 @@ function Drawer() {
                 writeup={content.writeup}
                 blogs={content.blogs}
               />
-            </>
+            </Fragment>
           );
         })}
       </ContentWrapper>
@@ -49,7 +62,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled(motion.div)`
   width: 100%;
   height: 90%;
 
@@ -58,6 +71,11 @@ const ContentWrapper = styled.div`
   align-items: flex-end;
 
   border: 5px solid black;
+  border-top-left-radius: 5vw;
+  border-bottom-left-radius: 5vw;
+
+  transform: ${(props) => `translateX(${props.translatexpos}%)`};
+  transition: transform 0.65s cubic-bezier(0.17, 0.3, 0.07, 0.98);
 `;
 
 const PaddingSection = styled.div`
@@ -69,4 +87,6 @@ const PaddingSection = styled.div`
   align-items: center;
 
   background-color: ${(props) => props.theme.backgroundColor.black};
+  border-top-left-radius: 4vw;
+  border-bottom-left-radius: 4vw;
 `;

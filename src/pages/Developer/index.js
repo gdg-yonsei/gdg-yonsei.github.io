@@ -1,6 +1,9 @@
-import LocomotiveScrollCustom from "@context/LocomotiveScrollCustom";
-import { useRef } from "react";
-import styled from "styled-components";
+import LoadingScreen from "@components/LoadingScreen";
+import { TransitionColorContext } from "@context/TransitionColorContext";
+import useEffectOnce from "@hooks/useEffectOnce";
+import useHandleAnimationScroll from "@hooks/useHandleAnimationScroll.js";
+import { useContext } from "react";
+import styled, { useTheme } from "styled-components";
 import Banner from "./Banner";
 import FooterSection from "./FooterSection";
 import Introduction from "./Introduction";
@@ -13,11 +16,19 @@ import WebSection from "./JamSection/Web";
 import SectionIntro from "./SectionIntro";
 
 function DeveloperPage() {
-  const ref = useRef(null);
+  const { handleAnimationStart, handleAnimationComplete } =
+    useHandleAnimationScroll();
+
+  const { transitionColorHandler } = useContext(TransitionColorContext);
+  const { color } = useTheme();
+
+  useEffectOnce(() => {
+    transitionColorHandler(color.green);
+  });
 
   return (
-    <LocomotiveScrollCustom containerRef={ref}>
-      <Container data-scroll-container ref={ref}>
+    <>
+      <Container>
         <Banner />
         <Introduction />
         <SectionIntro />
@@ -29,7 +40,11 @@ function DeveloperPage() {
         <DevRelSection />
         <FooterSection />
       </Container>
-    </LocomotiveScrollCustom>
+      <LoadingScreen
+        handleAnimationStart={handleAnimationStart}
+        handleAnimationComplete={handleAnimationComplete}
+      />
+    </>
   );
 }
 
@@ -44,4 +59,6 @@ const Container = styled.main`
   align-items: center;
 
   font-family: "Google Sans", sans-serif;
+  perspective: 1px; // for locomotive-scroll element disappearance bug fix.
+  background-color: ${(props) => props.theme.backgroundColor.white};
 `;

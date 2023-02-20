@@ -1,17 +1,26 @@
-import { Link } from "react-router-dom";
+import DelayedLink from "@components/DelayedLink";
+import { TRANSITION_DURATION } from "@constants/constants";
+import { TransitionColorContext } from "@context/TransitionColorContext";
+import { useContext } from "react";
 import styled from "styled-components";
 
 function Card(props) {
+  const { transitionColorHandler } = useContext(TransitionColorContext);
+
+  const handleCardClick = () => {
+    transitionColorHandler(props.color);
+  };
+
   return (
-    <Link to={props.linkTarget}>
-      <Container color={props.color}>
+    <DelayedLink to={props.linkTarget} delay={TRANSITION_DURATION}>
+      <Container color={props.color} onClick={handleCardClick}>
         <ShapeWrapper>{props.shape}</ShapeWrapper>
         <TextWrapper>
           <LeftText>{props.leftText}</LeftText>
           <RightText>{props.rightText}</RightText>
         </TextWrapper>
       </Container>
-    </Link>
+    </DelayedLink>
   );
 }
 
@@ -30,11 +39,6 @@ const Container = styled.figure`
   border: 1px solid ${(props) => props.theme.lightColor.light};
 
   cursor: pointer;
-  transition: background-color 1s ease-in-out;
-
-  &:active {
-    background-color: ${(props) => props.color};
-  }
 `;
 
 const ShapeWrapper = styled.div`

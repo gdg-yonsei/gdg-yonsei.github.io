@@ -4,7 +4,7 @@ import Card from "./Card";
 import Asterisk from "./Elements/Asterisk";
 
 function MainSection() {
-  const { contrast } = useTheme();
+  const { color } = useTheme();
 
   return (
     <Container data-scroll-section>
@@ -19,28 +19,28 @@ function MainSection() {
             leftText={"01"}
             rightText={"Google"}
             shape={<Asterisk />}
-            color={contrast.red}
+            color={color.red}
             linkTarget={"/google"}
           />
           <Card
             leftText={"02"}
             rightText={"Developer"}
             shape={<Asterisk />}
-            color={contrast.green}
+            color={color.green}
             linkTarget={"/developer"}
           />
           <Card
             leftText={"03"}
             rightText={"Student"}
             shape={<Asterisk />}
-            color={contrast.blue}
+            color={color.blue}
             linkTarget={"/student"}
           />
           <Card
             leftText={"04"}
             rightText={"Clubs"}
             shape={<Asterisk />}
-            color={contrast.yellow}
+            color={color.yellow}
             linkTarget={"/clubs"}
           />
         </CardContainer>

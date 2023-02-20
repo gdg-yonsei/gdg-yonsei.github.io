@@ -1,25 +1,31 @@
-import LocomotiveScrollCustom from "@context/LocomotiveScrollCustom";
+import LoadingScreen from "@components/LoadingScreen";
+import useHandleAnimationScroll from "@hooks/useHandleAnimationScroll.js";
 import Hero from "@pages/Home/Hero";
 import MainSection from "@pages/Home/MainSection";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 function Home() {
-  const ref = useRef(null);
+  const { handleAnimationStart, handleAnimationComplete } =
+    useHandleAnimationScroll();
 
   return (
-    <LocomotiveScrollCustom containerRef={ref}>
-      <Container data-scroll-container ref={ref}>
+    <>
+      <Container>
         <Hero />
         <MainSection />
       </Container>
-    </LocomotiveScrollCustom>
+      <LoadingScreen
+        handleAnimationStart={handleAnimationStart}
+        handleAnimationComplete={handleAnimationComplete}
+      />
+    </>
   );
 }
 
 export default Home;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 100%;
 
   background-color: ${(props) => props.theme.backgroundColor.white};
