@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { MdChevronRight } from "@react-icons/all-files/md/MdChevronRight";
 
 import { ReactComponent as SiSwift } from "@assets/images/icons/swift.svg";

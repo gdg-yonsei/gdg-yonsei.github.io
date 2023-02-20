@@ -8,8 +8,8 @@ function Page404() {
   return (
     <Container>
       <DinosaurImage src={DinosaurGif} alt="DinosaurGif" />
-      <H1>Captain, We're Lost!</H1>
-      <Span>Don't worry. We'll get you back on course.</Span>
+      <H1>Captain, We&apos;re Lost!</H1>
+      <Span>Don&apos;t worry. We&apos;ll get you back on course.</Span>
       <BackToMain
         onClick={() => {
           navigate(`/`);
@@ -23,7 +23,8 @@ function Page404() {
         rel="noreferrer noopener"
       >
         <Credits>
-          Credits to: Dinosaur Trex Sticker by "RoxanneJarrelMellott" on tenor
+          Credits to: Dinosaur Trex Sticker by &quot;RoxanneJarrelMellott&quot;
+          on tenor
         </Credits>
       </a>
     </Container>

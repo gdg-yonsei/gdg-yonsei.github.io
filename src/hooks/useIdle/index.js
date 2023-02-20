@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-const { useState, useEffect } = require("react");
-const { throttle } = require("throttle-debounce");
+import { useState, useEffect } from "react";
+import { throttle } from "throttle-debounce";
 
 const defaultEvents = [
   "mousemove",

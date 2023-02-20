@@ -69,7 +69,7 @@ function NavigationSection() {
           data-scroll-position="top"
           data-scroll-speed="4"
         >
-          <ButtonSpan>I'm Feeling Lucky</ButtonSpan>
+          <ButtonSpan>I&apos;m Feeling Lucky</ButtonSpan>
         </StyledButton>
       </ButtonContainer>
     </Container>

@@ -57,10 +57,15 @@
   "devDependencies": {
     "@craco/craco": "^7.0.0",
     "@svgr/webpack": "^6.5.1",
+    "@yarnpkg/sdks": "^3.0.0-rc.39",
     "craco-swc": "^0.5.1",
     "cross-env": "^7.0.3",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
     "gh-pages": "^5.0.0",
     "react-snap": "^1.23.0",
+    "typescript": "^4.9.5",
     "webpack-bundle-analyzer": "^4.7.0"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }

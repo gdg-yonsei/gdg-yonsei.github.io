@@ -84,6 +84,7 @@ function MemberSection() {
               return (
                 <ReactTextTransition
                   key={idx}
+                  // eslint-disable-next-line react/no-children-prop
                   children={n}
                   delay={idx * 25}
                   overflow

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-function Button(props) {
-  return <Element>{props.children}</Element>;
+function Button({ children }) {
+  return <Element>{children}</Element>;
 }
 
 export default Button;

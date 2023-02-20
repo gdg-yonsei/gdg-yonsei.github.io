@@ -72,7 +72,7 @@ function DevRelSection() {
             <EventList>
               <List>Hosted GDSC - YS Weekly T19 / Tech Talk Session.</List>
               <List>Organize aperiodic fireside chat.</List>
-              <List>Manage production of 'Fridge Share App.'</List>
+              <List>Manage production of &apos;Fridge Share App.&apos;</List>
               <List>Hosted joint session with GDSC - CAU.</List>
               <List>Hosted joint session with GDSC - CAU & GDSC - GIST.</List>
             </EventList>
