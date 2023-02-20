@@ -12,10 +12,10 @@ function Page404() {
       <Span>Don't worry. We'll get you back on course.</Span>
       <BackToMain
         onClick={() => {
-          navigate(-1);
+          navigate(`/`);
         }}
       >
-        Take me to Previous Page
+        Take me to the Main Page
       </BackToMain>
       <a
         href="https://tenor.com/ko/view/dinosaur-trex-rare-no-net-gif-15077799"
