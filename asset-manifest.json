@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.8ee3c903.css",
-    "main.js": "/static/js/main.bda7b1a7.js",
-    "static/media/odessaPattern1.png": "/static/media/odessaPattern1.55c6eab460e563dac59a.png",
-    "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.b1d16f0d6d71361d1036.png",
-    "static/media/terrainPattern1.png": "/static/media/terrainPattern1.854b0f0499492233976e.png",
+    "main.js": "/static/js/main.5cbb9ada.js",
+    "static/media/odessaPattern1.png": "/static/media/odessaPattern1.0952069654966aa2d9a4.png",
+    "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -27,6 +26,7 @@
     "static/media/PPNeueMontreal-Thin.otf": "/static/media/PPNeueMontreal-Thin.79ab813ef18c7e673de5.otf",
     "static/media/GoogleDevelopers.png": "/static/media/GoogleDevelopers.008a741a39eb169dd39b.png",
     "static/media/pattern4.png": "/static/media/pattern4.01fb40c44041247eda26.png",
+    "static/media/terrainPattern1.png": "/static/media/terrainPattern1.7db208928c06195e7984.png",
     "static/media/pattern3.png": "/static/media/pattern3.4434cc959bac00c44434.png",
     "static/media/SolutionChallenge.png": "/static/media/SolutionChallenge.f718e3e549766181471b.png",
     "static/media/gdsclogo.png": "/static/media/gdsclogo.3455e8e781768daa53c9.png",
@@ -89,6 +89,6 @@
   },
   "entrypoints": [
     "static/css/main.8ee3c903.css",
-    "static/js/main.bda7b1a7.js"
+    "static/js/main.5cbb9ada.js"
   ]
 }
