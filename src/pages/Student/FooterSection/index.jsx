@@ -21,7 +21,12 @@ function FooterSection() {
           Take me to the top.
         </GotoTopButton>
       </ButtonContainer>
-      <CenterImage src={Pattern} data-scroll data-scroll-speed="3" />
+      <CenterImage
+        src={Pattern}
+        data-scroll
+        data-scroll-speed="3"
+        fetchpriority="low"
+      />
     </Container>
   );
 }

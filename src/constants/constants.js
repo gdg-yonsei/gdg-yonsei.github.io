@@ -3,8 +3,8 @@
 
 // Transition Duration Between pages.
 
-export const TRANSITION_DURATION = 500;
-export const TRANSITION_DURATION_DELAY = 250;
+export const TRANSITION_DURATION = 650;
+export const TRANSITION_DURATION_DELAY = 650;
 
 // Breakpoint height in 'students' page.
 

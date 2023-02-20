@@ -1,11 +1,14 @@
 import SolutionChallenge from "@assets/images/SolutionChallenge.png";
 import { BannerTextAnimation } from "@components/Animation/BannerTextAnimation";
 import DelayedLink from "@components/DelayedLink";
-import { TRANSITION_DURATION } from "@constants/constants";
+import {
+  TRANSITION_DURATION,
+  TRANSITION_DURATION_DELAY,
+} from "@constants/constants";
 import styled from "styled-components";
 
 function Banner() {
-  const animationDelaySeconds = TRANSITION_DURATION * 0.001;
+  const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
 
   return (
     <HeadingSection data-scroll-section>
@@ -31,13 +34,13 @@ function Banner() {
       </TitleSection>
       <BodySection>
         <TextSection>
-          <TextAnimationContainer delay={animationDelaySeconds}>
+          <TextAnimationContainer delay={animationDelaySeconds + 0.1}>
             <BodySpanLarge>Google</BodySpanLarge>
           </TextAnimationContainer>
-          <TextAnimationContainer delay={animationDelaySeconds + 0.3}>
+          <TextAnimationContainer delay={animationDelaySeconds + 0.4}>
             <BodySpan>Solution</BodySpan>
           </TextAnimationContainer>
-          <TextAnimationContainer delay={animationDelaySeconds + 0.3}>
+          <TextAnimationContainer delay={animationDelaySeconds + 0.4}>
             <BodySpan>Challenge</BodySpan>
           </TextAnimationContainer>
         </TextSection>
