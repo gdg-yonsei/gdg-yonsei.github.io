@@ -27,12 +27,12 @@ function FSSection() {
             data-scroll-target="#fixed-element-FS"
           >
             <H1>05.</H1>
-            <H2>Full-Stack Development</H2>
+            <H2>Gymnasium</H2>
             <Paragraph>
-              GDSC - YS provides a course for an end-to-end development. <br />
-              From the UI users first encounter to the place where data flows,
-              FS study jam enables beginner developers see the big picture of
-              the stream.
+              In GDSC - YS, students are provided with a comprehensive
+              end-to-end devleopment curriculum. <br />
+              Beginning with the user interface, Gymnasium study jam allows
+              novice developers to understand the entire data flow process.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -49,12 +49,12 @@ function FSSection() {
               )}
             </TitleWrapperFirst>
             <LearnList>
-              <List>End-to-end system mock design using MERN stack.</List>
+              <List>Mock design of an end-to-end system using MERN stack.</List>
               <List>
-                Manage REST & RESTful api endpoint using HTTP protocol.
+                Manage REST & RESTful API endpoints using HTTP protocol.
               </List>
               <List>
-                Experience the whole process of developing applications.
+                Experience the entire process of developing modern applications.
               </List>
             </LearnList>
           </SectionWrapper>

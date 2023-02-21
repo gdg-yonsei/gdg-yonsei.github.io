@@ -52,10 +52,11 @@ function WebSection() {
             <H1>01.</H1>
             <H2>Web Development</H2>
             <Paragraph>
-              Designing how to interact is another type of art, implying modern
-              frontend code is something more than a layout. <br />
+              Interaction design is another type of art, implying that modern
+              front-end code is something more than just a layout. <br />
               Leveraging with modern SPA frameworks, the frontend section
-              defines what and how to deliver the best experience to the user.
+              defines what the user experience should be and how it should be
+              delivered.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -72,10 +73,12 @@ function WebSection() {
               )}
             </TitleWrapperFirst>
             <LearnList>
-              <List>Explore fundamentals of web development.</List>
-              <List>Build UI/UX-friendly web wireframe for users.</List>
+              <List>Discover the fundamentals of web development.</List>
               <List>
-                Think of creative interaction upon various browser events.
+                Develop user-friendly UI/UX wireframes for various devices.
+              </List>
+              <List>
+                Consider creative interaction with various browser events.
               </List>
               <List>
                 Write Unit / UI tests to identify errors and malfunctions.
@@ -83,12 +86,12 @@ function WebSection() {
               <List>
                 Conduct research about modern SPA frameworks & libraries.
               </List>
-              <List>Build optimized code for faster experience.</List>
+              <List>Optimize code for providing faster user experience.</List>
               <List>
                 Understand the process between client-server architecture.
               </List>
               <List>
-                Study state management and data binding between components.
+                Study component-based state management and data binding.
               </List>
             </LearnList>
           </SectionWrapper>

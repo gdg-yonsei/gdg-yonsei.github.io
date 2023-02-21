@@ -21,11 +21,11 @@ function DevRelSection() {
             <H1>06.</H1>
             <H2>Developer Relations</H2>
             <Paragraph>
-              Every groups need a leader & mediators. <br />
-              Developer Relations, DevRel in short, hosts ongoing events in GDSC
-              - YS, and be the heart of the chapter. <br />
-              Strategic mind and tactics help the chapter beneficial to both
-              developers and the organization.
+              Every group needs a leader and a mediator. As the heart of the
+              chapter, Developer Relations, or DevRel in short, hosts ongoing
+              event with GDSC - YS. <br />
+              Strategic mind and tactics provide the chapter with an advantage
+              that benefits both developers and the organization as a whole.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -70,7 +70,7 @@ function DevRelSection() {
               )}
             </TitleWrapperSecond>
             <EventList>
-              <List>Hosted GDSC - YS Weekly T19 / Tech Talk Session.</List>
+              <List>Hosted GDSC - YS Weekly T19 / Tech Talk session.</List>
               <List>Organize aperiodic fireside chat.</List>
               <List>Manage production of &apos;Fridge Share App.&apos;</List>
               <List>Hosted joint session with GDSC - CAU.</List>

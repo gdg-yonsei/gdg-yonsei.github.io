@@ -59,11 +59,11 @@ function ServerSection() {
             <H1>02.</H1>
             <H2>Server Development</H2>
             <Paragraph>
-              Backend of the service is something magical to the user, because
-              all of the talks between the client and the server work under the
-              hood. <br />
-              Every communication should be held in an integrated way, and each
-              communication should have their own responsibility.
+              The backend of the service appears magical to the user, as all
+              communications between the client and the server take place under
+              the hood. <br />
+              Communication should be held in an integrated manner, and every
+              communication should have its own responsibility.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -80,16 +80,16 @@ function ServerSection() {
               )}
             </TitleWrapperFirst>
             <LearnList>
-              <List>Develop web application with RDBMS & Redis.</List>
+              <List>Develop a web application with RDBMS & Redis.</List>
               <List>
-                Manage REST & RESTful api endpoint using HTTP protocol.
+                Manage REST & RESTful API endpoint using HTTP protocol.
               </List>
               <List>Automated CI/CD for continuous service.</List>
               <List>
                 Penetration test & hacking, learn security by mock CTF.
               </List>
               <List>
-                Design microservice architecture using multi languages.
+                Design microservice architecture using multi-languages.
               </List>
             </LearnList>
           </SectionWrapper>

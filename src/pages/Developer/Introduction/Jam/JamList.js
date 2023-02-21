@@ -2,7 +2,7 @@ import { VscCode } from "@react-icons/all-files/vsc/VscCode";
 import { BsServer } from "@react-icons/all-files/bs/BsServer";
 import { VscDeviceMobile } from "@react-icons/all-files/vsc/VscDeviceMobile";
 import { GiProcessor } from "@react-icons/all-files/gi/GiProcessor";
-import { FaCogs } from "@react-icons/all-files/fa/FaCogs";
+import { FaGraduationCap } from "@react-icons/all-files/fa/FaGraduationCap";
 import { FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
 
 export const JamList = [
@@ -27,7 +27,7 @@ export const JamList = [
     scrollTarget: "#fixed-element-ML",
   },
   {
-    icon: <FaCogs />,
+    icon: <FaGraduationCap />,
     description: "Gymnasium",
     scrollTarget: "#fixed-element-FS",
   },

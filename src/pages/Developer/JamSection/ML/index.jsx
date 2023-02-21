@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 // Icon Import
 import { ReactComponent as SiPython } from "@assets/images/icons/python.svg";
-
 import { ReactComponent as SiJupyter } from "@assets/images/icons/ML/jupyter.svg";
 import { ReactComponent as SiNumpy } from "@assets/images/icons/ML/numpy.svg";
 import { ReactComponent as SiPandas } from "@assets/images/icons/ML/pandas.svg";
@@ -36,9 +35,9 @@ function MLSection() {
             <H2>Machine Learning</H2>
             <H2>Artificial Intelligence</H2>
             <Paragraph>
-              State-of-the-art technology is here. At the frontier of the future
-              IT industry, GDSC - YS ML study jam pursues the best and the
-              finest model training and model serving for customized needs.
+              State-of-the-art technology is here. At the forefront of the
+              future IT industry, GDSC - YS ML study jam pursues the best and
+              the finest model training and model services for customized needs.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -62,7 +61,7 @@ function MLSection() {
                 Review the latest paper in order to catch up with the industry.
               </List>
               <List>
-                Dataflow management & ML pipelineing with huggingface, wanDB.
+                Manage Dataflow & build model pipeline using Huggingface, WanDB.
               </List>
               <List>Build basic Pytorch template for further competition.</List>
               <List>

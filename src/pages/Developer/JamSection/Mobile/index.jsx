@@ -32,9 +32,9 @@ function MobileSection() {
             <H1>03.</H1>
             <H2>Mobile Development</H2>
             <Paragraph>
-              As hand-held mobile smartphones & devices are any closer than
-              other devices, the importance of mobile developement is emphasized
-              more and more nowadays. <br />
+              Hand-held mobile smartphones & devices have become more accessible
+              than ever before, and the importance of mobile developement is
+              becoming more evident. more and more nowadays. <br />
               Crucial as it seems, and it is!
             </Paragraph>
           </OutlineContainer>
@@ -53,13 +53,10 @@ function MobileSection() {
             </TitleWrapperFirst>
             <LearnList>
               <List>
-                Develop modern mobile application using modern framework.
+                Develop modern mobile application using Flutter & Swift.
               </List>
-              <List>Write APIs for supporting mobile functionality.</List>
+              <List>Write API to support native mobile functionality.</List>
               <List>Build interfaces with rich UI / UX.</List>
-              <List>
-                Create cross-platform applications for Android and iOS.
-              </List>
               <List>
                 Monitor the application CI / CD and track ongoing releases.
               </List>
