@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ee3c903.css",
-    "main.js": "/static/js/main.81bfa772.js",
+    "main.js": "/static/js/main.257ed4fb.js",
     "static/media/odessaPattern1.png": "/static/media/odessaPattern1.0952069654966aa2d9a4.png",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
@@ -24,12 +24,11 @@
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.a5585efb70f888db7b5c.otf",
     "static/media/PPNeueMontreal-Book.otf": "/static/media/PPNeueMontreal-Book.497a4d8a79ae3d85403f.otf",
     "static/media/PPNeueMontreal-Thin.otf": "/static/media/PPNeueMontreal-Thin.79ab813ef18c7e673de5.otf",
-    "static/media/GoogleDevelopers.png": "/static/media/GoogleDevelopers.008a741a39eb169dd39b.png",
     "static/media/pattern4.png": "/static/media/pattern4.01fb40c44041247eda26.png",
     "static/media/terrainPattern1.png": "/static/media/terrainPattern1.7db208928c06195e7984.png",
     "static/media/pattern3.png": "/static/media/pattern3.4434cc959bac00c44434.png",
     "static/media/SolutionChallenge.png": "/static/media/SolutionChallenge.f718e3e549766181471b.png",
-    "static/media/gdsclogo.png": "/static/media/gdsclogo.3455e8e781768daa53c9.png",
+    "static/media/GoogleDevelopers.png": "/static/media/GoogleDevelopers.9b72a86ee5e42508d1c4.png",
     "static/media/nestjs.svg": "/static/media/nestjs.d5a4ab95a2744ffa33da21fa23e26c53.svg",
     "static/media/postgresql.svg": "/static/media/postgresql.4d89da07f5b01320923e37a50ee3a5d3.svg",
     "static/media/scikitlearn.svg": "/static/media/scikitlearn.73b2a863dc9eea5d16c9c271fc70605f.svg",
@@ -89,6 +88,6 @@
   },
   "entrypoints": [
     "static/css/main.8ee3c903.css",
-    "static/js/main.81bfa772.js"
+    "static/js/main.257ed4fb.js"
   ]
 }
