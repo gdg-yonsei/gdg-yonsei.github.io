@@ -2,7 +2,8 @@ import LoadingScreen from "@components/LoadingScreen";
 import { TransitionColorContext } from "@context/TransitionColorContext";
 import useEffectOnce from "@hooks/useEffectOnce";
 import useHandleAnimationScroll from "@hooks/useHandleAnimationScroll.js";
-import { useContext } from "react";
+import { HorizontalLocomotiveScrollProvider } from "@context/LocomotiveScrollCustom";
+import { useContext, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import Banner from "./Banner";
 
@@ -11,6 +12,7 @@ function ClubsPage() {
     useHandleAnimationScroll();
   const { transitionColorHandler } = useContext(TransitionColorContext);
   const { color } = useTheme();
+  const containerRef = useRef(null);
 
   useEffectOnce(() => {
     transitionColorHandler(color.yellow);
@@ -18,10 +20,12 @@ function ClubsPage() {
 
   return (
     <>
-      <Container>
-        <Banner />
-        <PaddingTemp />
-      </Container>
+      <HorizontalLocomotiveScrollProvider containerRef={containerRef}>
+        <Container data-scroll-container ref={containerRef}>
+          <Banner />
+          <PaddingTemp />
+        </Container>
+      </HorizontalLocomotiveScrollProvider>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

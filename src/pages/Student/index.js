@@ -4,7 +4,8 @@ import MouseContextProvider from "@context/MouseContext";
 import { TransitionColorContext } from "@context/TransitionColorContext";
 import useEffectOnce from "@hooks/useEffectOnce";
 import useHandleAnimationScroll from "@hooks/useHandleAnimationScroll.js";
-import { useContext } from "react";
+import { VerticalLocomotiveScrollProvider } from "@context/LocomotiveScrollCustom";
+import { useContext, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import Banner from "./Banner";
 import BlogSection from "./BlogSection";
@@ -16,6 +17,7 @@ function StudentPage() {
     useHandleAnimationScroll();
   const { transitionColorHandler } = useContext(TransitionColorContext);
   const { color } = useTheme();
+  const containerRef = useRef(null);
 
   useEffectOnce(() => {
     transitionColorHandler(color.blue);
@@ -23,16 +25,18 @@ function StudentPage() {
 
   return (
     <>
-      <Container>
-        <Banner />
-        <MouseContextProvider>
-          <MemberSection />
-          <GithubCursor />
-        </MouseContextProvider>
-        <PaddingSection />
-        <BlogSection />
-        <FooterSection />
-      </Container>
+      <VerticalLocomotiveScrollProvider containerRef={containerRef}>
+        <Container data-scroll-container ref={containerRef}>
+          <Banner />
+          <MouseContextProvider>
+            <MemberSection />
+            <GithubCursor />
+          </MouseContextProvider>
+          <PaddingSection />
+          <BlogSection />
+          <FooterSection />
+        </Container>
+      </VerticalLocomotiveScrollProvider>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

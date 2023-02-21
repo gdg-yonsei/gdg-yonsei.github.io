@@ -4,17 +4,22 @@ import Hero from "@pages/Home/Hero";
 import MainSection from "@pages/Home/MainSection";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { VerticalLocomotiveScrollProvider } from "@context/LocomotiveScrollCustom";
+import { useRef } from "react";
 
 function Home() {
   const { handleAnimationStart, handleAnimationComplete } =
     useHandleAnimationScroll();
+  const containerRef = useRef(null);
 
   return (
     <>
-      <Container>
-        <Hero />
-        <MainSection />
-      </Container>
+      <VerticalLocomotiveScrollProvider containerRef={containerRef}>
+        <Container data-scroll-container ref={containerRef}>
+          <Hero />
+          <MainSection />
+        </Container>
+      </VerticalLocomotiveScrollProvider>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

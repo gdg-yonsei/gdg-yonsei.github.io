@@ -1,12 +1,11 @@
 import { TRANSITION_DURATION } from "@constants/constants";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useLocation } from "react-router-dom";
 
-function LocomotiveScrollCustom({ containerRef, children }) {
-  const location = useLocation();
-
+export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
     onLocationChange: (scroll) => {
+      scroll.destroy();
+      scroll.init();
       setTimeout(() => {
         scroll.scrollTo(0, { duration: 0, disableLerp: true });
       }, TRANSITION_DURATION);
@@ -36,4 +35,34 @@ function LocomotiveScrollCustom({ containerRef, children }) {
   );
 }
 
-export default LocomotiveScrollCustom;
+export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
+  const scrollOptions = {
+    onLocationChange: (scroll) => {
+      setTimeout(() => {
+        scroll.scrollTo(0, { duration: 0, disableLerp: true });
+      }, TRANSITION_DURATION);
+    },
+    options: {
+      smooth: true,
+      reloadOnContextChange: true,
+      tablet: {
+        breakpoint: 0,
+        smooth: true,
+      },
+      smartphone: {
+        smooth: true,
+      },
+      direction: "horizontal",
+      getDirection: true,
+    },
+    location: location,
+    containerRef: containerRef,
+    watch: [],
+  };
+
+  return (
+    <LocomotiveScrollProvider {...scrollOptions}>
+      {children}
+    </LocomotiveScrollProvider>
+  );
+}
