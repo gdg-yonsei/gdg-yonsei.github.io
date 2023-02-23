@@ -5,20 +5,18 @@ import styled from "styled-components";
 import mapNumber from "@utils/mapNumber";
 
 function GalleryItem({ index, desc, short }) {
-  const { scroll: lscroll } = useLocomotiveScroll();
+  const { scroll } = useLocomotiveScroll();
   const scrollPos = { previous: 0, current: 0 };
   const [skew, setSkew] = useState(0);
 
   useEffect(() => {
-    if (lscroll) {
-      lscroll.on("scroll", (obj) => {
-        scrollPos.current = obj.scroll.x;
-        const distance = scrollPos.current - scrollPos.previous;
-        scrollPos.previous = scrollPos.current;
-        const skewness = mapNumber(distance, -50, 50, -10, 10);
-        setSkew(skewness);
-      });
-    }
+    scroll.on("scroll", (obj) => {
+      scrollPos.current = obj.scroll.x;
+      const distance = scrollPos.current - scrollPos.previous;
+      scrollPos.previous = scrollPos.current;
+      const skewness = mapNumber(distance, -100, 100, -10, 10);
+      setSkew(skewness);
+    });
   }, [scroll]);
 
   return (
