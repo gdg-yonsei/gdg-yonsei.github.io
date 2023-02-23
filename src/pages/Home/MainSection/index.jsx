@@ -96,11 +96,12 @@ const TitleSpan = styled.span`
 `;
 
 const CardContainer = styled.div`
-  width: 85%;
-  padding: 0 auto;
-  flex-grow: 1;
+  flex: 1;
+  padding-bottom: 5vh;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 5%;
 `;

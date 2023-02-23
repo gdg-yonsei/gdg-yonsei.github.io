@@ -5,6 +5,7 @@ import {
   TRANSITION_DURATION,
   TRANSITION_DURATION_DELAY,
 } from "@constants/constants";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 function Banner() {
@@ -56,7 +57,7 @@ function Banner() {
 
 export default Banner;
 
-const HeadingSection = styled.div`
+const HeadingSection = styled(motion.div)`
   width: 100%;
   height: 100vh;
 
@@ -69,6 +70,8 @@ const HeadingSection = styled.div`
   align-items: center;
 
   font-family: "Google Sans";
+
+  /* background-color: ${(props) => props.bgcolor}; */
 `;
 
 const BodySection = styled.div`
@@ -124,7 +127,7 @@ const BodySpanLarge = styled.span`
   font-size: 12.5vw;
   font-weight: 500;
 
-  line-height: 1.1;
+  line-height: 1.3;
 
   color: ${(props) => props.theme.backgroundColor.black};
 `;

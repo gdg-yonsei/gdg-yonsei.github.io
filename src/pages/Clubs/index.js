@@ -6,6 +6,7 @@ import { HorizontalLocomotiveScrollProvider } from "@context/LocomotiveScrollCus
 import { useContext, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import Banner from "./Banner";
+import GalleryComponent from "./GalleryComponent";
 
 function ClubsPage() {
   const { handleAnimationStart, handleAnimationComplete } =
@@ -23,7 +24,8 @@ function ClubsPage() {
       <HorizontalLocomotiveScrollProvider containerRef={containerRef}>
         <Container data-scroll-container ref={containerRef}>
           <Banner />
-          <PaddingTemp />
+          <GalleryPadding data-scroll-section />
+          <GalleryComponent />
         </Container>
       </HorizontalLocomotiveScrollProvider>
       <LoadingScreen
@@ -40,9 +42,6 @@ const Container = styled.main`
   width: 100%;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 
   font-family: "Google Sans", sans-serif;
   perspective: 1px; // for locomotive-scroll element disappearance bug fix.
@@ -51,7 +50,13 @@ const Container = styled.main`
   content-visibility: auto;
 `;
 
-const PaddingTemp = styled.div`
-  width: 100%;
-  height: 100vh;
+const GalleryPadding = styled.div`
+  width: 35vw;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    ${(props) => props.theme.backgroundColor.white} 0%,
+    ${(props) => props.theme.backgroundColor.black} 100%
+  );
 `;

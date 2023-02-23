@@ -28,7 +28,7 @@ export default Card;
 
 const Container = styled.figure`
   width: 18vw;
-  height: 25vw;
+  height: 45vh;
 
   display: flex;
   flex-direction: column;

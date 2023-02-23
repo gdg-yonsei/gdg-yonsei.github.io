@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { throttle } from "throttle-debounce";
 
-function useLocomotiveScrollPosition(throttleValue = 1000) {
+function useLocomotiveScrollPosition(throttleValue = 1000, horizontal = false) {
   const [pos, setPos] = useState(null);
 
   const { scroll } = useLocomotiveScroll();
@@ -12,7 +12,11 @@ function useLocomotiveScrollPosition(throttleValue = 1000) {
       scroll.on(
         "scroll",
         throttle(throttleValue, (args) => {
-          setPos(args.scroll.y);
+          if (horizontal) {
+            setPos(args.scroll.x);
+          } else {
+            setPos(args.scroll.y);
+          }
         })
       );
     }
