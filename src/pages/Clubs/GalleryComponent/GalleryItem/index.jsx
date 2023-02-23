@@ -17,7 +17,6 @@ function GalleryItem({ index, desc, short }) {
         scrollPos.previous = scrollPos.current;
         const skewness = mapNumber(distance, -100, 100, -10, 10);
         setSkew(skewness);
-        console.log(scrollPos, skewness);
       });
     }
   }, [scroll]);
