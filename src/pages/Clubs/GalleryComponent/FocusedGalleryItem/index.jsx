@@ -1,17 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import styled from "styled-components";
+import useKeyPress from "@hooks/useKeyPress";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import styled from "styled-components";
 import useOverlayStyle from "./hooks/useOverlayStyle";
 
 function FocusedGalleryItem({ focusedSectionId, thumbnail, onBlur, disabled }) {
   const { scroll } = useLocomotiveScroll();
   const { blurValue, brightnessValue } = useOverlayStyle();
+  const isEscPressed = useKeyPress("Escape");
 
   const onClickOverlayContainer = () => {
     scroll.start();
     onBlur();
   };
+
+  useEffect(() => {
+    if (isEscPressed) {
+      onClickOverlayContainer();
+    }
+  }, [isEscPressed]);
 
   return (
     <>
@@ -51,12 +59,18 @@ const Container = styled(motion.div)`
   width: 30vw;
   height: 50vh;
 
-  background: ${(props) => `url("/assets/GDSCImages/${props.thumbnail}")`};
+  background: ${(props) => `url("/assets/GDSCImages/${props.thumbnail}")`},
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(65, 65, 65, 1) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
-  box-shadow: 0 0 0 10px ${(props) => props.theme.backgroundColor.white} inset;
+  box-shadow: 0 0 0 3.5px ${(props) => props.theme.backgroundColor.white} inset;
   cursor: pointer;
 
   z-index: 3000;

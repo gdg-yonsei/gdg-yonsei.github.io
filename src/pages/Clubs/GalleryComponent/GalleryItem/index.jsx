@@ -30,6 +30,13 @@ function GalleryItem({ item, index, onFocus, visible }) {
         <ImageSection
           thumbnail={item.thumbnail}
           onClick={onClickImageSection}
+          whileHover={{
+            scale: 1.05,
+            transition: {
+              duration: 0.3,
+            },
+          }}
+          layout
           layoutId={item.id}
           visible={visible}
         />

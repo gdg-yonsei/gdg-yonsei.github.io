@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import styled, { css } from "styled-components";
 import GalleryItem from "./GalleryItem";
 import { GalleryItems } from "./GalleryItem/GalleryItems";
@@ -7,6 +7,8 @@ import FocusedGalleryItem from "./FocusedGalleryItem";
 
 function GalleryComponent() {
   const [focusedSectionId, setFocusedSectionId] = useState(null);
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef);
 
   const focusedItem = GalleryItems.filter(
     (item) => item.id === focusedSectionId
@@ -16,6 +18,12 @@ function GalleryComponent() {
     focusedItem.length !== 0 ? focusedItem[0].thumbnail : null;
 
   const isDisabled = !(focusedSectionId && focusedThumbnail);
+
+  useEffect(() => {
+    if (!isInView) {
+      setFocusedSectionId(null);
+    }
+  }, [isInView]);
 
   return (
     <Container data-scroll-section id="fixed-element-clubs-container">

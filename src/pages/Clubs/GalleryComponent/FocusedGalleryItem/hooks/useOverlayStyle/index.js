@@ -10,7 +10,7 @@ function useOverlayStyle(disabled) {
       setBrightnessValue(100);
     } else {
       setBlurValue(10);
-      setBrightnessValue(100);
+      setBrightnessValue(30);
     }
   }, [disabled]);
 
