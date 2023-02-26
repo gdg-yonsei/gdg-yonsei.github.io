@@ -36,6 +36,9 @@ function GalleryItem({ item, index, onFocus, visible }) {
               duration: 0.3,
             },
           }}
+          whileInView={{
+            transform: "none",
+          }}
           layout
           layoutId={item.id}
           visible={visible}

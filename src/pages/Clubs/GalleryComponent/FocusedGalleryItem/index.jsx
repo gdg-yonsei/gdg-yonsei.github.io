@@ -53,11 +53,11 @@ const Container = styled(motion.div)`
   visibility: ${(props) => (props.disabled ? "hidden" : "visible")};
 
   position: absolute;
-  top: 25vh;
-  left: 35vw;
+  top: 20vh;
+  left: 30vw;
 
-  width: 30vw;
-  height: 50vh;
+  width: 40vw;
+  height: 60vh;
 
   background: ${(props) => `url("/assets/GDSCImages/${props.thumbnail}")`},
     linear-gradient(
@@ -70,7 +70,7 @@ const Container = styled(motion.div)`
   background-repeat: no-repeat;
   background-size: contain;
 
-  box-shadow: 0 0 0 3.5px ${(props) => props.theme.backgroundColor.white} inset;
+  box-shadow: 0 0 0 10px ${(props) => props.theme.backgroundColor.white} inset;
   cursor: pointer;
 
   z-index: 3000;
