@@ -38,6 +38,8 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
 export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
     onLocationChange: (scroll) => {
+      scroll.destroy();
+      scroll.init();
       setTimeout(() => {
         scroll.scrollTo(0, { duration: 0, disableLerp: true });
       }, TRANSITION_DURATION);

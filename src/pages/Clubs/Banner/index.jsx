@@ -58,7 +58,7 @@ function Banner() {
 export default Banner;
 
 const HeadingSection = styled(motion.div)`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   padding-bottom: 1vh;

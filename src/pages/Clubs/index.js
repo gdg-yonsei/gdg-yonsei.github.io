@@ -1,8 +1,8 @@
 import LoadingScreen from "@components/LoadingScreen";
+import { HorizontalLocomotiveScrollProvider } from "@context/LocomotiveScrollCustom";
 import { TransitionColorContext } from "@context/TransitionColorContext";
 import useEffectOnce from "@hooks/useEffectOnce";
 import useHandleAnimationScroll from "@hooks/useHandleAnimationScroll.js";
-import { HorizontalLocomotiveScrollProvider } from "@context/LocomotiveScrollCustom";
 import { useContext, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import Banner from "./Banner";
@@ -22,7 +22,11 @@ function ClubsPage() {
   return (
     <>
       <HorizontalLocomotiveScrollProvider containerRef={containerRef}>
-        <Container data-scroll-container ref={containerRef}>
+        <Container
+          data-scroll-container
+          ref={containerRef}
+          id="#fixed-element-clubs-container"
+        >
           <Banner />
           <GalleryPadding data-scroll-section />
           <GalleryComponent />
@@ -39,15 +43,14 @@ function ClubsPage() {
 export default ClubsPage;
 
 const Container = styled.main`
-  width: 100%;
+  width: fit-content;
+  height: 100%;
 
   display: flex;
 
   font-family: "Google Sans", sans-serif;
   perspective: 1px; // for locomotive-scroll element disappearance bug fix.
   background-color: ${(props) => props.theme.backgroundColor.white};
-
-  content-visibility: auto;
 `;
 
 const GalleryPadding = styled.div`

@@ -5,6 +5,7 @@
 - [x] Virtual Scrolling
 - [x] Page Transition Animation
 - [x] Text Appear Animation on Banner Page
+- [ ] 'Clubs' gallery page.
 - [ ] Micro Interactions on Home/Hero
 - [ ] Image to css-doodle for optimization & custom animation.
 
@@ -14,4 +15,3 @@
 - [ ] Bottom Padding Adjustment
 - [ ] 'Develop' Page Layout change request.
 - [ ] 'Student' Page Delay & Layout Error on Webkit.
-- [ ] 

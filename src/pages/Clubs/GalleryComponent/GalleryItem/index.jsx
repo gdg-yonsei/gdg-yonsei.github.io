@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import styled from "styled-components";
-import mapNumber from "@utils/mapNumber";
+import { useGallerySkew } from "../hooks";
 
-function GalleryItem({ index, desc, short }) {
+function GalleryItem({ item, index, onFocus, visible }) {
   const { scroll } = useLocomotiveScroll();
-  const scrollPos = { previous: 0, current: 0 };
-  const [skew, setSkew] = useState(0);
+  const skew = useGallerySkew();
 
-  useEffect(() => {
-    if (scroll) {
-      scroll.on("scroll", (obj) => {
-        scrollPos.current = obj.scroll.x;
-        const distance = scrollPos.current - scrollPos.previous;
-        scrollPos.previous = scrollPos.current;
-        const skewness = mapNumber(distance, -100, 100, -10, 10);
-        setSkew(skewness);
-      });
-    }
-  }, [scroll]);
+  const onClickImageSection = () => {
+    scroll.stop();
+    onFocus();
+  };
 
   return (
     <Container
@@ -32,10 +23,17 @@ function GalleryItem({ index, desc, short }) {
           0{index + 1}
         </IndexSpan>
         <DescriptionSpan data-scroll data-scroll-speed="2.5">
-          {short}
+          {item.short}
         </DescriptionSpan>
       </WriteupWrapper>
-      <ImageSection data-scroll data-scroll-speed="1"></ImageSection>
+      <div data-scroll data-scroll-speed="1.2">
+        <ImageSection
+          thumbnail={item.thumbnail}
+          onClick={onClickImageSection}
+          layoutId={item.id}
+          visible={visible}
+        />
+      </div>
     </Container>
   );
 }
@@ -78,11 +76,20 @@ const DescriptionSpan = styled.span`
   color: ${(props) => props.theme.backgroundColor.white};
 `;
 
-const ImageSection = styled.div`
-  width: 100%;
+const ImageSection = styled(motion.div)`
+  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
+
+  width: 30vw;
   height: 50vh;
 
-  background-color: white;
+  background: ${(props) => `url("/assets/GDSCImages/${props.thumbnail}")`};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 0 0 0 10px ${(props) => props.theme.backgroundColor.white} inset;
+
+  overflow: hidden;
 
   cursor: pointer;
 `;
