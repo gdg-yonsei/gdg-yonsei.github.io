@@ -1,4 +1,13 @@
-Under Construction...
-<br />
+# GDSC Yonsei is online!
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFlNqyAZbKofV_uPhr4mOEswL6zOyUPWfRV3BfD0Wh7NuSrHHWTLuff9PiXNx9B8y1bz4&usqp=CAU" alt="Under Construction..."/>
+> ## 📂&nbsp; FRAMEWORKS & LIBRARIES
+
+- React.js
+- Styled-components
+- locomotive-scroll
+- framer-motion
+- ... and other minor libraries
+
+> ## 👩‍💻&nbsp; EXTERNAL LINKS
+
+- **Refer to <a href="https://github.com/gdsc-ys">GDSC Yonsei Official repository</a> for more information.**
