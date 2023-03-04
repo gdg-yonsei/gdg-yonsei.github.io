@@ -1,5 +1,5 @@
-import { TRANSITION_DURATION } from "@constants/constants";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { TRANSITION_DURATION } from '@constants/constants';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
@@ -20,7 +20,7 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
       smartphone: {
         smooth: true,
       },
-      direction: "vertical",
+      direction: 'vertical',
       getDirection: true,
     },
     location: location,
@@ -28,11 +28,7 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
     watch: [],
   };
 
-  return (
-    <LocomotiveScrollProvider {...scrollOptions}>
-      {children}
-    </LocomotiveScrollProvider>
-  );
+  return <LocomotiveScrollProvider {...scrollOptions}>{children}</LocomotiveScrollProvider>;
 }
 
 export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
@@ -54,7 +50,7 @@ export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
       smartphone: {
         smooth: true,
       },
-      direction: "horizontal",
+      direction: 'horizontal',
       getDirection: true,
     },
     location: location,
@@ -62,9 +58,5 @@ export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
     watch: [],
   };
 
-  return (
-    <LocomotiveScrollProvider {...scrollOptions}>
-      {children}
-    </LocomotiveScrollProvider>
-  );
+  return <LocomotiveScrollProvider {...scrollOptions}>{children}</LocomotiveScrollProvider>;
 }

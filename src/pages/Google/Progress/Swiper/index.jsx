@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import styled from 'styled-components';
+import { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/free-mode";
-import useWindowSize from "@hooks/useWindowSize";
-import Slide from "./Slide";
-import { SlideContents } from "./SlideContent";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
+import useWindowSize from '@hooks/useWindowSize';
+import Slide from './Slide';
+import { SlideContents } from './SlideContent';
 
 function SwiperElement() {
   const { width } = useWindowSize();

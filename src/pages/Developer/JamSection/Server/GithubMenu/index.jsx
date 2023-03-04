@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { ReactComponent as SiGithub } from "@assets/images/icons/github.svg";
-import { MdChevronRight } from "@react-icons/all-files/md/MdChevronRight";
-import { ReactComponent as DreamHackLogo } from "@assets/images/icons/server/hackaday.svg";
+import styled from 'styled-components';
+import { ReactComponent as SiGithub } from '@assets/images/icons/github.svg';
+import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
+import { ReactComponent as DreamHackLogo } from '@assets/images/icons/server/hackaday.svg';
 
-function handleIcon(type = "Github") {
+function handleIcon(type = 'Github') {
   switch (type) {
-    case "Github":
+    case 'Github':
       return <GithubIcon />;
 
-    case "Dreamhack":
+    case 'Dreamhack':
       return <DreamHackIcon />;
 
     default:

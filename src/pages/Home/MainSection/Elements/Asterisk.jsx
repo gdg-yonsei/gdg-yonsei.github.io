@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 function Asterisk() {
   return <AsteriskElement />;
@@ -14,7 +14,7 @@ const AsteriskElement = styled.figure`
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;

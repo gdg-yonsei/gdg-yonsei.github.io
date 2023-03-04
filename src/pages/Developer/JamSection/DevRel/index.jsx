@@ -1,7 +1,7 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 function DevRelSection() {
   const observerRef = useRef(null);
@@ -21,11 +21,10 @@ function DevRelSection() {
             <H1>06.</H1>
             <H2>Developer Relations</H2>
             <Paragraph>
-              Every group needs a leader and a mediator. As the heart of the
-              chapter, Developer Relations, or DevRel in short, hosts ongoing
-              event with GDSC - YS. <br />
-              Strategic mind and tactics provide the chapter with an advantage
-              that benefits both developers and the organization as a whole.
+              Every group needs a leader and a mediator. As the heart of the chapter, Developer
+              Relations, or DevRel in short, hosts ongoing event with GDSC - YS. <br />
+              Strategic mind and tactics provide the chapter with an advantage that benefits both
+              developers and the organization as a whole.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -33,29 +32,19 @@ function DevRelSection() {
           <SectionWrapper ref={observerRef}>
             <TitleWrapperFirst>
               {onScreen && (
-                <TypeAnimation
-                  sequence={["What we do"]}
-                  speed={50}
-                  wrapper={"span"}
-                  repeat={1}
-                />
+                <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
             </TitleWrapperFirst>
             <LearnList>
+              <List>Host upcoming & ongoing internal, external Google events.</List>
               <List>
-                Host upcoming & ongoing internal, external Google events.
+                Recruit other developers and managers and help the recuitee fit in the chapter.
               </List>
               <List>
-                Recruit other developers and managers and help the recuitee fit
-                in the chapter.
+                Manage current projects and develop vision for the product related to business
+                goals.
               </List>
-              <List>
-                Manage current projects and develop vision for the product
-                related to business goals.
-              </List>
-              <List>
-                Promote GDSC chapter to the student & industry society.
-              </List>
+              <List>Promote GDSC chapter to the student & industry society.</List>
             </LearnList>
           </SectionWrapper>
           <SectionWrapper ref={observerRefSecond}>
@@ -64,7 +53,7 @@ function DevRelSection() {
                 <TypeAnimation
                   sequence={["What we've done"]}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}

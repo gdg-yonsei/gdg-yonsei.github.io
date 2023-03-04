@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const Writeup = [
-  "Build a solution to a local",
-  "problems using Google technologies,",
-  "in accordance with one or more of",
-  "UN 17 Sustainable Development Goals",
+  'Build a solution to a local',
+  'problems using Google technologies,',
+  'in accordance with one or more of',
+  'UN 17 Sustainable Development Goals',
 ];
 
 function Introduction() {
@@ -59,7 +59,7 @@ const Container = styled.div`
 
   background-color: ${(props) => props.theme.color.red};
 
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
   color: ${(props) => props.theme.backgroundColor.white};
 `;
 
@@ -95,7 +95,7 @@ const Line = styled.li`
 
   font-weight: 300;
   font-size: 5.5vw;
-  font-family: "Pretendard", sans-serif;
+  font-family: 'Pretendard', sans-serif;
 
   line-height: 1.3;
 

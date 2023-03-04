@@ -1,13 +1,11 @@
-import useIdle from "@hooks/useIdle";
-import { Helmet } from "react-helmet-async";
+import useIdle from '@hooks/useIdle';
+import { Helmet } from 'react-helmet-async';
 
 function Head() {
   const idleState = useIdle(5e3);
 
   return (
-    <Helmet>
-      {!idleState ? <title>GDSC - YS</title> : <title>👋 Are you there?</title>}
-    </Helmet>
+    <Helmet>{!idleState ? <title>GDSC - YS</title> : <title>👋 Are you there?</title>}</Helmet>
   );
 }
 

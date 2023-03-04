@@ -1,11 +1,11 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 function SectionIntro() {
   const observerRef = useRef(null);
-  const onScreen = useOnScreen(observerRef, "100px");
+  const onScreen = useOnScreen(observerRef, '100px');
 
   return (
     <TitleWrapper data-scroll-section ref={observerRef}>
@@ -14,7 +14,7 @@ function SectionIntro() {
           <TypeAnimation
             data-scroll
             data-scroll-speed="2"
-            sequence={["Section Introduction."]}
+            sequence={['Section Introduction.']}
             speed={50}
             wrapper="span"
             repeat={1}

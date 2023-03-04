@@ -1,1 +1,1 @@
-export * from "./useGallerySkew";
+export * from './useGallerySkew';

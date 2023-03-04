@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
-import Jam from "./Jam/Jam";
-import { useState } from "react";
-import { JamList } from "./Jam/JamList";
+import styled, { css } from 'styled-components';
+import Jam from './Jam/Jam';
+import { useState } from 'react';
+import { JamList } from './Jam/JamList';
 
 const handleHoveredSection = (sectionIndex) => {
   switch (sectionIndex) {
@@ -92,7 +92,7 @@ const Container = styled.div`
   position: relative;
   z-index: 2;
 
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
   background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 
@@ -120,8 +120,7 @@ const JamsContainer = styled.div`
 
   padding: 5vh 5vw;
 
-  transition: grid-template-columns 0.35s ease-in-out,
-    grid-template-rows 0.35s ease-in-out;
+  transition: grid-template-columns 0.35s ease-in-out, grid-template-rows 0.35s ease-in-out;
   ${(props) => handleHoveredSection(props.hoveredSection)}
 
   display: grid;

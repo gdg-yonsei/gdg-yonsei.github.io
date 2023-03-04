@@ -1,6 +1,6 @@
-import DropdownIcon from "@components/DropdownIcon";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import styled from "styled-components";
+import DropdownIcon from '@components/DropdownIcon';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import styled from 'styled-components';
 
 function MainHeader() {
   const { scroll } = useLocomotiveScroll();
@@ -15,7 +15,7 @@ function MainHeader() {
         <LoginButton
           className="Login"
           onClick={() => {
-            scroll.scrollTo("bottom", {
+            scroll.scrollTo('bottom', {
               duration: 600,
               easing: [0.06, 0.87, 0.11, 0.96],
             });

@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import styled from "styled-components";
-import { useGallerySkew } from "../hooks";
+import { motion } from 'framer-motion';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import styled from 'styled-components';
+
+import { useGallerySkew } from '../hooks';
 
 function GalleryItem({ item, index, onFocus, visible }) {
   const { scroll } = useLocomotiveScroll();
@@ -37,7 +38,7 @@ function GalleryItem({ item, index, onFocus, visible }) {
             },
           }}
           whileInView={{
-            transform: "none",
+            transform: 'none',
           }}
           layout
           layoutId={item.id}
@@ -87,7 +88,7 @@ const DescriptionSpan = styled.span`
 `;
 
 const ImageSection = styled(motion.div)`
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
+  visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
 
   width: 30vw;
   height: 50vh;

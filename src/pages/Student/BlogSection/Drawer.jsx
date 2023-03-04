@@ -1,9 +1,9 @@
-import { motion, useInView } from "framer-motion";
-import { Fragment, memo, useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { DrawerContents } from "./DrawerContents";
-import SessionBlog from "./SessionBlog";
-import SessionCard from "./SessionCard";
+import { motion, useInView } from 'framer-motion';
+import { Fragment, memo, useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import { DrawerContents } from './DrawerContents';
+import SessionBlog from './SessionBlog';
+import SessionCard from './SessionCard';
 
 function Drawer() {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -22,11 +22,7 @@ function Drawer() {
   }, [isDrawerInView]);
 
   return (
-    <Container
-      data-scroll
-      data-scroll-sticky
-      data-scroll-target="#fixed-element-DrawerContainer"
-    >
+    <Container data-scroll data-scroll-sticky data-scroll-target="#fixed-element-DrawerContainer">
       <ContentWrapper ref={drawerRef} translatexpos={translateXPos}>
         <PaddingSection />
         {DrawerContents.map((content, idx) => {

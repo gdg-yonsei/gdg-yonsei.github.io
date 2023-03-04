@@ -1,16 +1,16 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 // Icon Import
-import { ReactComponent as SiSwift } from "@assets/images/icons/swift.svg";
-import { ReactComponent as SiUIKit } from "@assets/images/icons/mobile/uikit.svg";
-import { ReactComponent as SiDart } from "@assets/images/icons/mobile/dart.svg";
-import { ReactComponent as SiFlutter } from "@assets/images/icons/mobile/flutter.svg";
-import { ReactComponent as SiFirebase } from "@assets/images/icons/mobile/firebase.svg";
+import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
+import { ReactComponent as SiUIKit } from '@assets/images/icons/mobile/uikit.svg';
+import { ReactComponent as SiDart } from '@assets/images/icons/mobile/dart.svg';
+import { ReactComponent as SiFlutter } from '@assets/images/icons/mobile/flutter.svg';
+import { ReactComponent as SiFirebase } from '@assets/images/icons/mobile/firebase.svg';
 
-import GithubMenu from "./GithubMenu";
+import GithubMenu from './GithubMenu';
 
 function MobileSection() {
   const observerRef = useRef(null);
@@ -32,9 +32,9 @@ function MobileSection() {
             <H1>03.</H1>
             <H2>Mobile Development</H2>
             <Paragraph>
-              Hand-held mobile smartphones & devices have become more accessible
-              than ever before, and the importance of mobile developement is
-              becoming more evident. more and more nowadays. <br />
+              Hand-held mobile smartphones & devices have become more accessible than ever before,
+              and the importance of mobile developement is becoming more evident. more and more
+              nowadays. <br />
               Crucial as it seems, and it is!
             </Paragraph>
           </OutlineContainer>
@@ -43,32 +43,23 @@ function MobileSection() {
           <SectionWrapper ref={observerRef}>
             <TitleWrapperFirst>
               {onScreen && (
-                <TypeAnimation
-                  sequence={["What we do"]}
-                  speed={50}
-                  wrapper={"span"}
-                  repeat={1}
-                />
+                <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
             </TitleWrapperFirst>
             <LearnList>
-              <List>
-                Develop modern mobile application using Flutter & Swift.
-              </List>
+              <List>Develop modern mobile application using Flutter & Swift.</List>
               <List>Write API to support native mobile functionality.</List>
               <List>Build interfaces with rich UI / UX.</List>
-              <List>
-                Monitor the application CI / CD and track ongoing releases.
-              </List>
+              <List>Monitor the application CI / CD and track ongoing releases.</List>
             </LearnList>
           </SectionWrapper>
           <SectionWrapper ref={observerRefSecond}>
             <TitleWrapperSecond>
               {onScreenSecond && (
                 <TypeAnimation
-                  sequence={["What we learn"]}
+                  sequence={['What we learn']}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
@@ -96,17 +87,17 @@ function MobileSection() {
                 <TypeAnimation
                   sequence={["What we've done"]}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
             </TitleWrapperThird>
             <GithubList>
               <GithubMenu
-                title={"Fridge Share App"}
+                title={'Fridge Share App'}
                 type="Flutter"
                 description={
-                  "Fridge Sharing managing mobile app. GDSC - YS believes the power of beneficial positive impact on society."
+                  'Fridge Sharing managing mobile app. GDSC - YS believes the power of beneficial positive impact on society.'
                 }
                 link="https://github.com/gdsc-ys/share-fridge-flutter"
               />

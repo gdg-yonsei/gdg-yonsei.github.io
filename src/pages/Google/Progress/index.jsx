@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import SwiperElement from "./Swiper";
+import styled from 'styled-components';
+import SwiperElement from './Swiper';
 
 function Progress() {
   return (
@@ -31,7 +31,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
 
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
   color: ${(props) => props.theme.backgroundColor.black};
 `;
 

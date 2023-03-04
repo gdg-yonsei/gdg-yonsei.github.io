@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useMousePosition = (includeTouch = false) => {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
@@ -16,17 +16,17 @@ const useMousePosition = (includeTouch = false) => {
       setMousePosition({ x, y });
     };
 
-    document.addEventListener("mousemove", mouseMoveHandler);
+    document.addEventListener('mousemove', mouseMoveHandler);
 
     if (includeTouch) {
-      document.addEventListener("touchmove", mouseMoveHandler);
+      document.addEventListener('touchmove', mouseMoveHandler);
     }
 
     return () => {
-      document.removeEventListener("mousemove", mouseMoveHandler);
+      document.removeEventListener('mousemove', mouseMoveHandler);
 
       if (includeTouch) {
-        document.removeEventListener("touchmove", mouseMoveHandler);
+        document.removeEventListener('touchmove', mouseMoveHandler);
       }
     };
   }, [includeTouch, mousePosition]);

@@ -1,21 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import styled, { css } from "styled-components";
-import GalleryItem from "./GalleryItem";
-import { GalleryItems } from "./GalleryItem/GalleryItems";
-import FocusedGalleryItem from "./FocusedGalleryItem";
+import { AnimatePresence, motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+
+import FocusedGalleryItem from './FocusedGalleryItem';
+import GalleryItem from './GalleryItem';
+import { GalleryItems } from './GalleryItem/GalleryItems';
 
 function GalleryComponent() {
   const [focusedSectionId, setFocusedSectionId] = useState(null);
   const containerRef = useRef(null);
   const isInView = useInView(containerRef);
 
-  const focusedItem = GalleryItems.filter(
-    (item) => item.id === focusedSectionId
-  );
+  const focusedItem = GalleryItems.filter((item) => item.id === focusedSectionId);
 
-  const focusedThumbnail =
-    focusedItem.length !== 0 ? focusedItem[0].thumbnail : null;
+  const focusedThumbnail = focusedItem.length !== 0 ? focusedItem[0].thumbnail : null;
 
   const isDisabled = !(focusedSectionId && focusedThumbnail);
 

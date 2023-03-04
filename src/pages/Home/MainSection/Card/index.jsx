@@ -1,8 +1,8 @@
-import DelayedLink from "@components/DelayedLink";
-import { TRANSITION_DURATION } from "@constants/constants";
-import { TransitionColorContext } from "@context/TransitionColorContext";
-import { useContext } from "react";
-import styled from "styled-components";
+import DelayedLink from '@components/DelayedLink';
+import { TRANSITION_DURATION } from '@constants/constants';
+import { TransitionColorContext } from '@context/TransitionColorContext';
+import { useContext } from 'react';
+import styled from 'styled-components';
 
 function Card(props) {
   const { transitionColorHandler } = useContext(TransitionColorContext);

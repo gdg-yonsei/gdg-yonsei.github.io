@@ -1,16 +1,16 @@
-import LoadingScreen from "@components/LoadingScreen";
-import { HorizontalLocomotiveScrollProvider } from "@context/LocomotiveScrollCustom";
-import { TransitionColorContext } from "@context/TransitionColorContext";
-import useEffectOnce from "@hooks/useEffectOnce";
-import useHandleAnimationScroll from "@hooks/useHandleAnimationScroll.js";
-import { useContext, useRef } from "react";
-import styled, { useTheme } from "styled-components";
-import Banner from "./Banner";
-import GalleryComponent from "./GalleryComponent";
+import LoadingScreen from '@components/LoadingScreen';
+import { HorizontalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
+import { TransitionColorContext } from '@context/TransitionColorContext';
+import useEffectOnce from '@hooks/useEffectOnce';
+import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import { useContext, useRef } from 'react';
+import styled, { useTheme } from 'styled-components';
+
+import Banner from './Banner';
+import GalleryComponent from './GalleryComponent';
 
 function ClubsPage() {
-  const { handleAnimationStart, handleAnimationComplete } =
-    useHandleAnimationScroll();
+  const { handleAnimationStart, handleAnimationComplete } = useHandleAnimationScroll();
   const { transitionColorHandler } = useContext(TransitionColorContext);
   const { color } = useTheme();
   const containerRef = useRef(null);
@@ -22,11 +22,7 @@ function ClubsPage() {
   return (
     <>
       <HorizontalLocomotiveScrollProvider containerRef={containerRef}>
-        <Container
-          data-scroll-container
-          ref={containerRef}
-          id="#fixed-element-clubs-container"
-        >
+        <Container data-scroll-container ref={containerRef} id="#fixed-element-clubs-container">
           <Banner />
           <GalleryPadding data-scroll-section />
           <GalleryComponent />
@@ -48,7 +44,7 @@ const Container = styled.main`
 
   display: flex;
 
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
   perspective: 1px; // for locomotive-scroll element disappearance bug fix.
   background-color: ${(props) => props.theme.backgroundColor.white};
 `;

@@ -1,9 +1,9 @@
-import { STUDENTS_PROGRESS_UPPER_LIMIT } from "@constants/constants";
-import useLocomotiveScrollPosition from "@hooks/useLocomotiveScrollPosition";
-import useWindowSize from "@hooks/useWindowSize";
-import clamp from "@utils/clamp";
-import { memo, useCallback } from "react";
-import styled, { useTheme } from "styled-components";
+import { STUDENTS_PROGRESS_UPPER_LIMIT } from '@constants/constants';
+import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
+import useWindowSize from '@hooks/useWindowSize';
+import clamp from '@utils/clamp';
+import { memo, useCallback } from 'react';
+import styled, { useTheme } from 'styled-components';
 
 function ProgressBar({ scrollIndex }) {
   const scrollPos = useLocomotiveScrollPosition(10);
@@ -12,12 +12,8 @@ function ProgressBar({ scrollIndex }) {
 
   const HEIGHT_OFFSET = height * 1.05;
   const progress =
-    clamp(
-      (scrollPos - HEIGHT_OFFSET) /
-        (STUDENTS_PROGRESS_UPPER_LIMIT - HEIGHT_OFFSET),
-      0,
-      1
-    ) * 100;
+    clamp((scrollPos - HEIGHT_OFFSET) / (STUDENTS_PROGRESS_UPPER_LIMIT - HEIGHT_OFFSET), 0, 1) *
+    100;
 
   const handleColor = useCallback(
     (idx) => {
@@ -32,7 +28,7 @@ function ProgressBar({ scrollIndex }) {
           return backgroundColor.black;
       }
     },
-    [backgroundColor.black, lightColor.blue, lightColor.green, lightColor.red]
+    [backgroundColor.black, lightColor.blue, lightColor.green, lightColor.red],
   );
 
   return (

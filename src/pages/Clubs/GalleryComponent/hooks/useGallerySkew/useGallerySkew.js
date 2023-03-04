@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import mapNumber from "@utils/mapNumber";
+import { useState, useEffect } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import mapNumber from '@utils/mapNumber';
 
 const useGallerySkew = () => {
   const { scroll } = useLocomotiveScroll();
@@ -11,7 +11,7 @@ const useGallerySkew = () => {
 
   useEffect(() => {
     if (scroll) {
-      scroll.on("scroll", (obj) => {
+      scroll.on('scroll', (obj) => {
         scrollPos.current = obj.scroll.x;
         const distance = scrollPos.current - scrollPos.previous;
         scrollPos.previous = scrollPos.current;

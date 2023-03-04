@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 function Button({ children }) {
   return <Element>{children}</Element>;
@@ -22,7 +22,7 @@ const Element = styled.button`
   cursor: pointer;
   user-select: none;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   &:hover {
     border: 1px solid ${(props) => props.theme.color.lightgrey};

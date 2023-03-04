@@ -1,18 +1,18 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 // Icon Import
-import { ReactComponent as SiPython } from "@assets/images/icons/python.svg";
-import { ReactComponent as SiJupyter } from "@assets/images/icons/ML/jupyter.svg";
-import { ReactComponent as SiNumpy } from "@assets/images/icons/ML/numpy.svg";
-import { ReactComponent as SiPandas } from "@assets/images/icons/ML/pandas.svg";
-import { ReactComponent as SiPytorch } from "@assets/images/icons/ML/pytorch.svg";
-import { ReactComponent as SiTensorflow } from "@assets/images/icons/ML/tensorflow.svg";
-import { ReactComponent as SiSklearn } from "@assets/images/icons/ML/scikitlearn.svg";
+import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
+import { ReactComponent as SiJupyter } from '@assets/images/icons/ML/jupyter.svg';
+import { ReactComponent as SiNumpy } from '@assets/images/icons/ML/numpy.svg';
+import { ReactComponent as SiPandas } from '@assets/images/icons/ML/pandas.svg';
+import { ReactComponent as SiPytorch } from '@assets/images/icons/ML/pytorch.svg';
+import { ReactComponent as SiTensorflow } from '@assets/images/icons/ML/tensorflow.svg';
+import { ReactComponent as SiSklearn } from '@assets/images/icons/ML/scikitlearn.svg';
 
-import GithubMenu from "./GithubMenu";
+import GithubMenu from './GithubMenu';
 
 function MLSection() {
   const observerRef = useRef(null);
@@ -26,18 +26,14 @@ function MLSection() {
     <Container data-scroll-section>
       <ContentWrapper id="fixed-element-ML">
         <LeftSection>
-          <OutlineContainer
-            data-scroll
-            data-scroll-sticky
-            data-scroll-target="#fixed-element-ML"
-          >
+          <OutlineContainer data-scroll data-scroll-sticky data-scroll-target="#fixed-element-ML">
             <H1>04.</H1>
             <H2>Machine Learning</H2>
             <H2>Artificial Intelligence</H2>
             <Paragraph>
-              State-of-the-art technology is here. At the forefront of the
-              future IT industry, GDSC - YS ML study jam pursues the best and
-              the finest model training and model services for customized needs.
+              State-of-the-art technology is here. At the forefront of the future IT industry, GDSC
+              - YS ML study jam pursues the best and the finest model training and model services
+              for customized needs.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -45,37 +41,24 @@ function MLSection() {
           <SectionWrapper ref={observerRef}>
             <TitleWrapperFirst>
               {onScreen && (
-                <TypeAnimation
-                  sequence={["What we do"]}
-                  speed={50}
-                  wrapper={"span"}
-                  repeat={1}
-                />
+                <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
             </TitleWrapperFirst>
             <LearnList>
-              <List>
-                Learn the fundamentals of AI / ML & basic model optimization.
-              </List>
-              <List>
-                Review the latest paper in order to catch up with the industry.
-              </List>
-              <List>
-                Manage Dataflow & build model pipeline using Huggingface, WanDB.
-              </List>
+              <List>Learn the fundamentals of AI / ML & basic model optimization.</List>
+              <List>Review the latest paper in order to catch up with the industry.</List>
+              <List>Manage Dataflow & build model pipeline using Huggingface, WanDB.</List>
               <List>Build basic Pytorch template for further competition.</List>
-              <List>
-                Inspect ML ideas with respect to mathematical approach.
-              </List>
+              <List>Inspect ML ideas with respect to mathematical approach.</List>
             </LearnList>
           </SectionWrapper>
           <SectionWrapper ref={observerRefSecond}>
             <TitleWrapperSecond>
               {onScreenSecond && (
                 <TypeAnimation
-                  sequence={["What we learn"]}
+                  sequence={['What we learn']}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
@@ -106,7 +89,7 @@ function MLSection() {
                 <TypeAnimation
                   sequence={["What we've done"]}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
@@ -114,9 +97,9 @@ function MLSection() {
             {/* TODO: Add papers! */}
             <GithubList>
               <GithubMenu
-                title={"Change me!"}
+                title={'Change me!'}
                 type="Github"
-                description={"sample"}
+                description={'sample'}
                 link="https://github.com/orgs/gdsc-ys/repositories?q=sprint1&type=all"
               />
             </GithubList>

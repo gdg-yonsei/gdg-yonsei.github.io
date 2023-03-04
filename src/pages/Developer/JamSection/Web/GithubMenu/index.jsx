@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { ReactComponent as SiGithub } from "@assets/images/icons/github.svg";
-import { ReactComponent as SiNpm } from "@assets/images/icons/web/npm.svg";
-import { MdChevronRight } from "@react-icons/all-files/md/MdChevronRight";
+import { ReactComponent as SiGithub } from '@assets/images/icons/github.svg';
+import { ReactComponent as SiNpm } from '@assets/images/icons/web/npm.svg';
+import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
 
-function handleIcon(type = "Github") {
+function handleIcon(type = 'Github') {
   switch (type) {
-    case "Github":
+    case 'Github':
       return <GithubIcon />;
 
-    case "Npm":
+    case 'Npm':
       return <NpmIcon />;
 
     default:

@@ -1,4 +1,4 @@
-const { keyframes } = require("styled-components");
+const { keyframes } = require('styled-components');
 
 export const onHoverAnimation = keyframes`
   0% {

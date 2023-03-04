@@ -1,1 +1,1 @@
-export { default as useGallerySkew } from "./useGallerySkew";
+export { default as useGallerySkew } from './useGallerySkew';

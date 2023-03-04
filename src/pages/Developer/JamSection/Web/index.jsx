@@ -1,36 +1,36 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 // Icon Import
-import { SiHtml5 } from "@react-icons/all-files/si/SiHtml5";
-import { SiCss3 } from "@react-icons/all-files/si/SiCss3";
-import { ReactComponent as SiSass } from "@assets/images/icons/web/sass.svg";
-import { ReactComponent as SiStyledComponents } from "@assets/images/icons/web/styledcomponents.svg";
-import { SiJavascript } from "@react-icons/all-files/si/SiJavascript";
-import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
+import { SiHtml5 } from '@react-icons/all-files/si/SiHtml5';
+import { SiCss3 } from '@react-icons/all-files/si/SiCss3';
+import { ReactComponent as SiSass } from '@assets/images/icons/web/sass.svg';
+import { ReactComponent as SiStyledComponents } from '@assets/images/icons/web/styledcomponents.svg';
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
+import { SiTypescript } from '@react-icons/all-files/si/SiTypescript';
 
-import { SiReact } from "@react-icons/all-files/si/SiReact";
-import { ReactComponent as SiNextJS } from "@assets/images/icons/web/nextdotjs.svg";
-import { SiVueDotJs } from "@react-icons/all-files/si/SiVueDotJs";
-import { SiAngular } from "@react-icons/all-files/si/SiAngular";
-import { SiRedux } from "@react-icons/all-files/si/SiRedux";
-import { ReactComponent as SiReduxSaga } from "@assets/images/icons/web/reduxsaga.svg";
-import { ReactComponent as SiReactQuery } from "@assets/images/icons/web/reactquery.svg";
-import { ReactComponent as SiReactTable } from "@assets/images/icons/web/reacttable.svg";
-import { ReactComponent as SiNodeJS } from "@assets/images/icons/web/nodedotjs.svg";
-import { ReactComponent as SiThreeJS } from "@assets/images/icons/web/threedotjs.svg";
-import { ReactComponent as SiWebGL } from "@assets/images/icons/web/webgl.svg";
-import { ReactComponent as SiElectronJS } from "@assets/images/icons/web/electron.svg";
+import { SiReact } from '@react-icons/all-files/si/SiReact';
+import { ReactComponent as SiNextJS } from '@assets/images/icons/web/nextdotjs.svg';
+import { SiVueDotJs } from '@react-icons/all-files/si/SiVueDotJs';
+import { SiAngular } from '@react-icons/all-files/si/SiAngular';
+import { SiRedux } from '@react-icons/all-files/si/SiRedux';
+import { ReactComponent as SiReduxSaga } from '@assets/images/icons/web/reduxsaga.svg';
+import { ReactComponent as SiReactQuery } from '@assets/images/icons/web/reactquery.svg';
+import { ReactComponent as SiReactTable } from '@assets/images/icons/web/reacttable.svg';
+import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
+import { ReactComponent as SiThreeJS } from '@assets/images/icons/web/threedotjs.svg';
+import { ReactComponent as SiWebGL } from '@assets/images/icons/web/webgl.svg';
+import { ReactComponent as SiElectronJS } from '@assets/images/icons/web/electron.svg';
 
-import { SiBabel } from "@react-icons/all-files/si/SiBabel";
-import { SiWebpack } from "@react-icons/all-files/si/SiWebpack";
-import { ReactComponent as SiVite } from "@assets/images/icons/web/vite.svg";
+import { SiBabel } from '@react-icons/all-files/si/SiBabel';
+import { SiWebpack } from '@react-icons/all-files/si/SiWebpack';
+import { ReactComponent as SiVite } from '@assets/images/icons/web/vite.svg';
 
-import { SiNpm } from "@react-icons/all-files/si/SiNpm";
-import { SiYarn } from "@react-icons/all-files/si/SiYarn";
-import GithubMenu from "./GithubMenu";
+import { SiNpm } from '@react-icons/all-files/si/SiNpm';
+import { SiYarn } from '@react-icons/all-files/si/SiYarn';
+import GithubMenu from './GithubMenu';
 
 function WebSection() {
   const observerRef = useRef(null);
@@ -44,19 +44,14 @@ function WebSection() {
     <Container data-scroll-section>
       <ContentWrapper id="fixed-element-web">
         <LeftSection>
-          <OutlineContainer
-            data-scroll
-            data-scroll-sticky
-            data-scroll-target="#fixed-element-web"
-          >
+          <OutlineContainer data-scroll data-scroll-sticky data-scroll-target="#fixed-element-web">
             <H1>01.</H1>
             <H2>Web Development</H2>
             <Paragraph>
-              Interaction design is another type of art, implying that modern
-              front-end code is something more than just a layout. <br />
-              Leveraging with modern SPA frameworks, the frontend section
-              defines what the user experience should be and how it should be
-              delivered.
+              Interaction design is another type of art, implying that modern front-end code is
+              something more than just a layout. <br />
+              Leveraging with modern SPA frameworks, the frontend section defines what the user
+              experience should be and how it should be delivered.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -64,44 +59,27 @@ function WebSection() {
           <SectionWrapper ref={observerRef}>
             <TitleWrapperFirst>
               {onScreen && (
-                <TypeAnimation
-                  sequence={["What we do"]}
-                  speed={50}
-                  wrapper={"span"}
-                  repeat={1}
-                />
+                <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
             </TitleWrapperFirst>
             <LearnList>
               <List>Discover the fundamentals of web development.</List>
-              <List>
-                Develop user-friendly UI/UX wireframes for various devices.
-              </List>
-              <List>
-                Consider creative interaction with various browser events.
-              </List>
-              <List>
-                Write Unit / UI tests to identify errors and malfunctions.
-              </List>
-              <List>
-                Conduct research about modern SPA frameworks & libraries.
-              </List>
+              <List>Develop user-friendly UI/UX wireframes for various devices.</List>
+              <List>Consider creative interaction with various browser events.</List>
+              <List>Write Unit / UI tests to identify errors and malfunctions.</List>
+              <List>Conduct research about modern SPA frameworks & libraries.</List>
               <List>Optimize code for providing faster user experience.</List>
-              <List>
-                Understand the process between client-server architecture.
-              </List>
-              <List>
-                Study component-based state management and data binding.
-              </List>
+              <List>Understand the process between client-server architecture.</List>
+              <List>Study component-based state management and data binding.</List>
             </LearnList>
           </SectionWrapper>
           <SectionWrapper ref={observerRefSecond}>
             <TitleWrapperSecond>
               {onScreenSecond && (
                 <TypeAnimation
-                  sequence={["What we learn"]}
+                  sequence={['What we learn']}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
@@ -163,48 +141,48 @@ function WebSection() {
                 <TypeAnimation
                   sequence={["What we've done"]}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
             </TitleWrapperThird>
             <GithubList>
               <GithubMenu
-                title={"DOM Visualizer"}
+                title={'DOM Visualizer'}
                 type="Github"
                 description={
-                  "Parsing HTML to Virtual DOM Tree. Written in JavaScript & TypeScript without DOMParser API. Features automatic error checking and tree creation animation."
+                  'Parsing HTML to Virtual DOM Tree. Written in JavaScript & TypeScript without DOMParser API. Features automatic error checking and tree creation animation.'
                 }
                 link="https://mumwa.github.io/dom-visualizer/"
               />
               <GithubMenu
-                title={"Magic-boolean-conch"}
+                title={'Magic-boolean-conch'}
                 type="Npm"
                 description={
-                  "NPM package that returns random boolean or undefined type. Grab it if you needed. :)"
+                  'NPM package that returns random boolean or undefined type. Grab it if you needed. :)'
                 }
                 link="https://www.npmjs.com/package/magic-boolean-conch"
               />
               <GithubMenu
-                title={"React-moar-table"}
+                title={'React-moar-table'}
                 type="Npm"
                 description={
-                  "Customized react table component with other features included. Best choice if you need lightweight & fully-functional table component."
+                  'Customized react table component with other features included. Best choice if you need lightweight & fully-functional table component.'
                 }
                 link="https://www.npmjs.com/package/magic-boolean-conch"
               />
               <GithubMenu
-                title={"Model Curation"}
+                title={'Model Curation'}
                 type="Npm"
                 description={
-                  "Utilizing three.js, displaying 3d model in website with this package comes in handy."
+                  'Utilizing three.js, displaying 3d model in website with this package comes in handy.'
                 }
                 link="https://www.npmjs.com/package/model-curation"
               />
               <GithubMenu
-                title={"Course Apply Webpage"}
+                title={'Course Apply Webpage'}
                 type="Github"
-                description={"Mock Yonsei Univ. Course Apply Webpage."}
+                description={'Mock Yonsei Univ. Course Apply Webpage.'}
                 link="https://github.com/gdsc-ys/left-web-sprint-courseapply"
               />
             </GithubList>

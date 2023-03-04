@@ -1,11 +1,11 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect } from 'react';
 
 function useCanvas(canvasWidth, canvasHeight, animate) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const ctx = canvas?.getContext('2d');
 
     const setCanvas = () => {
       const devicePixelRatio = window.devicePixelRatio ?? 1;

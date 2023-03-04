@@ -1,14 +1,7 @@
-import { useState, useEffect } from "react";
-import { throttle } from "throttle-debounce";
+import { useState, useEffect } from 'react';
+import { throttle } from 'throttle-debounce';
 
-const defaultEvents = [
-  "mousemove",
-  "mousedown",
-  "resize",
-  "keydown",
-  "touchstart",
-  "wheel",
-];
+const defaultEvents = ['mousemove', 'mousedown', 'resize', 'keydown', 'touchstart', 'wheel'];
 const oneMinute = 60e3;
 
 const on = (obj, ...args) => {
@@ -23,11 +16,7 @@ const off = (obj, ...args) => {
   }
 };
 
-const useIdle = (
-  ms = oneMinute,
-  initialState = false,
-  events = defaultEvents
-) => {
+const useIdle = (ms = oneMinute, initialState = false, events = defaultEvents) => {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
@@ -63,7 +52,7 @@ const useIdle = (
       on(window, events[i], onEvent);
     }
 
-    on(document, "visibilitychange", onVisibility);
+    on(document, 'visibilitychange', onVisibility);
 
     timeout = setTimeout(() => {
       set(true);
@@ -75,7 +64,7 @@ const useIdle = (
       for (let i = 0; i < events.length; i++) {
         off(window, events[i], onEvent);
       }
-      off(document, "visibilitychange", onVisibility);
+      off(document, 'visibilitychange', onVisibility);
     };
   }, [ms, events]);
 

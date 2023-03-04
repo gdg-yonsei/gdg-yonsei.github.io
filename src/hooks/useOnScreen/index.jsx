@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-function useOnScreen(ref, rootMargin = "0px") {
+function useOnScreen(ref, rootMargin = '0px') {
   const [isIntersecting, setIntersecting] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -9,7 +9,7 @@ function useOnScreen(ref, rootMargin = "0px") {
       },
       {
         rootMargin,
-      }
+      },
     );
     if (ref.current) {
       observer.observe(ref.current);

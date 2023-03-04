@@ -1,5 +1,5 @@
-import { useCallback } from "react";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { useCallback } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 function useHandleAnimationScroll() {
   const { scroll } = useLocomotiveScroll();

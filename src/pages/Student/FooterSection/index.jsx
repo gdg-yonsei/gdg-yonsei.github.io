@@ -1,7 +1,7 @@
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import styled from "styled-components";
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import styled from 'styled-components';
 
-import Pattern from "@assets/images/odeszaPattern2.png";
+import Pattern from '@assets/images/odeszaPattern2.png';
 
 function FooterSection() {
   const { scroll } = useLocomotiveScroll();
@@ -15,18 +15,13 @@ function FooterSection() {
       <ButtonContainer data-scroll data-scroll-speed="4">
         <GotoTopButton
           onClick={() => {
-            scroll.scrollTo("top");
+            scroll.scrollTo('top');
           }}
         >
           Take me to the top.
         </GotoTopButton>
       </ButtonContainer>
-      <CenterImage
-        src={Pattern}
-        data-scroll
-        data-scroll-speed="3"
-        fetchpriority="low"
-      />
+      <CenterImage src={Pattern} data-scroll data-scroll-speed="3" fetchpriority="low" />
     </Container>
   );
 }

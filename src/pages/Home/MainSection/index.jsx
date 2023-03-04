@@ -1,7 +1,7 @@
-import SubHeader from "@components/Header/SubHeader";
-import styled, { useTheme } from "styled-components";
-import Card from "./Card";
-import Asterisk from "./Elements/Asterisk";
+import SubHeader from '@components/Header/SubHeader';
+import styled, { useTheme } from 'styled-components';
+import Card from './Card';
+import Asterisk from './Elements/Asterisk';
 
 function MainSection() {
   const { color } = useTheme();
@@ -16,32 +16,32 @@ function MainSection() {
         </TitleWrapper>
         <CardContainer>
           <Card
-            leftText={"01"}
-            rightText={"Google"}
+            leftText={'01'}
+            rightText={'Google'}
             shape={<Asterisk />}
             color={color.red}
-            linkTarget={"/google"}
+            linkTarget={'/google'}
           />
           <Card
-            leftText={"02"}
-            rightText={"Developer"}
+            leftText={'02'}
+            rightText={'Developer'}
             shape={<Asterisk />}
             color={color.green}
-            linkTarget={"/developer"}
+            linkTarget={'/developer'}
           />
           <Card
-            leftText={"03"}
-            rightText={"Student"}
+            leftText={'03'}
+            rightText={'Student'}
             shape={<Asterisk />}
             color={color.blue}
-            linkTarget={"/student"}
+            linkTarget={'/student'}
           />
           <Card
-            leftText={"04"}
-            rightText={"Clubs"}
+            leftText={'04'}
+            rightText={'Clubs'}
             shape={<Asterisk />}
             color={color.yellow}
-            linkTarget={"/clubs"}
+            linkTarget={'/clubs'}
           />
         </CardContainer>
       </OffsetWrapper>
@@ -58,7 +58,7 @@ const Container = styled.section`
   position: relative;
   z-index: 10;
 
-  font-family: "Neue Montreal";
+  font-family: 'Neue Montreal';
 `;
 
 const OffsetWrapper = styled.div`

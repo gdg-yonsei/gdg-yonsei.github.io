@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Drawer from "./Drawer";
+import styled from 'styled-components';
+import Drawer from './Drawer';
 
 function BlogSection() {
   return (

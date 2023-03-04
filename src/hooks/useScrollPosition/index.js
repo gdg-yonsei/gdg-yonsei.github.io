@@ -1,4 +1,4 @@
-const { useState, useEffect } = require("react");
+const { useState, useEffect } = require('react');
 
 function useScrollPosition() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -8,10 +8,10 @@ function useScrollPosition() {
       setScrollPos(window.scrollY);
     };
 
-    window.addEventListener("scroll", updatePosition);
+    window.addEventListener('scroll', updatePosition);
     updatePosition();
     return () => {
-      window.removeEventListener("scroll", updatePosition);
+      window.removeEventListener('scroll', updatePosition);
     };
   }, []);
 

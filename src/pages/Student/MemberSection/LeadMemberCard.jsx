@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import useHover from "@hooks/useHover";
-import TextTransition from "react-text-transition";
-import { memo, useCallback, useContext } from "react";
-import { MouseParallaxChild } from "react-parallax-mouse";
-import { MouseContext } from "@context/MouseContext";
+import styled from 'styled-components';
+import useHover from '@hooks/useHover';
+import TextTransition from 'react-text-transition';
+import { memo, useCallback, useContext } from 'react';
+import { MouseParallaxChild } from 'react-parallax-mouse';
+import { MouseContext } from '@context/MouseContext';
 
 function LeadMemberCard({ upperLetter, lowerLetter, githubID }) {
   const [hoverRef, isHovered] = useHover();
@@ -12,11 +12,11 @@ function LeadMemberCard({ upperLetter, lowerLetter, githubID }) {
   const names = [lowerLetter, `@${githubID}`];
 
   const cursorChangeGithubHandler = useCallback(() => {
-    cursorChangeHandler("Github");
+    cursorChangeHandler('Github');
   }, [cursorChangeHandler]);
 
   const cursorChangeEmptyHandler = useCallback(() => {
-    cursorChangeHandler("");
+    cursorChangeHandler('');
   }, [cursorChangeHandler]);
 
   return (

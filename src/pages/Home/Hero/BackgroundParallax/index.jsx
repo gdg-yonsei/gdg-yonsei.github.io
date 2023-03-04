@@ -1,10 +1,7 @@
-import Circle from "@components/Circle";
-import useWindowSize from "@hooks/useWindowSize";
-import {
-  MouseParallaxChild,
-  MouseParallaxContainer,
-} from "react-parallax-mouse";
-import styled, { css } from "styled-components";
+import Circle from '@components/Circle';
+import useWindowSize from '@hooks/useWindowSize';
+import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
+import styled, { css } from 'styled-components';
 
 function BackgroundParallax() {
   const { width, height } = useWindowSize();
@@ -13,22 +10,22 @@ function BackgroundParallax() {
     <>
       <MouseParallaxChild factorX={0.1} factorY={0.05}>
         <CircleWrapper xPos={width * -0.24} yPos={height * -0.6}>
-          <Circle size={Math.min(width, height) * 1} color={"red"} />
+          <Circle size={Math.min(width, height) * 1} color={'red'} />
         </CircleWrapper>
       </MouseParallaxChild>
       <MouseParallaxChild factorX={0.25} factorY={0.125}>
         <CircleWrapper xPos={width * 0.02} yPos={height * 0.1} rightPos>
-          <Circle size={Math.min(width, height) * 0.3} color={"green"} />
+          <Circle size={Math.min(width, height) * 0.3} color={'green'} />
         </CircleWrapper>
       </MouseParallaxChild>
       <MouseParallaxChild factorX={0.2} factorY={0.1}>
         <CircleWrapper xPos={width * 0.01} yPos={height * 0.6}>
-          <Circle size={Math.min(width, height) * 0.618} color={"blue"} />
+          <Circle size={Math.min(width, height) * 0.618} color={'blue'} />
         </CircleWrapper>
       </MouseParallaxChild>
       <MouseParallaxChild factorX={0.4} factorY={0.2}>
         <CircleWrapper xPos={width * 0.01} yPos={height * 0.7} rightPos>
-          <Circle size={Math.min(width, height) * 0.1} color={"yellow"} />
+          <Circle size={Math.min(width, height) * 0.1} color={'yellow'} />
         </CircleWrapper>
       </MouseParallaxChild>
     </>

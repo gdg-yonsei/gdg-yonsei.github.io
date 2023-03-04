@@ -1,12 +1,9 @@
-import pattern from "@assets/images/terrainPattern1.png";
-import { BannerTextAnimation } from "@components/Animation/BannerTextAnimation";
-import DelayedLink from "@components/DelayedLink";
-import {
-  TRANSITION_DURATION,
-  TRANSITION_DURATION_DELAY,
-} from "@constants/constants";
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import pattern from '@assets/images/terrainPattern1.png';
+import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
+import DelayedLink from '@components/DelayedLink';
+import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 function Banner() {
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
@@ -14,19 +11,11 @@ function Banner() {
   return (
     <HeadingSection data-scroll-section>
       <TitleSection>
-        <TitleWrapper
-          data-scroll
-          data-scroll-position="top"
-          data-scroll-speed="-5"
-        >
+        <TitleWrapper data-scroll data-scroll-position="top" data-scroll-speed="-5">
           <TitleSpan>Introducing</TitleSpan>
         </TitleWrapper>
         <DelayedLink to="/" delay={TRANSITION_DURATION}>
-          <BackToMainButton
-            data-scroll
-            data-scroll-position="top"
-            data-scroll-speed="5"
-          >
+          <BackToMainButton data-scroll data-scroll-position="top" data-scroll-speed="5">
             Back To Main
           </BackToMainButton>
         </DelayedLink>
@@ -69,7 +58,7 @@ const HeadingSection = styled(motion.div)`
   justify-content: flex-start;
   align-items: center;
 
-  font-family: "Google Sans";
+  font-family: 'Google Sans';
 
   /* background-color: ${(props) => props.bgcolor}; */
 `;
@@ -178,7 +167,7 @@ const BackToMainButton = styled.button`
 
   font-size: 16px;
   font-weight: 400;
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
 
   border: none;
   background-color: ${(props) => props.theme.backgroundColor.white};

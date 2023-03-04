@@ -1,11 +1,8 @@
-import {
-  TRANSITION_DURATION,
-  TRANSITION_DURATION_DELAY,
-} from "@constants/constants";
-import { TransitionColorContext } from "@context/TransitionColorContext";
-import { motion, useIsPresent } from "framer-motion";
-import { useContext } from "react";
-import styled from "styled-components";
+import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
+import { TransitionColorContext } from '@context/TransitionColorContext';
+import { motion, useIsPresent } from 'framer-motion';
+import { useContext } from 'react';
+import styled from 'styled-components';
 
 function LoadingScreen({ handleAnimationStart, handleAnimationComplete }) {
   const { transitionColor } = useContext(TransitionColorContext);
@@ -18,7 +15,7 @@ function LoadingScreen({ handleAnimationStart, handleAnimationComplete }) {
     end: {
       scaleY: 0,
       transition: {
-        ease: "circOut",
+        ease: 'circOut',
         duration: TRANSITION_DURATION * 0.001,
         delay: TRANSITION_DURATION_DELAY * 0.001,
       },
@@ -26,7 +23,7 @@ function LoadingScreen({ handleAnimationStart, handleAnimationComplete }) {
     exit: {
       scaleY: 1,
       transition: {
-        ease: "circIn",
+        ease: 'circIn',
         duration: TRANSITION_DURATION * 0.001,
       },
     },

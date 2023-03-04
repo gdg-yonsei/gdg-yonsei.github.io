@@ -1,28 +1,23 @@
-import useKeyPress from "@hooks/useKeyPress";
+import useKeyPress from '@hooks/useKeyPress';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper';
 
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import useOverlayStyle from "./hooks/useOverlayStyle";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import useOverlayStyle from './hooks/useOverlayStyle';
 
-import "swiper/css";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 SwiperCore.use([Pagination]);
 
-function FocusedGalleryItem({
-  focusedSectionId,
-  focusedItem,
-  onBlur,
-  disabled,
-}) {
+function FocusedGalleryItem({ focusedSectionId, focusedItem, onBlur, disabled }) {
   const { scroll } = useLocomotiveScroll();
   const { blurValue, brightnessValue } = useOverlayStyle();
-  const isEscPressed = useKeyPress("Escape");
+  const isEscPressed = useKeyPress('Escape');
 
   const progressBarRef = useRef(null);
 
@@ -66,7 +61,7 @@ function FocusedGalleryItem({
                 spaceBetween={200}
                 slidesPerView={2}
                 centeredSlides
-                pagination={{ type: "progressbar", el: progressBarRef.current }}
+                pagination={{ type: 'progressbar', el: progressBarRef.current }}
                 grabCursor
                 onSwiper={(swiper) => {
                   swiper.params.pagination.el = progressBarRef.current;
@@ -80,11 +75,7 @@ function FocusedGalleryItem({
                   if (idx === 0) {
                     return (
                       <SwiperSlide key={idx}>
-                        <Image
-                          layoutId={focusedSectionId}
-                          disabled={disabled}
-                          thumbnail={item}
-                        />
+                        <Image layoutId={focusedSectionId} disabled={disabled} thumbnail={item} />
                       </SwiperSlide>
                     );
                   }
@@ -126,18 +117,13 @@ const Padding = styled.div`
 `;
 
 const Image = styled(motion.div)`
-  visibility: ${(props) => (props.disabled ? "hidden" : "visible")};
+  visibility: ${(props) => (props.disabled ? 'hidden' : 'visible')};
 
   width: 50vw;
   height: 60vh;
 
   background: ${(props) => `url("/assets/GDSCImages/${props.thumbnail}")`},
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(65, 65, 65, 1) 50%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(65, 65, 65, 1) 50%, rgba(0, 0, 0, 1) 100%);
 
   background-position: center;
   background-repeat: no-repeat;
@@ -149,7 +135,7 @@ const Image = styled(motion.div)`
 `;
 
 const OverlayContainer = styled(motion.div)`
-  visibility: ${(props) => (props.disabled ? "hidden" : "visible")};
+  visibility: ${(props) => (props.disabled ? 'hidden' : 'visible')};
 
   width: 100vw;
   height: 100vh;
@@ -158,8 +144,7 @@ const OverlayContainer = styled(motion.div)`
   top: 0;
   left: 0;
 
-  backdrop-filter: ${(props) =>
-    `blur(${props.blurvalue}px) brightness(${props.brightnessvalue}%)`};
+  backdrop-filter: ${(props) => `blur(${props.blurvalue}px) brightness(${props.brightnessvalue}%)`};
 
   z-index: 2999;
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 function useComponentVisible(init = false) {
   const [isVisible, setIsVisible] = useState(init);
@@ -11,18 +11,18 @@ function useComponentVisible(init = false) {
   };
 
   const handleEscPress = (event) => {
-    if (event.key === "Escape") {
+    if (event.key === 'Escape') {
       setIsVisible(false);
     }
   };
 
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-    document.addEventListener("keydown", handleEscPress, true);
+    document.addEventListener('click', handleClickOutside, true);
+    document.addEventListener('keydown', handleEscPress, true);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-      document.removeEventListener("keydown", handleEscPress, true);
+      document.removeEventListener('click', handleClickOutside, true);
+      document.removeEventListener('keydown', handleEscPress, true);
     };
   }, []);
 

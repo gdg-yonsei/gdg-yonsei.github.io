@@ -1,12 +1,12 @@
-import TransitionColorProvider from "@context/TransitionColorContext";
-import Page404 from "@pages/404";
-import ClubsPage from "@pages/Clubs";
-import DeveloperPage from "@pages/Developer";
-import GooglePage from "@pages/Google";
-import Home from "@pages/Home";
-import StudentPage from "@pages/Student";
-import { AnimatePresence } from "framer-motion";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import TransitionColorProvider from '@context/TransitionColorContext';
+import Page404 from '@pages/404';
+import ClubsPage from '@pages/Clubs';
+import DeveloperPage from '@pages/Developer';
+import GooglePage from '@pages/Google';
+import Home from '@pages/Home';
+import StudentPage from '@pages/Student';
+import { AnimatePresence } from 'framer-motion';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 function App() {
   const location = useLocation();

@@ -1,18 +1,18 @@
-import useHover from "@hooks/useHover";
-import { IconContext } from "@react-icons/all-files";
-import { useCallback } from "react";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
-import styled, { css } from "styled-components";
+import useHover from '@hooks/useHover';
+import { IconContext } from '@react-icons/all-files';
+import { useCallback } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import styled, { css } from 'styled-components';
 
 function Jam({ index, icon, scrollTarget, description, setHoveredSection }) {
   const [hoverRef, isHovered] = useHover(false);
   const { scroll } = useLocomotiveScroll();
 
   const IconStyle = {
-    width: "30%",
-    height: "100%",
-    fontSize: "30%",
-    color: "black",
+    width: '30%',
+    height: '100%',
+    fontSize: '30%',
+    color: 'black',
   };
 
   const handleMouseEnter = useCallback(() => {

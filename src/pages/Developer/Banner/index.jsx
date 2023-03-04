@@ -1,11 +1,8 @@
-import GoogleDevelopers from "@assets/images/GoogleDevelopers.png";
-import { BannerTextAnimation } from "@components/Animation/BannerTextAnimation";
-import DelayedLink from "@components/DelayedLink";
-import {
-  TRANSITION_DURATION,
-  TRANSITION_DURATION_DELAY,
-} from "@constants/constants";
-import styled from "styled-components";
+import GoogleDevelopers from '@assets/images/GoogleDevelopers.png';
+import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
+import DelayedLink from '@components/DelayedLink';
+import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
+import styled from 'styled-components';
 
 function Banner() {
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
@@ -68,7 +65,7 @@ const HeadingSection = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  font-family: "Google Sans";
+  font-family: 'Google Sans';
 
   background-color: ${(props) => props.theme.backgroundColor.white};
 `;
@@ -176,7 +173,7 @@ const BackToMainButton = styled.button`
 
   font-size: 16px;
   font-weight: 400;
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
 
   border: none;
   background-color: ${(props) => props.theme.backgroundColor.white};

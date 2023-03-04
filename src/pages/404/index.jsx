@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import DinosaurGif from "@assets/images/dinosaur-trex.gif";
-import { useNavigate } from "react-router-dom";
+import styled from 'styled-components';
+import DinosaurGif from '@assets/images/dinosaur-trex.gif';
+import { useNavigate } from 'react-router-dom';
 
 function Page404() {
   const navigate = useNavigate();
@@ -23,8 +23,7 @@ function Page404() {
         rel="noreferrer noopener"
       >
         <Credits>
-          Credits to: Dinosaur Trex Sticker by &quot;RoxanneJarrelMellott&quot;
-          on tenor
+          Credits to: Dinosaur Trex Sticker by &quot;RoxanneJarrelMellott&quot; on tenor
         </Credits>
       </a>
     </Container>
@@ -44,7 +43,7 @@ const Container = styled.div`
 
   position: relative;
 
-  font-family: "Google Sans", sans-serif;
+  font-family: 'Google Sans', sans-serif;
   background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 

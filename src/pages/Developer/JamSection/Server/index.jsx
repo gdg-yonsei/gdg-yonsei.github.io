@@ -1,43 +1,43 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 // Icon Import
-import { ReactComponent as SiPython } from "@assets/images/icons/python.svg";
-import { ReactComponent as SiSwift } from "@assets/images/icons/swift.svg";
-import { ReactComponent as SiJava } from "@assets/images/icons/server/java.svg";
-import { ReactComponent as SiCplusplus } from "@assets/images/icons/server/cplusplus.svg";
-import { ReactComponent as SiPhp } from "@assets/images/icons/server/php.svg";
-import { ReactComponent as SiGolang } from "@assets/images/icons/server/go.svg";
-import { ReactComponent as SiRuby } from "@assets/images/icons/server/ruby.svg";
-import { ReactComponent as SiKotlin } from "@assets/images/icons/server/kotlin.svg";
-import { ReactComponent as SiScala } from "@assets/images/icons/server/scala.svg";
-import { SiJavascript } from "@react-icons/all-files/si/SiJavascript";
-import { ReactComponent as SiNodeJS } from "@assets/images/icons/web/nodedotjs.svg";
+import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
+import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
+import { ReactComponent as SiJava } from '@assets/images/icons/server/java.svg';
+import { ReactComponent as SiCplusplus } from '@assets/images/icons/server/cplusplus.svg';
+import { ReactComponent as SiPhp } from '@assets/images/icons/server/php.svg';
+import { ReactComponent as SiGolang } from '@assets/images/icons/server/go.svg';
+import { ReactComponent as SiRuby } from '@assets/images/icons/server/ruby.svg';
+import { ReactComponent as SiKotlin } from '@assets/images/icons/server/kotlin.svg';
+import { ReactComponent as SiScala } from '@assets/images/icons/server/scala.svg';
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
+import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
 
-import { ReactComponent as SiSpring } from "@assets/images/icons/server/spring.svg";
-import { ReactComponent as SiSpringBoot } from "@assets/images/icons/server/springboot.svg";
-import { ReactComponent as SiDotnet } from "@assets/images/icons/server/dotnet.svg";
-import { ReactComponent as SiRubyOnRails } from "@assets/images/icons/server/rubyonrails.svg";
-import { ReactComponent as SiLaravel } from "@assets/images/icons/server/laravel.svg";
-import { ReactComponent as SiSymfony } from "@assets/images/icons/server/symfony.svg";
-import { ReactComponent as SiNestJS } from "@assets/images/icons/server/nestjs.svg";
-import { ReactComponent as SiFastAPI } from "@assets/images/icons/server/fastapi.svg";
-import { ReactComponent as SiExpress } from "@assets/images/icons/server/express.svg";
+import { ReactComponent as SiSpring } from '@assets/images/icons/server/spring.svg';
+import { ReactComponent as SiSpringBoot } from '@assets/images/icons/server/springboot.svg';
+import { ReactComponent as SiDotnet } from '@assets/images/icons/server/dotnet.svg';
+import { ReactComponent as SiRubyOnRails } from '@assets/images/icons/server/rubyonrails.svg';
+import { ReactComponent as SiLaravel } from '@assets/images/icons/server/laravel.svg';
+import { ReactComponent as SiSymfony } from '@assets/images/icons/server/symfony.svg';
+import { ReactComponent as SiNestJS } from '@assets/images/icons/server/nestjs.svg';
+import { ReactComponent as SiFastAPI } from '@assets/images/icons/server/fastapi.svg';
+import { ReactComponent as SiExpress } from '@assets/images/icons/server/express.svg';
 
-import { ReactComponent as SiMongoDB } from "@assets/images/icons/server/mongodb.svg";
-import { ReactComponent as SiSQLite } from "@assets/images/icons/server/sqlite.svg";
-import { ReactComponent as SiMySQL } from "@assets/images/icons/server/mysql.svg";
-import { ReactComponent as SiPostgreSQL } from "@assets/images/icons/server/postgresql.svg";
-import { ReactComponent as SiRedis } from "@assets/images/icons/server/redis.svg";
+import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb.svg';
+import { ReactComponent as SiSQLite } from '@assets/images/icons/server/sqlite.svg';
+import { ReactComponent as SiMySQL } from '@assets/images/icons/server/mysql.svg';
+import { ReactComponent as SiPostgreSQL } from '@assets/images/icons/server/postgresql.svg';
+import { ReactComponent as SiRedis } from '@assets/images/icons/server/redis.svg';
 
-import { ReactComponent as SiDocker } from "@assets/images/icons/server/docker.svg";
-import { ReactComponent as SiJira } from "@assets/images/icons/server/jira.svg";
-import { ReactComponent as SiJenkins } from "@assets/images/icons/server/jenkins.svg";
-import { ReactComponent as SiGCP } from "@assets/images/icons/server/googlecloud.svg";
+import { ReactComponent as SiDocker } from '@assets/images/icons/server/docker.svg';
+import { ReactComponent as SiJira } from '@assets/images/icons/server/jira.svg';
+import { ReactComponent as SiJenkins } from '@assets/images/icons/server/jenkins.svg';
+import { ReactComponent as SiGCP } from '@assets/images/icons/server/googlecloud.svg';
 
-import GithubMenu from "./GithubMenu";
+import GithubMenu from './GithubMenu';
 
 function ServerSection() {
   const observerRef = useRef(null);
@@ -59,11 +59,10 @@ function ServerSection() {
             <H1>02.</H1>
             <H2>Server Development</H2>
             <Paragraph>
-              The backend of the service appears magical to the user, as all
-              communications between the client and the server take place under
-              the hood. <br />
-              Communication should be held in an integrated manner, and every
-              communication should have its own responsibility.
+              The backend of the service appears magical to the user, as all communications between
+              the client and the server take place under the hood. <br />
+              Communication should be held in an integrated manner, and every communication should
+              have its own responsibility.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -71,35 +70,24 @@ function ServerSection() {
           <SectionWrapper ref={observerRef}>
             <TitleWrapperFirst>
               {onScreen && (
-                <TypeAnimation
-                  sequence={["What we do"]}
-                  speed={50}
-                  wrapper={"span"}
-                  repeat={1}
-                />
+                <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
             </TitleWrapperFirst>
             <LearnList>
               <List>Develop a web application with RDBMS & Redis.</List>
-              <List>
-                Manage REST & RESTful API endpoint using HTTP protocol.
-              </List>
+              <List>Manage REST & RESTful API endpoint using HTTP protocol.</List>
               <List>Automated CI/CD for continuous service.</List>
-              <List>
-                Penetration test & hacking, learn security by mock CTF.
-              </List>
-              <List>
-                Design microservice architecture using multi-languages.
-              </List>
+              <List>Penetration test & hacking, learn security by mock CTF.</List>
+              <List>Design microservice architecture using multi-languages.</List>
             </LearnList>
           </SectionWrapper>
           <SectionWrapper ref={observerRefSecond}>
             <TitleWrapperSecond>
               {onScreenSecond && (
                 <TypeAnimation
-                  sequence={["What we learn"]}
+                  sequence={['What we learn']}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
@@ -170,47 +158,45 @@ function ServerSection() {
                 <TypeAnimation
                   sequence={["What we've done"]}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}
             </TitleWrapperThird>
             <GithubList>
               <GithubMenu
-                title={"Faster DB utilizing in-memory DBMS"}
+                title={'Faster DB utilizing in-memory DBMS'}
                 type="Github"
                 description={
-                  "Utilizing in-memory DBMS, widely known as Redis, DB caching makes handling queries a lot more easier!"
+                  'Utilizing in-memory DBMS, widely known as Redis, DB caching makes handling queries a lot more easier!'
                 }
                 link="https://github.com/orgs/gdsc-ys/repositories?q=sprint1&type=all"
               />
               <GithubMenu
-                title={"Wargame Simulation"}
-                type={"Dreamhack"}
+                title={'Wargame Simulation'}
+                type={'Dreamhack'}
                 description={
                   <span>
-                    If you know the enemy and know yourself, you need not fear
-                    the result of a hundred battles. <br />- Sun Zhu, The Art of
-                    War -
+                    If you know the enemy and know yourself, you need not fear the result of a
+                    hundred battles. <br />- Sun Zhu, The Art of War -
                   </span>
                 }
                 link="https://dreamhack.io/group/989/detail"
               />
               <GithubMenu
-                title={"Jira Implementation"}
-                type={"Github"}
+                title={'Jira Implementation'}
+                type={'Github'}
                 description={
                   <span>
-                    Implementation of Jira, the project tracking software.{" "}
-                    <br />
+                    Implementation of Jira, the project tracking software. <br />
                     Designed based on microservice architecture.
                   </span>
                 }
                 link="https://github.com/orgs/gdsc-ys/repositories?q=jira&type=all&language=&sort="
               />
               <GithubMenu
-                title={"Catrot Market Service"}
-                type={"Github"}
+                title={'Catrot Market Service'}
+                type={'Github'}
                 description={
                   <span>
                     Backend of secondhand market services.

@@ -1,15 +1,15 @@
-import useOnScreen from "@hooks/useOnScreen";
-import { useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
-import styled from "styled-components";
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 // Icon Import
-import { ReactComponent as SiJavascirpt } from "@assets/images/icons/javascript.svg";
-import { ReactComponent as SiNodeJS } from "@assets/images/icons/web/nodedotjs.svg";
-import { ReactComponent as SiTypescript } from "@assets/images/icons/web/typescript.svg";
-import { ReactComponent as SiReact } from "@assets/images/icons/web/react.svg";
-import { ReactComponent as SiExpress } from "@assets/images/icons/server/express.svg";
-import { ReactComponent as SiMongoDB } from "@assets/images/icons/server/mongodb.svg";
+import { ReactComponent as SiJavascirpt } from '@assets/images/icons/javascript.svg';
+import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
+import { ReactComponent as SiTypescript } from '@assets/images/icons/web/typescript.svg';
+import { ReactComponent as SiReact } from '@assets/images/icons/web/react.svg';
+import { ReactComponent as SiExpress } from '@assets/images/icons/server/express.svg';
+import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb.svg';
 
 function FSSection() {
   const observerRef = useRef(null);
@@ -21,18 +21,14 @@ function FSSection() {
     <Container data-scroll-section>
       <ContentWrapper id="fixed-element-FS">
         <LeftSection>
-          <OutlineContainer
-            data-scroll
-            data-scroll-sticky
-            data-scroll-target="#fixed-element-FS"
-          >
+          <OutlineContainer data-scroll data-scroll-sticky data-scroll-target="#fixed-element-FS">
             <H1>05.</H1>
             <H2>Gymnasium</H2>
             <Paragraph>
-              In GDSC - YS, students are provided with a comprehensive
-              end-to-end devleopment curriculum. <br />
-              Beginning with the user interface, Gymnasium study jam allows
-              novice developers to understand the entire data flow process.
+              In GDSC - YS, students are provided with a comprehensive end-to-end devleopment
+              curriculum. <br />
+              Beginning with the user interface, Gymnasium study jam allows novice developers to
+              understand the entire data flow process.
             </Paragraph>
           </OutlineContainer>
         </LeftSection>
@@ -40,31 +36,22 @@ function FSSection() {
           <SectionWrapper ref={observerRef}>
             <TitleWrapperFirst>
               {onScreen && (
-                <TypeAnimation
-                  sequence={["What we do"]}
-                  speed={50}
-                  wrapper={"span"}
-                  repeat={1}
-                />
+                <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
             </TitleWrapperFirst>
             <LearnList>
               <List>Mock design of an end-to-end system using MERN stack.</List>
-              <List>
-                Manage REST & RESTful API endpoints using HTTP protocol.
-              </List>
-              <List>
-                Experience the entire process of developing modern applications.
-              </List>
+              <List>Manage REST & RESTful API endpoints using HTTP protocol.</List>
+              <List>Experience the entire process of developing modern applications.</List>
             </LearnList>
           </SectionWrapper>
           <SectionWrapper ref={observerRefSecond}>
             <TitleWrapperSecond>
               {onScreenSecond && (
                 <TypeAnimation
-                  sequence={["What we learn"]}
+                  sequence={['What we learn']}
                   speed={50}
-                  wrapper={"span"}
+                  wrapper={'span'}
                   repeat={1}
                 />
               )}

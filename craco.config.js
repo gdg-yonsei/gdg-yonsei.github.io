@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-const { CracoAliasPlugin } = require("react-app-alias");
-const CracoSwcPlugin = require("craco-swc");
+const { CracoAliasPlugin } = require('react-app-alias');
+const CracoSwcPlugin = require('craco-swc');
 
 module.exports = {
   plugins: [
@@ -8,7 +8,7 @@ module.exports = {
       plugin: {
         ...CracoSwcPlugin,
         overrideCracoConfig: ({ cracoConfig }) => {
-          if (typeof cracoConfig.eslint.enable !== "undefined") {
+          if (typeof cracoConfig.eslint.enable !== 'undefined') {
             cracoConfig.disableEslint = !cracoConfig.eslint.enable;
           }
           delete cracoConfig.eslint;
@@ -16,11 +16,11 @@ module.exports = {
         },
         overrideWebpackConfig: ({ webpackConfig, cracoConfig }) => {
           if (
-            typeof cracoConfig.disableEslint !== "undefined" &&
+            typeof cracoConfig.disableEslint !== 'undefined' &&
             cracoConfig.disableEslint === true
           ) {
             webpackConfig.plugins = webpackConfig.plugins.filter(
-              (instance) => instance.constructor.name !== "ESLintWebpackPlugin"
+              (instance) => instance.constructor.name !== 'ESLintWebpackPlugin',
             );
           }
           return webpackConfig;
@@ -30,9 +30,9 @@ module.exports = {
         swcLoaderOptions: {
           jsc: {
             externalHelpers: true,
-            target: "es5",
+            target: 'es5',
             parser: {
-              syntax: "ecmascript",
+              syntax: 'ecmascript',
               jsx: true,
               dynamicImport: true,
               exportDefaultFrom: true,

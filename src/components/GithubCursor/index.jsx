@@ -1,15 +1,15 @@
-import { MouseContext } from "@context/MouseContext";
-import useMousePosition from "@hooks/useMousePosition";
-import { memo, useContext } from "react";
-import styled, { css } from "styled-components";
+import { MouseContext } from '@context/MouseContext';
+import useMousePosition from '@hooks/useMousePosition';
+import { memo, useContext } from 'react';
+import styled, { css } from 'styled-components';
 
-import { ReactComponent as GithubIcon } from "@assets/images/icons/github.svg";
+import { ReactComponent as GithubIcon } from '@assets/images/icons/github.svg';
 
 function GithubCursor() {
   const { cursorType } = useContext(MouseContext);
   const { x, y } = useMousePosition();
 
-  const isHovered = cursorType !== "";
+  const isHovered = cursorType !== '';
 
   return (
     <Ring
@@ -22,7 +22,7 @@ function GithubCursor() {
       {isHovered && (
         <>
           <GithubIcon width={50} height={35} fill="white" />
-          <InnerText>Go to Github</InnerText>{" "}
+          <InnerText>Go to Github</InnerText>{' '}
         </>
       )}
     </Ring>

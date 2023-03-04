@@ -1,13 +1,7 @@
-import { useCallback } from "react";
-import styled from "styled-components";
+import { useCallback } from 'react';
+import styled from 'styled-components';
 
-function SessionCard({
-  index,
-  title,
-  selectedIndex,
-  setSelectedIndex,
-  children,
-}) {
+function SessionCard({ index, title, selectedIndex, setSelectedIndex, children }) {
   const handleCardClick = useCallback(() => {
     if (selectedIndex === index) {
       setSelectedIndex(null);

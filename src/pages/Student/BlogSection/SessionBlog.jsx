@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { offHoverAnimation, onHoverAnimation } from "./animation";
+import styled from 'styled-components';
+import { offHoverAnimation, onHoverAnimation } from './animation';
 
 function SessionBlog({ selected, index, writeup, blogs }) {
   return (
@@ -11,12 +11,7 @@ function SessionBlog({ selected, index, writeup, blogs }) {
         <BlogWrapper>
           {blogs.map((blog, idx) => {
             return (
-              <BlogLink
-                key={idx}
-                href={blog}
-                target="_blank"
-                rel="noreferrer noopener nofollow"
-              >
+              <BlogLink key={idx} href={blog} target="_blank" rel="noreferrer noopener nofollow">
                 {blog}
               </BlogLink>
             );
@@ -103,7 +98,7 @@ const BlogLink = styled.a`
   letter-spacing: -0.05px;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -112,12 +107,10 @@ const BlogLink = styled.a`
     height: 1px;
     background-color: ${(props) => props.theme.color.darkgrey};
 
-    animation: ${offHoverAnimation} 0.5s cubic-bezier(0.17, 0.86, 0.22, 0.96) 0s
-      forwards;
+    animation: ${offHoverAnimation} 0.5s cubic-bezier(0.17, 0.86, 0.22, 0.96) 0s forwards;
   }
 
   &:hover::before {
-    animation: ${onHoverAnimation} 0.5s cubic-bezier(0.17, 0.86, 0.22, 0.96) 0s
-      forwards;
+    animation: ${onHoverAnimation} 0.5s cubic-bezier(0.17, 0.86, 0.22, 0.96) 0s forwards;
   }
 `;

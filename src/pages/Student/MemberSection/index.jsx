@@ -1,20 +1,20 @@
-import { LeftAppearAnimationWidth } from "@components/Animation/LeftAppearAnimation";
-import { useCallback, useEffect, useRef, useState } from "react";
-import ReactTextTransition from "react-text-transition";
-import styled, { useTheme } from "styled-components";
-import MemberCard from "./MemberCard";
-import { DevrelList, MemberList } from "./memberList";
+import { LeftAppearAnimationWidth } from '@components/Animation/LeftAppearAnimation';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import ReactTextTransition from 'react-text-transition';
+import styled, { useTheme } from 'styled-components';
+import MemberCard from './MemberCard';
+import { DevrelList, MemberList } from './memberList';
 
-import HorizontalPatternImage1 from "@assets/images/pattern3.png";
-import HorizontalPatternImage2 from "@assets/images/pattern4.png";
-import useLocomotiveScrollPosition from "@hooks/useLocomotiveScrollPosition";
-import useWindowSize from "@hooks/useWindowSize";
-import { MouseParallaxContainer } from "react-parallax-mouse";
-import LeadMemberCard from "./LeadMemberCard";
-import ProgressBar from "./ProgressBar";
-import { STUDENTS_COLOR_BREAKPOINT as BREAKPOINT } from "@constants/constants";
+import HorizontalPatternImage1 from '@assets/images/pattern3.png';
+import HorizontalPatternImage2 from '@assets/images/pattern4.png';
+import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
+import useWindowSize from '@hooks/useWindowSize';
+import { MouseParallaxContainer } from 'react-parallax-mouse';
+import LeadMemberCard from './LeadMemberCard';
+import ProgressBar from './ProgressBar';
+import { STUDENTS_COLOR_BREAKPOINT as BREAKPOINT } from '@constants/constants';
 
-const Writeups = ["Lead", "DevRel", "Developers", ""];
+const Writeups = ['Lead', 'DevRel', 'Developers', ''];
 
 function MemberSection() {
   const sectionRef = useRef(null);
@@ -32,17 +32,11 @@ function MemberSection() {
       return 0;
     }
 
-    if (
-      BREAKPOINT.LEAD_BREAKPOINT <= pos &&
-      pos <= BREAKPOINT.DEVREL_BREAKPOINT
-    ) {
+    if (BREAKPOINT.LEAD_BREAKPOINT <= pos && pos <= BREAKPOINT.DEVREL_BREAKPOINT) {
       return 1;
     }
 
-    if (
-      BREAKPOINT.DEVREL_BREAKPOINT <= pos &&
-      pos <= BREAKPOINT.MEMBER_BREAKPOINT
-    ) {
+    if (BREAKPOINT.DEVREL_BREAKPOINT <= pos && pos <= BREAKPOINT.MEMBER_BREAKPOINT) {
       return 2;
     }
 
@@ -62,7 +56,7 @@ function MemberSection() {
           return backgroundColor.black;
       }
     },
-    [backgroundColor.black, contrast.blue, contrast.green, contrast.red]
+    [backgroundColor.black, contrast.blue, contrast.green, contrast.red],
   );
 
   useEffect(() => {
@@ -80,7 +74,7 @@ function MemberSection() {
         >
           <LeftTitle>GDSC Yonsei</LeftTitle>
           <LeftSubtitle>
-            {`${Writeups[scrollIndex]}`.split("").map((n, idx) => {
+            {`${Writeups[scrollIndex]}`.split('').map((n, idx) => {
               return (
                 <ReactTextTransition
                   key={idx}
@@ -98,15 +92,11 @@ function MemberSection() {
       </LeftContainer>
       <RightContainer>
         <div>
-          <MouseParallaxContainer
-            globalFactorX={0.2}
-            globalFactorY={0.2}
-            resetOnLeave
-          >
+          <MouseParallaxContainer globalFactorX={0.2} globalFactorY={0.2} resetOnLeave>
             <LeadMemberCard
-              upperLetter={"GDSC Lead"}
-              lowerLetter={"Kiung Jung"}
-              githubID={"Quqqu"}
+              upperLetter={'GDSC Lead'}
+              lowerLetter={'Kiung Jung'}
+              githubID={'Quqqu'}
             />
           </MouseParallaxContainer>
         </div>
@@ -206,7 +196,7 @@ const TypeWrapper = styled.div`
   align-items: flex-start;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -215,8 +205,7 @@ const TypeWrapper = styled.div`
 
     mix-blend-mode: overlay;
 
-    animation: ${LeftAppearAnimationWidth} 1s
-      cubic-bezier(0.1, 0.87, 0.19, 0.98) 1s forwards;
+    animation: ${LeftAppearAnimationWidth} 1s cubic-bezier(0.1, 0.87, 0.19, 0.98) 1s forwards;
 
     background-color: ${(props) => props.bgcolor};
     transition: background-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
@@ -229,7 +218,7 @@ const LeftTitle = styled.span`
 
   margin-bottom: 3vh;
 
-  font-family: "Neue Montreal";
+  font-family: 'Neue Montreal';
   font-size: 5.5vw;
   font-weight: 400;
   color: ${(props) => props.theme.backgroundColor.white};
@@ -239,7 +228,7 @@ const LeftSubtitle = styled.span`
   display: block;
   width: 100%;
 
-  font-family: "Neue Montreal";
+  font-family: 'Neue Montreal';
   font-size: 2.5vw;
   font-weight: 200;
   color: ${(props) => props.theme.backgroundColor.white};
