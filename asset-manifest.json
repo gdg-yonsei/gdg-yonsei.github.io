@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9357d55b.css",
-    "main.js": "/static/js/main.cd524473.js",
+    "main.css": "/static/css/main.5173f520.css",
+    "main.js": "/static/js/main.e4daefd0.js",
     "static/media/odessaPattern1.png": "/static/media/odessaPattern1.0952069654966aa2d9a4.png",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
@@ -53,11 +53,11 @@
     "static/media/nextdotjs.svg": "/static/media/nextdotjs.02171293962bc80585c6e12ced8ca1c7.svg",
     "static/media/symfony.svg": "/static/media/symfony.c9b52413c65e2c8a95c2f3b5385f01ef.svg",
     "static/media/sqlite.svg": "/static/media/sqlite.0e20b3e1c532fa997f8e7fd28bec2984.svg",
+    "index.html": "/index.html",
     "static/media/typescript.svg": "/static/media/typescript.1b46c028879d6c94a56e6dfc1fd6797b.svg",
     "static/media/sass.svg": "/static/media/sass.f39b61fa63da56122e4767f8ce57939b.svg",
     "static/media/redis.svg": "/static/media/redis.69c4fd4d0b889a5a5f91a2cce5bded85.svg",
     "static/media/php.svg": "/static/media/php.1942de9eeb653e4d3d0138c24d39939b.svg",
-    "index.html": "/index.html",
     "static/media/springboot.svg": "/static/media/springboot.0201916dafacfe4c440c9b5b0e9d19ef.svg",
     "static/media/javascript.svg": "/static/media/javascript.5ee3c82fade3a5a9c98dc18702a4f717.svg",
     "static/media/vite.svg": "/static/media/vite.8ecb7a4163aa0b6d847705c4b3c32900.svg",
@@ -87,7 +87,7 @@
     "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg"
   },
   "entrypoints": [
-    "static/css/main.9357d55b.css",
-    "static/js/main.cd524473.js"
+    "static/css/main.5173f520.css",
+    "static/js/main.e4daefd0.js"
   ]
 }
