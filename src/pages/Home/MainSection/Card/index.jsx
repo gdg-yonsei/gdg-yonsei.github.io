@@ -4,20 +4,20 @@ import { TransitionColorContext } from '@context/TransitionColorContext';
 import { useContext } from 'react';
 import styled from 'styled-components';
 
-function Card(props) {
+function Card({ color, linkTarget, shape, leftText, rightText }) {
   const { transitionColorHandler } = useContext(TransitionColorContext);
 
   const handleCardClick = () => {
-    transitionColorHandler(props.color);
+    transitionColorHandler(color);
   };
 
   return (
-    <DelayedLink to={props.linkTarget} delay={TRANSITION_DURATION}>
-      <Container color={props.color} onClick={handleCardClick}>
-        <ShapeWrapper>{props.shape}</ShapeWrapper>
+    <DelayedLink to={linkTarget} delay={TRANSITION_DURATION}>
+      <Container color={color} onClick={handleCardClick}>
+        <ShapeWrapper>{shape}</ShapeWrapper>
         <TextWrapper>
-          <LeftText>{props.leftText}</LeftText>
-          <RightText>{props.rightText}</RightText>
+          <LeftText>{leftText}</LeftText>
+          <RightText>{rightText}</RightText>
         </TextWrapper>
       </Container>
     </DelayedLink>

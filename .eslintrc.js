@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'simple-import-sort', 'import'],
+  plugins: ['react', 'prettier', 'simple-import-sort', 'import', 'unused-imports'],
   rules: {
     'react/prop-types': 0,
     'no-unused-vars': 0,
@@ -24,5 +24,10 @@ module.exports = {
     'import/first': 'error',
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    ],
   },
 };

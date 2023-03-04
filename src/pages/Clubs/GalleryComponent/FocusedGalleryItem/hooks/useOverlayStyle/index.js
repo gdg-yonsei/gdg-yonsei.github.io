@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function useOverlayStyle(disabled) {
   const [blurValue, setBlurValue] = useState(0);

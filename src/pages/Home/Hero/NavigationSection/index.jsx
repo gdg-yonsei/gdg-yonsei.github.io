@@ -52,9 +52,15 @@ function NavigationSection() {
             <ButtonSpan>Google Search</ButtonSpan>
           </StyledButton>
         </a>
-        <StyledButton data-scroll data-scroll-position="top" data-scroll-speed="4">
-          <ButtonSpan>I&apos;m Feeling Lucky</ButtonSpan>
-        </StyledButton>
+        <a
+          href="https://gdsc.community.dev/yonsei-university-seoul-campus/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <StyledButton data-scroll data-scroll-position="top" data-scroll-speed="4">
+            <ButtonSpan>I&apos;m Feeling Lucky</ButtonSpan>
+          </StyledButton>
+        </a>
       </ButtonContainer>
     </Container>
   );
