@@ -30,6 +30,7 @@ import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.s
 import useOnScreen from '@hooks/useOnScreen';
 import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
 import { useRef } from 'react';
+import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
 
@@ -42,6 +43,15 @@ function ServerSection() {
   const onScreen = useOnScreen(observerRef);
   const onScreenSecond = useOnScreen(observerRefSecond);
   const onScreenThird = useOnScreen(observerRefThird);
+
+  const setTooltip = (content) => {
+    return {
+      'data-tooltip-id': 'server-tooltip',
+      'data-tooltip-content': content,
+      'data-tooltip-place': 'bottom',
+      'data-tooltip-hide': 0.5,
+    };
+  };
 
   return (
     <Container data-scroll-section>
@@ -92,59 +102,59 @@ function ServerSection() {
               <IconName>Languages</IconName>
               <IconWrapper>
                 {/* FIXME: Why not fill color props? */}
-                <SiJava />
-                <SiPython />
-                <SiJavascript />
-                <SiSwift />
+                <SiJava {...setTooltip('Java')} />
+                <SiPython {...setTooltip('React')} />
+                <SiJavascript {...setTooltip('JavaScript')} />
+                <SiSwift {...setTooltip('Swift')} />
               </IconWrapper>
               <IconWrapper>
-                <SiGolang />
-                <SiRuby />
-                <SiKotlin />
+                <SiGolang {...setTooltip('Go')} />
+                <SiRuby {...setTooltip('Ruby')} />
+                <SiKotlin {...setTooltip('Kotlin')} />
               </IconWrapper>
               <IconWrapper>
-                <SiScala />
-                <SiPhp />
-                <SiCplusplus />
+                <SiScala {...setTooltip('Scala')} />
+                <SiPhp {...setTooltip('php')} />
+                <SiCplusplus {...setTooltip('C++')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>Server Frameworks & Libraries</IconName>
               <IconWrapper>
-                <SiSpring />
-                <SiSpringBoot />
+                <SiSpring {...setTooltip('Spring')} />
+                <SiSpringBoot {...setTooltip('Spring Boot')} />
 
-                <SiNodeJS />
-                <SiExpress />
+                <SiNodeJS {...setTooltip('NodeJS')} />
+                <SiExpress {...setTooltip('Express.js')} />
               </IconWrapper>
               <IconWrapper>
-                <SiDotnet />
-                <SiRubyOnRails />
-                <SiLaravel />
+                <SiDotnet {...setTooltip('.NET')} />
+                <SiRubyOnRails {...setTooltip('Ruby On Rails')} />
+                <SiLaravel {...setTooltip('Laravel')} />
               </IconWrapper>
               <IconWrapper>
-                <SiSymfony />
-                <SiNestJS />
-                <SiFastAPI />
+                <SiSymfony {...setTooltip('Symfony')} />
+                <SiNestJS {...setTooltip('Next.js')} />
+                <SiFastAPI {...setTooltip('FastAPI')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>RDBMS</IconName>
               <IconWrapper>
-                <SiMongoDB />
-                <SiMySQL />
-                <SiPostgreSQL />
-                <SiSQLite />
-                <SiRedis />
+                <SiMongoDB {...setTooltip('MongoDB')} />
+                <SiMySQL {...setTooltip('MySQL')} />
+                <SiPostgreSQL {...setTooltip('PostgreSQL')} />
+                <SiSQLite {...setTooltip('SQLite')} />
+                <SiRedis {...setTooltip('Redis')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>CI/CD</IconName>
               <IconWrapper>
-                <SiDocker />
-                <SiJira />
-                <SiJenkins />
-                <SiGCP />
+                <SiDocker {...setTooltip('Docker')} />
+                <SiJira {...setTooltip('Jira')} />
+                <SiJenkins {...setTooltip('Jenkins')} />
+                <SiGCP {...setTooltip('GCP')} />
               </IconWrapper>
             </IconList>
           </SectionWrapper>
@@ -208,6 +218,7 @@ function ServerSection() {
           </SectionWrapper>
         </RightSection>
       </ContentWrapper>
+      <Tooltip id="server-tooltip" />
     </Container>
   );
 }

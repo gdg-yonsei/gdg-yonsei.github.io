@@ -17,6 +17,7 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "react-text-transition": "^3.0.2",
+    "react-tooltip": "^5.8.3",
     "react-type-animation": "^2.1.2",
     "styled-components": "^5.3.6",
     "swiper": "^9.0.2",

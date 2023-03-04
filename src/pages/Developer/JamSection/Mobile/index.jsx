@@ -6,6 +6,7 @@ import { ReactComponent as SiUIKit } from '@assets/images/icons/mobile/uikit.svg
 import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
 import useOnScreen from '@hooks/useOnScreen';
 import { useRef } from 'react';
+import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
 
@@ -18,6 +19,15 @@ function MobileSection() {
   const onScreen = useOnScreen(observerRef);
   const onScreenSecond = useOnScreen(observerRefSecond);
   const onScreenThird = useOnScreen(observerRefThird);
+
+  const setTooltip = (content) => {
+    return {
+      'data-tooltip-id': 'mobile-tooltip',
+      'data-tooltip-content': content,
+      'data-tooltip-place': 'bottom',
+      'data-tooltip-hide': 0.5,
+    };
+  };
 
   return (
     <Container data-scroll-section>
@@ -66,17 +76,17 @@ function MobileSection() {
             <IconList>
               <IconName>Languages</IconName>
               <IconWrapper>
-                <SiSwift />
-                <SiDart />
+                <SiSwift {...setTooltip('Swift')} />
+                <SiDart {...setTooltip('Dart')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>Mobile Frameworks & Libraries</IconName>
               <IconWrapper>
-                <SiSwift />
-                <SiUIKit />
-                <SiFlutter />
-                <SiFirebase />
+                <SiSwift {...setTooltip('Swift')} />
+                <SiUIKit {...setTooltip('UIKit')} />
+                <SiFlutter {...setTooltip('Flutter')} />
+                <SiFirebase {...setTooltip('Firebase')} />
               </IconWrapper>
             </IconList>
           </SectionWrapper>
@@ -104,6 +114,7 @@ function MobileSection() {
           </SectionWrapper>
         </RightSection>
       </ContentWrapper>
+      <Tooltip id="mobile-tooltip" />
     </Container>
   );
 }

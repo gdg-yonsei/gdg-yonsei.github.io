@@ -3,6 +3,7 @@ import './styles/locomotive-scroll.css';
 import './styles/reset.css';
 import 'react-app-polyfill/ie9'; // IE 9 support.
 import 'react-app-polyfill/stable'; // Stable
+import 'react-tooltip/dist/react-tooltip.css';
 
 import Head from '@components/Head';
 import { theme } from '@styles/global-theme';

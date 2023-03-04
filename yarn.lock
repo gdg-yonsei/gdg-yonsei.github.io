@@ -1855,6 +1855,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.1.0":
+  version: 1.2.2
+  resolution: "@floating-ui/core@npm:1.2.2"
+  checksum: 0728efcb3f57c0bbeaf940e3ca8dfbecb659afec8943dff79169b8191b8c4aa14b54a33dc66599e624dfa791920010ebd9f860cfa7f47df94ad75b32c1e44883
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@floating-ui/dom@npm:1.1.1"
+  dependencies:
+    "@floating-ui/core": ^1.1.0
+  checksum: 8b7f3b98ed7ec0b634e4a0b735253b0442358c5cea8302935fc185b2bd882202a053622abe9248c76d0908645dd35f93adeaed2d64371b2ab76b36725ce3f7d3
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -5392,6 +5408,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
+  languageName: node
+  linkType: hard
+
 "clean-css@npm:4.2.1":
   version: 4.2.1
   resolution: "clean-css@npm:4.2.1"
@@ -8451,6 +8474,7 @@ __metadata:
     react-scripts: 5.0.1
     react-snap: ^1.23.0
     react-text-transition: ^3.0.2
+    react-tooltip: ^5.8.3
     react-type-animation: ^2.1.2
     styled-components: ^5.3.6
     swiper: ^9.0.2
@@ -13970,6 +13994,19 @@ __metadata:
   peerDependencies:
     react: ">=18.0.0"
   checksum: 4705df72a929ac3300eb6e42b2ecf5e0941469af79649bb8c7ab5ef63d43747b3906b1bf6df895915f466586b66a019e16b26691fe67509ba813e107c6fb0479
+  languageName: node
+  linkType: hard
+
+"react-tooltip@npm:^5.8.3":
+  version: 5.8.3
+  resolution: "react-tooltip@npm:5.8.3"
+  dependencies:
+    "@floating-ui/dom": 1.1.1
+    classnames: ^2.3.2
+  peerDependencies:
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  checksum: 9743ab23f189fc4e05f6d6a7928c3a95821cf031a9bed0945ebae34c557910654b68a98cc198b6e2a2ac676224e7c4aad2165c03e3cc376b6cc81ec67d9e64e0
   languageName: node
   linkType: hard
 

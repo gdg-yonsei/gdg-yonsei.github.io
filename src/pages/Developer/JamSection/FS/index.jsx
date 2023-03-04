@@ -7,6 +7,7 @@ import { ReactComponent as SiReact } from '@assets/images/icons/web/react.svg';
 import { ReactComponent as SiTypescript } from '@assets/images/icons/web/typescript.svg';
 import useOnScreen from '@hooks/useOnScreen';
 import { useRef } from 'react';
+import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
 
@@ -15,6 +16,15 @@ function FSSection() {
   const observerRefSecond = useRef(null);
   const onScreen = useOnScreen(observerRef);
   const onScreenSecond = useOnScreen(observerRefSecond);
+
+  const setTooltip = (content) => {
+    return {
+      'data-tooltip-id': 'fs-tooltip',
+      'data-tooltip-content': content,
+      'data-tooltip-place': 'bottom',
+      'data-tooltip-hide': 0.5,
+    };
+  };
 
   return (
     <Container data-scroll-section>
@@ -58,23 +68,23 @@ function FSSection() {
             <IconList>
               <IconName>Languages</IconName>
               <IconWrapper>
-                {/* FIXME: Why not fill color props? */}
-                <SiJavascirpt />
-                <SiTypescript />
+                <SiJavascirpt {...setTooltip('JavaScript')} />
+                <SiTypescript {...setTooltip('TypeScript')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>Frameworks, Libraries & DBMS</IconName>
               <IconWrapper>
-                <SiNodeJS />
-                <SiExpress />
-                <SiReact />
-                <SiMongoDB />
+                <SiNodeJS {...setTooltip('NodeJS')} />
+                <SiExpress {...setTooltip('Express.js')} />
+                <SiReact {...setTooltip('React')} />
+                <SiMongoDB {...setTooltip('MongoDB')} />
               </IconWrapper>
             </IconList>
           </SectionWrapper>
         </RightSection>
       </ContentWrapper>
+      <Tooltip id="fs-tooltip" />
     </Container>
   );
 }

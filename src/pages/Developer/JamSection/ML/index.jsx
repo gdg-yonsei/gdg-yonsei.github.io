@@ -8,6 +8,7 @@ import { ReactComponent as SiTensorflow } from '@assets/images/icons/ML/tensorfl
 import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
 import useOnScreen from '@hooks/useOnScreen';
 import { useRef } from 'react';
+import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
 
@@ -20,6 +21,15 @@ function MLSection() {
   const onScreen = useOnScreen(observerRef);
   const onScreenSecond = useOnScreen(observerRefSecond);
   const onScreenThird = useOnScreen(observerRefThird);
+
+  const setTooltip = (content) => {
+    return {
+      'data-tooltip-id': 'ml-tooltip',
+      'data-tooltip-content': content,
+      'data-tooltip-place': 'bottom',
+      'data-tooltip-hide': 0.5,
+    };
+  };
 
   return (
     <Container data-scroll-section>
@@ -65,20 +75,20 @@ function MLSection() {
             <IconList>
               <IconName>Languages</IconName>
               <IconWrapper>
-                <SiPython />
+                <SiPython {...setTooltip('Python')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>ML Frameworks & Libraries</IconName>
               <IconWrapper>
-                <SiNumpy />
-                <SiPandas />
-                <SiJupyter />
+                <SiNumpy {...setTooltip('Numpy')} />
+                <SiPandas {...setTooltip('Pandas')} />
+                <SiJupyter {...setTooltip('Jupyter')} />
               </IconWrapper>
               <IconWrapper>
-                <SiPytorch />
-                <SiTensorflow />
-                <SiSklearn />
+                <SiPytorch {...setTooltip('Pytorch')} />
+                <SiTensorflow {...setTooltip('TensorFlow')} />
+                <SiSklearn {...setTooltip('Sklearn')} />
               </IconWrapper>
             </IconList>
           </SectionWrapper>
@@ -105,6 +115,7 @@ function MLSection() {
           </SectionWrapper>
         </RightSection>
       </ContentWrapper>
+      <Tooltip id="ml-tooltip" />
     </Container>
   );
 }

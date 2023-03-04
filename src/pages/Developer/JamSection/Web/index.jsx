@@ -1,3 +1,5 @@
+import 'react-tooltip/dist/react-tooltip.css';
+
 import { ReactComponent as SiElectronJS } from '@assets/images/icons/web/electron.svg';
 import { ReactComponent as SiNextJS } from '@assets/images/icons/web/nextdotjs.svg';
 import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
@@ -13,7 +15,6 @@ import useOnScreen from '@hooks/useOnScreen';
 import { SiAngular } from '@react-icons/all-files/si/SiAngular';
 import { SiBabel } from '@react-icons/all-files/si/SiBabel';
 import { SiCss3 } from '@react-icons/all-files/si/SiCss3';
-// Icon Import
 import { SiHtml5 } from '@react-icons/all-files/si/SiHtml5';
 import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
 import { SiNpm } from '@react-icons/all-files/si/SiNpm';
@@ -24,6 +25,7 @@ import { SiVueDotJs } from '@react-icons/all-files/si/SiVueDotJs';
 import { SiWebpack } from '@react-icons/all-files/si/SiWebpack';
 import { SiYarn } from '@react-icons/all-files/si/SiYarn';
 import { useRef } from 'react';
+import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
 
@@ -36,6 +38,15 @@ function WebSection() {
   const onScreen = useOnScreen(observerRef);
   const onScreenSecond = useOnScreen(observerRefSecond);
   const onScreenThird = useOnScreen(observerRefThird);
+
+  const setTooltip = (content) => {
+    return {
+      'data-tooltip-id': 'web-tooltip',
+      'data-tooltip-content': content,
+      'data-tooltip-place': 'bottom',
+      'data-tooltip-hide': 0.5,
+    };
+  };
 
   return (
     <Container data-scroll-section>
@@ -85,50 +96,50 @@ function WebSection() {
               <IconName>Languages</IconName>
               <IconWrapper>
                 {/* FIXME: Why not fill color props? */}
-                <SiHtml5 />
-                <SiCss3 />
-                <SiJavascript />
-                <SiTypescript />
+                <SiHtml5 {...setTooltip('HTML5')} />
+                <SiCss3 {...setTooltip('CSS3')} />
+                <SiJavascript {...setTooltip('JavaScript')} />
+                <SiTypescript {...setTooltip('TypeScript')} />
               </IconWrapper>
               <IconWrapper>
-                <SiSass />
-                <SiStyledComponents />
+                <SiSass {...setTooltip('SASS')} />
+                <SiStyledComponents {...setTooltip('Styled-Components')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>Frameworks & Libraries</IconName>
               <IconWrapper>
-                <SiReact />
-                <SiNextJS />
-                <SiNodeJS />
-                <SiVueDotJs />
-                <SiAngular />
+                <SiReact {...setTooltip('React')} />
+                <SiNextJS {...setTooltip('Next.js')} />
+                <SiNodeJS {...setTooltip('NodeJS')} />
+                <SiVueDotJs {...setTooltip('Vue.js')} />
+                <SiAngular {...setTooltip('Angular')} />
               </IconWrapper>
               <IconWrapper>
-                <SiRedux />
-                <SiReduxSaga />
-                <SiReactQuery />
-                <SiReactTable />
+                <SiRedux {...setTooltip('Redux')} />
+                <SiReduxSaga {...setTooltip('Redux-Saga')} />
+                <SiReactQuery {...setTooltip('Reac-Query')} />
+                <SiReactTable {...setTooltip('React-Table')} />
               </IconWrapper>
               <IconWrapper>
-                <SiThreeJS />
-                <SiWebGL />
-                <SiElectronJS />
+                <SiThreeJS {...setTooltip('Three.js')} />
+                <SiWebGL {...setTooltip('WebGL')} />
+                <SiElectronJS {...setTooltip('Electron.js')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>Build Tools & Transpilers</IconName>
               <IconWrapper>
-                <SiWebpack />
-                <SiVite />
-                <SiBabel />
+                <SiWebpack {...setTooltip('Webpack')} />
+                <SiVite {...setTooltip('Vite')} />
+                <SiBabel {...setTooltip('Babel')} />
               </IconWrapper>
             </IconList>
             <IconList>
               <IconName>Package Manager</IconName>
               <IconWrapper>
-                <SiNpm />
-                <SiYarn />
+                <SiNpm {...setTooltip('npm')} />
+                <SiYarn {...setTooltip('Yarn')} />
               </IconWrapper>
             </IconList>
           </SectionWrapper>
@@ -186,6 +197,7 @@ function WebSection() {
           </SectionWrapper>
         </RightSection>
       </ContentWrapper>
+      <Tooltip id="web-tooltip" />
     </Container>
   );
 }
