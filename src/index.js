@@ -15,17 +15,34 @@ import { ThemeProvider } from 'styled-components';
 
 import App from '@/App';
 
-const rootElement = document.getElementById('root');
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
 
-ReactDOM.createRoot(rootElement).render(
-  <Fragment>
-    <HelmetProvider>
-      <Head />
-      <ThemeProvider theme={theme}>
-        <BrowserRouter basename="/">
-          <App />
-        </BrowserRouter>
-      </ThemeProvider>
-    </HelmetProvider>
-  </Fragment>,
-);
+if (container.hasChildNodes()) {
+  ReactDOM.hydrateRoot(
+    container,
+    <Fragment>
+      <HelmetProvider>
+        <Head />
+        <ThemeProvider theme={theme}>
+          <BrowserRouter basename="/">
+            <App />
+          </BrowserRouter>
+        </ThemeProvider>
+      </HelmetProvider>
+    </Fragment>,
+  );
+} else {
+  root.render(
+    <Fragment>
+      <HelmetProvider>
+        <Head />
+        <ThemeProvider theme={theme}>
+          <BrowserRouter basename="/">
+            <App />
+          </BrowserRouter>
+        </ThemeProvider>
+      </HelmetProvider>
+    </Fragment>,
+  );
+}
