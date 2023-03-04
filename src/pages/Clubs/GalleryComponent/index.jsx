@@ -47,6 +47,7 @@ function GalleryComponent() {
       <AnimatePresence>
         <FocusedGalleryItem
           disabled={isDisabled}
+          focusedItem={focusedItem}
           focusedSectionId={focusedSectionId}
           thumbnail={focusedThumbnail}
           onBlur={() => setFocusedSectionId(null)}
