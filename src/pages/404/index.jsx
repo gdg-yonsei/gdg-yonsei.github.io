@@ -1,22 +1,14 @@
 import DinosaurGif from '@assets/images/dinosaur-trex.gif';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Page404() {
-  const navigate = useNavigate();
-
   return (
     <Container>
       <DinosaurImage src={DinosaurGif} alt="DinosaurGif" />
       <H1>Captain, We&apos;re Lost!</H1>
       <Span>Don&apos;t worry. We&apos;ll get you back on course.</Span>
-      <BackToMain
-        onClick={() => {
-          navigate(`/`);
-        }}
-      >
-        Take me to the Main Page
-      </BackToMain>
+      <BackToMain to={'/'}>Take me to the Main Page</BackToMain>
       <a
         href="https://tenor.com/ko/view/dinosaur-trex-rare-no-net-gif-15077799"
         target="_blank"
@@ -61,7 +53,7 @@ const Span = styled.span`
   margin-bottom: 5vh;
 `;
 
-const BackToMain = styled.button`
+const BackToMain = styled(Link)`
   font-size: 32px;
   font-weight: 600;
 
