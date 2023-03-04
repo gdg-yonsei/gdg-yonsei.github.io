@@ -5,9 +5,10 @@
 - [x] Virtual Scrolling
 - [x] Page Transition Animation
 - [x] Text Appear Animation on Banner Page
-- [ ] 'Clubs' gallery page.
+- [x] 'Clubs' gallery page.
 - [ ] Micro Interactions on Home/Hero
 - [ ] Image to css-doodle for optimization & custom animation.
+- [ ] Mobile & Tablet media queries.
 
 ### Bug Fix & Layout Requests
 
