@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import { MouseContext } from '@context/MouseContext';
 import useHover from '@hooks/useHover';
-import TextTransition from 'react-text-transition';
 import { memo, useCallback, useContext } from 'react';
 import { MouseParallaxChild } from 'react-parallax-mouse';
-import { MouseContext } from '@context/MouseContext';
+import TextTransition from 'react-text-transition';
+import styled from 'styled-components';
 
 function LeadMemberCard({ upperLetter, lowerLetter, githubID }) {
   const [hoverRef, isHovered] = useHover();

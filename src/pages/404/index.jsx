@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import DinosaurGif from '@assets/images/dinosaur-trex.gif';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
 function Page404() {
   const navigate = useNavigate();

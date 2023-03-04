@@ -1,18 +1,18 @@
-import { LeftAppearAnimationWidth } from '@components/Animation/LeftAppearAnimation';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import ReactTextTransition from 'react-text-transition';
-import styled, { useTheme } from 'styled-components';
-import MemberCard from './MemberCard';
-import { DevrelList, MemberList } from './memberList';
-
 import HorizontalPatternImage1 from '@assets/images/pattern3.png';
 import HorizontalPatternImage2 from '@assets/images/pattern4.png';
+import { LeftAppearAnimationWidth } from '@components/Animation/LeftAppearAnimation';
+import { STUDENTS_COLOR_BREAKPOINT as BREAKPOINT } from '@constants/constants';
 import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
 import useWindowSize from '@hooks/useWindowSize';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { MouseParallaxContainer } from 'react-parallax-mouse';
+import ReactTextTransition from 'react-text-transition';
+import styled, { useTheme } from 'styled-components';
+
 import LeadMemberCard from './LeadMemberCard';
+import MemberCard from './MemberCard';
+import { DevrelList, MemberList } from './memberList';
 import ProgressBar from './ProgressBar';
-import { STUDENTS_COLOR_BREAKPOINT as BREAKPOINT } from '@constants/constants';
 
 const Writeups = ['Lead', 'DevRel', 'Developers', ''];
 

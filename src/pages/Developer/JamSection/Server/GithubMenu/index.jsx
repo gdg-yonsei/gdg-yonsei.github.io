@@ -1,7 +1,7 @@
-import styled from 'styled-components';
 import { ReactComponent as SiGithub } from '@assets/images/icons/github.svg';
-import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
 import { ReactComponent as DreamHackLogo } from '@assets/images/icons/server/hackaday.svg';
+import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
+import styled from 'styled-components';
 
 function handleIcon(type = 'Github') {
   switch (type) {

@@ -1,9 +1,8 @@
+import { ReactComponent as GithubIcon } from '@assets/images/icons/github.svg';
 import { MouseContext } from '@context/MouseContext';
 import useMousePosition from '@hooks/useMousePosition';
 import { memo, useContext } from 'react';
 import styled, { css } from 'styled-components';
-
-import { ReactComponent as GithubIcon } from '@assets/images/icons/github.svg';
 
 function GithubCursor() {
   const { cursorType } = useContext(MouseContext);

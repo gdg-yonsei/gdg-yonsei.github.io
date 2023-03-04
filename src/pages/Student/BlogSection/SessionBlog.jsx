@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { offHoverAnimation, onHoverAnimation } from './animation';
 
 function SessionBlog({ selected, index, writeup, blogs }) {

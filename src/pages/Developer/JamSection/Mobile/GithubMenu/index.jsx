@@ -1,8 +1,7 @@
-import styled from 'styled-components';
-import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
-
-import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
 import { ReactComponent as SiFlutter } from '@assets/images/icons/mobile/flutter.svg';
+import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
+import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
+import styled from 'styled-components';
 
 function handleIcon(type = 'Flutter') {
   switch (type) {

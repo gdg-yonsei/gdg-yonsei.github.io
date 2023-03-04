@@ -1,41 +1,37 @@
+// Icon Import
+import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
+import { ReactComponent as SiCplusplus } from '@assets/images/icons/server/cplusplus.svg';
+import { ReactComponent as SiDocker } from '@assets/images/icons/server/docker.svg';
+import { ReactComponent as SiDotnet } from '@assets/images/icons/server/dotnet.svg';
+import { ReactComponent as SiExpress } from '@assets/images/icons/server/express.svg';
+import { ReactComponent as SiFastAPI } from '@assets/images/icons/server/fastapi.svg';
+import { ReactComponent as SiGolang } from '@assets/images/icons/server/go.svg';
+import { ReactComponent as SiGCP } from '@assets/images/icons/server/googlecloud.svg';
+import { ReactComponent as SiJava } from '@assets/images/icons/server/java.svg';
+import { ReactComponent as SiJenkins } from '@assets/images/icons/server/jenkins.svg';
+import { ReactComponent as SiJira } from '@assets/images/icons/server/jira.svg';
+import { ReactComponent as SiKotlin } from '@assets/images/icons/server/kotlin.svg';
+import { ReactComponent as SiLaravel } from '@assets/images/icons/server/laravel.svg';
+import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb.svg';
+import { ReactComponent as SiMySQL } from '@assets/images/icons/server/mysql.svg';
+import { ReactComponent as SiNestJS } from '@assets/images/icons/server/nestjs.svg';
+import { ReactComponent as SiPhp } from '@assets/images/icons/server/php.svg';
+import { ReactComponent as SiPostgreSQL } from '@assets/images/icons/server/postgresql.svg';
+import { ReactComponent as SiRedis } from '@assets/images/icons/server/redis.svg';
+import { ReactComponent as SiRuby } from '@assets/images/icons/server/ruby.svg';
+import { ReactComponent as SiRubyOnRails } from '@assets/images/icons/server/rubyonrails.svg';
+import { ReactComponent as SiScala } from '@assets/images/icons/server/scala.svg';
+import { ReactComponent as SiSpring } from '@assets/images/icons/server/spring.svg';
+import { ReactComponent as SiSpringBoot } from '@assets/images/icons/server/springboot.svg';
+import { ReactComponent as SiSQLite } from '@assets/images/icons/server/sqlite.svg';
+import { ReactComponent as SiSymfony } from '@assets/images/icons/server/symfony.svg';
+import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
+import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
 import useOnScreen from '@hooks/useOnScreen';
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
 import { useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
-
-// Icon Import
-import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
-import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
-import { ReactComponent as SiJava } from '@assets/images/icons/server/java.svg';
-import { ReactComponent as SiCplusplus } from '@assets/images/icons/server/cplusplus.svg';
-import { ReactComponent as SiPhp } from '@assets/images/icons/server/php.svg';
-import { ReactComponent as SiGolang } from '@assets/images/icons/server/go.svg';
-import { ReactComponent as SiRuby } from '@assets/images/icons/server/ruby.svg';
-import { ReactComponent as SiKotlin } from '@assets/images/icons/server/kotlin.svg';
-import { ReactComponent as SiScala } from '@assets/images/icons/server/scala.svg';
-import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
-import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
-
-import { ReactComponent as SiSpring } from '@assets/images/icons/server/spring.svg';
-import { ReactComponent as SiSpringBoot } from '@assets/images/icons/server/springboot.svg';
-import { ReactComponent as SiDotnet } from '@assets/images/icons/server/dotnet.svg';
-import { ReactComponent as SiRubyOnRails } from '@assets/images/icons/server/rubyonrails.svg';
-import { ReactComponent as SiLaravel } from '@assets/images/icons/server/laravel.svg';
-import { ReactComponent as SiSymfony } from '@assets/images/icons/server/symfony.svg';
-import { ReactComponent as SiNestJS } from '@assets/images/icons/server/nestjs.svg';
-import { ReactComponent as SiFastAPI } from '@assets/images/icons/server/fastapi.svg';
-import { ReactComponent as SiExpress } from '@assets/images/icons/server/express.svg';
-
-import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb.svg';
-import { ReactComponent as SiSQLite } from '@assets/images/icons/server/sqlite.svg';
-import { ReactComponent as SiMySQL } from '@assets/images/icons/server/mysql.svg';
-import { ReactComponent as SiPostgreSQL } from '@assets/images/icons/server/postgresql.svg';
-import { ReactComponent as SiRedis } from '@assets/images/icons/server/redis.svg';
-
-import { ReactComponent as SiDocker } from '@assets/images/icons/server/docker.svg';
-import { ReactComponent as SiJira } from '@assets/images/icons/server/jira.svg';
-import { ReactComponent as SiJenkins } from '@assets/images/icons/server/jenkins.svg';
-import { ReactComponent as SiGCP } from '@assets/images/icons/server/googlecloud.svg';
 
 import GithubMenu from './GithubMenu';
 

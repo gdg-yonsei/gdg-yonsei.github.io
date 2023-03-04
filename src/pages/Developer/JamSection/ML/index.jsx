@@ -1,16 +1,15 @@
-import useOnScreen from '@hooks/useOnScreen';
-import { useRef } from 'react';
-import { TypeAnimation } from 'react-type-animation';
-import styled from 'styled-components';
-
-// Icon Import
-import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
 import { ReactComponent as SiJupyter } from '@assets/images/icons/ML/jupyter.svg';
 import { ReactComponent as SiNumpy } from '@assets/images/icons/ML/numpy.svg';
 import { ReactComponent as SiPandas } from '@assets/images/icons/ML/pandas.svg';
 import { ReactComponent as SiPytorch } from '@assets/images/icons/ML/pytorch.svg';
-import { ReactComponent as SiTensorflow } from '@assets/images/icons/ML/tensorflow.svg';
 import { ReactComponent as SiSklearn } from '@assets/images/icons/ML/scikitlearn.svg';
+import { ReactComponent as SiTensorflow } from '@assets/images/icons/ML/tensorflow.svg';
+// Icon Import
+import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
+import useOnScreen from '@hooks/useOnScreen';
+import { useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 import GithubMenu from './GithubMenu';
 

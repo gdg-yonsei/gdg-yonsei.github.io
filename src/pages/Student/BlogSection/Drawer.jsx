@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { Fragment, memo, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+
 import { DrawerContents } from './DrawerContents';
 import SessionBlog from './SessionBlog';
 import SessionCard from './SessionCard';

@@ -1,10 +1,11 @@
 import LoadingScreen from '@components/LoadingScreen';
+import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
 import { TransitionColorContext } from '@context/TransitionColorContext';
 import useEffectOnce from '@hooks/useEffectOnce';
 import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
-import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
+
 import Banner from './Banner';
 import Introduction from './Introduction';
 import Progress from './Progress';

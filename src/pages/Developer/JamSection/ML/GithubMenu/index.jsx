@@ -1,8 +1,7 @@
-import styled from 'styled-components';
-
 import { ReactComponent as SiGithub } from '@assets/images/icons/github.svg';
 import { ReactComponent as SiNpm } from '@assets/images/icons/web/npm.svg';
 import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
+import styled from 'styled-components';
 
 function handleIcon(type = 'Github') {
   switch (type) {

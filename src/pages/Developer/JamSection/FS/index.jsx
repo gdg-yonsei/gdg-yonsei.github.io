@@ -1,15 +1,14 @@
+// Icon Import
+import { ReactComponent as SiJavascirpt } from '@assets/images/icons/javascript.svg';
+import { ReactComponent as SiExpress } from '@assets/images/icons/server/express.svg';
+import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb.svg';
+import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
+import { ReactComponent as SiReact } from '@assets/images/icons/web/react.svg';
+import { ReactComponent as SiTypescript } from '@assets/images/icons/web/typescript.svg';
 import useOnScreen from '@hooks/useOnScreen';
 import { useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
-
-// Icon Import
-import { ReactComponent as SiJavascirpt } from '@assets/images/icons/javascript.svg';
-import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
-import { ReactComponent as SiTypescript } from '@assets/images/icons/web/typescript.svg';
-import { ReactComponent as SiReact } from '@assets/images/icons/web/react.svg';
-import { ReactComponent as SiExpress } from '@assets/images/icons/server/express.svg';
-import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb.svg';
 
 function FSSection() {
   const observerRef = useRef(null);

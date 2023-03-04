@@ -1,8 +1,8 @@
-import Button from '@components/Button';
-import styled from 'styled-components';
-import { MdSearch } from '@react-icons/all-files/md/MdSearch';
 import { ReactComponent as MicIcon } from '@assets/images/mic.svg';
+import Button from '@components/Button';
+import { MdSearch } from '@react-icons/all-files/md/MdSearch';
 import { TypeAnimation } from 'react-type-animation';
+import styled from 'styled-components';
 
 function NavigationSection() {
   return (
@@ -80,8 +80,6 @@ const NavbarContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  cursor: text;
 `;
 
 const Navbar = styled.div`
@@ -101,6 +99,8 @@ const LeftEnd = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  cursor: text;
 `;
 
 const SearchIcon = styled(MdSearch)`

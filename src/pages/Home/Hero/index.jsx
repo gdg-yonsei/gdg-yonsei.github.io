@@ -1,6 +1,7 @@
 import MainFooter from '@components/Footer/MainFooter';
 import MainHeader from '@components/Header/MainHeader';
 import styled from 'styled-components';
+
 import LogoSection from './LogoSection';
 import NavigationSection from './NavigationSection';
 import PaddingSection from './PaddingSection';

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import getRandomArbitrary from '@utils/getRandomArbitraryNumber';
+import styled from 'styled-components';
 
 const LETTERS = 'GDSC Yonsei Univ. Seoul Campus';
 

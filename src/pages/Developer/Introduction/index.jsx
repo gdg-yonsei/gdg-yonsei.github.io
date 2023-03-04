@@ -1,6 +1,7 @@
-import styled, { css } from 'styled-components';
-import Jam from './Jam/Jam';
 import { useState } from 'react';
+import styled, { css } from 'styled-components';
+
+import Jam from './Jam/Jam';
 import { JamList } from './Jam/JamList';
 
 const handleHoveredSection = (sectionIndex) => {

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import GDSCLogo from '@assets/images/gdsclogo.png';
+import styled from 'styled-components';
 
 function LogoSection() {
   return (

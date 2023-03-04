@@ -1,9 +1,9 @@
-import { VscCode } from '@react-icons/all-files/vsc/VscCode';
 import { BsServer } from '@react-icons/all-files/bs/BsServer';
-import { VscDeviceMobile } from '@react-icons/all-files/vsc/VscDeviceMobile';
-import { GiProcessor } from '@react-icons/all-files/gi/GiProcessor';
 import { FaGraduationCap } from '@react-icons/all-files/fa/FaGraduationCap';
 import { FaHandshake } from '@react-icons/all-files/fa/FaHandshake';
+import { GiProcessor } from '@react-icons/all-files/gi/GiProcessor';
+import { VscCode } from '@react-icons/all-files/vsc/VscCode';
+import { VscDeviceMobile } from '@react-icons/all-files/vsc/VscDeviceMobile';
 
 export const JamList = [
   {

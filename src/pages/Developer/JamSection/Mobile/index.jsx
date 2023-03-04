@@ -1,14 +1,13 @@
+import { ReactComponent as SiDart } from '@assets/images/icons/mobile/dart.svg';
+import { ReactComponent as SiFirebase } from '@assets/images/icons/mobile/firebase.svg';
+import { ReactComponent as SiFlutter } from '@assets/images/icons/mobile/flutter.svg';
+import { ReactComponent as SiUIKit } from '@assets/images/icons/mobile/uikit.svg';
+// Icon Import
+import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
 import useOnScreen from '@hooks/useOnScreen';
 import { useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
-
-// Icon Import
-import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
-import { ReactComponent as SiUIKit } from '@assets/images/icons/mobile/uikit.svg';
-import { ReactComponent as SiDart } from '@assets/images/icons/mobile/dart.svg';
-import { ReactComponent as SiFlutter } from '@assets/images/icons/mobile/flutter.svg';
-import { ReactComponent as SiFirebase } from '@assets/images/icons/mobile/firebase.svg';
 
 import GithubMenu from './GithubMenu';
 

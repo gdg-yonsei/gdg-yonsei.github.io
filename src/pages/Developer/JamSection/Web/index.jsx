@@ -1,35 +1,32 @@
+import { ReactComponent as SiElectronJS } from '@assets/images/icons/web/electron.svg';
+import { ReactComponent as SiNextJS } from '@assets/images/icons/web/nextdotjs.svg';
+import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
+import { ReactComponent as SiReactQuery } from '@assets/images/icons/web/reactquery.svg';
+import { ReactComponent as SiReactTable } from '@assets/images/icons/web/reacttable.svg';
+import { ReactComponent as SiReduxSaga } from '@assets/images/icons/web/reduxsaga.svg';
+import { ReactComponent as SiSass } from '@assets/images/icons/web/sass.svg';
+import { ReactComponent as SiStyledComponents } from '@assets/images/icons/web/styledcomponents.svg';
+import { ReactComponent as SiThreeJS } from '@assets/images/icons/web/threedotjs.svg';
+import { ReactComponent as SiVite } from '@assets/images/icons/web/vite.svg';
+import { ReactComponent as SiWebGL } from '@assets/images/icons/web/webgl.svg';
 import useOnScreen from '@hooks/useOnScreen';
+import { SiAngular } from '@react-icons/all-files/si/SiAngular';
+import { SiBabel } from '@react-icons/all-files/si/SiBabel';
+import { SiCss3 } from '@react-icons/all-files/si/SiCss3';
+// Icon Import
+import { SiHtml5 } from '@react-icons/all-files/si/SiHtml5';
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
+import { SiNpm } from '@react-icons/all-files/si/SiNpm';
+import { SiReact } from '@react-icons/all-files/si/SiReact';
+import { SiRedux } from '@react-icons/all-files/si/SiRedux';
+import { SiTypescript } from '@react-icons/all-files/si/SiTypescript';
+import { SiVueDotJs } from '@react-icons/all-files/si/SiVueDotJs';
+import { SiWebpack } from '@react-icons/all-files/si/SiWebpack';
+import { SiYarn } from '@react-icons/all-files/si/SiYarn';
 import { useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';
 
-// Icon Import
-import { SiHtml5 } from '@react-icons/all-files/si/SiHtml5';
-import { SiCss3 } from '@react-icons/all-files/si/SiCss3';
-import { ReactComponent as SiSass } from '@assets/images/icons/web/sass.svg';
-import { ReactComponent as SiStyledComponents } from '@assets/images/icons/web/styledcomponents.svg';
-import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
-import { SiTypescript } from '@react-icons/all-files/si/SiTypescript';
-
-import { SiReact } from '@react-icons/all-files/si/SiReact';
-import { ReactComponent as SiNextJS } from '@assets/images/icons/web/nextdotjs.svg';
-import { SiVueDotJs } from '@react-icons/all-files/si/SiVueDotJs';
-import { SiAngular } from '@react-icons/all-files/si/SiAngular';
-import { SiRedux } from '@react-icons/all-files/si/SiRedux';
-import { ReactComponent as SiReduxSaga } from '@assets/images/icons/web/reduxsaga.svg';
-import { ReactComponent as SiReactQuery } from '@assets/images/icons/web/reactquery.svg';
-import { ReactComponent as SiReactTable } from '@assets/images/icons/web/reacttable.svg';
-import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
-import { ReactComponent as SiThreeJS } from '@assets/images/icons/web/threedotjs.svg';
-import { ReactComponent as SiWebGL } from '@assets/images/icons/web/webgl.svg';
-import { ReactComponent as SiElectronJS } from '@assets/images/icons/web/electron.svg';
-
-import { SiBabel } from '@react-icons/all-files/si/SiBabel';
-import { SiWebpack } from '@react-icons/all-files/si/SiWebpack';
-import { ReactComponent as SiVite } from '@assets/images/icons/web/vite.svg';
-
-import { SiNpm } from '@react-icons/all-files/si/SiNpm';
-import { SiYarn } from '@react-icons/all-files/si/SiYarn';
 import GithubMenu from './GithubMenu';
 
 function WebSection() {

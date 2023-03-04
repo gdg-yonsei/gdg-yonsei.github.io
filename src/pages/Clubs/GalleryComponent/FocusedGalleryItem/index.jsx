@@ -1,16 +1,15 @@
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 import useKeyPress from '@hooks/useKeyPress';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
-
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
-import useOverlayStyle from './hooks/useOverlayStyle';
+import styled from 'styled-components';
+import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
+import useOverlayStyle from './hooks/useOverlayStyle';
 
 SwiperCore.use([Pagination]);
 

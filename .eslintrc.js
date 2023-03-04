@@ -14,10 +14,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'simple-import-sort', 'import'],
+  plugins: ['react', 'prettier', 'simple-import-sort', 'import'],
   rules: {
     'react/prop-types': 0,
     'no-unused-vars': 0,
+    'prettier/prettier': 'error',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'import/first': 'error',

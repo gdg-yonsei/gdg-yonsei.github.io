@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import mapNumber from '@utils/mapNumber';
+import { useEffect, useState } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const useGallerySkew = () => {
   const { scroll } = useLocomotiveScroll();

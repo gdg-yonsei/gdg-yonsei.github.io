@@ -1,7 +1,6 @@
+import Pattern from '@assets/images/odeszaPattern2.png';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import styled from 'styled-components';
-
-import Pattern from '@assets/images/odeszaPattern2.png';
 
 function FooterSection() {
   const { scroll } = useLocomotiveScroll();
