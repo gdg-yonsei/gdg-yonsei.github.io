@@ -81,7 +81,7 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1vh;
+  gap: 4vw;
 `;
 
 const TitleSpan = styled.span`
@@ -93,7 +93,7 @@ const TitleSpan = styled.span`
   align-items: flex-end;
 
   font-weight: 500;
-  font-size: 9vmin;
+  font-size: 6vw;
   letter-spacing: 3.6px;
 
   &.green {
