@@ -1,30 +1,36 @@
 import DropdownIcon from '@components/DropdownIcon';
+import useComponentVisible from '@hooks/useComponentVisible';
+import DropdownList from '@pages/Home/Hero/components/DropdownList';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import styled from 'styled-components';
 
 function MainHeader() {
   const { scroll } = useLocomotiveScroll();
+  const { ref: outsideRef, isVisible, setIsVisible } = useComponentVisible();
 
   return (
-    <Container data-scroll data-scroll-position="top" data-scroll-speed="0.1">
-      <LeftEnd>
-        <LeftSpan>About us</LeftSpan>
-      </LeftEnd>
-      <RightEnd>
-        <DropdownIcon />
-        <LoginButton
-          className="Login"
-          onClick={() => {
-            scroll.scrollTo('bottom', {
-              duration: 600,
-              easing: [0.06, 0.87, 0.11, 0.96],
-            });
-          }}
-        >
-          Login
-        </LoginButton>
-      </RightEnd>
-    </Container>
+    <>
+      <Container data-scroll data-scroll-position="top" data-scroll-speed="0.1">
+        <LeftEnd>
+          <LeftSpan>About us</LeftSpan>
+        </LeftEnd>
+        <RightEnd>
+          <DropdownIcon setIsVisible={setIsVisible} />
+          <LoginButton
+            className="Login"
+            onClick={() => {
+              scroll.scrollTo('bottom', {
+                duration: 600,
+                easing: [0.06, 0.87, 0.11, 0.96],
+              });
+            }}
+          >
+            Login
+          </LoginButton>
+        </RightEnd>
+      </Container>
+      <div ref={outsideRef}>{isVisible && <DropdownList />}</div>
+    </>
   );
 }
 

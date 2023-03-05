@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
-function DropdownIcon() {
+function DropdownIcon({ setIsVisible, children }) {
+  const onClickIcon = (event) => {
+    event.stopPropagation();
+    setIsVisible((prev) => !prev);
+  };
+
   return (
-    <Container>
+    <Container onClick={onClickIcon}>
       <Wrapper>
         {Array.from(Array(9).keys()).map((_, idx) => {
           return (
@@ -12,6 +17,7 @@ function DropdownIcon() {
           );
         })}
       </Wrapper>
+      {children}
     </Container>
   );
 }
@@ -29,6 +35,8 @@ const Container = styled.div`
   cursor: pointer;
   transition: background-color 0.2s ease-in;
   background-color: transparent;
+
+  position: relative;
 
   &:hover {
     background-color: #dcdcdc;
