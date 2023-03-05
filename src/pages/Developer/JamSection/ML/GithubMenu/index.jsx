@@ -1,5 +1,5 @@
 import { ReactComponent as SiGithub } from '@assets/images/icons/github.svg';
-import { ReactComponent as SiNpm } from '@assets/images/icons/web/npm.svg';
+import { GiArchiveResearch } from '@react-icons/all-files/gi/GiArchiveResearch';
 import { MdChevronRight } from '@react-icons/all-files/md/MdChevronRight';
 import styled from 'styled-components';
 
@@ -8,8 +8,8 @@ function handleIcon(type = 'Github') {
     case 'Github':
       return <GithubIcon />;
 
-    case 'Npm':
-      return <NpmIcon />;
+    case 'Paper':
+      return <PaperIcon />;
 
     default:
       return null;
@@ -96,7 +96,7 @@ const GithubIcon = styled(SiGithub)`
   }
 `;
 
-const NpmIcon = styled(SiNpm)`
+const PaperIcon = styled(GiArchiveResearch)`
   width: 3.6vmax;
   height: 3.6vmax;
   path {

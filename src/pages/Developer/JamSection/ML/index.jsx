@@ -103,13 +103,28 @@ function MLSection() {
                 />
               )}
             </TitleWrapperThird>
-            {/* TODO: Add papers! */}
             <GithubList>
               <GithubMenu
-                title={'Change me!'}
+                title={'CoCa : Contrastive Captioners'}
+                type="Paper"
+                description={
+                  'A minimalist design to pretrain an image-text encoder-decoder foundation model jointly with contrastive loss and captioning loss'
+                }
+                link="https://arxiv.org/abs/2205.01917"
+              />
+              <GithubMenu
+                title={'Transformers : Attention Is All You Need'}
+                type="Paper"
+                description={
+                  'Transformer model using the attention mechanism, which has become a popular choice for sequence processing tasks in natural language processing.'
+                }
+                link="https://arxiv.org/abs/1706.03762"
+              />
+              <GithubMenu
+                title={'Pytorch Deep Dive'}
                 type="Github"
-                description={'sample'}
-                link="https://github.com/orgs/gdsc-ys/repositories?q=sprint1&type=all"
+                description={'Inspection on "de facto" Pytorch template.'}
+                link="https://github.com/victoresque/pytorch-template"
               />
             </GithubList>
           </SectionWrapper>
