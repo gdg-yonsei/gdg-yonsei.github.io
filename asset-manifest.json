@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9120d5ec.css",
-    "main.js": "/static/js/main.1ba8aede.js",
+    "main.js": "/static/js/main.f25249da.js",
     "static/media/odessaPattern1.png": "/static/media/odessaPattern1.0952069654966aa2d9a4.png",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
@@ -88,6 +88,6 @@
   },
   "entrypoints": [
     "static/css/main.9120d5ec.css",
-    "static/js/main.1ba8aede.js"
+    "static/js/main.f25249da.js"
   ]
 }
