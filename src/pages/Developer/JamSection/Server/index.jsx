@@ -436,7 +436,7 @@ const TitleWrapperThird = styled(TitleWrapper)`
 const GithubList = styled.ul`
   width: 100%;
 
-  padding: 5% 0;
+  padding: 5% 10%;
 
   display: flex;
   flex-direction: column;

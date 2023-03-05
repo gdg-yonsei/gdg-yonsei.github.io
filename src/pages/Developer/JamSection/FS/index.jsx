@@ -263,7 +263,8 @@ const IconName = styled.div`
 
 const IconWrapper = styled.div`
   width: 100%;
-  padding: 3% 0;
+
+  padding: 5% 10%;
 
   display: flex;
   justify-content: space-around;

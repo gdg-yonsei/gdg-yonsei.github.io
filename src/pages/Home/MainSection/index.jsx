@@ -12,8 +12,10 @@ function MainSection() {
       <OffsetWrapper data-scroll data-scroll-speed="-10">
         <SubHeader />
         <TitleWrapper>
-          <TitleSpan>We Solve,</TitleSpan>
-          <TitleSpan>We Challenge.</TitleSpan>
+          <TitleSpan className="green">Create,</TitleSpan>
+          <TitleSpan className="yellow">Design,</TitleSpan>
+          <TitleSpan className="red">Code,</TitleSpan>
+          <TitleSpan className="blue">Build</TitleSpan>
         </TitleWrapper>
         <CardContainer>
           <Card
@@ -59,7 +61,7 @@ const Container = styled.section`
   position: relative;
   z-index: 10;
 
-  font-family: 'Neue Montreal';
+  font-family: 'Google Sans';
 `;
 
 const OffsetWrapper = styled.div`
@@ -68,20 +70,17 @@ const OffsetWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `;
 
 const TitleWrapper = styled.div`
   width: 100%;
-  padding: 5vh 10vw;
-
-  vertical-align: baseline;
+  min-height: 20vh;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 1vh;
 `;
 
@@ -89,11 +88,29 @@ const TitleSpan = styled.span`
   display: inline-block;
   height: 100%;
 
-  font-weight: 400;
-  font-size: 10vmin;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  font-weight: 500;
+  font-size: 9vmin;
   letter-spacing: 3.6px;
 
-  color: ${(props) => props.theme.backgroundColor.white};
+  &.green {
+    color: ${(props) => props.theme.color.green};
+  }
+
+  &.red {
+    color: ${(props) => props.theme.color.red};
+  }
+
+  &.blue {
+    color: ${(props) => props.theme.color.blue};
+  }
+
+  &.yellow {
+    color: ${(props) => props.theme.color.yellow};
+  }
 `;
 
 const CardContainer = styled.div`
