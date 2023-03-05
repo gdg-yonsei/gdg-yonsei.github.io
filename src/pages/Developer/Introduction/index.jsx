@@ -6,41 +6,41 @@ import { JamList } from './Jam/JamList';
 
 const handleHoveredSection = (sectionIndex) => {
   switch (sectionIndex) {
-    case 0:
-      return css`
-        grid-template-columns: 1.2fr 1fr 1fr;
-        grid-template-rows: 1.2fr 1fr;
-      `;
+    // case 0:
+    //   return css`
+    //     grid-template-columns: 1.2fr 1fr 1fr;
+    //     grid-template-rows: 1.2fr 1fr;
+    //   `;
 
-    case 1:
-      return css`
-        grid-template-columns: 1fr 1.2fr 1fr;
-        grid-template-rows: 1.2fr 1fr;
-      `;
+    // case 1:
+    //   return css`
+    //     grid-template-columns: 1fr 1.2fr 1fr;
+    //     grid-template-rows: 1.2fr 1fr;
+    //   `;
 
-    case 2:
-      return css`
-        grid-template-columns: 1fr 1fr 1.2fr;
-        grid-template-rows: 1.2fr 1fr;
-      `;
+    // case 2:
+    //   return css`
+    //     grid-template-columns: 1fr 1fr 1.2fr;
+    //     grid-template-rows: 1.2fr 1fr;
+    //   `;
 
-    case 3:
-      return css`
-        grid-template-columns: 1.2fr 1fr 1fr;
-        grid-template-rows: 1fr 1.2fr;
-      `;
+    // case 3:
+    //   return css`
+    //     grid-template-columns: 1.2fr 1fr 1fr;
+    //     grid-template-rows: 1fr 1.2fr;
+    //   `;
 
-    case 4:
-      return css`
-        grid-template-columns: 1fr 1.2fr 1fr;
-        grid-template-rows: 1fr 1.2fr;
-      `;
+    // case 4:
+    //   return css`
+    //     grid-template-columns: 1fr 1.2fr 1fr;
+    //     grid-template-rows: 1fr 1.2fr;
+    //   `;
 
-    case 5:
-      return css`
-        grid-template-columns: 1fr 1fr 1.2fr;
-        grid-template-rows: 1fr 1.2fr;
-      `;
+    // case 5:
+    //   return css`
+    //     grid-template-columns: 1fr 1fr 1.2fr;
+    //     grid-template-rows: 1fr 1.2fr;
+    //   `;
 
     default:
       return css`

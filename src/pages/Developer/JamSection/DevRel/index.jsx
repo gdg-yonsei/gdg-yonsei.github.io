@@ -29,8 +29,12 @@ function DevRelSection() {
           </OutlineContainer>
         </LeftSection>
         <RightSection>
-          <SectionWrapper ref={observerRef}>
-            <TitleWrapperFirst>
+          <SectionWrapper ref={observerRef} id="devrel-section-wrapper-first">
+            <TitleWrapperFirst
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#devrel-section-wrapper-first"
+            >
               {onScreen && (
                 <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
@@ -47,8 +51,12 @@ function DevRelSection() {
               <List>Promote GDSC chapter to the student & industry society.</List>
             </LearnList>
           </SectionWrapper>
-          <SectionWrapper ref={observerRefSecond}>
-            <TitleWrapperSecond>
+          <SectionWrapper ref={observerRefSecond} id="devrel-section-wrapper-second">
+            <TitleWrapperSecond
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#devrel-section-wrapper-second"
+            >
               {onScreenSecond && (
                 <TypeAnimation
                   sequence={["What we've done"]}
@@ -64,6 +72,7 @@ function DevRelSection() {
               <List>Manage production of &apos;Fridge Share App.&apos;</List>
               <List>Hosted joint session with GDSC - CAU.</List>
               <List>Hosted joint session with GDSC - CAU & GDSC - GIST.</List>
+              <List>Hosted joint session with GDSC - HYU & Inha & SSWU</List>
             </EventList>
           </SectionWrapper>
         </RightSection>
@@ -144,7 +153,7 @@ const Paragraph = styled.p`
 const RightSection = styled.div`
   width: 65%;
 
-  padding: 3% 7%;
+  padding: 3% 0;
 
   display: flex;
   flex-direction: column;
@@ -162,11 +171,16 @@ const SectionWrapper = styled.div`
 const TitleWrapper = styled.div`
   width: 100%;
   height: 15vh;
-  padding: 5% 0;
+  padding: 7% 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+  z-index: 1000;
+
+  background-color: ${(props) => props.theme.backgroundColor.black};
 
   span {
     font-weight: 500;
@@ -187,7 +201,7 @@ const TitleWrapperFirst = styled(TitleWrapper)`
 const LearnList = styled.ul`
   width: 100%;
 
-  padding: 5% 0;
+  padding: 3% 12%;
 
   display: flex;
   flex-direction: column;
@@ -213,7 +227,7 @@ const TitleWrapperSecond = styled(TitleWrapper)`
 const EventList = styled.ul`
   width: 100%;
 
-  padding: 5% 0;
+  padding: 3% 12%;
 
   display: flex;
   flex-direction: column;

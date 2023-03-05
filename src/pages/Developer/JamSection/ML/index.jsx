@@ -47,8 +47,12 @@ function MLSection() {
           </OutlineContainer>
         </LeftSection>
         <RightSection>
-          <SectionWrapper ref={observerRef}>
-            <TitleWrapperFirst>
+          <SectionWrapper ref={observerRef} id="ml-section-wrapper-first">
+            <TitleWrapperFirst
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#ml-section-wrapper-first"
+            >
               {onScreen && (
                 <TypeAnimation sequence={['What we do']} speed={50} wrapper={'span'} repeat={1} />
               )}
@@ -61,8 +65,12 @@ function MLSection() {
               <List>Inspect ML ideas with respect to mathematical approach.</List>
             </LearnList>
           </SectionWrapper>
-          <SectionWrapper ref={observerRefSecond}>
-            <TitleWrapperSecond>
+          <SectionWrapper ref={observerRefSecond} id="ml-section-wrapper-second">
+            <TitleWrapperSecond
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#ml-section-wrapper-second"
+            >
               {onScreenSecond && (
                 <TypeAnimation
                   sequence={['What we learn']}
@@ -92,8 +100,12 @@ function MLSection() {
               </IconWrapper>
             </IconList>
           </SectionWrapper>
-          <SectionWrapper ref={observerRefThird}>
-            <TitleWrapperThird>
+          <SectionWrapper ref={observerRefThird} id="ml-section-wrapper-third">
+            <TitleWrapperThird
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#ml-section-wrapper-third"
+            >
               {onScreenThird && (
                 <TypeAnimation
                   sequence={["What we've done"]}
@@ -207,7 +219,7 @@ const Paragraph = styled.p`
 const RightSection = styled.div`
   width: 65%;
 
-  padding: 3% 7%;
+  padding: 3% 0;
 
   display: flex;
   flex-direction: column;
@@ -225,11 +237,16 @@ const SectionWrapper = styled.div`
 const TitleWrapper = styled.div`
   width: 100%;
   height: 15vh;
-  padding: 5% 0;
+  padding: 7% 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+  z-index: 1000;
+
+  background-color: ${(props) => props.theme.color.green};
 
   span {
     font-weight: 500;
@@ -250,7 +267,7 @@ const TitleWrapperFirst = styled(TitleWrapper)`
 const LearnList = styled.ul`
   width: 100%;
 
-  padding: 5% 0;
+  padding: 3% 12%;
 
   display: flex;
   flex-direction: column;

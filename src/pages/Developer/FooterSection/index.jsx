@@ -27,7 +27,7 @@ export default FooterSection;
 
 const Container = styled.footer`
   width: 100%;
-  height: 70vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -60,8 +60,11 @@ const ButtonContainer = styled.div`
   width: 100%;
   flex-grow: 1;
 
+  padding-bottom: 10vh;
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 `;
 
@@ -75,7 +78,6 @@ const GotoTopButton = styled.button`
   border-radius: 32px;
 
   cursor: pointer;
-  margin-bottom: 10vh;
 
   transition: all 0.2s ease-in-out;
 
