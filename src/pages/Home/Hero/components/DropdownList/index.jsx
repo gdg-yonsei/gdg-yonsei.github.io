@@ -22,7 +22,7 @@ export default forwardRef(DropdownList);
 
 const Container = styled.div`
   width: 275px;
-  height: 350px;
+  max-height: 350px;
 
   padding: 20px;
 
