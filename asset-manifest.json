@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9120d5ec.css",
-    "main.js": "/static/js/main.4ea521a4.js",
+    "main.js": "/static/js/main.e5f0681c.js",
     "static/media/odessaPattern1.png": "/static/media/odessaPattern1.0952069654966aa2d9a4.png",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
@@ -37,7 +37,6 @@
     "static/media/mysql.svg": "/static/media/mysql.1957fab3610b78c02010dab864c2d6b8.svg",
     "static/media/reacttable.svg": "/static/media/reacttable.5e54bbeb6ab51e1fced5365737e09efa.svg",
     "static/media/react.svg": "/static/media/react.8e63d418a6421cc2662e234ac8af7313.svg",
-    "static/media/styledcomponents.svg": "/static/media/styledcomponents.cd1aef9abdc7ee8bc7d755a201ef05fb.svg",
     "static/media/electron.svg": "/static/media/electron.5f7a4a27b6a0bd7e51b816083fb5eda5.svg",
     "static/media/webgl.svg": "/static/media/webgl.63781f40d34c6afb0a4ce5c1417e85d8.svg",
     "static/media/rubyonrails.svg": "/static/media/rubyonrails.9b2e574eab5142f8b4aa13ecb704fdf1.svg",
@@ -49,6 +48,7 @@
     "static/media/swift.svg": "/static/media/swift.f3f9994006e46149d7050de3bf89f973.svg",
     "static/media/go.svg": "/static/media/go.37237ed58cf313dc04482ca32cdd3af3.svg",
     "static/media/nodedotjs.svg": "/static/media/nodedotjs.6d0ce605479079334bce77dc7c3be9ab.svg",
+    "static/media/jetpackcompose.svg": "/static/media/jetpackcompose.b6165c1f39369b32105a82434b5fca01.svg",
     "static/media/python.svg": "/static/media/python.e146c98dc5517bd9c7e63d6f63a6a1df.svg",
     "static/media/nextdotjs.svg": "/static/media/nextdotjs.02171293962bc80585c6e12ced8ca1c7.svg",
     "static/media/symfony.svg": "/static/media/symfony.c9b52413c65e2c8a95c2f3b5385f01ef.svg",
@@ -81,7 +81,6 @@
     "static/media/pandas.svg": "/static/media/pandas.26ff1c0502d192cd5b4766b6a13d643c.svg",
     "static/media/firebase.svg": "/static/media/firebase.87ccfc8845e87baa83f8dde5aaf414fc.svg",
     "static/media/npm.svg": "/static/media/npm.0f4d771ca1f0e2d9336e9050eaf97edd.svg",
-    "static/media/uikit.svg": "/static/media/uikit.9542f18af478ca1d554e98e1ff21ce97.svg",
     "static/media/tensorflow.svg": "/static/media/tensorflow.2c1801bb18ea8780cb4a759879fe54ce.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
     "static/media/flutter.svg": "/static/media/flutter.799390e896410bb1fbfe56c03371bfaa.svg",
@@ -89,6 +88,6 @@
   },
   "entrypoints": [
     "static/css/main.9120d5ec.css",
-    "static/js/main.4ea521a4.js"
+    "static/js/main.e5f0681c.js"
   ]
 }
