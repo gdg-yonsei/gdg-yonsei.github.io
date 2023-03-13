@@ -10,7 +10,7 @@ function Drawer() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const drawerRef = useRef(null);
-  const isDrawerInView = useInView(drawerRef, { amount: 0.1 });
+  const isDrawerInView = useInView(drawerRef, { amount: 0.05 });
   const [translateXPos, setTranslateXPos] = useState(90);
 
   useEffect(() => {
