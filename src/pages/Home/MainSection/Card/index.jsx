@@ -1,10 +1,11 @@
 import DelayedLink from '@components/DelayedLink';
+import { Doodle } from '@components/Doodle';
 import { TRANSITION_DURATION } from '@constants/constants';
 import { TransitionColorContext } from '@context/TransitionColorContext';
 import { useContext } from 'react';
 import styled from 'styled-components';
 
-function Card({ color, linkTarget, shape, leftText, rightText }) {
+function Card({ color, linkTarget, leftText, rightText }) {
   const { transitionColorHandler } = useContext(TransitionColorContext);
 
   const handleCardClick = () => {
@@ -14,7 +15,32 @@ function Card({ color, linkTarget, shape, leftText, rightText }) {
   return (
     <DelayedLink to={linkTarget} delay={TRANSITION_DURATION}>
       <Container color={color} onClick={handleCardClick}>
-        <ShapeWrapper>{shape}</ShapeWrapper>
+        <ShapeWrapper>
+          <Doodle
+            rule={`
+              :doodle {
+                @size: 200px;
+              }
+
+              transition: all 0.4s ease;
+              border-top: 1px solid @p(#ea3323, #007cf3, #ffbb25,#1fb254);
+              border-right: 1px solid @p(#ea3323, #007cf3, #ffbb25,#1fb254);
+
+              :after {
+                content: \\@hex(@rand(9632, 9687));
+                color: @p(#ea3323, #007cf3, #ffbb25,#1fb254);
+                transform: scale(3.5);
+              }
+
+              @random {
+                border-top: 1px solid transparent;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid @p(#ea3323, #007cf3, #ffbb25,#1fb254);
+                border-left: 1px solid @p(#ea3323, #007cf3, #ffbb25,#1fb254);
+                border-style: dashed;
+            `}
+          />
+        </ShapeWrapper>
         <TextWrapper>
           <LeftText>{leftText}</LeftText>
           <RightText>{rightText}</RightText>
@@ -37,6 +63,8 @@ const Container = styled.figure`
 
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.lightColor.light};
+
+  position: relative;
 
   cursor: pointer;
 `;
@@ -62,10 +90,10 @@ const TextWrapper = styled.div`
 
 const LeftText = styled.span`
   color: ${(props) => props.theme.backgroundColor.white};
-  font-size: 40px;
+  font-size: 44px;
 `;
 
 const RightText = styled.span`
   color: ${(props) => props.theme.backgroundColor.white};
-  font-size: 16px;
+  font-size: 20px;
 `;

@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'no-unused-vars': 0,
+    'no-useless-escape': 0,
     'prettier/prettier': 'error',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',

@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "css-doodle": "^0.34.5",
     "framer-motion": "^9.0.4",
     "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
@@ -36,7 +37,8 @@
   },
   "reactSnap": {
     "include": [
-      "/index", "/"
+      "/index",
+      "/"
     ]
   },
   "eslintConfig": {

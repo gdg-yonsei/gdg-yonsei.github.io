@@ -11,41 +11,47 @@ function MainSection() {
     <Container data-scroll-section>
       <OffsetWrapper data-scroll data-scroll-speed="-10">
         <SubHeader />
-        <TitleWrapper>
-          <TitleSpan className="green">Create,</TitleSpan>
-          <TitleSpan className="yellow">Design,</TitleSpan>
-          <TitleSpan className="red">Code,</TitleSpan>
-          <TitleSpan className="blue">Build</TitleSpan>
-        </TitleWrapper>
         <CardContainer>
-          <Card
-            leftText={'01'}
-            rightText={'Google'}
-            shape={<Asterisk />}
-            color={color.red}
-            linkTarget={'/google'}
-          />
-          <Card
-            leftText={'02'}
-            rightText={'Developer'}
-            shape={<Asterisk />}
-            color={color.green}
-            linkTarget={'/developer'}
-          />
-          <Card
-            leftText={'03'}
-            rightText={'Student'}
-            shape={<Asterisk />}
-            color={color.blue}
-            linkTarget={'/student'}
-          />
-          <Card
-            leftText={'04'}
-            rightText={'Clubs'}
-            shape={<Asterisk />}
-            color={color.yellow}
-            linkTarget={'/clubs'}
-          />
+          <CardWrapper>
+            <TitleSpan className="green">Create.</TitleSpan>
+            <Card
+              leftText={'01'}
+              rightText={'Google'}
+              shape={<Asterisk />}
+              color={color.red}
+              linkTarget={'/google'}
+            />
+          </CardWrapper>
+          <CardWrapper>
+            <TitleSpan className="yellow">Design.</TitleSpan>
+            <Card
+              leftText={'02'}
+              rightText={'Developer'}
+              shape={<Asterisk />}
+              color={color.green}
+              linkTarget={'/developer'}
+            />
+          </CardWrapper>
+          <CardWrapper>
+            <TitleSpan className="red">Code.</TitleSpan>
+            <Card
+              leftText={'03'}
+              rightText={'Student'}
+              shape={<Asterisk />}
+              color={color.blue}
+              linkTarget={'/student'}
+            />
+          </CardWrapper>
+          <CardWrapper>
+            <TitleSpan className="blue">Build.</TitleSpan>
+            <Card
+              leftText={'04'}
+              rightText={'Clubs'}
+              shape={<Asterisk />}
+              color={color.yellow}
+              linkTarget={'/clubs'}
+            />
+          </CardWrapper>
         </CardContainer>
       </OffsetWrapper>
     </Container>
@@ -74,27 +80,20 @@ const OffsetWrapper = styled.div`
   align-items: center;
 `;
 
-const TitleWrapper = styled.div`
-  width: 100%;
-  min-height: 20vh;
+const TitleSpan = styled.span`
+  display: inline-block;
+
+  height: 30vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4vw;
-`;
 
-const TitleSpan = styled.span`
-  display: inline-block;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
+  font-size: 4.7vw;
   font-weight: 500;
-  font-size: 6vw;
   letter-spacing: 3.6px;
+
+  pointer-events: none;
 
   &.green {
     color: ${(props) => props.theme.color.green};
@@ -115,11 +114,18 @@ const TitleSpan = styled.span`
 
 const CardContainer = styled.div`
   flex: 1;
-  padding-bottom: 5vh;
+  padding-bottom: 12.5vh;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 5%;
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `;

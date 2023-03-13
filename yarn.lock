@@ -5964,6 +5964,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-doodle@npm:^0.34.5":
+  version: 0.34.5
+  resolution: "css-doodle@npm:0.34.5"
+  checksum: 0999628fe81be3b4ea3e249bd419e3737f71ed732b6fad35e3860e985f2670e5f88a1771e132fa42ca1987653b00886013abbd061096336e2c1eefbab2fc3164
+  languageName: node
+  linkType: hard
+
 "css-has-pseudo@npm:^3.0.4":
   version: 3.0.4
   resolution: "css-has-pseudo@npm:3.0.4"
@@ -8447,6 +8454,7 @@ __metadata:
     "@yarnpkg/sdks": ^3.0.0-rc.39
     craco-swc: ^0.5.1
     cross-env: ^7.0.3
+    css-doodle: ^0.34.5
     eslint: latest
     eslint-config-prettier: ^8.6.0
     eslint-plugin-import: ^2.27.5

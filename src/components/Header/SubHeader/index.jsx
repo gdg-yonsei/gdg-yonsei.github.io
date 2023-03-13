@@ -3,7 +3,7 @@ import styled from 'styled-components';
 function SubHeader() {
   return (
     <Container>
-      <Span>GDSC - Yonsei 2023</Span>
+      <Span>GDSC Yonsei 22-23</Span>
     </Container>
   );
 }
@@ -24,7 +24,7 @@ const Container = styled.div`
 `;
 
 const Span = styled.span`
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: ${(props) => props.theme.backgroundColor.white};
 `;

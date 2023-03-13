@@ -1991,6 +1991,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:f0516132820932122a8776d9d0aa78c57b16346d241b67b292ee491259e860d917b75d3b18352a94bd403a37c5beb05b04f04141e51e9b69c28dc4e451314df4#npm:6.3.1"\
       ],\
       [\
+        "css-doodle",\
+        "npm:0.34.5"\
+      ],\
+      [\
         "css-has-pseudo",\
         "virtual:4639c1b85db847c96ed2ee89a9f15e7a6e43212ca424da261bd53b11f6d59025d25e605872adada9e42bb0f10eb0beb868846414c1e4a0c62000d0687536c166#npm:3.0.4"\
       ],\
@@ -5626,6 +5630,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:3.0.0-rc.39"],\
             ["craco-swc", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:0.5.1"],\
             ["cross-env", "npm:7.0.3"],\
+            ["css-doodle", "npm:0.34.5"],\
             ["eslint", "npm:8.34.0"],\
             ["eslint-config-prettier", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:8.6.0"],\
             ["eslint-plugin-import", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:2.27.5"],\
@@ -14299,6 +14304,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["css-doodle", [\
+        ["npm:0.34.5", {\
+          "packageLocation": "./.yarn/cache/css-doodle-npm-0.34.5-62394c5924-0999628fe8.zip/node_modules/css-doodle/",\
+          "packageDependencies": [\
+            ["css-doodle", "npm:0.34.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["css-has-pseudo", [\
         ["npm:3.0.4", {\
           "packageLocation": "./.yarn/cache/css-has-pseudo-npm-3.0.4-e97bb61896-8f165d68f6.zip/node_modules/css-has-pseudo/",\
@@ -17357,6 +17371,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:3.0.0-rc.39"],\
             ["craco-swc", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:0.5.1"],\
             ["cross-env", "npm:7.0.3"],\
+            ["css-doodle", "npm:0.34.5"],\
             ["eslint", "npm:8.34.0"],\
             ["eslint-config-prettier", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:8.6.0"],\
             ["eslint-plugin-import", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:2.27.5"],\
