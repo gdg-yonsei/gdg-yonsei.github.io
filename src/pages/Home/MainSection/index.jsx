@@ -1,14 +1,20 @@
 import SubHeader from '@components/Header/SubHeader';
+import { useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
 import Card from './Card';
-import Asterisk from './Elements/Asterisk';
 
 function MainSection() {
   const { color } = useTheme();
 
+  const cardsRef = useRef([]);
+
+  const onClickContainer = () => {
+    cardsRef.current.forEach((el) => el.update());
+  };
+
   return (
-    <Container data-scroll-section>
+    <Container data-scroll-section onClick={onClickContainer}>
       <OffsetWrapper data-scroll data-scroll-speed="-10">
         <SubHeader />
         <CardContainer>
@@ -17,9 +23,11 @@ function MainSection() {
             <Card
               leftText={'01'}
               rightText={'Google'}
-              shape={<Asterisk />}
               color={color.red}
               linkTarget={'/google'}
+              ref={(el) => {
+                cardsRef.current[0] = el;
+              }}
             />
           </CardWrapper>
           <CardWrapper>
@@ -27,9 +35,11 @@ function MainSection() {
             <Card
               leftText={'02'}
               rightText={'Developer'}
-              shape={<Asterisk />}
               color={color.green}
               linkTarget={'/developer'}
+              ref={(el) => {
+                cardsRef.current[1] = el;
+              }}
             />
           </CardWrapper>
           <CardWrapper>
@@ -37,9 +47,11 @@ function MainSection() {
             <Card
               leftText={'03'}
               rightText={'Student'}
-              shape={<Asterisk />}
               color={color.blue}
               linkTarget={'/student'}
+              ref={(el) => {
+                cardsRef.current[2] = el;
+              }}
             />
           </CardWrapper>
           <CardWrapper>
@@ -47,9 +59,11 @@ function MainSection() {
             <Card
               leftText={'04'}
               rightText={'Clubs'}
-              shape={<Asterisk />}
               color={color.yellow}
               linkTarget={'/clubs'}
+              ref={(el) => {
+                cardsRef.current[3] = el;
+              }}
             />
           </CardWrapper>
         </CardContainer>

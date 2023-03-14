@@ -2,10 +2,10 @@ import DelayedLink from '@components/DelayedLink';
 import { Doodle } from '@components/Doodle';
 import { TRANSITION_DURATION } from '@constants/constants';
 import { TransitionColorContext } from '@context/TransitionColorContext';
-import { useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 import styled from 'styled-components';
 
-function Card({ color, linkTarget, leftText, rightText }) {
+function Card({ color, linkTarget, leftText, rightText }, ref) {
   const { transitionColorHandler } = useContext(TransitionColorContext);
 
   const handleCardClick = () => {
@@ -17,6 +17,7 @@ function Card({ color, linkTarget, leftText, rightText }) {
       <Container color={color} onClick={handleCardClick}>
         <ShapeWrapper>
           <Doodle
+            ref={ref}
             rule={`
               :doodle {
                 @size: 200px;
@@ -50,7 +51,7 @@ function Card({ color, linkTarget, leftText, rightText }) {
   );
 }
 
-export default Card;
+export default forwardRef(Card);
 
 const Container = styled.figure`
   width: 18vw;

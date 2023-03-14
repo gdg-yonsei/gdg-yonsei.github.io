@@ -1,14 +1,21 @@
-import pattern from '@assets/images/odessaPattern1.png';
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
 import DelayedLink from '@components/DelayedLink';
+import OdessaDoodle from '@components/Doodle/OdessaDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
+import { useRef } from 'react';
 import styled from 'styled-components';
 
 function Banner() {
+  const doodleRef = useRef(null);
+
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
 
+  const onClickHeadingSection = () => {
+    doodleRef.current.update();
+  };
+
   return (
-    <HeadingSection data-scroll-section>
+    <HeadingSection data-scroll-section onClick={onClickHeadingSection}>
       <TitleSection>
         <TitleWrapper
           data-scroll
@@ -39,14 +46,7 @@ function Banner() {
           </TextAnimationContainer>
         </TextSection>
         <CanvasSection>
-          <CanvasImage
-            data-scroll
-            data-scroll-position="top"
-            data-scroll-speed="3"
-            src={pattern}
-            fetchpriority="high"
-            alt="Solution Challenge"
-          />
+          <OdessaDoodle ref={doodleRef} shapeFrequency={0.5} />
         </CanvasSection>
       </BodySection>
     </HeadingSection>
@@ -112,10 +112,6 @@ const CanvasSection = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-`;
-
-const CanvasImage = styled.img`
-  height: 80vh;
 `;
 
 const BodySpanLarge = styled.span`

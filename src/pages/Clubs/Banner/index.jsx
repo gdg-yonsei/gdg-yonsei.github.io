@@ -1,15 +1,21 @@
-import pattern from '@assets/images/terrainPattern1.png';
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
 import DelayedLink from '@components/DelayedLink';
+import { TerrainDoodle } from '@components/Doodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import styled from 'styled-components';
 
 function Banner() {
+  const doodleRef = useRef(null);
+
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
 
+  const onClickHeadingSection = () => {
+    doodleRef.current.update();
+  };
   return (
-    <HeadingSection data-scroll-section>
+    <HeadingSection data-scroll-section onClick={onClickHeadingSection}>
       <TitleSection>
         <TitleWrapper data-scroll data-scroll-position="top" data-scroll-speed="-5">
           <TitleSpan>Introducing</TitleSpan>
@@ -30,14 +36,7 @@ function Banner() {
           </TextAnimationContainer>
         </TextSection>
         <CanvasSection>
-          <CanvasImage
-            data-scroll
-            data-scroll-position="top"
-            data-scroll-speed="3"
-            src={pattern}
-            fetchpriority="high"
-            alt="Clubs"
-          />
+          <TerrainDoodle ref={doodleRef} shapeFrequency={0.8} lineFrequency={0.4} />
         </CanvasSection>
       </BodySection>
     </HeadingSection>
@@ -59,13 +58,11 @@ const HeadingSection = styled(motion.div)`
   align-items: center;
 
   font-family: 'Google Sans';
-
-  /* background-color: ${(props) => props.bgcolor}; */
 `;
 
 const BodySection = styled.div`
   width: 100%;
-  flex-grow: 1;
+  height: 87vh;
 
   padding-bottom: 2vh;
   padding-left: 2vw;
@@ -75,6 +72,8 @@ const BodySection = styled.div`
 `;
 
 const TextSection = styled.div`
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -101,14 +100,12 @@ const TextAnimationContainer = styled.div`
 `;
 
 const CanvasSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-`;
+  width: 100%;
+  height: 100%;
 
-const CanvasImage = styled.img`
-  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const BodySpanLarge = styled.span`
@@ -132,6 +129,8 @@ const BodySpan = styled.span`
 
 const TitleSection = styled.div`
   width: 100%;
+  height: 12vh;
+
   padding-top: 5vh;
   padding-left: 5vw;
   padding-right: 5vw;

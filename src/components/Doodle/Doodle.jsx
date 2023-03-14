@@ -1,7 +1,9 @@
 import 'css-doodle';
 
-function Doodle({ rule = '' }) {
-  return <css-doodle>{rule}</css-doodle>;
+import { forwardRef } from 'react';
+
+function Doodle({ rule = '' }, ref) {
+  return <css-doodle ref={ref}>{rule}</css-doodle>;
 }
 
-export default Doodle;
+export default forwardRef(Doodle);
