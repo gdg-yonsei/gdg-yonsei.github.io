@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false craco start",
-    "build": "GENERATE_SOURCEMAP=false craco build && react-snap",
+    "build": "GENERATE_SOURCEMAP=false craco build",
     "winbuild": "set \"GENERATE_SOURCEMAP=false\" && yarn build && react-snap",
     "lint": "eslint src && eslint --fix",
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
