@@ -25,8 +25,8 @@
     "throttle-debounce": "^5.0.0"
   },
   "scripts": {
-    "start": "GENERATE_SOURCEMAP=false craco start",
-    "build": "GENERATE_SOURCEMAP=false craco build",
+    "start": "craco start",
+    "build": "craco build",
     "winbuild": "set \"GENERATE_SOURCEMAP=false\" && yarn build && react-snap",
     "lint": "eslint src && eslint --fix",
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
