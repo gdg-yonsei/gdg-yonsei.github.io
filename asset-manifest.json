@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ae5bed4.css",
-    "main.js": "/static/js/main.598a0525.js",
+    "main.css": "/static/css/main.e7d838f8.css",
+    "main.js": "/static/js/main.835ae23a.js",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
@@ -83,10 +83,12 @@
     "static/media/tensorflow.svg": "/static/media/tensorflow.2c1801bb18ea8780cb4a759879fe54ce.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
     "static/media/flutter.svg": "/static/media/flutter.799390e896410bb1fbfe56c03371bfaa.svg",
-    "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg"
+    "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg",
+    "main.e7d838f8.css.map": "/static/css/main.e7d838f8.css.map",
+    "main.835ae23a.js.map": "/static/js/main.835ae23a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ae5bed4.css",
-    "static/js/main.598a0525.js"
+    "static/css/main.e7d838f8.css",
+    "static/js/main.835ae23a.js"
   ]
 }
