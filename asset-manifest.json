@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2ae5bed4.css",
-    "main.js": "/static/js/main.7e2ad237.js",
+    "main.js": "/static/js/main.598a0525.js",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
@@ -87,6 +87,6 @@
   },
   "entrypoints": [
     "static/css/main.2ae5bed4.css",
-    "static/js/main.7e2ad237.js"
+    "static/js/main.598a0525.js"
   ]
 }
