@@ -53,7 +53,7 @@ function TerrainDoodle({ shapeFrequency = 0.5, lineFrequency = 0.5 }, ref) {
           }
           
           :container {
-            background: ${(props) => props.theme.backgroundColor.white};
+            background: #fffdfa;
             overflow:hidden;
           }
           `}

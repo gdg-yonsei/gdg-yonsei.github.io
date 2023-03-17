@@ -41,7 +41,7 @@ function OdessaDoodle({ shapeFrequency = 0.4 }, ref) {
           }
           
           :container {
-            background: ${(props) => props.theme.backgroundColor.white};
+            background: #fffdfa;
             overflow:hidden;
           }
           `}
