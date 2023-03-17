@@ -1,17 +1,15 @@
 import 'css-doodle';
 
 import { forwardRef } from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 
 function TerrainDoodle({ shapeFrequency = 0.5, lineFrequency = 0.5 }, ref) {
-  const { color } = useTheme();
-
   return (
     <Container>
       <style>
         {`
           css-doodle {
-            --randomColor: @p(${color.red}, ${color.blue}, ${color.green}, ${color.yellow});
+            --randomColor: @p(#ea3323, #007cf3, #1fb254, #ffbb25);
             --rule: (
               /*Frequency options of 0.2, 0.4, 0.6, 0.8, 1.0 */
               @random(${shapeFrequency}) {
