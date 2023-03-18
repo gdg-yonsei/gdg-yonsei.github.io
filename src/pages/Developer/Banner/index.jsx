@@ -18,16 +18,18 @@ function Banner() {
         >
           <TitleSpan>Introducing</TitleSpan>
         </TitleWrapper>
-        <DelayedLink to="/" delay={TRANSITION_DURATION}>
-          <BackToMainButton
-            data-scroll
-            data-scroll-position="top"
-            data-scroll-direction="horizontal"
-            data-scroll-speed="5"
-          >
-            Back To Main
-          </BackToMainButton>
-        </DelayedLink>
+        <LinkWrapper>
+          <DelayedLink to="/" delay={TRANSITION_DURATION}>
+            <BackToMainButton
+              data-scroll
+              data-scroll-position="top"
+              data-scroll-direction="horizontal"
+              data-scroll-speed="5"
+            >
+              Back To Main
+            </BackToMainButton>
+          </DelayedLink>
+        </LinkWrapper>
       </TitleSection>
       <BodySection>
         <TextSection>
@@ -180,4 +182,8 @@ const BackToMainButton = styled.button`
   color: ${(props) => props.theme.backgroundColor.black};
 
   cursor: pointer;
+`;
+
+const LinkWrapper = styled.main`
+  height: 100%;
 `;
