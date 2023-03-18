@@ -22,5 +22,9 @@ const Container = styled.div`
 
 const LogoImg = styled.img`
   margin-top: auto;
-  width: 150px;
+  width: min(30vw, 150px);
+
+  ${({ theme }) => theme.mobile`
+    margin-bottom: 16px;
+  `}
 `;

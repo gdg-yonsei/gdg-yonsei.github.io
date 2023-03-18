@@ -11,17 +11,7 @@ function NavigationSection() {
         <Navbar>
           <LeftEnd>
             <SearchIcon data-scroll data-scroll-position="top" data-scroll-speed="4" />
-            <TypeAnimation
-              sequence={['We are GDSC developers.']}
-              style={{
-                color: 'black',
-                fontSize: '24px',
-                fontFamily:
-                  " -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-              }}
-              speed={20}
-              wrapper="div"
-            />
+            <StyledTypeAnimation sequence={['We are GDSC developers.']} speed={20} wrapper="div" />
           </LeftEnd>
           <RightEnd data-scroll-section>
             <KeyboardImg
@@ -76,6 +66,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+
+  ${({ theme }) => theme.mobile`
+    gap: 20px;
+  `}
 `;
 
 const NavbarContainer = styled.div`
@@ -89,8 +83,7 @@ const NavbarContainer = styled.div`
 `;
 
 const Navbar = styled.div`
-  width: 600px;
-  min-width: 500px;
+  width: 700px;
   padding: 10px 20px;
   border: 1px solid #b6c0c9;
   border-radius: 24px;
@@ -98,6 +91,14 @@ const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${({ theme }) => theme.tablet`
+    width: 500px;
+  `}
+
+  ${({ theme }) => theme.mobile`
+    width: 300px;
+  `}
 `;
 
 const LeftEnd = styled.div`
@@ -113,6 +114,10 @@ const SearchIcon = styled(MdSearch)`
   font-size: 24px;
 
   color: #525151;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 18px;
+  `}
 `;
 
 const RightEnd = styled.div`
@@ -120,6 +125,10 @@ const RightEnd = styled.div`
   justify-content: center;
   align-items: center;
   gap: 8px;
+
+  ${({ theme }) => theme.mobile`
+    display: none;
+  `}
 `;
 
 const ButtonContainer = styled.div`
@@ -156,4 +165,15 @@ const CameraImg = styled.img`
   height: 24px;
 
   cursor: pointer;
+`;
+
+const StyledTypeAnimation = styled(TypeAnimation)`
+  color: ${(props) => props.theme.backgroundColor.black};
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 18px;
+  `}
 `;

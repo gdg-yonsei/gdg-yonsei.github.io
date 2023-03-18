@@ -13,14 +13,15 @@ function Card({ color, linkTarget, leftText, rightText }, ref) {
   };
 
   return (
-    <DelayedLink to={linkTarget} delay={TRANSITION_DURATION}>
-      <Container color={color} onClick={handleCardClick}>
-        <ShapeWrapper>
-          <Doodle
-            ref={ref}
-            rule={`
+    <Container color={color} onClick={handleCardClick}>
+      <DelayedLink to={linkTarget} delay={TRANSITION_DURATION}>
+        <Wrapper>
+          <ShapeWrapper>
+            <Doodle
+              ref={ref}
+              rule={`
               :doodle {
-                @size: 200px;
+                @size: clamp(200px, 75%, 250px);
               }
 
               transition: all 0.4s ease;
@@ -40,27 +41,23 @@ function Card({ color, linkTarget, leftText, rightText }, ref) {
                 border-left: 1px solid @p(#ea3323, #007cf3, #ffbb25,#1fb254);
                 border-style: dashed;
             `}
-          />
-        </ShapeWrapper>
-        <TextWrapper>
-          <LeftText>{leftText}</LeftText>
-          <RightText>{rightText}</RightText>
-        </TextWrapper>
-      </Container>
-    </DelayedLink>
+            />
+          </ShapeWrapper>
+          <TextWrapper>
+            <LeftText>{leftText}</LeftText>
+            <RightText>{rightText}</RightText>
+          </TextWrapper>
+        </Wrapper>
+      </DelayedLink>
+    </Container>
   );
 }
 
 export default forwardRef(Card);
 
 const Container = styled.figure`
-  width: 18vw;
-  height: 45vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
 
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.lightColor.light};
@@ -77,6 +74,15 @@ const ShapeWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const TextWrapper = styled.div`

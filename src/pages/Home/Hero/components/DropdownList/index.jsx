@@ -37,6 +37,10 @@ const Container = styled.div`
   background-color: ${(props) => props.theme.backgroundColor.white};
 
   font-family: 'Roboto';
+
+  ${({ theme }) => theme.mobile`
+    right: 20px;
+  `}
 `;
 
 const Menus = styled.ul`

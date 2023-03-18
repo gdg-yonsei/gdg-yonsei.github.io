@@ -27,17 +27,8 @@ const Span = styled.span`
   font-size: 20px;
   font-weight: 300;
   color: ${(props) => props.theme.backgroundColor.white};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 14px;
+  `}
 `;
-
-// const AbsoluteSpan = styled.span`
-//   display: inline-block;
-
-//   position: absolute;
-//   top: 140%;
-//   right: 0%;
-
-//   font-size: 16px;
-//   font-weight: 300;
-//   letter-spacing: 4px;
-//   color: ${(props) => props.theme.backgroundColor.white};
-// `;

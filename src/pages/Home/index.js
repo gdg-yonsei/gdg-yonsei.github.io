@@ -1,14 +1,19 @@
 import LoadingScreen from '@components/LoadingScreen';
 import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
 import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import { useMediaQuery } from '@hooks/useMediaQuery';
 import Hero from '@pages/Home/Hero';
 import MainSection from '@pages/Home/MainSection';
+import { MEDIA_QUERIES } from '@styles/media';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import styled from 'styled-components';
 
+import { MobileMainSection } from './MobileMainSection';
+
 function Home() {
   const { handleAnimationStart, handleAnimationComplete } = useHandleAnimationScroll();
+  const isMobileOrTablet = useMediaQuery(MEDIA_QUERIES.LAPTOP);
   const containerRef = useRef(null);
 
   return (
@@ -16,7 +21,7 @@ function Home() {
       <VerticalLocomotiveScrollProvider containerRef={containerRef}>
         <Container data-scroll-container ref={containerRef}>
           <Hero />
-          <MainSection />
+          {!isMobileOrTablet ? <MainSection /> : <MobileMainSection />}
         </Container>
       </VerticalLocomotiveScrollProvider>
       <LoadingScreen

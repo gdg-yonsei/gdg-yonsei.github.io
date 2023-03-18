@@ -7,6 +7,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 
 import Head from '@components/Head';
 import { theme } from '@styles/global-theme';
+import media from '@styles/media';
 import { Fragment } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
@@ -22,7 +23,7 @@ root.render(
   <Fragment>
     <HelmetProvider>
       <Head />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={{ ...theme, ...media }}>
         <BrowserRouter basename="/">
           <App />
         </BrowserRouter>

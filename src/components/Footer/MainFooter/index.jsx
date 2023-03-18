@@ -63,16 +63,24 @@ const LeftSpan = styled.span`
   display: inline-block;
 
   font-size: 20px;
-  color: black;
+  color: ${(props) => props.theme.backgroundColor.black};
 
   white-space: pre;
   letter-spacing: 0.3px;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 16px;
+  `}
 `;
 
 const RightEnd = styled.div`
   margin-right: 20px;
 
   background-color: transparent;
+
+  ${({ theme }) => theme.mobile`
+    margin-right: 12px;
+  `}
 `;
 
 const GithubIcon = styled(FaGithub)`

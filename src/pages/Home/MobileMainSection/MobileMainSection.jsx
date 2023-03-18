@@ -4,7 +4,7 @@ import styled, { useTheme } from 'styled-components';
 
 import Card from '../Card';
 
-function MainSection() {
+function MobileMainSection() {
   const { color } = useTheme();
   const cardsRef = useRef([]);
 
@@ -14,12 +14,14 @@ function MainSection() {
 
   return (
     <Container data-scroll-section onClick={onClickContainer}>
-      <OffsetWrapper data-scroll data-scroll-speed={`-10`}>
+      <OffsetWrapper data-scroll data-scroll-speed="0">
         <SubHeader />
         <CardContainer>
           <CardWrapper>
-            <TitleSpan className="green">Create.</TitleSpan>
-            <CardHeight>
+            <TitleSpan data-scroll data-scroll-speed="1.5" className="green">
+              Create.
+            </TitleSpan>
+            <CardControl>
               <Card
                 leftText={'01'}
                 rightText={'Google'}
@@ -29,11 +31,13 @@ function MainSection() {
                   cardsRef.current[0] = el;
                 }}
               />
-            </CardHeight>
+            </CardControl>
           </CardWrapper>
           <CardWrapper>
-            <TitleSpan className="yellow">Design.</TitleSpan>
-            <CardHeight>
+            <TitleSpan data-scroll data-scroll-speed="1.5" className="yellow">
+              Design.
+            </TitleSpan>
+            <CardControl>
               <Card
                 leftText={'02'}
                 rightText={'Developer'}
@@ -43,11 +47,13 @@ function MainSection() {
                   cardsRef.current[1] = el;
                 }}
               />
-            </CardHeight>
+            </CardControl>
           </CardWrapper>
           <CardWrapper>
-            <TitleSpan className="red">Code.</TitleSpan>
-            <CardHeight>
+            <TitleSpan data-scroll data-scroll-speed="1.5" className="red">
+              Code.
+            </TitleSpan>
+            <CardControl>
               <Card
                 leftText={'03'}
                 rightText={'Student'}
@@ -57,11 +63,13 @@ function MainSection() {
                   cardsRef.current[2] = el;
                 }}
               />
-            </CardHeight>
+            </CardControl>
           </CardWrapper>
           <CardWrapper>
-            <TitleSpan className="blue">Build.</TitleSpan>
-            <CardHeight>
+            <TitleSpan data-scroll data-scroll-speed="1.5" className="blue">
+              Build.
+            </TitleSpan>
+            <CardControl>
               <Card
                 leftText={'04'}
                 rightText={'Clubs'}
@@ -71,7 +79,7 @@ function MainSection() {
                   cardsRef.current[3] = el;
                 }}
               />
-            </CardHeight>
+            </CardControl>
           </CardWrapper>
         </CardContainer>
       </OffsetWrapper>
@@ -79,11 +87,11 @@ function MainSection() {
   );
 }
 
-export default MainSection;
+export default MobileMainSection;
 
-const Container = styled.section`
+const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   background-color: ${(props) => props.theme.backgroundColor.black};
   position: relative;
   z-index: 10;
@@ -93,7 +101,26 @@ const Container = styled.section`
 
 const OffsetWrapper = styled.div`
   width: 100%;
-  height: 100%;
+
+  padding-bottom: max(10vh, 120px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const CardContainer = styled.div`
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const CardWrapper = styled.div`
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -104,13 +131,14 @@ const OffsetWrapper = styled.div`
 const TitleSpan = styled.span`
   display: inline-block;
 
+  width: 100%;
   height: 30vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 4.7vw;
+  font-size: 80px;
   font-weight: 500;
   letter-spacing: 3.6px;
 
@@ -133,28 +161,7 @@ const TitleSpan = styled.span`
   }
 `;
 
-const CardHeight = styled.div`
-  width: 100%;
-  height: 45vh;
-`;
-
-const CardContainer = styled.div`
-  width: 100%;
-  flex: 1;
-  padding-bottom: 12.5vh;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-`;
-
-const CardWrapper = styled.div`
-  width: 18vw;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+const CardControl = styled.div`
+  width: min(100%, 450px);
+  height: 55vh;
 `;
