@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const deviceSize = {
   mobile: '420px',
   tablet: '768px',
-  laptop: '1200px',
+  laptop: '1025px',
 };
 
 export const MEDIA_QUERIES = {

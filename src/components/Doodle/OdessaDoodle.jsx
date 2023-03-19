@@ -11,14 +11,12 @@ function OdessaDoodle({ shapeFrequency = 0.4 }, ref) {
           css-doodle {
             --randomColor: @p(#ea3323, #007cf3, #1fb254, #ffbb25);
             --rule: (
-              /* Frequency options of 0.2, 0.4, 0.6, 0.8, 1.0 */
               @random(${shapeFrequency}) {
                 background: var(--randomColor);
                 width:100%;
                 height: @pick(100%, 200%, 300%);
                 border-radius: 200px 200px 200px 200px;
                 
-                /* On or off option for displaying box shadows */
                 -webkit-box-shadow: 0 0 @pick(0, 40)px rgba(0,0,0,0.2);
                 box-shadow: 0 0 @pick(0, 40)px rgba(0,0,0,0.2);
               }

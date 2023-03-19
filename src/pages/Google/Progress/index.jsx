@@ -49,15 +49,19 @@ const TitleWrapper = styled.div`
 
 const Title = styled.span`
   display: inline-block;
-  font-size: 5vw;
+  font-size: max(5vw, 28px);
   padding-left: 3vw;
   letter-spacing: -0.5px;
 `;
 
 const Desc = styled.span`
   display: inline-block;
-  font-size: 2.5vw;
+  font-size: max(2.5vw, 20px);
   padding-left: 3vw;
+
+  ${({ theme }) => theme.mobile`
+    padding-top: 2vh;
+  `}
 `;
 
 const SwpierWrapper = styled.div`

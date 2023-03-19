@@ -1,14 +1,20 @@
-import SolutionChallenge from '@assets/images/SolutionChallenge.png';
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
 import DelayedLink from '@components/DelayedLink';
+import BlocksDoodle from '@components/Doodle/BlocksDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
+import { useRef } from 'react';
 import styled from 'styled-components';
 
 function Banner() {
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
+  const doodleRef = useRef(null);
+
+  const onClickHeadingSection = () => {
+    doodleRef.current.update();
+  };
 
   return (
-    <HeadingSection data-scroll-section>
+    <HeadingSection data-scroll-section onClick={onClickHeadingSection}>
       <TitleSection>
         <TitleWrapper
           data-scroll
@@ -39,18 +45,12 @@ function Banner() {
           <TextAnimationContainer delay={animationDelaySeconds + 0.4}>
             <BodySpan>Solution</BodySpan>
           </TextAnimationContainer>
-          <TextAnimationContainer delay={animationDelaySeconds + 0.4}>
+          <TextAnimationContainer delay={animationDelaySeconds + 0.6}>
             <BodySpan>Challenge</BodySpan>
           </TextAnimationContainer>
         </TextSection>
         <CanvasSection>
-          <CanvasImage
-            data-scroll
-            data-scroll-position="top"
-            data-scroll-speed="3"
-            src={SolutionChallenge}
-            alt="Solution Challenge"
-          />
+          <BlocksDoodle ref={doodleRef} />
         </CanvasSection>
       </BodySection>
     </HeadingSection>
@@ -82,6 +82,16 @@ const BodySection = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  ${({ theme }) => theme.laptop`
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  `}
 `;
 
 const TextSection = styled.div`
@@ -114,10 +124,11 @@ const CanvasSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
 
-const CanvasImage = styled.img`
-  width: 80%;
+  ${({ theme }) => theme.laptop`
+    width: 100%;
+    flex: 1;
+  `}
 `;
 
 const BodySpanLarge = styled.span`
@@ -146,6 +157,7 @@ const TitleSection = styled.div`
   padding-right: 5vw;
 
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 `;

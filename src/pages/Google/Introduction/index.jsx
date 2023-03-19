@@ -32,7 +32,7 @@ function Introduction() {
               index={idx}
               data-scroll
               data-scroll-position="top"
-              data-scroll-speed="1.5"
+              data-scroll-speed={`1.5 - ${0.1 * idx}`}
             >
               {el}
             </Line>
@@ -71,7 +71,7 @@ const TitleWrapper = styled.div`
 
 const Title = styled.span`
   display: inline-block;
-  font-size: 5vw;
+  font-size: max(5vw, 28px);
 `;
 
 const DescWrapper = styled.ul`
@@ -94,7 +94,7 @@ const Line = styled.li`
   align-items: center;
 
   font-weight: 300;
-  font-size: 5.5vw;
+  font-size: max(5.5vw, 24px);
   font-family: 'Pretendard', sans-serif;
 
   line-height: 1.3;
@@ -117,7 +117,7 @@ const Underline = styled.a`
   justify-content: flex-end;
   align-items: center;
 
-  font-size: 5.5vw;
+  font-size: max(5.5vw, 24px);
 
   text-decoration: underline;
   cursor: pointer;

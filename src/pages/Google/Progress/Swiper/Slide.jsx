@@ -24,6 +24,10 @@ const SlideContainer = styled.div`
 
   border-radius: 20px;
   background-color: black;
+
+  ${({ theme }) => theme.tablet`
+    width: 80vw;
+  `}
 `;
 
 const DescWrapper = styled.div`
@@ -50,4 +54,9 @@ const Name = styled.span`
   color: ${(props) => props.theme.backgroundColor.white};
 
   white-space: nowrap;
+  text-overflow: ellipsis;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 24px;
+  `}
 `;

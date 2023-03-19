@@ -21,10 +21,17 @@ function SwiperElement() {
         navigation
         pagination={{ clickable: true }}
         rewind={true}
-        slidesPerView={2}
-        slidesOffsetBefore={width / 5}
+        slidesPerView={1}
+        slidesOffsetBefore={width / 10}
         loop={true}
         spaceBetween={width / 10}
+        breakpoints={{
+          769: {
+            slidesPerView: 2,
+            slidesOffsetBefore: width / 5,
+            spaceBetween: width / 10,
+          },
+        }}
       >
         {[
           SlideContents.map((content, idx) => {
