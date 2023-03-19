@@ -81,6 +81,16 @@ const BodySection = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1.2fr;
+
+  ${({ theme }) => theme.laptop`
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  `}
 `;
 
 const TextSection = styled.div`
@@ -113,6 +123,11 @@ const CanvasSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.laptop`
+    width: 100%;
+    flex: 1;
+  `}
 `;
 
 const CanvasImage = styled.img`
@@ -164,10 +179,19 @@ const TitleWrapper = styled.div`
   border-radius: 50px;
 
   background-color: ${(props) => props.theme.color.green};
+
+  ${({ theme }) => theme.mobile`
+    width: 120px;
+    height: 30px;
+  `}
 `;
 
 const TitleSpan = styled.h1`
   font-size: 28px;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 16px;
+  `}
 `;
 
 const BackToMainButton = styled.button`

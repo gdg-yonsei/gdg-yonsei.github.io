@@ -43,7 +43,7 @@ const TitleWrapper = styled.div`
 
 const Title = styled.span`
   display: block;
-  font-size: 5vw;
+  font-size: max(5vw, 40px);
   line-height: 1.5;
 
   color: ${(props) => props.theme.backgroundColor.black};
@@ -51,7 +51,7 @@ const Title = styled.span`
 
 const Subtitle = styled.span`
   display: inline-block;
-  font-size: 3vw;
+  font-size: max(3vw, 24px);
 
   color: ${(props) => props.theme.backgroundColor.black};
 `;
@@ -85,4 +85,10 @@ const GotoTopButton = styled.button`
     background-color: ${(props) => props.theme.backgroundColor.black};
     color: ${(props) => props.theme.backgroundColor.white};
   }
+
+  ${({ theme }) => theme.mobile`
+    padding: 8px 12px;
+    
+    font-size: 20px;
+  `}
 `;

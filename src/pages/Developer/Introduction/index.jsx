@@ -1,54 +1,8 @@
 import { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import Jam from './Jam/Jam';
 import { JamList } from './Jam/JamList';
-
-const handleHoveredSection = (sectionIndex) => {
-  switch (sectionIndex) {
-    // case 0:
-    //   return css`
-    //     grid-template-columns: 1.2fr 1fr 1fr;
-    //     grid-template-rows: 1.2fr 1fr;
-    //   `;
-
-    // case 1:
-    //   return css`
-    //     grid-template-columns: 1fr 1.2fr 1fr;
-    //     grid-template-rows: 1.2fr 1fr;
-    //   `;
-
-    // case 2:
-    //   return css`
-    //     grid-template-columns: 1fr 1fr 1.2fr;
-    //     grid-template-rows: 1.2fr 1fr;
-    //   `;
-
-    // case 3:
-    //   return css`
-    //     grid-template-columns: 1.2fr 1fr 1fr;
-    //     grid-template-rows: 1fr 1.2fr;
-    //   `;
-
-    // case 4:
-    //   return css`
-    //     grid-template-columns: 1fr 1.2fr 1fr;
-    //     grid-template-rows: 1fr 1.2fr;
-    //   `;
-
-    // case 5:
-    //   return css`
-    //     grid-template-columns: 1fr 1fr 1.2fr;
-    //     grid-template-rows: 1fr 1.2fr;
-    //   `;
-
-    default:
-      return css`
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-      `;
-  }
-};
 
 function Introduction() {
   const [hoveredSection, setHoveredSection] = useState(null);
@@ -121,10 +75,15 @@ const JamsContainer = styled.div`
 
   padding: 5vh 5vw;
 
-  transition: grid-template-columns 0.35s ease-in-out, grid-template-rows 0.35s ease-in-out;
-  ${(props) => handleHoveredSection(props.hoveredSection)}
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 
   display: grid;
   row-gap: 5vh;
   column-gap: 3vw;
+
+  ${({ theme }) => theme.tablet`
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  `}
 `;

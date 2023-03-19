@@ -266,12 +266,20 @@ const OutlineContainer = styled.div`
 const H1 = styled.h1`
   font-size: 88px;
   color: ${(props) => props.theme.backgroundColor.black};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 9vw;
+  `}
 `;
 
 const H2 = styled.h2`
   display: inline-block;
   font-size: 30px;
   color: ${(props) => props.theme.backgroundColor.black};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 1.5vw;
+  `}
 `;
 
 const Paragraph = styled.p`
@@ -283,6 +291,10 @@ const Paragraph = styled.p`
   line-height: 1.3;
 
   color: ${(props) => props.theme.backgroundColor.black};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 0.75vw;
+  `}
 `;
 
 const RightSection = styled.div`
@@ -325,6 +337,10 @@ const TitleWrapper = styled.div`
       color: ${(props) => props.theme.brightColor.blue};
     }
   }
+
+  ${({ theme }) => theme.mobile`
+    height: 10vh;
+  `}
 `;
 
 const TitleWrapperFirst = styled(TitleWrapper)`
@@ -350,6 +366,10 @@ const LearnList = styled.ul`
 const List = styled.li`
   font-size: 1.7vw;
   font-weight: 400;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 0.5vw;
+  `}
 `;
 
 const TitleWrapperSecond = styled(TitleWrapper)`
@@ -390,8 +410,8 @@ const IconWrapper = styled.div`
 
   // Icon Styling
   svg {
-    width: 4.5vmax;
-    height: 4.5vmax;
+    width: 5vw;
+    height: 5vw;
     cursor: pointer;
 
     path {

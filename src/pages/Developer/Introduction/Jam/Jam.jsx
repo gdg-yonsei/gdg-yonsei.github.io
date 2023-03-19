@@ -106,4 +106,8 @@ const DescSpan = styled.span`
       : css`
           transform: translateY(100%);
         `}
+
+  ${({ theme }) => theme.tablet`
+    font-size: 3vw;
+  `}
 `;

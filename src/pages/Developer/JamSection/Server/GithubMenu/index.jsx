@@ -69,6 +69,12 @@ const Container = styled.li`
     opacity: 1;
     right: 1%;
   }
+
+  ${({ theme }) => theme.mobile`
+    &:hover ${ChevronRightIcon} {
+      opacity: 0;
+    }
+  `}
 `;
 
 const LinkWrapper = styled.a`
@@ -77,6 +83,10 @@ const LinkWrapper = styled.a`
 
   display: grid;
   grid-template-columns: 1fr 8fr;
+
+  ${({ theme }) => theme.mobile`
+    grid-template-columns: 1fr 10fr;
+  `}
 `;
 
 const IconWrapper = styled.div`
@@ -89,16 +99,16 @@ const IconWrapper = styled.div`
 `;
 
 const GithubIcon = styled(SiGithub)`
-  width: 3.6vmax;
-  height: 3.6vmax;
+  width: max(3.6vw, 24px);
+  height: max(3.6vw, 24px);
   path {
     fill: ${(props) => props.theme.backgroundColor.white};
   }
 `;
 
 const DreamHackIcon = styled(DreamHackLogo)`
-  width: 3.6vmax;
-  height: 3.6vmax;
+  width: max(3.6vw, 24px);
+  height: max(3.6vw, 24px);
 
   path {
     fill: ${(props) => props.theme.backgroundColor.white};
@@ -106,7 +116,7 @@ const DreamHackIcon = styled(DreamHackLogo)`
 `;
 
 const DescWrapper = styled.div`
-  width: 90%;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -115,18 +125,33 @@ const DescWrapper = styled.div`
   gap: 1vh;
 
   padding: 1.5vw 3vh;
+
+  ${({ theme }) => theme.mobile`
+    padding: 1vh 1vw;
+  `}
 `;
 
 const DescTitle = styled.h3`
+  display: inline-block;
   font-size: 3.5vw;
   line-height: 1.5;
   color: ${(props) => props.theme.backgroundColor.white};
 
   margin-bottom: 0;
+
+  ${({ theme }) => theme.mobile`
+    line-height: 1;
+  `}
 `;
 
 const Desc = styled.h4`
+  display: inline-block;
   font-size: 1.5vw;
 
   line-height: 1.3;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 7px;
+    line-height: 1.1;
+  `}
 `;
