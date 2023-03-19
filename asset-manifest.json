@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2ae5bed4.css",
-    "main.js": "/static/js/main.8ac3429e.js",
+    "main.js": "/static/js/main.aae4ddf8.js",
     "static/media/odeszaPattern2.png": "/static/media/odeszaPattern2.e57be3e2657333c073da.png",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
@@ -25,7 +25,6 @@
     "static/media/PPNeueMontreal-Thin.otf": "/static/media/PPNeueMontreal-Thin.79ab813ef18c7e673de5.otf",
     "static/media/pattern4.png": "/static/media/pattern4.01fb40c44041247eda26.png",
     "static/media/pattern3.png": "/static/media/pattern3.4434cc959bac00c44434.png",
-    "static/media/SolutionChallenge.png": "/static/media/SolutionChallenge.f718e3e549766181471b.png",
     "static/media/GoogleDevelopers.png": "/static/media/GoogleDevelopers.9b72a86ee5e42508d1c4.png",
     "static/media/nestjs.svg": "/static/media/nestjs.d5a4ab95a2744ffa33da21fa23e26c53.svg",
     "static/media/postgresql.svg": "/static/media/postgresql.4d89da07f5b01320923e37a50ee3a5d3.svg",
@@ -87,6 +86,6 @@
   },
   "entrypoints": [
     "static/css/main.2ae5bed4.css",
-    "static/js/main.8ac3429e.js"
+    "static/js/main.aae4ddf8.js"
   ]
 }
