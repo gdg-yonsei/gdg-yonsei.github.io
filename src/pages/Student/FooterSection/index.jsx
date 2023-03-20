@@ -1,12 +1,18 @@
-import Pattern from '@assets/images/odeszaPattern2.png';
+import { OdessaDoodle } from '@components/Doodle';
+import { useRef } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import styled from 'styled-components';
 
 function FooterSection() {
   const { scroll } = useLocomotiveScroll();
+  const doodleRef = useRef(null);
+
+  const onClickContainer = () => {
+    doodleRef.current.update();
+  };
 
   return (
-    <Container data-scroll-section>
+    <Container data-scroll-section onClick={onClickContainer}>
       <TitleWrapper data-scroll data-scroll-speed="3">
         <Title>We recruit on yearly schedule.</Title>
         <Subtitle>Stay Tuned!</Subtitle>
@@ -20,7 +26,9 @@ function FooterSection() {
           Take me to the top.
         </GotoTopButton>
       </ButtonContainer>
-      <CenterImage src={Pattern} data-scroll data-scroll-speed="3" fetchpriority="low" />
+      <DoodleWrapper>
+        <OdessaDoodle shapeFrequency={0.6} ref={doodleRef} />
+      </DoodleWrapper>
     </Container>
   );
 }
@@ -47,15 +55,19 @@ const TitleWrapper = styled.div`
 
 const Title = styled.span`
   display: block;
-  font-size: 5vw;
+  font-size: max(5vw, 32px);
   line-height: 1.5;
 
   color: ${(props) => props.theme.backgroundColor.black};
+
+  ${({ theme }) => theme.mobile`
+    line-height: 1.25;
+  `}
 `;
 
 const Subtitle = styled.span`
   display: inline-block;
-  font-size: 3vw;
+  font-size: max(3vw, 20px);
 
   color: ${(props) => props.theme.backgroundColor.black};
 `;
@@ -89,9 +101,15 @@ const GotoTopButton = styled.button`
     background-color: ${(props) => props.theme.backgroundColor.black};
     color: ${(props) => props.theme.backgroundColor.white};
   }
+
+  ${({ theme }) => theme.mobile`
+    padding: 8px 12px;
+    
+    font-size: 20px;
+  `}
 `;
 
-const CenterImage = styled.img`
+const DoodleWrapper = styled.div`
   position: absolute;
   left: 0;
   right: 0;
@@ -99,5 +117,6 @@ const CenterImage = styled.img`
   bottom: 0;
   margin: auto;
 
-  width: 35vw;
+  width: 60vw;
+  height: 37.2vh;
 `;

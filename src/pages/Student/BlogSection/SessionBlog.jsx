@@ -25,7 +25,7 @@ function SessionBlog({ selected, index, writeup, blogs }) {
 
 export default SessionBlog;
 
-const Container = styled.div`
+const Container = styled.article`
   width: ${(props) => (props.selected ? `20vw` : `0vw`)};
   height: 100%;
   position: relative;

@@ -15,7 +15,7 @@ export const MemberList = [
     githubID: 'VSFe',
   },
   {
-    upperLetter: 'GDSC Server & FS Part',
+    upperLetter: 'GDSC Server',
     lowerLetter: 'Young min jin',
     githubID: 'jimmy0006',
   },
@@ -30,7 +30,7 @@ export const MemberList = [
     githubID: 'BaeRoNuI',
   },
   {
-    upperLetter: 'GDSC Flutter & ML & FS Part',
+    upperLetter: 'GDSC Flutter & ML Part',
     lowerLetter: 'Juii Kim',
     githubID: 'watchstep',
   },
@@ -50,7 +50,7 @@ export const MemberList = [
     githubID: 'Hysperion',
   },
   {
-    upperLetter: 'GDSC L-Web & FS Part',
+    upperLetter: 'GDSC L-Web Part',
     lowerLetter: 'Kang Seok Yoon',
     githubID: 'Doooooring',
   },
@@ -116,7 +116,7 @@ export const MemberList = [
   },
 
   {
-    upperLetter: 'GDSC FS Part',
+    upperLetter: 'GDSC Server',
     lowerLetter: 'Young Han Park',
     githubID: 'younghanstark',
   },

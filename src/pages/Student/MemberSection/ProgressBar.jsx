@@ -44,16 +44,17 @@ function ProgressBar({ scrollIndex }) {
 
 export default memo(ProgressBar);
 
-const Container = styled.div`
+const Container = styled.div.attrs((props) => ({
+  style: {
+    width: `${props.progress}%`,
+    backgroundColor: props.bgcolor,
+  },
+}))`
   position: absolute;
   top: 0;
   left: 0;
 
   z-index: 100;
-
-  width: ${(props) => `${props.progress}%`};
   height: 7.5px;
-
-  background-color: ${(props) => props.bgcolor};
   transition: background-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
 `;

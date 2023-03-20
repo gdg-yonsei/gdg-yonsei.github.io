@@ -1,5 +1,7 @@
 import { MouseContext } from '@context/MouseContext';
 import useHover from '@hooks/useHover';
+import { useMediaQuery } from '@hooks/useMediaQuery';
+import { MEDIA_QUERIES } from '@styles/media';
 import { memo, useCallback, useContext } from 'react';
 import { MouseParallaxChild } from 'react-parallax-mouse';
 import TextTransition from 'react-text-transition';
@@ -8,6 +10,7 @@ import styled from 'styled-components';
 function MemberCard({ upperLetter, lowerLetter, githubID }) {
   const [hoverRef, isHovered] = useHover();
   const { cursorChangeHandler } = useContext(MouseContext);
+  const isMobile = useMediaQuery(MEDIA_QUERIES.MOBILE);
 
   const names = [lowerLetter, `@${githubID}`];
 
@@ -33,7 +36,11 @@ function MemberCard({ upperLetter, lowerLetter, githubID }) {
       </UpperContainer>
       <LowerContainer>
         <LowerSpan>
-          <MouseParallaxChild>
+          <MouseParallaxChild
+            style={{
+              paddingRight: isMobile ? '20px' : '50px',
+            }}
+          >
             <TextTransition inline overflow>
               {names[isHovered | 0]}
             </TextTransition>
@@ -50,8 +57,6 @@ const Container = styled.a`
   width: 100%;
   height: 200px;
 
-  padding: 0 10%;
-
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
@@ -64,11 +69,16 @@ const Container = styled.a`
 
 const UpperContainer = styled.div`
   width: 100%;
+  padding-right: 50px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+
+  ${({ theme }) => theme.mobile`
+    padding-right: 20px;
+  `}
 `;
 
 const UpperSpan = styled.span`
@@ -82,6 +92,11 @@ const UpperSpan = styled.span`
   text-overflow: ellipsis;
 
   color: ${(props) => props.theme.contrast.red};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 6px;
+    line-height: 20px;
+  `}
 `;
 
 const LowerContainer = styled.div`
@@ -101,4 +116,11 @@ const LowerSpan = styled.span`
   letter-spacing: 2px;
   text-overflow: ellipsis;
   text-transform: uppercase;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 2px;
+    line-height: 20px;
+
+    padding-right: 1vw;
+  `}
 `;

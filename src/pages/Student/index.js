@@ -5,6 +5,8 @@ import MouseContextProvider from '@context/MouseContext';
 import { TransitionColorContext } from '@context/TransitionColorContext';
 import useEffectOnce from '@hooks/useEffectOnce';
 import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import { useMediaQuery } from '@hooks/useMediaQuery';
+import { MEDIA_QUERIES } from '@styles/media';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
@@ -17,6 +19,8 @@ function StudentPage() {
   const { handleAnimationStart, handleAnimationComplete } = useHandleAnimationScroll();
   const { transitionColorHandler } = useContext(TransitionColorContext);
   const { color } = useTheme();
+  const isMobileOrTablet = useMediaQuery(MEDIA_QUERIES.TABLET);
+
   const containerRef = useRef(null);
 
   useEffectOnce(() => {
@@ -30,7 +34,7 @@ function StudentPage() {
           <Banner />
           <MouseContextProvider>
             <MemberSection />
-            <GithubCursor />
+            {isMobileOrTablet ? null : <GithubCursor />}
           </MouseContextProvider>
           <PaddingSection />
           <BlogSection />

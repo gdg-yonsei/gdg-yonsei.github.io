@@ -3,7 +3,9 @@ import HorizontalPatternImage2 from '@assets/images/pattern4.png';
 import { LeftAppearAnimationWidth } from '@components/Animation/LeftAppearAnimation';
 import { STUDENTS_COLOR_BREAKPOINT as BREAKPOINT } from '@constants/constants';
 import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
+import { useMediaQuery } from '@hooks/useMediaQuery';
 import useWindowSize from '@hooks/useWindowSize';
+import { MEDIA_QUERIES } from '@styles/media';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { MouseParallaxContainer } from 'react-parallax-mouse';
 import ReactTextTransition from 'react-text-transition';
@@ -19,6 +21,7 @@ const Writeups = ['Lead', 'DevRel', 'Developers', ''];
 function MemberSection() {
   const sectionRef = useRef(null);
   const { height } = useWindowSize();
+  const isMobileOrTablet = useMediaQuery(MEDIA_QUERIES.TABLET);
 
   const scrollPos = useLocomotiveScrollPosition(50);
   const [scrollIndex, setScrollIndex] = useState(3);
@@ -92,7 +95,11 @@ function MemberSection() {
       </LeftContainer>
       <RightContainer>
         <div>
-          <MouseParallaxContainer globalFactorX={0.2} globalFactorY={0.2} resetOnLeave>
+          <MouseParallaxContainer
+            globalFactorX={isMobileOrTablet ? 0 : 0.2}
+            globalFactorY={isMobileOrTablet ? 0 : 0.2}
+            resetOnLeave
+          >
             <LeadMemberCard
               upperLetter={'GDSC Lead'}
               lowerLetter={'Kiung Jung'}
@@ -112,8 +119,8 @@ function MemberSection() {
             return (
               <MouseParallaxContainer
                 key={idx}
-                globalFactorX={0.1}
-                globalFactorY={0.1}
+                globalFactorX={isMobileOrTablet ? 0 : 0.1}
+                globalFactorY={isMobileOrTablet ? 0 : 0.1}
                 resetOnLeave
               >
                 <MemberCard
@@ -138,8 +145,8 @@ function MemberSection() {
             return (
               <MouseParallaxContainer
                 key={idx}
-                globalFactorX={0.1}
-                globalFactorY={0.1}
+                globalFactorX={isMobileOrTablet ? 0 : 0.1}
+                globalFactorY={isMobileOrTablet ? 0 : 0.1}
                 resetOnLeave
               >
                 <MemberCard
@@ -171,6 +178,10 @@ const Container = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+
+  ${({ theme }) => theme.tablet`
+    grid-template-columns: 1fr 1fr;
+  `}
 `;
 
 const LeftContainer = styled.div`
@@ -232,6 +243,10 @@ const LeftSubtitle = styled.span`
   font-size: 2.5vw;
   font-weight: 200;
   color: ${(props) => props.theme.backgroundColor.white};
+
+  ${({ theme }) => theme.tablet`
+    font-size: 5.5vw;
+  `}
 `;
 
 const RightContainer = styled.div`
@@ -243,7 +258,11 @@ const RightContainer = styled.div`
   overflow: hidden;
 `;
 
-const RightArrow = styled.figure`
+const RightArrow = styled.figure.attrs((props) => ({
+  style: {
+    borderColor: `transparent ${props.bgcolor} transparent transparent`,
+  },
+}))`
   position: absolute;
   top: 0;
   right: 0;
@@ -253,8 +272,13 @@ const RightArrow = styled.figure`
   height: 0;
   border-style: solid;
   border-width: 25px 43.3px 25px 0;
-  border-color: transparent ${(props) => props.bgcolor} transparent transparent;
+
   transition: border-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
+
+  ${({ theme }) => theme.mobile`
+    margin-top: calc(50vh - 25px);
+    border-width: 12.5px 21.7px 12.5px 0;
+  `}
 `;
 
 const HorizontalLineWrapper = styled.div`
