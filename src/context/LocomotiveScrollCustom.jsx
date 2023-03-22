@@ -46,9 +46,11 @@ export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
       tablet: {
         breakpoint: 0,
         smooth: true,
+        direction: 'horizontal',
       },
       smartphone: {
         smooth: true,
+        direction: 'horizontal',
       },
       direction: 'horizontal',
       getDirection: true,

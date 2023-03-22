@@ -20,15 +20,6 @@ function FocusedGalleryItem({ focusedSectionId, focusedItem, onBlur, disabled })
 
   const progressBarRef = useRef(null);
 
-  const imageVariant = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-    },
-  };
-
   const onClickOverlayContainer = () => {
     scroll.start();
     onBlur();
@@ -87,7 +78,6 @@ function FocusedGalleryItem({ focusedSectionId, focusedItem, onBlur, disabled })
                         thumbnail={item}
                         initial="hidden"
                         animate="visible"
-                        variants={imageVariant}
                       />
                     </SwiperSlide>
                   );
@@ -131,6 +121,11 @@ const Image = styled(motion.div)`
   box-shadow: 0 0 0 10px ${(props) => props.theme.backgroundColor.white} inset;
 
   z-index: 3000;
+
+  ${({ theme }) => theme.mobile`
+    width: 250px;
+    height: 50vh;
+  `}
 `;
 
 const OverlayContainer = styled(motion.div)`

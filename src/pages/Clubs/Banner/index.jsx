@@ -22,7 +22,12 @@ function Banner() {
         </TitleWrapper>
         <LinkWrapper>
           <DelayedLink to="/" delay={TRANSITION_DURATION}>
-            <BackToMainButton data-scroll data-scroll-position="top" data-scroll-speed="5">
+            <BackToMainButton
+              data-scroll
+              data-scroll-position="top"
+              data-scroll-speed="5"
+              dtaa-scroll-direction="vertical"
+            >
               Back To Main
             </BackToMainButton>
           </DelayedLink>
@@ -71,11 +76,14 @@ const BodySection = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1.2fr;
+
+  ${({ theme }) => theme.mobile`
+    display: flex;
+    flex-direction: column-reverse;
+  `}
 `;
 
 const TextSection = styled.div`
-  height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -108,6 +116,10 @@ const CanvasSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.mobile`
+    flex: 1;
+  `}
 `;
 
 const BodySpanLarge = styled.span`
@@ -157,10 +169,19 @@ const TitleWrapper = styled.div`
   border-radius: 50px;
 
   background-color: ${(props) => props.theme.color.yellow};
+
+  ${({ theme }) => theme.mobile`
+    width: 120px;
+    height: 30px;
+  `}
 `;
 
 const TitleSpan = styled.h1`
   font-size: 28px;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 16px;
+  `}
 `;
 
 const BackToMainButton = styled.button`

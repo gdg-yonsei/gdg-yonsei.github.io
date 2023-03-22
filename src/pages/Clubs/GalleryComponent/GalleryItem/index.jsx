@@ -52,7 +52,7 @@ function GalleryItem({ item, index, onFocus, visible }) {
 export default GalleryItem;
 
 const Container = styled(motion.div)`
-  width: 30vw;
+  width: 576px;
 
   display: flex;
   flex-direction: column;
@@ -67,7 +67,11 @@ const WriteupWrapper = styled.div`
   align-items: baseline;
   gap: 4vw;
 
-  transform: translateX(-30%);
+  transform: translateX(-20%);
+
+  ${({ theme }) => theme.tablet`
+    transform: translateX(-10%);
+  `}
 `;
 
 const IndexSpan = styled.span`
@@ -83,14 +87,14 @@ const DescriptionSpan = styled.span`
   display: inline-block;
 
   font-weight: 400;
-  font-size: 5vw;
+  font-size: max(5vw, 72px);
   color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const ImageSection = styled(motion.div)`
   visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
 
-  width: 30vw;
+  width: 576px;
   height: 50vh;
 
   background: ${(props) => `url("/assets/GDSCImages/${props.thumbnail}")`};
@@ -103,4 +107,8 @@ const ImageSection = styled(motion.div)`
   overflow: hidden;
 
   cursor: pointer;
+
+  ${({ theme }) => theme.mobile`
+    width: 300px;
+  `}
 `;
