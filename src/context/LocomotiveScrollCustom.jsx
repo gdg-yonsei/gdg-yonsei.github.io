@@ -4,8 +4,6 @@ import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
     onLocationChange: (scroll) => {
-      scroll.destroy();
-      scroll.init();
       setTimeout(() => {
         scroll.scrollTo(0, { duration: 0, disableLerp: true });
       }, TRANSITION_DURATION);
@@ -34,8 +32,6 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
 export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
     onLocationChange: (scroll) => {
-      scroll.destroy();
-      scroll.init();
       setTimeout(() => {
         scroll.scrollTo(0, { duration: 0, disableLerp: true });
       }, TRANSITION_DURATION);
