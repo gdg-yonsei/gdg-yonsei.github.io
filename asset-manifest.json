@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d9509a22.css",
+    "main.css": "/static/css/main.3f67c0b3.css",
     "main.js": "/static/js/main.0f7227a2.js",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
@@ -83,7 +83,7 @@
     "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg"
   },
   "entrypoints": [
-    "static/css/main.d9509a22.css",
+    "static/css/main.3f67c0b3.css",
     "static/js/main.0f7227a2.js"
   ]
 }
