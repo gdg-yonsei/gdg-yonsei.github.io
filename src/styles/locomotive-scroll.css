@@ -38,7 +38,8 @@ html.has-scroll-dragging {
   height: 100%;
 }
 
-.c-scrollbar {
+/* //FIXME: Why two scrollbar instances?  */
+/* .c-scrollbar {
   position: absolute;
   right: 0;
   top: 0;
@@ -48,16 +49,16 @@ html.has-scroll-dragging {
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
   z-index: 9999;
-}
-.c-scrollbar:hover {
+} */
+/* .c-scrollbar:hover {
   transform: scaleX(1.45);
-}
-.c-scrollbar:hover,
+} */
+/* .c-scrollbar:hover,
 .has-scroll-scrolling .c-scrollbar,
 .has-scroll-dragging .c-scrollbar {
   opacity: 1;
-}
-[data-scroll-direction="horizontal"] .c-scrollbar {
+} */
+/* [data-scroll-direction="horizontal"] .c-scrollbar {
   width: 100%;
   height: 10px;
   top: auto;
@@ -66,8 +67,8 @@ html.has-scroll-dragging {
 }
 [data-scroll-direction="horizontal"] .c-scrollbar:hover {
   transform: scaleY(1.3);
-}
-
+} */
+/* 
 .c-scrollbar_thumb {
   position: absolute;
   top: 0;
@@ -87,4 +88,4 @@ html.has-scroll-dragging {
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
-}
+} */
