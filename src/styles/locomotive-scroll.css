@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 html.has-scroll-smooth {
   overflow: hidden;
 }

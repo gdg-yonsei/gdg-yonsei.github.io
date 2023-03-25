@@ -7,7 +7,7 @@ function DelayedLink({ to, delay, children }) {
   const delayAndNavigate = (event) => {
     event.preventDefault();
     setTimeout(() => {
-      navigate(`${to}`);
+      navigate(`${to}`, { replace: true });
     }, delay);
   };
 

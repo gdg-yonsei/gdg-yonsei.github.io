@@ -1,14 +1,20 @@
-import GoogleDevelopers from '@assets/images/GoogleDevelopers.png';
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
 import DelayedLink from '@components/DelayedLink';
+import BlossomDoodle from '@components/Doodle/BlossomDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
+import { useRef } from 'react';
 import styled from 'styled-components';
 
 function Banner() {
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
+  const doodleRef = useRef(null);
+
+  const onClickHeadingSection = () => {
+    doodleRef.current.update();
+  };
 
   return (
-    <HeadingSection data-scroll-section>
+    <HeadingSection data-scroll-section onClick={onClickHeadingSection}>
       <TitleSection>
         <TitleWrapper
           data-scroll
@@ -41,13 +47,7 @@ function Banner() {
           </TextAnimationContainer>
         </TextSection>
         <CanvasSection>
-          <CanvasImage
-            data-scroll
-            data-scroll-position="top"
-            data-scroll-speed="3"
-            src={GoogleDevelopers}
-            alt="Solution Challenge"
-          />
+          <BlossomDoodle shapeFrequency={0.6} ref={doodleRef} />
         </CanvasSection>
       </BodySection>
     </HeadingSection>
@@ -68,8 +68,6 @@ const HeadingSection = styled.div`
   align-items: center;
 
   font-family: 'Google Sans';
-
-  background-color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const BodySection = styled.div`
@@ -80,7 +78,7 @@ const BodySection = styled.div`
   padding-left: 2vw;
 
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
 
   ${({ theme }) => theme.laptop`
     width: 100%;
@@ -130,10 +128,6 @@ const CanvasSection = styled.div`
   `}
 `;
 
-const CanvasImage = styled.img`
-  width: 80%;
-`;
-
 const BodySpanLarge = styled.span`
   display: inline-block;
   font-size: 12.5vw;
@@ -160,12 +154,12 @@ const TitleSection = styled.div`
   padding-right: 5vw;
 
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 `;
 
 const TitleWrapper = styled.div`
-  box-sizing: border-box;
   width: 200px;
   height: 65px;
 
@@ -186,6 +180,10 @@ const TitleWrapper = styled.div`
   `}
 `;
 
+const LinkWrapper = styled.main`
+  height: 100%;
+`;
+
 const TitleSpan = styled.h1`
   font-size: 28px;
 
@@ -202,12 +200,8 @@ const BackToMainButton = styled.button`
   font-family: 'Google Sans', sans-serif;
 
   border: none;
-  background-color: ${(props) => props.theme.backgroundColor.white};
   color: ${(props) => props.theme.backgroundColor.black};
+  background-color: ${(props) => props.theme.backgroundColor.white};
 
   cursor: pointer;
-`;
-
-const LinkWrapper = styled.main`
-  height: 100%;
 `;

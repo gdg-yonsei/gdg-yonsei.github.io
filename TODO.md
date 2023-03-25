@@ -8,9 +8,11 @@
 - [x] 'Clubs' gallery page.
 - [ ] Micro Interactions on Home/Hero
 - [x] Image to css-doodle for optimization & custom animation.
-- [ ] Mobile & Tablet media queries.
+- [x] Mobile & Tablet media queries.
+- [ ] 4K monitor & projector media queries.
 
 ### Bug Fix & Layout Requests
 
 - [ ] Handle Resize Events
+- [ ] 'Developer' Page Banner Transition Fix.
 - [ ] 'Student' Page Delay & Layout Error on Webkit.

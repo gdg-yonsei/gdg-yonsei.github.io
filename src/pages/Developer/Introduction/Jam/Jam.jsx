@@ -54,8 +54,10 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 
+  padding: 2%;
+
   display: grid;
-  grid-template-rows: 4fr 1fr;
+  grid-template-rows: 6fr 1fr;
 
   border-radius: 20px;
 
@@ -63,6 +65,10 @@ const Container = styled.div`
   border: 3px solid ${(props) => props.theme.backgroundColor.black};
 
   cursor: pointer;
+
+  ${({ theme }) => theme.tablet`
+    grid-template-rows: 4fr 1fr;
+  `}
 `;
 
 const IconContainer = styled.div`
@@ -104,7 +110,7 @@ const DescSpan = styled.span`
           transform: translateY(-5%);
         `
       : css`
-          transform: translateY(100%);
+          transform: translateY(150%);
         `}
 
   ${({ theme }) => theme.tablet`
