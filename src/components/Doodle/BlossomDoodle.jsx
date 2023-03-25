@@ -59,7 +59,7 @@ function BlossomDoodle({ shapeFrequency = 0.4 }, ref) {
 
                 transform: rotate(@pick(0, 90deg, 180deg));
                 -webkit-transition: ease @rand(200ms, 600ms);
-                
+                 
                 transition: ease @rand(200ms, 600ms);
                 
                 :before {
