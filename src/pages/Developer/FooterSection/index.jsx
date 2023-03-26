@@ -1,3 +1,4 @@
+import DeveloperFooter from '@assets/images/GoogleDevelopers.png';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import styled from 'styled-components';
 
@@ -19,6 +20,9 @@ function FooterSection() {
           Take me to the top.
         </GotoTopButton>
       </ButtonContainer>
+      <ImageWrapper>
+        <FooterImage src={DeveloperFooter} />
+      </ImageWrapper>
     </Container>
   );
 }
@@ -91,4 +95,17 @@ const GotoTopButton = styled.button`
     
     font-size: 20px;
   `}
+`;
+
+const ImageWrapper = styled.figure`
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  width: 80vw;
+`;
+
+const FooterImage = styled.img`
+  width: 100%;
 `;

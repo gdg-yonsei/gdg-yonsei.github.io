@@ -10,7 +10,6 @@ import { ReactComponent as SiSass } from '@assets/images/icons/web/sass.svg';
 import { ReactComponent as SiStyledComponents } from '@assets/images/icons/web/styledcomponents.svg';
 import { ReactComponent as SiThreeJS } from '@assets/images/icons/web/threedotjs.svg';
 import { ReactComponent as SiVite } from '@assets/images/icons/web/vite.svg';
-import { ReactComponent as SiWebGL } from '@assets/images/icons/web/webgl.svg';
 import useOnScreen from '@hooks/useOnScreen';
 import { SiAngular } from '@react-icons/all-files/si/SiAngular';
 import { SiBabel } from '@react-icons/all-files/si/SiBabel';
@@ -121,17 +120,16 @@ function WebSection() {
                 <SiNextJS {...setTooltip('Next.js')} />
                 <SiNodeJS {...setTooltip('NodeJS')} />
                 <SiVueDotJs {...setTooltip('Vue.js')} />
-                <SiAngular {...setTooltip('Angular')} />
               </IconWrapper>
               <IconWrapper>
+                <SiAngular {...setTooltip('Angular')} />
                 <SiRedux {...setTooltip('Redux')} />
                 <SiReduxSaga {...setTooltip('Redux-Saga')} />
-                <SiReactQuery {...setTooltip('Reac-Query')} />
-                <SiReactTable {...setTooltip('React-Table')} />
+                <SiReactQuery {...setTooltip('React-Query')} />
               </IconWrapper>
               <IconWrapper>
+                <SiReactTable {...setTooltip('React-Table')} />
                 <SiThreeJS {...setTooltip('Three.js')} />
-                <SiWebGL {...setTooltip('WebGL')} />
                 <SiElectronJS {...setTooltip('Electron.js')} />
               </IconWrapper>
             </IconList>
@@ -278,7 +276,7 @@ const H2 = styled.h2`
   color: ${(props) => props.theme.backgroundColor.black};
 
   ${({ theme }) => theme.mobile`
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   `}
 `;
 
@@ -293,7 +291,7 @@ const Paragraph = styled.p`
   color: ${(props) => props.theme.backgroundColor.black};
 
   ${({ theme }) => theme.mobile`
-    font-size: 0.75vw;
+    font-size: 2vw;
   `}
 `;
 
@@ -368,7 +366,7 @@ const List = styled.li`
   font-weight: 400;
 
   ${({ theme }) => theme.mobile`
-    font-size: 0.5vw;
+    font-size: 2vw;
   `}
 `;
 

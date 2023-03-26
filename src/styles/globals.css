@@ -32,3 +32,15 @@ body {
 
   list-style-type: none;
 }
+
+/* TOOLTIP Styles */
+
+div[role="tooltip"] {
+  margin-top: 5px;
+  font-size: 16px;
+
+  @media screen and (max-width: 420px) {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+}

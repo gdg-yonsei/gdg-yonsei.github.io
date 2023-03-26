@@ -193,7 +193,7 @@ const H2 = styled.h2`
   color: ${(props) => props.theme.backgroundColor.black};
 
   ${({ theme }) => theme.mobile`
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   `}
 `;
 
@@ -208,7 +208,7 @@ const Paragraph = styled.p`
   color: ${(props) => props.theme.backgroundColor.black};
 
   ${({ theme }) => theme.mobile`
-    font-size: 0.75vw;
+    font-size: 2vw;
   `}
 `;
 
@@ -283,7 +283,7 @@ const List = styled.li`
   font-weight: 400;
 
   ${({ theme }) => theme.mobile`
-    font-size: 0.5vw;
+    font-size: 2vw;
   `}
 `;
 
