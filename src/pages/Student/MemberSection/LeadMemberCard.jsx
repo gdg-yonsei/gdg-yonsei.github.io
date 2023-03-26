@@ -91,6 +91,11 @@ const UpperSpan = styled.span`
   text-overflow: ellipsis;
 
   color: ${(props) => props.theme.contrast.red};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 6px;
+    line-height: 20px;
+  `}
 `;
 
 const LowerContainer = styled.div`
@@ -110,4 +115,11 @@ const LowerSpan = styled.span`
   white-space: nowrap;
   text-overflow: ellipsis;
   text-transform: uppercase;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 2px;
+    line-height: 20px;
+
+    padding-right: 1vw;
+  `}
 `;
