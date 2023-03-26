@@ -117,7 +117,7 @@ const LowerSpan = styled.span`
   text-transform: uppercase;
 
   ${({ theme }) => theme.mobile`
-    font-size: 2px;
+    font-size: 10px;
     line-height: 20px;
 
     padding-right: 1vw;
