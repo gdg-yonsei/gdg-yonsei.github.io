@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3f67c0b3.css",
-    "main.js": "/static/js/main.0f7227a2.js",
+    "main.js": "/static/js/main.e2255ac6.js",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -84,6 +84,6 @@
   },
   "entrypoints": [
     "static/css/main.3f67c0b3.css",
-    "static/js/main.0f7227a2.js"
+    "static/js/main.e2255ac6.js"
   ]
 }
