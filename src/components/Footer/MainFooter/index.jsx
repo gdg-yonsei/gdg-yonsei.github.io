@@ -48,6 +48,8 @@ const Container = styled.footer`
   align-items: center;
 
   background-color: #f2f2f2;
+
+  font-family: 'Google Sans', sans-serif;
 `;
 
 const LeftEnd = styled.div`

@@ -43,6 +43,8 @@ const Container = styled.header`
 
   display: flex;
   justify-content: space-between;
+
+  font-family: 'Google Sans', sans-serif;
 `;
 
 const LeftEnd = styled.div`
