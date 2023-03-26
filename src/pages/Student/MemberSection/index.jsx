@@ -255,7 +255,6 @@ const RightContainer = styled.div`
   position: relative;
 
   padding-top: calc(50vh - 125px);
-  overflow: hidden;
 `;
 
 const RightArrow = styled.figure.attrs((props) => ({
