@@ -38,6 +38,15 @@ html.has-scroll-dragging {
   height: 100%;
 }
 
+[data-load-container] {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+
 /* //FIXME: Why two scrollbar instances?  */
 /* .c-scrollbar {
   position: absolute;

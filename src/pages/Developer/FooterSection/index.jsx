@@ -103,7 +103,8 @@ const ImageWrapper = styled.figure`
   right: 0;
   margin: auto;
 
-  width: 80vw;
+  width: 60vw;
+  z-index: -1;
 `;
 
 const FooterImage = styled.img`
