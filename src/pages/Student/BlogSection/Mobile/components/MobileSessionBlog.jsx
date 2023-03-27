@@ -91,5 +91,5 @@ const BlogLink = styled.a`
   justify-content: flex-end;
   align-items: center;
 
-  font-size: 18px;
+  font-size: 10px;
 `;
