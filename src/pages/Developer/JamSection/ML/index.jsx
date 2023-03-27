@@ -37,7 +37,6 @@ function MLSection() {
         <LeftSection>
           <OutlineContainer data-scroll data-scroll-sticky data-scroll-target="#fixed-element-ML">
             <H1>04.</H1>
-            <H2>Machine Learning</H2>
             <H2>Artificial Intelligence</H2>
             <Paragraph>
               State-of-the-art technology is here. At the forefront of the future IT industry, GDSC
