@@ -11,6 +11,7 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
     options: {
       smooth: true,
       reloadOnContextChange: true,
+      touchMultiplier: 3,
       tablet: {
         breakpoint: 0,
         smooth: true,
