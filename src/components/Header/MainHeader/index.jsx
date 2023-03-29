@@ -2,6 +2,7 @@ import DropdownIcon from '@components/DropdownIcon';
 import useComponentVisible from '@hooks/useComponentVisible';
 import DropdownList from '@pages/Home/Hero/components/DropdownList';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function MainHeader() {
@@ -12,7 +13,9 @@ function MainHeader() {
     <>
       <Container data-scroll data-scroll-position="top" data-scroll-speed="0.1">
         <LeftEnd>
-          <LeftSpan>About us</LeftSpan>
+          <Link to={'/aboutUs'}>
+            <LeftSpan>About us</LeftSpan>
+          </Link>
         </LeftEnd>
         <RightEnd>
           <DropdownIcon setIsVisible={setIsVisible} />

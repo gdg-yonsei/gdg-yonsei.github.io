@@ -1,5 +1,6 @@
 import TransitionColorProvider from '@context/TransitionColorContext';
 import Page404 from '@pages/404';
+import { AboutUs } from '@pages/AboutUs';
 import ClubsPage from '@pages/Clubs';
 import DeveloperPage from '@pages/Developer';
 import GooglePage from '@pages/Google';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/developer" element={<DeveloperPage />} />
           <Route path="/student" element={<StudentPage />} />
           <Route path="/clubs" element={<ClubsPage />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/" element={<Home />} />
           <Route path="/404" element={<Page404 />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
