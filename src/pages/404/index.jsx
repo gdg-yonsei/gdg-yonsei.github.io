@@ -41,16 +41,28 @@ const Container = styled.div`
 
 const DinosaurImage = styled.img`
   margin-bottom: 10vh;
+
+  ${({ theme }) => theme.mobile`
+    width: 80vw;
+  `}
 `;
 
 const H1 = styled.h1`
   font-size: 80px;
   margin-bottom: 1.5vh;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 36px;
+  `}
 `;
 
 const Span = styled.span`
   font-size: 1.5vw;
   margin-bottom: 5vh;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 12px;
+  `}
 `;
 
 const BackToMain = styled(Link)`
@@ -71,6 +83,12 @@ const BackToMain = styled(Link)`
     background-color: ${(props) => props.theme.backgroundColor.black};
     color: ${(props) => props.theme.backgroundColor.white};
   }
+
+  ${({ theme }) => theme.mobile`
+    font-size: 16px;
+
+    padding: 12px 24px;
+  `}
 `;
 
 const Credits = styled.span`
@@ -84,4 +102,14 @@ const Credits = styled.span`
   &:hover {
     text-decoration: underline;
   }
+
+  ${({ theme }) => theme.mobile`
+    font-size: 14px;
+
+    display: block;
+
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  `}
 `;
