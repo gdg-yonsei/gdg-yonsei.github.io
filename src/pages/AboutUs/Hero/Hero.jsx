@@ -8,8 +8,6 @@ function Hero() {
   const scrollPos = useLocomotiveScrollPosition(10, false);
   const { height } = useWindowSize();
 
-  console.log(scrollPos / 5);
-
   return (
     <Container data-scroll-section id="aboutus-container">
       <MainWrapper data-scroll data-scroll-sticky data-scroll-target="#aboutus-container">
@@ -106,9 +104,15 @@ const MainSpan = styled.span.attrs((props) => ({
   display: inline-block;
   font-size: 120px;
 
+  background-color: transparent;
+
   color: ${(props) => props.theme.backgroundColor.white};
 
   filter: blur(${(props) => `${props.blue}px`});
+
+  ${({ theme }) => theme.mobile`
+    font-size: 72px;
+  `}
 `;
 
 const TextWrapper = styled.main`
@@ -132,11 +136,27 @@ const TextWrapper = styled.main`
   background-color: rgba(0, 0, 0, 0.4);
 
   border-radius: 32px;
+
+  ${({ theme }) => theme.tablet`
+    height: 100vh;
+
+    margin-top: 240vh;
+  `}
+
+  ${({ theme }) => theme.mobile`
+    height: 120vh;
+
+    margin-top: 220vh;
+  `}
 `;
 
 const H1 = styled.h1`
   font-size: 72px;
   color: ${(props) => props.theme.backgroundColor.white};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 36px;
+  `}
 `;
 
 const P = styled.p`
@@ -144,4 +164,8 @@ const P = styled.p`
   color: ${(props) => props.theme.backgroundColor.white};
 
   line-height: 1.2;
+
+  ${({ theme }) => theme.mobile`
+    font-size: 16px;
+  `}
 `;

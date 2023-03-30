@@ -33,7 +33,7 @@ const Container = styled.div.attrs((props) => ({
 
   @media screen and (max-width: 1350px) {
     flex: none;
-    width: 50vw;
+    width: max(50vw, 300px);
 
     height: 140px;
   }
