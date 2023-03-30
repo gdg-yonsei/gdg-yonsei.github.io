@@ -14,6 +14,7 @@ function Banner() {
   const onClickHeadingSection = () => {
     doodleRef.current.update();
   };
+
   return (
     <HeadingSection data-scroll-section onClick={onClickHeadingSection}>
       <TitleSection>

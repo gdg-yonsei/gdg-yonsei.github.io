@@ -1,22 +1,31 @@
 import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
 import styled from 'styled-components';
 
-import { BackgroundVideo, SearchBar } from '../components';
+import { BackgroundVideo, GoBackArrow, SearchBar } from '../components';
 
 function Hero() {
   const scrollPos = useLocomotiveScrollPosition(10, false);
+
+  console.log(scrollPos / 5);
 
   return (
     <Container data-scroll-section id="aboutus-container">
       <MainWrapper data-scroll data-scroll-sticky data-scroll-target="#aboutus-container">
         <TextSection>
-          <MainSpan blur={scrollPos / 30}>Code</MainSpan>
+          <MainSpan blur={scrollPos / 30} opacity={Math.max(1 - scrollPos / 2500, 0)}>
+            Code
+          </MainSpan>
           <SearchBar translateZ={scrollPos / 5} />
-          <MainSpan blur={scrollPos / 30}>With</MainSpan>
-          <MainSpan blur={scrollPos / 30}>Google</MainSpan>
+          <MainSpan blur={scrollPos / 30} opacity={Math.max(1 - scrollPos / 2500, 0)}>
+            With
+          </MainSpan>
+          <MainSpan blur={scrollPos / 30} opacity={Math.max(1 - scrollPos / 2500, 0)}>
+            Google
+          </MainSpan>
         </TextSection>
       </MainWrapper>
       <BackgroundVideo />
+      <GoBackArrow />
     </Container>
   );
 }
@@ -25,7 +34,7 @@ export default Hero;
 
 const Container = styled.div`
   width: 100vw;
-  height: 400vh;
+  height: 300vh;
 
   background-color: ${(props) => props.theme.backgroundColor.black};
 
@@ -72,6 +81,7 @@ const TextSection = styled.div`
 const MainSpan = styled.span.attrs((props) => ({
   style: {
     filter: `blur(${props.blur}px)`,
+    opacity: `${props.opacity}`,
   },
 }))`
   display: inline-block;
