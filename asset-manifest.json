@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c0e01c50.css",
-    "main.js": "/static/js/main.fa996ee1.js",
+    "main.css": "/static/css/main.931f24f7.css",
+    "main.js": "/static/js/main.a98a5112.js",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -18,6 +18,7 @@
     "static/media/GoogleSans-Medium-v1.27.ttf": "/static/media/GoogleSans-Medium-v1.27.81067d78370e5509b889.ttf",
     "static/media/GoogleSans-Regular-v1.27.ttf": "/static/media/GoogleSans-Regular-v1.27.19c78e33fc3a7243f219.ttf",
     "static/media/GoogleSans-Bold-v1.27.ttf": "/static/media/GoogleSans-Bold-v1.27.18cab8ca4b802f600b69.ttf",
+    "static/media/OpenSans-Light.ttf": "/static/media/OpenSans-Light.55d5015c3ced03510e63.ttf",
     "static/media/PPNeueMontreal-Medium.otf": "/static/media/PPNeueMontreal-Medium.b604bc34ed28cb1c20b3.otf",
     "static/media/PPNeueMontreal-Bold.otf": "/static/media/PPNeueMontreal-Bold.a5585efb70f888db7b5c.otf",
     "static/media/PPNeueMontreal-Book.otf": "/static/media/PPNeueMontreal-Book.497a4d8a79ae3d85403f.otf",
@@ -34,6 +35,7 @@
     "static/media/reacttable.svg": "/static/media/reacttable.5e54bbeb6ab51e1fced5365737e09efa.svg",
     "static/media/react.svg": "/static/media/react.8e63d418a6421cc2662e234ac8af7313.svg",
     "static/media/styledcomponents.svg": "/static/media/styledcomponents.cd1aef9abdc7ee8bc7d755a201ef05fb.svg",
+    "static/media/Mic.svg": "/static/media/Mic.25209dc7d3d8fd6549ddd2380edafbeb.svg",
     "static/media/electron.svg": "/static/media/electron.5f7a4a27b6a0bd7e51b816083fb5eda5.svg",
     "static/media/rubyonrails.svg": "/static/media/rubyonrails.9b2e574eab5142f8b4aa13ecb704fdf1.svg",
     "static/media/java.svg": "/static/media/java.227c012a504de5de006ed1ef551aaf58.svg",
@@ -83,7 +85,7 @@
     "static/media/kotlin.svg": "/static/media/kotlin.c907c0905b1db13215a306cbaa001da6.svg"
   },
   "entrypoints": [
-    "static/css/main.c0e01c50.css",
-    "static/js/main.fa996ee1.js"
+    "static/css/main.931f24f7.css",
+    "static/js/main.a98a5112.js"
   ]
 }
