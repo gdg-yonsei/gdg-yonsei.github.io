@@ -1,20 +1,23 @@
+import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
 import styled from 'styled-components';
 
 import { BackgroundVideo, SearchBar } from '../components';
 
 function Hero() {
+  const scrollPos = useLocomotiveScrollPosition(10, false);
+
   return (
-    <>
-      <Container>
-        <MainWrapper>
-          <MainSpan>Code</MainSpan>
-          <SearchBar />
-          <MainSpan>With</MainSpan>
-          <MainSpan>Google</MainSpan>
-        </MainWrapper>
-        <BackgroundVideo />
-      </Container>
-    </>
+    <Container data-scroll-section id="aboutus-container">
+      <MainWrapper data-scroll data-scroll-sticky data-scroll-target="#aboutus-container">
+        <TextSection>
+          <MainSpan blur={scrollPos / 30}>Code</MainSpan>
+          <SearchBar translateZ={scrollPos / 5} />
+          <MainSpan blur={scrollPos / 30}>With</MainSpan>
+          <MainSpan blur={scrollPos / 30}>Google</MainSpan>
+        </TextSection>
+      </MainWrapper>
+      <BackgroundVideo />
+    </Container>
   );
 }
 
@@ -22,13 +25,7 @@ export default Hero;
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 400vh;
 
   background-color: ${(props) => props.theme.backgroundColor.black};
 
@@ -36,16 +33,29 @@ const Container = styled.div`
 `;
 
 const MainWrapper = styled.div`
-  position: relative;
   width: 100%;
-  height: 15vh;
+  height: 100vh;
+
+  position: relative;
+  z-index: 10;
+
+  background-color: transparent;
+`;
+
+const TextSection = styled.div`
+  width: 100%;
+  height: 100vh;
 
   padding: 0 3%;
+
+  position: relative;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 2.5vw;
+
+  background-color: transparent;
 
   z-index: 4;
 
@@ -59,12 +69,15 @@ const MainWrapper = styled.div`
   }
 `;
 
-const MainSpan = styled.span`
+const MainSpan = styled.span.attrs((props) => ({
+  style: {
+    filter: `blur(${props.blur}px)`,
+  },
+}))`
   display: inline-block;
   font-size: 120px;
 
   color: ${(props) => props.theme.backgroundColor.white};
 
-  /* font-family: 'Open Sans';
-  font-weight: 300; */
+  filter: blur(${(props) => `${props.blue}px`});
 `;

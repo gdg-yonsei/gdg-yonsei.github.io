@@ -1,9 +1,9 @@
 import { ReactComponent as MICIcon } from '@assets/images/icons/Mic.svg';
 import styled from 'styled-components';
 
-function SearchBar() {
+function SearchBar({ translateZ }) {
   return (
-    <Container>
+    <Container translateZ={translateZ}>
       <LeftSpan>G</LeftSpan>
       <MICIcon height={80} />
     </Container>
@@ -12,7 +12,11 @@ function SearchBar() {
 
 export default SearchBar;
 
-const Container = styled.div`
+const Container = styled.div.attrs((props) => ({
+  style: {
+    transform: `perspective(400px) translateZ(${props.translateZ}px)`,
+  },
+}))`
   flex: 1;
   height: 140px;
 
@@ -21,6 +25,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  transform: perspective(400px) translateZ(50px);
 
   border: 5px solid ${(props) => props.theme.backgroundColor.white};
   border-radius: 10000000000000px;

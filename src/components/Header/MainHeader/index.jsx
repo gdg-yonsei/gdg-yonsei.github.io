@@ -1,8 +1,9 @@
+import DelayedLink from '@components/DelayedLink';
 import DropdownIcon from '@components/DropdownIcon';
+import { TRANSITION_DURATION } from '@constants/constants';
 import useComponentVisible from '@hooks/useComponentVisible';
 import DropdownList from '@pages/Home/Hero/components/DropdownList';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function MainHeader() {
@@ -13,9 +14,9 @@ function MainHeader() {
     <>
       <Container data-scroll data-scroll-position="top" data-scroll-speed="0.1">
         <LeftEnd>
-          <Link to={'/aboutUs'}>
+          <DelayedLink to={'/aboutUs'} delay={TRANSITION_DURATION}>
             <LeftSpan>About us</LeftSpan>
-          </Link>
+          </DelayedLink>
         </LeftEnd>
         <RightEnd>
           <DropdownIcon setIsVisible={setIsVisible} />
