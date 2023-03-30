@@ -5,7 +5,9 @@ function Head() {
   const idleState = useIdle(5e3);
 
   return (
-    <Helmet>{!idleState ? <title>GDSC - YS</title> : <title>👋 Are you there?</title>}</Helmet>
+    <Helmet prioritizeSeoTags>
+      {!idleState ? <title>GDSC - YS</title> : <title>👋 Are you there?</title>}
+    </Helmet>
   );
 }
 
