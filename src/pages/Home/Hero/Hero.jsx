@@ -17,17 +17,17 @@ function Hero() {
   const { scroll } = useLocomotiveScroll();
 
   useEffect(() => {
-    if (!scroll) return;
+    if (scroll) {
+      const prevRoute = localStorage.getItem('prev') ?? '';
 
-    const prevRoute = localStorage.getItem('prev') ?? '';
+      if (GDSC_PAGES.includes(prevRoute)) {
+        if (isSmallerLaptop) {
+          scroll.scrollTo('#home-container-mainsection', { duration: 0, disableLerp: false });
+          return;
+        }
 
-    if (GDSC_PAGES.includes(prevRoute)) {
-      if (isSmallerLaptop) {
-        scroll.scrollTo('#home-container-mainsection', { duration: 0, disableLerp: false });
-        return;
+        scroll.scrollTo('bottom', { duration: 0, disableLerp: false });
       }
-
-      scroll.scrollTo('bottom', { duration: 0, disableLerp: false });
     }
   }, [scroll]);
 
