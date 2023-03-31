@@ -21,7 +21,7 @@ function Card({ color, linkTarget, leftText, rightText }, ref) {
               ref={ref}
               rule={`
               :doodle {
-                @size: clamp(200px, 75%, 250px);
+                @size: clamp(150px, 75%, 200px);
               }
 
               transition: all 0.4s ease;

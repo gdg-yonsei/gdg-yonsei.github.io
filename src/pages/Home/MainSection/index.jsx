@@ -13,7 +13,7 @@ function MainSection() {
   };
 
   return (
-    <Container data-scroll-section onClick={onClickContainer}>
+    <Container data-scroll-section onClick={onClickContainer} id="home-container-mainsection">
       <OffsetWrapper data-scroll data-scroll-speed={`-10`}>
         <SubHeader />
         <CardContainer>

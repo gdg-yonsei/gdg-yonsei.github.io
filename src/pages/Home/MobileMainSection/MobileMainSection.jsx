@@ -14,7 +14,7 @@ function MobileMainSection() {
 
   return (
     <Container data-scroll-section onClick={onClickContainer}>
-      <OffsetWrapper data-scroll data-scroll-speed="0">
+      <OffsetWrapper data-scroll data-scroll-speed="0" id="home-container-mainsection">
         <SubHeader />
         <CardContainer>
           <CardWrapper>

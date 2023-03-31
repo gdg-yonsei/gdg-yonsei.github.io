@@ -3,11 +3,6 @@ import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
-    onLocationChange: (scroll) => {
-      setTimeout(() => {
-        scroll.scrollTo(0, { duration: 0, disableLerp: true });
-      }, TRANSITION_DURATION);
-    },
     options: {
       smooth: true,
       reloadOnContextChange: true,
