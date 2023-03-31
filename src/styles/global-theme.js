@@ -41,5 +41,6 @@ export const theme = {
     black: '#181818',
     button: '#f8f9fa',
     gray: '#dedede',
+    lightgray: '#efefef',
   },
 };
