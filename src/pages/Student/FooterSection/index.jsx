@@ -45,6 +45,10 @@ const Container = styled.footer`
   align-items: center;
 
   position: relative;
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const TitleWrapper = styled.div`

@@ -62,4 +62,8 @@ const Screen = styled(motion.div)`
   cursor: none;
 
   background-color: ${(props) => props.bgroundcolor};
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;

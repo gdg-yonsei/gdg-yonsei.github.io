@@ -114,6 +114,7 @@ const Container = styled.div`
   color: ${(props) => props.theme.backgroundColor.white};
 
   perspective: 1px;
+
   ${({ theme }) => theme.mobile`
     min-height: none;
   `}

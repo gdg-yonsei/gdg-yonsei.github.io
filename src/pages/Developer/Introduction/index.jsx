@@ -49,6 +49,10 @@ const Container = styled.div`
 
   font-family: 'Google Sans', sans-serif;
   background-color: ${(props) => props.theme.backgroundColor.white};
+
+  ${({ theme }) => theme.tablet`
+    min-height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const TitleWrapper = styled.div`

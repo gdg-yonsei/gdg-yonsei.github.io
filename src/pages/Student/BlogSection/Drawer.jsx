@@ -58,6 +58,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const ContentWrapper = styled(motion.div)`

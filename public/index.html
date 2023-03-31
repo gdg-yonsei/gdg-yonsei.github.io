@@ -39,7 +39,18 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-MRTFW4D');
     </script>
-  <!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
+
+    <!-- Mobile viewport support -->
+    <script>
+      const setVh = () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+
+      setVh();
+      window.addEventListener('resize', setVh);
+    </script>
 
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">

@@ -71,6 +71,10 @@ const HeadingSection = styled.div`
   align-items: center;
 
   font-family: 'Google Sans';
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const BodySection = styled.div`

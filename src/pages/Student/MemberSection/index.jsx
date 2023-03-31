@@ -221,6 +221,10 @@ const TypeWrapper = styled.div`
     background-color: ${(props) => props.bgcolor};
     transition: background-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
   }
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const LeftTitle = styled.span`

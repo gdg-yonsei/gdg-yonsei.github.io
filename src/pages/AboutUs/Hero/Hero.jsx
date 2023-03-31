@@ -66,6 +66,10 @@ const MainWrapper = styled.div`
   z-index: 10;
 
   background-color: transparent;
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const TextSection = styled.div`
@@ -93,6 +97,10 @@ const TextSection = styled.div`
 
     gap: 5vh;
   }
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const MainSpan = styled.span.attrs((props) => ({
@@ -102,13 +110,17 @@ const MainSpan = styled.span.attrs((props) => ({
   },
 }))`
   display: inline-block;
-  font-size: 120px;
+  font-size: 100px;
 
   background-color: transparent;
 
   color: ${(props) => props.theme.backgroundColor.white};
 
   filter: blur(${(props) => `${props.blue}px`});
+
+  @media screen and (max-width: 1350px) {
+    font-size: 120px;
+  }
 
   ${({ theme }) => theme.mobile`
     font-size: 72px;
@@ -138,7 +150,7 @@ const TextWrapper = styled.main`
   border-radius: 32px;
 
   ${({ theme }) => theme.tablet`
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 
     margin-top: 240vh;
   `}

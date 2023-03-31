@@ -37,6 +37,10 @@ const Container = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const TitleWrapper = styled.div`

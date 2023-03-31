@@ -145,6 +145,10 @@ const OverlayContainer = styled(motion.div)`
   cursor: pointer;
 
   transition: backdrop-filter 0.35s ease-in-out;
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const ProgressBar = styled(motion.div)`

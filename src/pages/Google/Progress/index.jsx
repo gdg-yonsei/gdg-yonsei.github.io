@@ -34,6 +34,10 @@ const Container = styled.div`
 
   font-family: 'Google Sans', sans-serif;
   color: ${(props) => props.theme.backgroundColor.black};
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const ContentWrapper = styled.div`

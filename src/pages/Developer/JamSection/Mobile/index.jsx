@@ -148,6 +148,10 @@ const Container = styled.div`
   color: ${(props) => props.theme.backgroundColor.black};
 
   perspective: 1px;
+
+  ${({ theme }) => theme.tablet`
+    min-height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const ContentWrapper = styled.div`

@@ -1,3 +1,4 @@
+import { ReactComponent as SiGithub } from '@assets/images/icons/github.svg';
 import { ReactComponent as SiNotion } from '@assets/images/icons/notion.svg';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
@@ -12,6 +13,11 @@ function DropdownList() {
           Icon={<NotionIcon />}
           description={'GDSC Notion'}
           href={'https://gdsc-yonsei.notion.site/'}
+        />
+        <DropdownMenu
+          Icon={<GithubIcon />}
+          description={'GDSC Github'}
+          href={'https://github.com/gdsc-ys'}
         />
       </Menus>
     </Container>
@@ -55,6 +61,14 @@ const Menus = styled.ul`
 `;
 
 const NotionIcon = styled(SiNotion)`
+  width: 36px;
+  height: 36px;
+  path {
+    fill: ${(props) => props.theme.backgroundColor.black};
+  }
+`;
+
+const GithubIcon = styled(SiGithub)`
   width: 36px;
   height: 36px;
   path {

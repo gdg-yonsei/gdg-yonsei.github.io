@@ -37,7 +37,7 @@ const MenuWrapper = styled.a`
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${(props) => props.theme.backgroundColor.gray};
+    background-color: ${(props) => props.theme.backgroundColor.lightgray};
     svg {
       opacity: 1;
       transform: none;

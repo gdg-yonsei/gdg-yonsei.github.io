@@ -89,6 +89,10 @@ const Container = styled.section`
   z-index: 10;
 
   font-family: 'Google Sans';
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const OffsetWrapper = styled.div`
