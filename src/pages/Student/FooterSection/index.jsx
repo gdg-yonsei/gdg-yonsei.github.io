@@ -46,6 +46,8 @@ const Container = styled.footer`
 
   position: relative;
 
+  background-color: ${(props) => props.theme.backgroundColor.white};
+
   ${({ theme }) => theme.tablet`
     height: calc(var(--vh, 1vh) * 100);
   `}
@@ -121,6 +123,6 @@ const DoodleWrapper = styled.div`
   bottom: 0;
   margin: auto;
 
-  width: 60vw;
-  height: 37.2vh;
+  width: 75vw;
+  height: 46.35vh;
 `;

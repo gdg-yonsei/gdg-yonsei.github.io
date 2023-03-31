@@ -71,6 +71,8 @@ const HeadingSection = styled.div`
 
   font-family: 'Google Sans';
 
+  background-color: ${(props) => props.theme.backgroundColor.white};
+
   ${({ theme }) => theme.tablet`
     height: calc(var(--vh, 1vh) * 100);
   `}
