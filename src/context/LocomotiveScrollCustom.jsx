@@ -14,9 +14,11 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
       tablet: {
         breakpoint: 0,
         smooth: true,
+        direction: 'vertical',
       },
       smartphone: {
         smooth: true,
+        direction: 'vertical',
       },
       direction: 'vertical',
       getDirection: true,
