@@ -4,12 +4,10 @@ import { TerrainDoodle } from '@components/Doodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import styled from 'styled-components';
 
 function Banner() {
   const doodleRef = useRef(null);
-  const { scroll } = useLocomotiveScroll();
 
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
 

@@ -11,25 +11,33 @@ import NavigationSection from './NavigationSection';
 import PaddingSection from './PaddingSection';
 
 const GDSC_PAGES = ['/google', '/developer', '/student', '/clubs'];
+const GDSC_SCROLL_TARGET = [
+  '#mobile-main-google',
+  '#mobile-main-developer',
+  '#mobile-main-student',
+  '#mobile-main-clubs',
+];
 
 function Hero() {
   const isSmallerLaptop = useMediaQuery(MEDIA_QUERIES.LAPTOP);
-  const { scroll } = useLocomotiveScroll();
+  const { scroll, isReady } = useLocomotiveScroll();
 
   useEffect(() => {
-    if (scroll) {
+    if (isReady) {
       const prevRoute = localStorage.getItem('prev') ?? '';
 
       if (GDSC_PAGES.includes(prevRoute)) {
         if (isSmallerLaptop) {
-          scroll.scrollTo('#home-container-mainsection', { duration: 0, disableLerp: false });
+          const pageIndex = GDSC_PAGES.indexOf(prevRoute);
+
+          scroll.scrollTo(GDSC_SCROLL_TARGET[pageIndex], { duration: 0, disableLerp: false });
           return;
         }
 
         scroll.scrollTo('bottom', { duration: 0, disableLerp: false });
       }
     }
-  }, [scroll]);
+  }, [isReady]);
 
   return (
     <MainContainer data-scroll-section>

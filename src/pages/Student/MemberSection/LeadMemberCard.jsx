@@ -93,7 +93,7 @@ const UpperSpan = styled.span`
   color: ${(props) => props.theme.contrast.red};
 
   ${({ theme }) => theme.mobile`
-    font-size: 6px;
+    font-size: 24px;
     line-height: 20px;
   `}
 `;
@@ -117,7 +117,7 @@ const LowerSpan = styled.span`
   text-transform: uppercase;
 
   ${({ theme }) => theme.mobile`
-    font-size: 12px;
+    font-size: 20px;
     line-height: 20px;
 
     padding-right: 1vw;

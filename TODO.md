@@ -15,4 +15,3 @@
 
 - [ ] Handle Resize Events
 - [ ] 'Developer' Page Banner Transition Fix.
-- [ ] 'Student' Page Delay & Layout Error on Webkit.

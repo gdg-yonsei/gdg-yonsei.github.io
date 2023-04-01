@@ -68,7 +68,7 @@ function MemberSection() {
 
   return (
     <Container data-scroll-section ref={sectionRef} id="fixed-element-members">
-      <LeftContainer id="fixed-element-leftcontainer">
+      <LeftContainer>
         <TypeWrapper
           data-scroll
           data-scroll-sticky
@@ -197,8 +197,6 @@ const TypeWrapper = styled.div`
   width: 100%;
   height: 100vh;
 
-  position: relative;
-
   padding-left: 10%;
 
   display: flex;
@@ -206,21 +204,12 @@ const TypeWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+  mix-blend-mode: overlay;
 
-    height: 100%;
+  animation: ${LeftAppearAnimationWidth} 1s cubic-bezier(0.1, 0.87, 0.19, 0.98) 1s forwards;
 
-    mix-blend-mode: overlay;
-
-    animation: ${LeftAppearAnimationWidth} 1s cubic-bezier(0.1, 0.87, 0.19, 0.98) 1s forwards;
-
-    background-color: ${(props) => props.bgcolor};
-    transition: background-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
-  }
+  background-color: ${(props) => props.bgcolor};
+  transition: background-color 1s cubic-bezier(0.1, 0.87, 0.19, 0.98);
 
   ${({ theme }) => theme.tablet`
     height: calc(var(--vh, 1vh) * 100);

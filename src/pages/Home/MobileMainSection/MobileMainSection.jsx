@@ -17,7 +17,7 @@ function MobileMainSection() {
       <OffsetWrapper data-scroll data-scroll-speed="0" id="home-container-mainsection">
         <SubHeader />
         <CardContainer>
-          <CardWrapper>
+          <CardWrapper id="mobile-main-google">
             <TitleSpan data-scroll data-scroll-speed="1.5" className="green">
               Create.
             </TitleSpan>
@@ -33,7 +33,7 @@ function MobileMainSection() {
               />
             </CardControl>
           </CardWrapper>
-          <CardWrapper>
+          <CardWrapper id="mobile-main-developer">
             <TitleSpan data-scroll data-scroll-speed="1.5" className="yellow">
               Design.
             </TitleSpan>
@@ -49,7 +49,7 @@ function MobileMainSection() {
               />
             </CardControl>
           </CardWrapper>
-          <CardWrapper>
+          <CardWrapper id="mobile-main-student">
             <TitleSpan data-scroll data-scroll-speed="1.5" className="red">
               Code.
             </TitleSpan>
@@ -69,7 +69,7 @@ function MobileMainSection() {
             <TitleSpan data-scroll data-scroll-speed="1.5" className="blue">
               Build.
             </TitleSpan>
-            <CardControl>
+            <CardControl id="mobile-main-clubs">
               <Card
                 leftText={'04'}
                 rightText={'Clubs'}

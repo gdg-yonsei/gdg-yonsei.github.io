@@ -647,6 +647,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:0.3.17"\
       ],\
       [\
+        "@juggle/resize-observer",\
+        "npm:3.4.0"\
+      ],\
+      [\
         "@leichtgewicht/ip-codec",\
         "npm:2.0.4"\
       ],\
@@ -5540,6 +5544,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/polyfill", "npm:7.12.1"],\
             ["@babel/preset-env", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:7.20.2"],\
             ["@craco/craco", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:7.0.0"],\
+            ["@juggle/resize-observer", "npm:3.4.0"],\
             ["@react-icons/all-files", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:4.1.0"],\
             ["@svgr/webpack", "npm:6.5.1"],\
             ["@trivago/prettier-plugin-sort-imports", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:4.1.1"],\
@@ -10640,6 +10645,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jridgewell/trace-mapping", "npm:0.3.9"],\
             ["@jridgewell/resolve-uri", "npm:3.1.0"],\
             ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@juggle/resize-observer", [\
+        ["npm:3.4.0", {\
+          "packageLocation": "./.yarn/cache/@juggle-resize-observer-npm-3.4.0-659544c6b5-2505028c05.zip/node_modules/@juggle/resize-observer/",\
+          "packageDependencies": [\
+            ["@juggle/resize-observer", "npm:3.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -18642,6 +18656,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/polyfill", "npm:7.12.1"],\
             ["@babel/preset-env", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:7.20.2"],\
             ["@craco/craco", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:7.0.0"],\
+            ["@juggle/resize-observer", "npm:3.4.0"],\
             ["@react-icons/all-files", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:4.1.0"],\
             ["@svgr/webpack", "npm:6.5.1"],\
             ["@trivago/prettier-plugin-sort-imports", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:4.1.1"],\

@@ -7,6 +7,7 @@ export const TRANSITION_DURATION = 650;
 export const TRANSITION_DURATION_DELAY = 650;
 
 // Breakpoint height in 'students' page.
+// FIXME: HARD-CODED
 
 export const STUDENTS_COLOR_BREAKPOINT = {
   LEAD_BREAKPOINT: 290,
