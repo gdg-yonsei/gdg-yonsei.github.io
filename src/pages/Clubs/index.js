@@ -40,13 +40,17 @@ export default ClubsPage;
 
 const Container = styled.main`
   width: fit-content;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
 
   font-family: 'Google Sans', sans-serif;
   perspective: 1px; // for locomotive-scroll element disappearance bug fix.
   background-color: ${(props) => props.theme.backgroundColor.white};
+
+  ${({ theme }) => theme.tablet`
+    height: calc(var(--vh, 1vh) * 100);
+  `}
 `;
 
 const GalleryPadding = styled.div`

@@ -4427,6 +4427,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.2.0"\
       ],\
       [\
+        "react-ga4",\
+        "npm:2.1.0"\
+      ],\
+      [\
         "react-helmet-async",\
         "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:1.3.0"\
       ],\
@@ -5579,6 +5583,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-app-alias", "npm:2.2.2"],\
             ["react-app-polyfill", "npm:3.0.0"],\
             ["react-dom", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:18.2.0"],\
+            ["react-ga4", "npm:2.1.0"],\
             ["react-helmet-async", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:1.3.0"],\
             ["react-locomotive-scroll", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:0.2.2"],\
             ["react-parallax-mouse", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:2.0.1"],\
@@ -18691,6 +18696,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-app-alias", "npm:2.2.2"],\
             ["react-app-polyfill", "npm:3.0.0"],\
             ["react-dom", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:18.2.0"],\
+            ["react-ga4", "npm:2.1.0"],\
             ["react-helmet-async", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:1.3.0"],\
             ["react-locomotive-scroll", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:0.2.2"],\
             ["react-parallax-mouse", "virtual:f6002ef6394eb99b05693e574e47fbcadb2377aaeeb217f511b235115c2c0fea8c7d1f40dcfb992fe68169fe8221271a77a4c51a73106a81fb747077529c1053#npm:2.0.1"],\
@@ -25442,6 +25448,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-fast-compare-npm-3.2.0-fbfa6627d9-8ef272c825.zip/node_modules/react-fast-compare/",\
           "packageDependencies": [\
             ["react-fast-compare", "npm:3.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-ga4", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/react-ga4-npm-2.1.0-2d2287b7a6-f7fb411414.zip/node_modules/react-ga4/",\
+          "packageDependencies": [\
+            ["react-ga4", "npm:2.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
