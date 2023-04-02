@@ -1,5 +1,4 @@
 import TransitionColorProvider from '@context/TransitionColorContext';
-import { useGoogleAnalytics } from '@hooks/useGoogleAnalytics';
 import Page404 from '@pages/404';
 import { AboutUs } from '@pages/AboutUs';
 import ClubsPage from '@pages/Clubs';
@@ -12,7 +11,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 function App() {
   const location = useLocation();
-  useGoogleAnalytics();
+  // useGoogleAnalytics();
 
   return (
     <TransitionColorProvider>
