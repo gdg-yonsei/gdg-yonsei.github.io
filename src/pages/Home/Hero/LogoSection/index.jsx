@@ -1,20 +1,10 @@
 import GDSCLogo from '@assets/images/gdsclogo.png';
-import { useState } from 'react';
 import styled from 'styled-components';
 
 function LogoSection() {
-  const [opacity, setOpacity] = useState(0);
-
   return (
     <Container data-scroll data-scroll-position="top" data-scroll-speed="2">
-      <LogoImg
-        src={GDSCLogo}
-        alt="GDSCLogo"
-        opacity={opacity}
-        onLoad={() => {
-          setOpacity(1);
-        }}
-      />
+      <LogoImg src={GDSCLogo} alt="GDSCLogo" impor />
     </Container>
   );
 }
@@ -30,11 +20,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const LogoImg = styled.img.attrs((props) => ({
-  style: {
-    opacity: `${props.opacity}`,
-  },
-}))`
+const LogoImg = styled.img`
   margin-top: auto;
   width: min(30vw, 150px);
   height: min(30vw, 150px);
