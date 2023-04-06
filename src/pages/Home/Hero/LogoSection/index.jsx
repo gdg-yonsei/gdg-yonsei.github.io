@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function LogoSection() {
   return (
     <Container data-scroll data-scroll-position="top" data-scroll-speed="2">
-      <LogoImg src={GDSCLogo} alt="GDSCLogo" impor />
+      <LogoImg src={GDSCLogo} alt="GDSCLogo" width={150} height={150} />
     </Container>
   );
 }
@@ -22,8 +22,6 @@ const Container = styled.div`
 
 const LogoImg = styled.img`
   margin-top: auto;
-  width: min(30vw, 150px);
-  height: min(30vw, 150px);
 
   ${({ theme }) => theme.mobile`
     margin-bottom: 16px;
