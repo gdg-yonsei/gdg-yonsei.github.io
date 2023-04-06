@@ -37,8 +37,9 @@ const LogoImg = styled.img.attrs((props) => ({
 }))`
   margin-top: auto;
   width: min(30vw, 150px);
+  height: min(30vw, 150px);
 
   ${({ theme }) => theme.mobile`
     margin-bottom: 16px;
-  `}
+  `};
 `;
