@@ -43,4 +43,6 @@ const Container = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  content-visibility: auto;
 `;

@@ -50,4 +50,6 @@ const Container = styled.main`
   font-family: 'Google Sans', sans-serif;
   perspective: 1px; // for locomotive-scroll element disappearance bug fix.
   background-color: ${(props) => props.theme.backgroundColor.white};
+
+  content-visibility: auto;
 `;

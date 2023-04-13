@@ -65,6 +65,8 @@ const Container = styled.a`
 
   user-select: none;
   cursor: none;
+
+  content-visibility: auto;
 `;
 
 const UpperContainer = styled.div`
