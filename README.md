@@ -21,3 +21,6 @@ In addition to contributing to the UN Sustainable Development Goals and addressi
 > ## 👩‍💻&nbsp; EXTERNAL LINKS
 
 - **Refer to <a href="https://github.com/gdsc-ys">GDSC Yonsei Official repository</a> for more information.**
+
+> ## 💁‍♀️&nbsp;Special Thanks to...
+<a href="https://github.com/tmrwu">@tmrwu</a> for designing open graph image!
