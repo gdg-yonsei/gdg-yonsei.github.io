@@ -1,4 +1,5 @@
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
+import { BannerTextAnimationFirefox } from '@components/Animation/BannerTextAnimationFirefox';
 import DelayedLink from '@components/DelayedLink';
 import BlocksDoodle from '@components/Doodle/BlocksDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
@@ -111,7 +112,7 @@ const TextAnimationContainer = styled.div`
   align-items: center;
 
   opacity: 0;
-  /* transform: translateY(100%) rotateX(-80deg); */
+  transform: translateY(100%) rotateX(-80deg);
   transform-origin: center top;
   transform-style: preserve-3d;
 
@@ -122,6 +123,11 @@ const TextAnimationContainer = styled.div`
   animation-delay: ${(props) => `${props.delay}s`};
 
   user-select: none;
+
+  @supports (-moz-appearance: none) {
+    transform: translateY(100%);
+    animation-name: ${BannerTextAnimationFirefox};
+  }
 `;
 
 const CanvasSection = styled.div`

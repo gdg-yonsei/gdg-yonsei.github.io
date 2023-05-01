@@ -1,4 +1,5 @@
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
+import { BannerTextAnimationFirefox } from '@components/Animation/BannerTextAnimationFirefox';
 import DelayedLink from '@components/DelayedLink';
 import BlossomDoodle from '@components/Doodle/BlossomDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
@@ -119,6 +120,11 @@ const TextAnimationContainer = styled.div`
   animation-delay: ${(props) => `${props.delay}s`};
 
   user-select: none;
+
+  @supports (-moz-appearance: none) {
+    transform: translateY(100%);
+    animation-name: ${BannerTextAnimationFirefox};
+  }
 `;
 
 const CanvasSection = styled.div`
