@@ -10,18 +10,13 @@ In addition to contributing to the UN Sustainable Development Goals and addressi
 <br />
 
 > # About This Project
-<br>
 Google Developer Student Clubs(GDSC) Yonsei Sinchon Campus official website is an open source to introduce what GDSC has done and how GDSC works. As GDSC Yonsei succesfully operated the first year course, this website is primarily designed to dedicate everyone who contributed to building and operating Yonsei developers community.
 
 <br>
-<br>
 
 > ## 👨‍💻&nbsp; Author
-<br>
 <a href="https://github.com/whatisyourname0">@whatisyourname0</a> on his own.
-
 <br />
-
 > ## 📂&nbsp; FRAMEWORKS & LIBRARIES
 
 <br />
