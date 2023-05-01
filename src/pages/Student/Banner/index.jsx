@@ -6,9 +6,8 @@ import { useRef } from 'react';
 import styled from 'styled-components';
 
 function Banner() {
-  const doodleRef = useRef(null);
-
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
+  const doodleRef = useRef(null);
 
   const onClickHeadingSection = () => {
     doodleRef.current.update();
@@ -62,7 +61,6 @@ const HeadingSection = styled.div`
   height: 100vh;
 
   padding-bottom: 1vh;
-  margin-bottom: 5vh;
 
   display: flex;
   flex-direction: column;
@@ -70,8 +68,6 @@ const HeadingSection = styled.div`
   align-items: center;
 
   font-family: 'Google Sans';
-
-  background-color: ${(props) => props.theme.backgroundColor.white};
 
   ${({ theme }) => theme.tablet`
     height: calc(var(--vh, 1vh) * 100);
@@ -86,7 +82,7 @@ const BodySection = styled.div`
   padding-left: 2vw;
 
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
 
   ${({ theme }) => theme.laptop`
     width: 100%;
@@ -127,8 +123,7 @@ const TextAnimationContainer = styled.div`
 
 const CanvasSection = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   ${({ theme }) => theme.laptop`
@@ -163,12 +158,12 @@ const TitleSection = styled.div`
   padding-right: 5vw;
 
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 `;
 
 const TitleWrapper = styled.div`
-  box-sizing: border-box;
   width: 200px;
   height: 65px;
 
@@ -189,6 +184,10 @@ const TitleWrapper = styled.div`
   `}
 `;
 
+const LinkWrapper = styled.main`
+  height: 100%;
+`;
+
 const TitleSpan = styled.h1`
   font-size: 28px;
 
@@ -205,11 +204,8 @@ const BackToMainButton = styled.button`
   font-family: 'Google Sans', sans-serif;
 
   border: none;
+  color: ${(props) => props.theme.backgroundColor.black};
   background-color: ${(props) => props.theme.backgroundColor.white};
 
   cursor: pointer;
-`;
-
-const LinkWrapper = styled.main`
-  height: 100%;
 `;

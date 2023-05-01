@@ -111,7 +111,7 @@ const TextAnimationContainer = styled.div`
   align-items: center;
 
   opacity: 0;
-  transform: translateY(100%) rotateX(-80deg);
+  /* transform: translateY(100%) rotateX(-80deg); */
   transform-origin: center top;
   transform-style: preserve-3d;
 
