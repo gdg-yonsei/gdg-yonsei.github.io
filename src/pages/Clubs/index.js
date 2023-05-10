@@ -1,4 +1,4 @@
-import LoadingScreen from '@components/LoadingScreen';
+import { LoadingScreen } from '@components/LoadingScreen';
 import { HorizontalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
 import { TransitionColorContext } from '@context/TransitionColorContext';
 import useEffectOnce from '@hooks/useEffectOnce';

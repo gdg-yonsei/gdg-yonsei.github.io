@@ -1,6 +1,6 @@
 import { BannerTextAnimation } from '@components/Animation/BannerTextAnimation';
 import { BannerTextAnimationFirefox } from '@components/Animation/BannerTextAnimationFirefox';
-import DelayedLink from '@components/DelayedLink';
+import { DelayedLink } from '@components/DelayedLink';
 import BlocksDoodle from '@components/Doodle/BlocksDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '@constants/constants';
 import { useRef } from 'react';

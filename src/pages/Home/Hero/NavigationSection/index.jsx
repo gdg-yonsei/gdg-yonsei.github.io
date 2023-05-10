@@ -1,5 +1,5 @@
 import { ReactComponent as MicIcon } from '@assets/images/mic.svg';
-import Button from '@components/Button';
+import { Button } from '@components/Button';
 import { MdSearch } from '@react-icons/all-files/md/MdSearch';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';

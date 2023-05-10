@@ -1,5 +1,5 @@
-import DelayedLink from '@components/DelayedLink';
-import DropdownIcon from '@components/DropdownIcon';
+import { DelayedLink } from '@components/DelayedLink';
+import { DropdownIcon } from '@components/DropdownIcon';
 import { TRANSITION_DURATION } from '@constants/constants';
 import { TransitionColorContext } from '@context/TransitionColorContext';
 import useComponentVisible from '@hooks/useComponentVisible';

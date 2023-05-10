@@ -1,4 +1,4 @@
-import LoadingScreen from '@components/LoadingScreen';
+import { LoadingScreen } from '@components/LoadingScreen';
 import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
 import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
 import { useMediaQuery } from '@hooks/useMediaQuery';

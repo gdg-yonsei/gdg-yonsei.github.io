@@ -1,4 +1,4 @@
-import SubHeader from '@components/Header/SubHeader';
+import { SubHeader } from '@components/Header/SubHeader';
 import { useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 

@@ -5,7 +5,7 @@ import 'react-app-polyfill/ie9'; // IE 9 support.
 import 'react-app-polyfill/stable'; // Stable
 import 'react-tooltip/dist/react-tooltip.css';
 
-import Head from '@components/Head';
+import { Head } from '@components/Head';
 import { theme } from '@styles/global-theme';
 import media from '@styles/media';
 import { Fragment } from 'react';

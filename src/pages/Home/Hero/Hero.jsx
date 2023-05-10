@@ -1,5 +1,5 @@
-import MainFooter from '@components/Footer/MainFooter';
-import MainHeader from '@components/Header/MainHeader';
+import { MainFooter } from '@components/Footer';
+import { MainHeader } from '@components/Header/MainHeader';
 import { useMediaQuery } from '@hooks/useMediaQuery';
 import { MEDIA_QUERIES } from '@styles/media';
 import { useEffect } from 'react';

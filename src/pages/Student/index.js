@@ -1,5 +1,5 @@
-import GithubCursor from '@components/GithubCursor';
-import LoadingScreen from '@components/LoadingScreen';
+import { GithubCursor } from '@components/GithubCursor';
+import { LoadingScreen } from '@components/LoadingScreen';
 import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
 import MouseContextProvider from '@context/MouseContext';
 import { TransitionColorContext } from '@context/TransitionColorContext';
