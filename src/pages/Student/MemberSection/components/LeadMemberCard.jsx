@@ -1,7 +1,5 @@
 import { MouseContext } from '@context/MouseContext';
 import useHover from '@hooks/useHover';
-import { useMediaQuery } from '@hooks/useMediaQuery';
-import { MEDIA_QUERIES } from '@styles/media';
 import { memo, useCallback, useContext } from 'react';
 import { MouseParallaxChild } from 'react-parallax-mouse';
 import TextTransition from 'react-text-transition';
@@ -10,7 +8,6 @@ import styled from 'styled-components';
 function LeadMemberCard({ upperLetter, lowerLetter, githubID }) {
   const [hoverRef, isHovered] = useHover();
   const { cursorChangeHandler } = useContext(MouseContext);
-  const isMobile = useMediaQuery(MEDIA_QUERIES.MOBILE);
 
   const names = [lowerLetter, `@${githubID}`];
 
@@ -36,11 +33,7 @@ function LeadMemberCard({ upperLetter, lowerLetter, githubID }) {
       </UpperContainer>
       <LowerContainer>
         <LowerSpan>
-          <MouseParallaxChild
-            style={{
-              paddingRight: isMobile ? '20px' : '50px',
-            }}
-          >
+          <MouseParallaxChild>
             <TextTransition inline overflow>
               {names[isHovered | 0]}
             </TextTransition>
@@ -105,15 +98,19 @@ const LowerContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  padding-right: 50px;
+
+  ${({ theme }) => theme.mobile`
+      padding-right: 20px;
+  `}
 `;
 
 const LowerSpan = styled.span`
-  font-size: 6vw;
+  font-size: 96px;
   font-weight: 900;
-  line-height: 1.2;
   letter-spacing: 2px;
   white-space: nowrap;
-  text-overflow: ellipsis;
   text-transform: uppercase;
 
   ${({ theme }) => theme.mobile`
