@@ -5,7 +5,6 @@
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "@juggle/resize-observer": "^3.4.0",
     "@react-icons/all-files": "^4.1.0",
     "css-doodle": "^0.34.5",
     "framer-motion": "^9.0.4",

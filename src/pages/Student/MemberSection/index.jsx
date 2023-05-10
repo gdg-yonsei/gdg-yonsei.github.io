@@ -11,10 +11,8 @@ import { MouseParallaxContainer } from 'react-parallax-mouse';
 import ReactTextTransition from 'react-text-transition';
 import styled, { useTheme } from 'styled-components';
 
-import LeadMemberCard from './LeadMemberCard';
-import MemberCard from './MemberCard';
+import { LeadMemberCard, MemberCard, ProgressBar } from './components';
 import { DevrelList, MemberList } from './memberList';
-import ProgressBar from './ProgressBar';
 
 const Writeups = ['Lead', 'DevRel', 'Developers', ''];
 
@@ -67,105 +65,107 @@ function MemberSection() {
   }, [handleScrollPosition, modifiedScrollPos]);
 
   return (
-    <Container data-scroll-section ref={sectionRef} id="fixed-element-members">
-      <LeftContainer>
-        <TypeWrapper
-          data-scroll
-          data-scroll-sticky
-          data-scroll-target="#fixed-element-members"
-          bgcolor={handleLeftBackgroundColor(scrollIndex)}
-        >
-          <LeftTitle>GDSC Yonsei</LeftTitle>
-          <LeftSubtitle>
-            {`${Writeups[scrollIndex]}`.split('').map((n, idx) => {
+    <Container data-scroll-section ref={sectionRef}>
+      <ContentWrapper id="fixed-element-members">
+        <LeftContainer>
+          <TypeWrapper
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target="#fixed-element-members"
+            bgcolor={handleLeftBackgroundColor(scrollIndex)}
+          >
+            <LeftTitle>GDSC Yonsei</LeftTitle>
+            <LeftSubtitle>
+              {`${Writeups[scrollIndex]}`.split('').map((n, idx) => {
+                return (
+                  <ReactTextTransition
+                    key={idx}
+                    // eslint-disable-next-line react/no-children-prop
+                    children={n}
+                    delay={idx * 25}
+                    overflow
+                    inline
+                  />
+                );
+              })}
+            </LeftSubtitle>
+          </TypeWrapper>
+          <ProgressBar scrollIndex={scrollIndex} />
+        </LeftContainer>
+        <RightContainer>
+          <div>
+            <MouseParallaxContainer
+              globalFactorX={isMobileOrTablet ? 0 : 0.2}
+              globalFactorY={isMobileOrTablet ? 0 : 0.2}
+              resetOnLeave
+            >
+              <LeadMemberCard
+                upperLetter={'GDSC Lead'}
+                lowerLetter={'Kiung Jung'}
+                githubID={'Quqqu'}
+              />
+            </MouseParallaxContainer>
+          </div>
+          <HorizontalLineWrapper>
+            <HorizontalPattern
+              style={{
+                backgroundImage: `url(${HorizontalPatternImage1})`,
+              }}
+            />
+          </HorizontalLineWrapper>
+          <div>
+            {DevrelList.map((el, idx) => {
               return (
-                <ReactTextTransition
+                <MouseParallaxContainer
                   key={idx}
-                  // eslint-disable-next-line react/no-children-prop
-                  children={n}
-                  delay={idx * 25}
-                  overflow
-                  inline
-                />
+                  globalFactorX={isMobileOrTablet ? 0 : 0.1}
+                  globalFactorY={isMobileOrTablet ? 0 : 0.1}
+                  resetOnLeave
+                >
+                  <MemberCard
+                    key={idx}
+                    upperLetter={el.upperLetter}
+                    lowerLetter={el.lowerLetter}
+                    githubID={el.githubID}
+                  />
+                </MouseParallaxContainer>
               );
             })}
-          </LeftSubtitle>
-        </TypeWrapper>
-        <ProgressBar scrollIndex={scrollIndex} />
-      </LeftContainer>
-      <RightContainer>
-        <div>
-          <MouseParallaxContainer
-            globalFactorX={isMobileOrTablet ? 0 : 0.2}
-            globalFactorY={isMobileOrTablet ? 0 : 0.2}
-            resetOnLeave
-          >
-            <LeadMemberCard
-              upperLetter={'GDSC Lead'}
-              lowerLetter={'Kiung Jung'}
-              githubID={'Quqqu'}
+          </div>
+          <HorizontalLineWrapper>
+            <HorizontalPattern
+              style={{
+                backgroundImage: `url(${HorizontalPatternImage2})`,
+              }}
             />
-          </MouseParallaxContainer>
-        </div>
-        <HorizontalLineWrapper>
-          <HorizontalPattern
-            style={{
-              backgroundImage: `url(${HorizontalPatternImage1})`,
-            }}
-          />
-        </HorizontalLineWrapper>
-        <div>
-          {DevrelList.map((el, idx) => {
-            return (
-              <MouseParallaxContainer
-                key={idx}
-                globalFactorX={isMobileOrTablet ? 0 : 0.1}
-                globalFactorY={isMobileOrTablet ? 0 : 0.1}
-                resetOnLeave
-              >
-                <MemberCard
+          </HorizontalLineWrapper>
+          <div>
+            {MemberList.map((el, idx) => {
+              return (
+                <MouseParallaxContainer
                   key={idx}
-                  upperLetter={el.upperLetter}
-                  lowerLetter={el.lowerLetter}
-                  githubID={el.githubID}
-                />
-              </MouseParallaxContainer>
-            );
-          })}
-        </div>
-        <HorizontalLineWrapper>
-          <HorizontalPattern
-            style={{
-              backgroundImage: `url(${HorizontalPatternImage2})`,
-            }}
+                  globalFactorX={isMobileOrTablet ? 0 : 0.1}
+                  globalFactorY={isMobileOrTablet ? 0 : 0.1}
+                  resetOnLeave
+                >
+                  <MemberCard
+                    key={idx}
+                    upperLetter={el.upperLetter}
+                    lowerLetter={el.lowerLetter}
+                    githubID={el.githubID}
+                  />
+                </MouseParallaxContainer>
+              );
+            })}
+          </div>
+          <RightArrow
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target="#fixed-element-members"
+            bgcolor={handleLeftBackgroundColor(scrollIndex)}
           />
-        </HorizontalLineWrapper>
-        <div>
-          {MemberList.map((el, idx) => {
-            return (
-              <MouseParallaxContainer
-                key={idx}
-                globalFactorX={isMobileOrTablet ? 0 : 0.1}
-                globalFactorY={isMobileOrTablet ? 0 : 0.1}
-                resetOnLeave
-              >
-                <MemberCard
-                  key={idx}
-                  upperLetter={el.upperLetter}
-                  lowerLetter={el.lowerLetter}
-                  githubID={el.githubID}
-                />
-              </MouseParallaxContainer>
-            );
-          })}
-        </div>
-        <RightArrow
-          data-scroll
-          data-scroll-sticky
-          data-scroll-target="#fixed-element-members"
-          bgcolor={handleLeftBackgroundColor(scrollIndex)}
-        />
-      </RightContainer>
+        </RightContainer>
+      </ContentWrapper>
     </Container>
   );
 }
@@ -174,18 +174,29 @@ export default MemberSection;
 
 const Container = styled.div`
   width: 100%;
-  height: fit-content;
+  min-height: 100vh;
 
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-  ${({ theme }) => theme.tablet`
-    grid-template-columns: 1fr 1fr;
-  `}
+  position: relative;
+  z-index: 2;
+
+  perspective: 1px;
+`;
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  flex-grow: 1;
+
+  position: relative;
+  display: flex;
 `;
 
 const LeftContainer = styled.div`
-  width: 100%;
+  flex: 2;
   height: 100%;
 
   position: relative;
@@ -243,11 +254,13 @@ const LeftSubtitle = styled.span`
 `;
 
 const RightContainer = styled.div`
-  width: 100%;
-
-  position: relative;
+  flex: 3;
 
   padding-top: calc(50vh - 125px);
+
+  ${({ theme }) => theme.tablet`
+    flex: 2;
+  `}
 `;
 
 const RightArrow = styled.figure.attrs((props) => ({
