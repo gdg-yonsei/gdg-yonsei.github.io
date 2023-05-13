@@ -109,11 +109,35 @@ export const MemberList = [
     lowerLetter: 'Hyun min Yoo',
     githubID: 'uhmin99',
   },
-
   {
     upperLetter: 'GDSC Server Member',
     lowerLetter: 'Young Han Park',
     githubID: 'younghanstark',
+  },
+  {
+    upperLetter: 'GDSC Member',
+    lowerLetter: 'Sang Won Park',
+    githubID: 'hobbychive',
+  },
+  {
+    upperLetter: 'GDSC Member',
+    lowerLetter: 'Heejin Park',
+    githubID: 'becooq81',
+  },
+  {
+    upperLetter: 'GDSC Member',
+    lowerLetter: 'Chaerim Lim',
+    githubID: 'C-limlim',
+  },
+  {
+    upperLetter: 'GDSC Member',
+    lowerLetter: 'Dongwon Jeon',
+    githubID: 'prsper2001',
+  },
+  {
+    upperLetter: 'GDSC Member',
+    lowerLetter: 'Yejin Kim',
+    githubID: 'gina261',
   },
 ];
 
@@ -127,5 +151,15 @@ export const DevrelList = [
     upperLetter: 'GDSC DevRel Member',
     lowerLetter: 'Yoojin Jeon',
     githubID: 'tmrwu',
+  },
+  {
+    upperLetter: 'GDSC DevRel Member',
+    lowerLetter: 'Yu Yeong Hyeon',
+    githubID: 'julie-yon',
+  },
+  {
+    upperLetter: 'GDSC DevRel Member',
+    lowerLetter: 'Hyerin Yoon',
+    githubID: 'cocoamy11',
   },
 ];

@@ -13,7 +13,7 @@ import styled, { useTheme } from 'styled-components';
 import Banner from './Banner';
 import BlogSection from './BlogSection';
 import FooterSection from './FooterSection';
-import MemberSection from './MemberSection';
+import { MemberSection } from './MemberSection';
 
 function StudentPage() {
   const { handleAnimationStart, handleAnimationComplete } = useHandleAnimationScroll();
