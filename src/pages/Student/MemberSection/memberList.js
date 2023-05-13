@@ -105,7 +105,7 @@ export const MemberList = [
     githubID: 'haaem',
   },
   {
-    upperLetter: 'GDSC Flutter & Server Member',
+    upperLetter: 'GDSC Flutter Member',
     lowerLetter: 'Hyun min Yoo',
     githubID: 'uhmin99',
   },
