@@ -1,18 +1,43 @@
+import { AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import styled from 'styled-components';
 
+import FocusedCardItem from './components/FocusedCardItem';
 import SwiperElement from './Swiper';
+import { SlideContents } from './Swiper/SlideContent';
 
 function Progress() {
+  const [focusedSectionId, setFocusedSectionId] = useState(null);
+  const isDisabled = focusedSectionId === null;
+
+  const focusedItem = SlideContents.filter((_, idx) => idx === focusedSectionId)[0];
+
+  const onClickElement = (idx) => {
+    setFocusedSectionId(idx);
+  };
+
+  const onBlurFocusedCardItem = () => {
+    setFocusedSectionId(null);
+  };
+
   return (
     <Container data-scroll-section>
       <ContentWrapper data-scroll data-scroll-speed="-10">
         <TitleWrapper>
-          <Title>...And GDSC - YS is challenging.</Title>
-          <Desc>Currently in development.</Desc>
+          <Title>...and GDSC - YS is always challenging.</Title>
+          <Desc>Congratulations to those who reached to Top 100!</Desc>
         </TitleWrapper>
         <SwpierWrapper>
-          <SwiperElement />
+          <SwiperElement onClickElement={onClickElement} />
         </SwpierWrapper>
+        <AnimatePresence>
+          <FocusedCardItem
+            focusedItem={focusedItem}
+            disabled={isDisabled}
+            focusedSectionId={focusedSectionId}
+            onBlur={onBlurFocusedCardItem}
+          />
+        </AnimatePresence>
       </ContentWrapper>
     </Container>
   );
@@ -53,8 +78,10 @@ const TitleWrapper = styled.div`
 
 const Title = styled.span`
   display: inline-block;
-  font-size: max(5vw, 28px);
   padding-left: 3vw;
+  padding-bottom: 10px;
+
+  font-size: max(5vw, 28px);
   letter-spacing: -0.5px;
 `;
 

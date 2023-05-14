@@ -1,11 +1,34 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-function Slide({ name, index }) {
+function Slide({ content, index, onFocus }) {
+  const onClickSlide = () => {
+    onFocus(index);
+  };
+
   return (
-    <SlideContainer>
+    <SlideContainer
+      onClick={onClickSlide}
+      layout
+      layoutId={index + ''}
+      whileHover={{
+        borderRadius: 0,
+        transtiion: {
+          duration: 0.3,
+        },
+      }}
+      whileInView={{
+        transform: 'none',
+      }}
+    >
+      <ImageWrapper>
+        <ImageBackground>
+          <Image src={require(`/public/assets/SolutionChallenge/${content.logo}`)} />
+        </ImageBackground>
+      </ImageWrapper>
       <DescWrapper>
         <Index>{index + 1}</Index>
-        <Name>{name}</Name>
+        <Name>{content.name}</Name>
       </DescWrapper>
     </SlideContainer>
   );
@@ -13,7 +36,7 @@ function Slide({ name, index }) {
 
 export default Slide;
 
-const SlideContainer = styled.div`
+const SlideContainer = styled(motion.div)`
   width: 40vw;
   height: 350px;
 
@@ -25,9 +48,38 @@ const SlideContainer = styled.div`
   border-radius: 20px;
   background-color: black;
 
+  cursor: pointer;
+
   ${({ theme }) => theme.tablet`
     width: 80vw;
   `}
+`;
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ImageBackground = styled.div`
+  width: 175px;
+  height: 175px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 25px;
+
+  background-color: ${(props) => props.theme.backgroundColor.white};
+`;
+
+const Image = styled.img`
+  width: 125px;
+  height: 125px;
 `;
 
 const DescWrapper = styled.div`

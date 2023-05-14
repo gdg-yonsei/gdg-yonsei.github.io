@@ -32,62 +32,60 @@ function FocusedGalleryItem({ focusedSectionId, focusedItem, onBlur, disabled })
   }, [isEscPressed]);
 
   return (
-    <>
-      <OverlayContainer
-        onClick={onClickOverlayContainer}
-        disabled={disabled}
-        blurvalue={blurValue}
-        brightnessvalue={brightnessValue}
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target="#fixed-element-clubs-container"
-      >
-        <ProgressBar ref={progressBarRef} />
-        {focusedSectionId && (
-          <>
-            <Padding>
-              <Swiper
-                modules={[Pagination]}
-                spaceBetween={200}
-                slidesPerView={2}
-                centeredSlides
-                pagination={{ type: 'progressbar', el: progressBarRef.current }}
-                grabCursor
-                onSwiper={(swiper) => {
-                  swiper.params.pagination.el = progressBarRef.current;
+    <OverlayContainer
+      onClick={onClickOverlayContainer}
+      disabled={disabled}
+      blurvalue={blurValue}
+      brightnessvalue={brightnessValue}
+      data-scroll
+      data-scroll-sticky
+      data-scroll-target="#fixed-element-clubs-container"
+    >
+      <ProgressBar ref={progressBarRef} />
+      {focusedSectionId && (
+        <>
+          <Padding>
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={200}
+              slidesPerView={2}
+              centeredSlides
+              pagination={{ type: 'progressbar', el: progressBarRef.current }}
+              grabCursor
+              onSwiper={(swiper) => {
+                swiper.params.pagination.el = progressBarRef.current;
 
-                  swiper.pagination.destroy();
-                  swiper.pagination.init();
-                  swiper.pagination.update();
-                }}
-              >
-                {focusedItem[0].images.map((item, idx) => {
-                  if (idx === 0) {
-                    return (
-                      <SwiperSlide key={idx}>
-                        <Image layoutId={focusedSectionId} disabled={disabled} thumbnail={item} />
-                      </SwiperSlide>
-                    );
-                  }
-
+                swiper.pagination.destroy();
+                swiper.pagination.init();
+                swiper.pagination.update();
+              }}
+            >
+              {focusedItem[0].images.map((item, idx) => {
+                if (idx === 0) {
                   return (
                     <SwiperSlide key={idx}>
-                      <Image
-                        key={idx}
-                        disabled={disabled}
-                        thumbnail={item}
-                        initial="hidden"
-                        animate="visible"
-                      />
+                      <Image layoutId={focusedSectionId} disabled={disabled} thumbnail={item} />
                     </SwiperSlide>
                   );
-                })}
-              </Swiper>
-            </Padding>
-          </>
-        )}
-      </OverlayContainer>
-    </>
+                }
+
+                return (
+                  <SwiperSlide key={idx}>
+                    <Image
+                      key={idx}
+                      disabled={disabled}
+                      thumbnail={item}
+                      initial="hidden"
+                      animate="visible"
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </Padding>
+        </>
+      )}
+    </OverlayContainer>
   );
 }
 

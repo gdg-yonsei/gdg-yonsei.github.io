@@ -8,7 +8,7 @@ import styled, { useTheme } from 'styled-components';
 
 import Banner from './Banner';
 import Introduction from './Introduction';
-import Progress from './Progress';
+import { Progress } from './Progress';
 
 function GooglePage() {
   const { handleAnimationStart, handleAnimationComplete } = useHandleAnimationScroll();

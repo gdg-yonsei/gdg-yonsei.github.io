@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Slide from './Slide';
 import { SlideContents } from './SlideContent';
 
-function SwiperElement() {
+function SwiperElement({ onClickElement }) {
   const { width } = useWindowSize();
 
   return (
@@ -37,7 +37,7 @@ function SwiperElement() {
           SlideContents.map((content, idx) => {
             return (
               <SwiperSlide key={idx}>
-                <Slide name={content.name} index={idx} />
+                <Slide content={content} index={idx} onFocus={onClickElement} />
               </SwiperSlide>
             );
           }),
