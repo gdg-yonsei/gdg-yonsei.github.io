@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.931f24f7.css",
-    "main.js": "/static/js/main.59ff80c4.js",
+    "main.js": "/static/js/main.67fc506f.js",
     "static/media/Roboto-BlackItalic.ttf": "/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
     "static/media/Roboto-MediumItalic.ttf": "/static/media/Roboto-MediumItalic.82736aaa11c64709055f.ttf",
     "static/media/Roboto-LightItalic.ttf": "/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -25,6 +25,7 @@
     "static/media/PPNeueMontreal-Thin.otf": "/static/media/PPNeueMontreal-Thin.79ab813ef18c7e673de5.otf",
     "static/media/pattern4.png": "/static/media/pattern4.01fb40c44041247eda26.png",
     "static/media/pattern3.png": "/static/media/pattern3.4434cc959bac00c44434.png",
+    "static/media/logo.png": "/static/media/logo.6617598ff617ed958b19.png",
     "static/media/GoogleDevelopers.png": "/static/media/GoogleDevelopers.9b72a86ee5e42508d1c4.png",
     "static/media/nestjs.svg": "/static/media/nestjs.d5a4ab95a2744ffa33da21fa23e26c53.svg",
     "static/media/postgresql.svg": "/static/media/postgresql.4d89da07f5b01320923e37a50ee3a5d3.svg",
@@ -86,6 +87,6 @@
   },
   "entrypoints": [
     "static/css/main.931f24f7.css",
-    "static/js/main.59ff80c4.js"
+    "static/js/main.67fc506f.js"
   ]
 }
