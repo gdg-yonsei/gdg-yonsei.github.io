@@ -8,19 +8,19 @@ import 'react-tooltip/dist/react-tooltip.css';
 import { Head } from '@components/Head';
 import { theme } from '@styles/global-theme';
 import media from '@styles/media';
-import { Fragment } from 'react';
+import { lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import App from '@/App';
+const App = lazy(() => import('@/App'));
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <Fragment>
+  <>
     <HelmetProvider>
       <Head />
       <ThemeProvider theme={{ ...theme, ...media }}>
@@ -29,5 +29,5 @@ root.render(
         </BrowserRouter>
       </ThemeProvider>
     </HelmetProvider>
-  </Fragment>,
+  </>,
 );
