@@ -1,5 +1,5 @@
 import Circle from '@components/Circle';
-import useWindowSize from '@hooks/useWindowSize';
+import useWindowSize from '@hooks/useWindowSize/useWindowSize';
 import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
 import styled, { css } from 'styled-components';
 

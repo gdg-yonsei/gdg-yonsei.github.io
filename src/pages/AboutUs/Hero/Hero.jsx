@@ -1,5 +1,5 @@
-import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
-import useWindowSize from '@hooks/useWindowSize';
+import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition/useLocomotiveScrollPosition';
+import useWindowSize from '@hooks/useWindowSize/useWindowSize';
 import styled from 'styled-components';
 
 import { BackgroundVideo, GoBackArrow, SearchBar } from '../components';

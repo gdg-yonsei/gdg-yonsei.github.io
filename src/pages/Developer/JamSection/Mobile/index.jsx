@@ -4,7 +4,7 @@ import { ReactComponent as SiFlutter } from '@assets/images/icons/mobile/flutter
 import { ReactComponent as SiUIKit } from '@assets/images/icons/mobile/uikit.svg';
 // Icon Import
 import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
-import useOnScreen from '@hooks/useOnScreen';
+import useOnScreen from '@hooks/useOnScreen/useOnScreen';
 import { useRef } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';

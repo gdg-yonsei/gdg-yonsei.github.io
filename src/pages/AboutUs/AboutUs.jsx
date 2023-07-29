@@ -1,8 +1,8 @@
 import { LoadingScreen } from '@components/LoadingScreen';
-import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
+import { LocomotiveScrollProvider } from '@context';
 import { TransitionColorContext } from '@context/TransitionColorContext';
-import useEffectOnce from '@hooks/useEffectOnce';
-import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll/useHandlerAnimationScroll';
+import useMount from '@hooks/useMount/useMount';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
@@ -14,17 +14,17 @@ function AboutUs() {
   const { transitionColorHandler } = useContext(TransitionColorContext);
   const { color } = useTheme();
 
-  useEffectOnce(() => {
+  useMount(() => {
     transitionColorHandler(color.darkgrey);
   });
 
   return (
     <>
-      <VerticalLocomotiveScrollProvider containerRef={containerRef}>
+      <LocomotiveScrollProvider.Vertical containerRef={containerRef}>
         <MainContainer data-scroll-container ref={containerRef}>
           <Hero />
         </MainContainer>
-      </VerticalLocomotiveScrollProvider>
+      </LocomotiveScrollProvider.Vertical>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

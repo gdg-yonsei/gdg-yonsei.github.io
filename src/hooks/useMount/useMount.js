@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-function useEffectOnce(cb) {
+function useMount(cb) {
   useEffect(cb, []);
 }
 
-export default useEffectOnce;
+export default useMount;

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 function useCanvas(canvasWidth, canvasHeight, animate) {
   const canvasRef = useRef(null);

@@ -1,4 +1,4 @@
-import useKeyPress from '@hooks/useKeyPress';
+import useKeyPress from '@hooks/useKeyPress/useKeyPress';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';

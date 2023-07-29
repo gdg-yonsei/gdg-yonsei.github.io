@@ -1,6 +1,6 @@
 import { STUDENTS_PROGRESS_UPPER_LIMIT } from '@constants/constants';
-import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition';
-import useWindowSize from '@hooks/useWindowSize';
+import useLocomotiveScrollPosition from '@hooks/useLocomotiveScrollPosition/useLocomotiveScrollPosition';
+import useWindowSize from '@hooks/useWindowSize/useWindowSize';
 import clamp from '@utils/clamp';
 import { memo, useCallback } from 'react';
 import styled, { useTheme } from 'styled-components';

@@ -1,7 +1,7 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import useKeyPress from '@hooks/useKeyPress';
+import useKeyPress from '@hooks/useKeyPress/useKeyPress';
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';

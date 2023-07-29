@@ -1,11 +1,8 @@
 import { GithubCursor } from '@components/GithubCursor';
 import { LoadingScreen } from '@components/LoadingScreen';
-import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
-import MouseContextProvider from '@context/MouseContext';
+import { LocomotiveScrollProvider, MouseContextProvider } from '@context';
 import { TransitionColorContext } from '@context/TransitionColorContext';
-import useEffectOnce from '@hooks/useEffectOnce';
-import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
-import { useMediaQuery } from '@hooks/useMediaQuery';
+import { useHandleAnimationScroll, useMediaQuery, useMount } from '@hooks';
 import { MEDIA_QUERIES } from '@styles/media';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
@@ -23,13 +20,13 @@ function StudentPage() {
 
   const containerRef = useRef(null);
 
-  useEffectOnce(() => {
+  useMount(() => {
     transitionColorHandler(color.blue);
   });
 
   return (
     <>
-      <VerticalLocomotiveScrollProvider containerRef={containerRef}>
+      <LocomotiveScrollProvider.Vertical containerRef={containerRef}>
         <Container data-scroll-container ref={containerRef}>
           <Banner />
           <MouseContextProvider>
@@ -40,7 +37,7 @@ function StudentPage() {
           <BlogSection />
           <FooterSection />
         </Container>
-      </VerticalLocomotiveScrollProvider>
+      </LocomotiveScrollProvider.Vertical>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

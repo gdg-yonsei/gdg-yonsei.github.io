@@ -1,6 +1,6 @@
 import { ReactComponent as GithubIcon } from '@assets/images/icons/github.svg';
 import { MouseContext } from '@context/MouseContext';
-import useMousePosition from '@hooks/useMousePosition';
+import useMousePosition from '@hooks/useMousePosition/useMousePosition';
 import { memo, useContext } from 'react';
 import styled, { css } from 'styled-components';
 

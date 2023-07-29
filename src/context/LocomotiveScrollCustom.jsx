@@ -1,6 +1,6 @@
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
-export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
+function VerticalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
     onLocationChange: (scroll) => {
       scroll.destroy();
@@ -31,7 +31,7 @@ export function VerticalLocomotiveScrollProvider({ containerRef, children }) {
   return <LocomotiveScrollProvider {...scrollOptions}>{children}</LocomotiveScrollProvider>;
 }
 
-export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
+function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
   const scrollOptions = {
     onLocationChange: (scroll) => {
       scroll.destroy();
@@ -60,3 +60,8 @@ export function HorizontalLocomotiveScrollProvider({ containerRef, children }) {
 
   return <LocomotiveScrollProvider {...scrollOptions}>{children}</LocomotiveScrollProvider>;
 }
+
+export default {
+  Vertical: VerticalLocomotiveScrollProvider,
+  Horizontal: HorizontalLocomotiveScrollProvider,
+};

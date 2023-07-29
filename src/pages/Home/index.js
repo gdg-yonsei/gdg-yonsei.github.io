@@ -1,6 +1,6 @@
 import { LoadingScreen } from '@components/LoadingScreen';
-import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
-import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import { LocomotiveScrollProvider } from '@context';
+import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll/useHandlerAnimationScroll.js';
 import { useMediaQuery } from '@hooks/useMediaQuery';
 import MainSection from '@pages/Home/MainSection';
 import { MEDIA_QUERIES } from '@styles/media';
@@ -18,12 +18,12 @@ function Home() {
 
   return (
     <>
-      <VerticalLocomotiveScrollProvider containerRef={containerRef}>
+      <LocomotiveScrollProvider.Vertical containerRef={containerRef}>
         <Container data-scroll-container ref={containerRef}>
           <Hero />
           {!isMobileOrTablet ? <MainSection /> : <MobileMainSection />}
         </Container>
-      </VerticalLocomotiveScrollProvider>
+      </LocomotiveScrollProvider.Vertical>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

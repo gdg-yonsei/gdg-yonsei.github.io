@@ -1,8 +1,8 @@
 import { LoadingScreen } from '@components/LoadingScreen';
-import { HorizontalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
+import { LocomotiveScrollProvider } from '@context';
 import { TransitionColorContext } from '@context/TransitionColorContext';
-import useEffectOnce from '@hooks/useEffectOnce';
-import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll/useHandlerAnimationScroll.js';
+import useMount from '@hooks/useMount/useMount';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
@@ -15,19 +15,19 @@ function ClubsPage() {
   const { color } = useTheme();
   const containerRef = useRef(null);
 
-  useEffectOnce(() => {
+  useMount(() => {
     transitionColorHandler(color.yellow);
   });
 
   return (
     <>
-      <HorizontalLocomotiveScrollProvider containerRef={containerRef}>
+      <LocomotiveScrollProvider.Horizontal containerRef={containerRef}>
         <Container data-scroll-container ref={containerRef} id="#fixed-element-clubs-container">
           <Banner />
           <GalleryPadding data-scroll-section />
           <GalleryComponent />
         </Container>
-      </HorizontalLocomotiveScrollProvider>
+      </LocomotiveScrollProvider.Horizontal>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

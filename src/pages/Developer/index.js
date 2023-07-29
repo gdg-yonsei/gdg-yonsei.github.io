@@ -1,8 +1,8 @@
 import { LoadingScreen } from '@components/LoadingScreen';
-import { VerticalLocomotiveScrollProvider } from '@context/LocomotiveScrollCustom';
+import { LocomotiveScrollProvider } from '@context';
 import { TransitionColorContext } from '@context/TransitionColorContext';
-import useEffectOnce from '@hooks/useEffectOnce';
-import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll.js';
+import { useHandleAnimationScroll } from '@hooks';
+import useMount from '@hooks/useMount/useMount';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
@@ -24,13 +24,13 @@ function DeveloperPage() {
   const { color } = useTheme();
   const containerRef = useRef(null);
 
-  useEffectOnce(() => {
+  useMount(() => {
     transitionColorHandler(color.green);
   });
 
   return (
     <>
-      <VerticalLocomotiveScrollProvider containerRef={containerRef}>
+      <LocomotiveScrollProvider.Vertical containerRef={containerRef}>
         <Container data-scroll-container ref={containerRef}>
           <Banner />
           <Introduction />
@@ -43,7 +43,7 @@ function DeveloperPage() {
           <DevRelSection />
           <FooterSection />
         </Container>
-      </VerticalLocomotiveScrollProvider>
+      </LocomotiveScrollProvider.Vertical>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
         handleAnimationComplete={handleAnimationComplete}

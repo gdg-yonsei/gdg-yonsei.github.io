@@ -1,4 +1,4 @@
-import useEffectOnce from '@hooks/useEffectOnce';
+import useMount from '@hooks/useMount/useMount';
 import { useEffect, useState } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
@@ -8,7 +8,7 @@ const useGoogleAnalytics = () => {
   const [initialized, setInitialized] = useState(false);
 
   // localhost는 기록하지 않음
-  useEffectOnce(() => {
+  useMount(() => {
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_TRAKING_ID);
       setInitialized(true);

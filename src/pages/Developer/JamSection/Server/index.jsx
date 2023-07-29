@@ -27,7 +27,7 @@ import { ReactComponent as SiSQLite } from '@assets/images/icons/server/sqlite.s
 import { ReactComponent as SiSymfony } from '@assets/images/icons/server/symfony.svg';
 import { ReactComponent as SiSwift } from '@assets/images/icons/swift.svg';
 import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
-import useOnScreen from '@hooks/useOnScreen';
+import useOnScreen from '@hooks/useOnScreen/useOnScreen';
 import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
 import { useRef } from 'react';
 import { Tooltip } from 'react-tooltip';
