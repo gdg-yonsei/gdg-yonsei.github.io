@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import Jam from './Jam/Jam';
-import { JamList } from './Jam/JamList';
+import { Jam, JamList } from './Jam';
 
 function Introduction() {
   const [hoveredSection, setHoveredSection] = useState(null);

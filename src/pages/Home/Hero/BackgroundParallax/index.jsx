@@ -1,6 +1,6 @@
 import Circle from '@components/Circle';
-import useWindowSize from '@hooks/useWindowSize/useWindowSize';
-import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
+import { useWindowSize } from '@hooks';
+import { MouseParallaxChild } from 'react-parallax-mouse';
 import styled, { css } from 'styled-components';
 
 function BackgroundParallax() {

@@ -5,7 +5,7 @@ import { ReactComponent as SiMongoDB } from '@assets/images/icons/server/mongodb
 import { ReactComponent as SiNodeJS } from '@assets/images/icons/web/nodedotjs.svg';
 import { ReactComponent as SiReact } from '@assets/images/icons/web/react.svg';
 import { ReactComponent as SiTypescript } from '@assets/images/icons/web/typescript.svg';
-import useOnScreen from '@hooks/useOnScreen/useOnScreen';
+import { useOnScreen } from '@hooks';
 import { useRef } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';

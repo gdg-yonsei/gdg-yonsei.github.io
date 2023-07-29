@@ -5,24 +5,28 @@ import { useHandleAnimationScroll, useMount } from '@hooks';
 import { useContext, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-import { Hero } from './Hero';
+import Banner from './Banner/Banner';
+import Introduction from './Introduction/Introduction';
+import { Progress } from './Progress';
 
-function AboutUs() {
+function GooglePage() {
   const { handleAnimationStart, handleAnimationComplete } = useHandleAnimationScroll();
-  const containerRef = useRef(null);
   const { transitionColorHandler } = useContext(TransitionColorContext);
   const { color } = useTheme();
+  const containerRef = useRef(null);
 
   useMount(() => {
-    transitionColorHandler(color.darkgrey);
+    transitionColorHandler(color.red);
   });
 
   return (
     <>
       <LocomotiveScrollProvider.Vertical containerRef={containerRef}>
-        <MainContainer data-scroll-container ref={containerRef}>
-          <Hero />
-        </MainContainer>
+        <Container data-scroll-container ref={containerRef}>
+          <Banner />
+          <Introduction />
+          <Progress />
+        </Container>
       </LocomotiveScrollProvider.Vertical>
       <LoadingScreen
         handleAnimationStart={handleAnimationStart}
@@ -32,15 +36,19 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default GooglePage;
 
-const MainContainer = styled.main`
-  width: 100vw;
-
-  background-color: ${(props) => props.theme.backgroundColor.white};
+const Container = styled.main`
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  font-family: 'Google Sans', sans-serif;
+  perspective: 1px; // for locomotive-scroll element disappearance bug fix.
+  background-color: ${(props) => props.theme.backgroundColor.white};
+
+  content-visibility: auto;
 `;

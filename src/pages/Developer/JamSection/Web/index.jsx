@@ -10,7 +10,7 @@ import { ReactComponent as SiSass } from '@assets/images/icons/web/sass.svg';
 import { ReactComponent as SiStyledComponents } from '@assets/images/icons/web/styledcomponents.svg';
 import { ReactComponent as SiThreeJS } from '@assets/images/icons/web/threedotjs.svg';
 import { ReactComponent as SiVite } from '@assets/images/icons/web/vite.svg';
-import useOnScreen from '@hooks/useOnScreen/useOnScreen';
+import { useOnScreen } from '@hooks';
 import { SiAngular } from '@react-icons/all-files/si/SiAngular';
 import { SiBabel } from '@react-icons/all-files/si/SiBabel';
 import { SiCss3 } from '@react-icons/all-files/si/SiCss3';

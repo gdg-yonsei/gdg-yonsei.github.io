@@ -1,6 +1,6 @@
 import { MainFooter } from '@components/Footer';
 import { MainHeader } from '@components/Header/MainHeader';
-import { useMediaQuery } from '@hooks/useMediaQuery';
+import { useMediaQuery } from '@hooks';
 import { MEDIA_QUERIES } from '@styles/media';
 import { useEffect } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import FocusedCardItem from './components/FocusedCardItem';
-import SwiperElement from './Swiper';
+import { SwiperElement } from './Swiper';
 import { SlideContents } from './Swiper/SlideContent';
 
 function Progress() {

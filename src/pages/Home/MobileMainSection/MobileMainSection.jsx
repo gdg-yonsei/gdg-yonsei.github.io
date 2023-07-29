@@ -2,7 +2,7 @@ import { SubHeader } from '@components/Header/SubHeader';
 import { useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-import Card from '../Card';
+import Card from '../Card/Card';
 
 function MobileMainSection() {
   const { color } = useTheme();

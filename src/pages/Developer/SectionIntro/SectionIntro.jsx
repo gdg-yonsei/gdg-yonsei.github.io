@@ -1,4 +1,4 @@
-import useOnScreen from '@hooks/useOnScreen/useOnScreen';
+import { useOnScreen } from '@hooks';
 import { useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import styled from 'styled-components';

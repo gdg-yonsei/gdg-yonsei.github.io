@@ -1,4 +1,4 @@
-import useIsomorphicLayoutEffect from '@hooks/useIsomorphicLayoutEffect/useIsomorphicLayoutEffect';
+import { useIsomorphicLayoutEffect } from '@hooks';
 import { useEffect, useRef } from 'react';
 
 function useTimeout(cb, delay) {

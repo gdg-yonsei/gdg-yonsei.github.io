@@ -1,4 +1,4 @@
-import useHover from '@hooks/useHover/useHover';
+import { useHover } from '@hooks';
 import { IconContext } from '@react-icons/all-files';
 import { useCallback } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';

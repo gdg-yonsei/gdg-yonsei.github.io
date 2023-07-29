@@ -1,7 +1,8 @@
-import useMount from '@hooks/useMount/useMount';
 import { useEffect, useState } from 'react';
 import ReactGA from 'react-ga4';
 import { useLocation } from 'react-router-dom';
+
+import { useMount } from '..';
 
 const useGoogleAnalytics = () => {
   const location = useLocation();

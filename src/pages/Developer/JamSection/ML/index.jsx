@@ -6,7 +6,7 @@ import { ReactComponent as SiSklearn } from '@assets/images/icons/ML/scikitlearn
 import { ReactComponent as SiTensorflow } from '@assets/images/icons/ML/tensorflow.svg';
 // Icon Import
 import { ReactComponent as SiPython } from '@assets/images/icons/python.svg';
-import useOnScreen from '@hooks/useOnScreen/useOnScreen';
+import { useOnScreen } from '@hooks';
 import { useRef } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { TypeAnimation } from 'react-type-animation';

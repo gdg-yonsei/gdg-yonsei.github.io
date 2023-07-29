@@ -1,8 +1,7 @@
 import { LoadingScreen } from '@components/LoadingScreen';
 import { LocomotiveScrollProvider } from '@context';
-import useHandleAnimationScroll from '@hooks/useHandleAnimationScroll/useHandlerAnimationScroll.js';
-import { useMediaQuery } from '@hooks/useMediaQuery';
-import MainSection from '@pages/Home/MainSection';
+import { useHandleAnimationScroll, useMediaQuery } from '@hooks';
+import MainSection from '@pages/Home/MainSection/MainSection';
 import { MEDIA_QUERIES } from '@styles/media';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';

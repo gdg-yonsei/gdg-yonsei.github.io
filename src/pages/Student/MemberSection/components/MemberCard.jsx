@@ -1,5 +1,5 @@
 import { MouseContext } from '@context/MouseContext';
-import useHover from '@hooks/useHover/useHover';
+import { useHover } from '@hooks';
 import { memo, useCallback, useContext } from 'react';
 import { MouseParallaxChild } from 'react-parallax-mouse';
 import TextTransition from 'react-text-transition';

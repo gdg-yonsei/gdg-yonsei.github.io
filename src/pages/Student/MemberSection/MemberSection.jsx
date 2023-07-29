@@ -1,8 +1,7 @@
 import HorizontalPatternImage1 from '@assets/images/pattern3.png';
 import HorizontalPatternImage2 from '@assets/images/pattern4.png';
 import { LeftAppearAnimationWidth } from '@components/Animation/LeftAppearAnimation';
-import { useIntersectionObserver } from '@hooks/useIntersectionObserver';
-import { useMediaQuery } from '@hooks/useMediaQuery';
+import { useIntersectionObserver, useMediaQuery } from '@hooks';
 import { MEDIA_QUERIES } from '@styles/media';
 import { useEffect, useRef, useState } from 'react';
 import { MouseParallaxContainer } from 'react-parallax-mouse';

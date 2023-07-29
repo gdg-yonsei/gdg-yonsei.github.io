@@ -1,7 +1,7 @@
 import { Fragment, memo, useState } from 'react';
 import styled from 'styled-components';
 
-import { DrawerContents } from '../DrawerContents';
+import { DrawerContents } from '../components/DrawerContents';
 import { MobileSessionBlog, MobileSessionCard } from './components';
 
 function MobileDrawer() {

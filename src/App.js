@@ -1,9 +1,9 @@
 import TransitionColorProvider from '@context/TransitionColorContext';
 import Page404 from '@pages/404';
 import { AboutUs } from '@pages/AboutUs';
-import ClubsPage from '@pages/Clubs';
-import DeveloperPage from '@pages/Developer';
-import GooglePage from '@pages/Google';
+import { ClubsPage } from '@pages/Clubs';
+import { DeveloperPage } from '@pages/Developer';
+import GooglePage from '@pages/Google/GooglePage';
 import Home from '@pages/Home';
 import StudentPage from '@pages/Student';
 import { AnimatePresence } from 'framer-motion';

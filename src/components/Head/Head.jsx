@@ -1,4 +1,4 @@
-import useIdle from '@hooks/useIdle/useIdle';
+import { useIdle } from '@hooks';
 import { Helmet } from 'react-helmet-async';
 
 function Head() {
