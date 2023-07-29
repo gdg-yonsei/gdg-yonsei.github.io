@@ -169,7 +169,7 @@ const CameraImg = styled.img`
 
 const StyledTypeAnimation = styled(TypeAnimation)`
   color: ${(props) => props.theme.backgroundColor.black};
-  font-size: 24px;
+  font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
 
